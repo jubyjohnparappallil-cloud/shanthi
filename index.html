@@ -1,0 +1,1349 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shanthi Wellness — Ayurveda, Homeopathy & Physiotherapy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ═══ FLOATING LEAF ANIMATIONS — fixed position over entire page ═══ -->
+<div class="leaf-container" aria-hidden="true">
+  <!-- SVG Leaves -->
+  <div class="leaf leaf-1">
+    <svg viewBox="0 0 60 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M30 75 C30 75 5 55 5 30 C5 10 20 2 30 2 C40 2 55 10 55 30 C55 55 30 75 30 75Z" fill="#4aaa4a" opacity="0.75"/>
+      <path d="M30 75 L30 2" stroke="#2d7a2d" stroke-width="1.5" opacity="0.5"/>
+      <path d="M30 30 Q18 22 10 18" stroke="#2d7a2d" stroke-width="1" opacity="0.4"/>
+      <path d="M30 30 Q42 22 50 18" stroke="#2d7a2d" stroke-width="1" opacity="0.4"/>
+      <path d="M30 50 Q20 42 14 38" stroke="#2d7a2d" stroke-width="1" opacity="0.4"/>
+      <path d="M30 50 Q40 42 46 38" stroke="#2d7a2d" stroke-width="1" opacity="0.4"/>
+    </svg>
+  </div>
+  <div class="leaf leaf-2">
+    <svg viewBox="0 0 50 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M25 65 C25 65 3 48 3 25 C3 8 14 2 25 2 C36 2 47 8 47 25 C47 48 25 65 25 65Z" fill="#6dcc6d" opacity="0.65"/>
+      <path d="M25 65 L25 2" stroke="#3a9a3a" stroke-width="1.2" opacity="0.45"/>
+    </svg>
+  </div>
+  <div class="leaf leaf-3">
+    <svg viewBox="0 0 40 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 52 C20 52 2 38 2 20 C2 6 10 1 20 1 C30 1 38 6 38 20 C38 38 20 52 20 52Z" fill="#3a8a3a" opacity="0.70"/>
+      <path d="M20 52 L20 1" stroke="#2d7a2d" stroke-width="1" opacity="0.4"/>
+    </svg>
+  </div>
+  <div class="leaf leaf-4">
+    <svg viewBox="0 0 55 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M27 70 C27 70 4 52 4 27 C4 9 15 2 27 2 C39 2 51 9 51 27 C51 52 27 70 27 70Z" fill="#57E86A" opacity="0.60"/>
+      <path d="M27 70 L27 2" stroke="#4aaa4a" stroke-width="1.2" opacity="0.4"/>
+      <path d="M27 35 Q15 26 8 22" stroke="#4aaa4a" stroke-width="0.8" opacity="0.35"/>
+      <path d="M27 35 Q39 26 46 22" stroke="#4aaa4a" stroke-width="0.8" opacity="0.35"/>
+    </svg>
+  </div>
+  <div class="leaf leaf-5">
+    <svg viewBox="0 0 35 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17 47 C17 47 2 34 2 17 C2 5 9 1 17 1 C25 1 33 5 33 17 C33 34 17 47 17 47Z" fill="#C4A882" opacity="0.55"/>
+      <path d="M17 47 L17 1" stroke="#A08060" stroke-width="1" opacity="0.4"/>
+    </svg>
+  </div>
+  <div class="leaf leaf-6">
+    <svg viewBox="0 0 45 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M22 58 C22 58 3 43 3 22 C3 7 12 1 22 1 C32 1 42 7 42 22 C42 43 22 58 22 58Z" fill="#4aaa4a" opacity="0.68"/>
+      <path d="M22 58 L22 1" stroke="#2d7a2d" stroke-width="1.2" opacity="0.45"/>
+    </svg>
+  </div>
+  <div class="leaf leaf-7">
+    <svg viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M15 39 C15 39 2 28 2 15 C2 5 8 1 15 1 C22 1 28 5 28 15 C28 28 15 39 15 39Z" fill="#6dcc6d" opacity="0.60"/>
+      <path d="M15 39 L15 1" stroke="#3a9a3a" stroke-width="0.8" opacity="0.4"/>
+    </svg>
+  </div>
+  <div class="leaf leaf-8">
+    <svg viewBox="0 0 50 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M25 64 C25 64 3 47 3 25 C3 8 13 1 25 1 C37 1 47 8 47 25 C47 47 25 64 25 64Z" fill="#3a8a3a" opacity="0.65"/>
+      <path d="M25 64 L25 1" stroke="#2d7a2d" stroke-width="1.2" opacity="0.4"/>
+      <path d="M25 32 Q14 24 7 20" stroke="#2d7a2d" stroke-width="0.8" opacity="0.35"/>
+      <path d="M25 32 Q36 24 43 20" stroke="#2d7a2d" stroke-width="0.8" opacity="0.35"/>
+    </svg>
+  </div>
+</div>
+
+<nav class="navbar" id="navbar">
+  <!-- Top bar: phone + appointment -->
+  <div class="navbar-topbar">
+    <div class="navbar-topbar-inner">
+      <span class="navbar-phone">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke="#A08060" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Call : +91 98765 43210, +91 80 2345 6789
+      </span>
+      <a href="#appointment" class="navbar-appt-btn">Appointment</a>
+    </div>
+  </div>
+  <!-- Logo + Menu row -->
+  <div class="navbar-main">
+    <div class="navbar-main-inner">
+      <a href="#home" class="nav-logo">
+        <img src="logo.png" alt="Shanthi Wellness" class="nav-logo-img" />
+      </a>
+      <div class="navbar-menu-right">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#treatments" class="nav-link">Treatments</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span class="nav-menu-label">Menu</span>
+          <span class="nav-menu-icon">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Nav overlay for left drawer -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- LEFT DRAWER -->
+<div class="nav-drawer" id="navDrawer">
+  <div class="nav-drawer-header">
+    <img src="logo.png" alt="Shanthi Wellness" class="nav-drawer-logo" />
+    <button class="nav-drawer-close" id="navDrawerClose" aria-label="Close menu">✕</button>
+  </div>
+  <ul class="nav-drawer-links">
+    <li><a href="#home" class="nav-drawer-link active">Home</a></li>
+    <li><a href="#about" class="nav-drawer-link">About</a></li>
+    <li><a href="#services" class="nav-drawer-link">Services</a></li>
+    <li><a href="#treatments" class="nav-drawer-link">Treatments</a></li>
+    <li><a href="#gallery" class="nav-drawer-link">Gallery</a></li>
+    <li><a href="#testimonials" class="nav-drawer-link">Testimonials</a></li>
+    <li><a href="#contact" class="nav-drawer-link">Contact</a></li>
+  </ul>
+  <a href="#appointment" class="nav-drawer-appt">Book Appointment</a>
+</div>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+  <div class="hero-overlay"></div>
+
+  <aside class="hero-thumb-strip">
+    <div class="hero-thumb reveal">
+      <img src="flower.jpg" alt="Shirodhara" />
+      <span class="hero-thumb-label">Shirodhara</span>
+    </div>
+    <div class="hero-thumb reveal">
+      <img src="kizhi.jpg" alt="Abhyanga" />
+      <span class="hero-thumb-label">Abhyanga</span>
+    </div>
+    <div class="hero-thumb reveal">
+      <img src="Medicine.jpg" alt="Consultation" />
+      <span class="hero-thumb-label">Consultation</span>
+    </div>
+    <div class="hero-thumb reveal">
+      <img src="ritual3.jpg" alt="Panchakarma" />
+      <span class="hero-thumb-label">Panchakarma</span>
+    </div>
+    <div class="hero-thumb reveal">
+      <img src="ritual4.jpg" alt="Physiotherapy" />
+      <span class="hero-thumb-label">Physiotherapy</span>
+    </div>
+  </aside>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-inner">Est.<br/>2010</span>
+    </div>
+    <p class="hero-eyebrow reveal">Holistic Healing Since 2010</p>
+    <h1 class="hero-heading reveal">Ancient Wisdom.<br /><em>Modern Healing.</em></h1>
+    <p class="hero-sub reveal">
+      Where time-honoured Ayurvedic traditions meet contemporary medicine —
+      restoring balance of body, mind and spirit through personalised care.
+    </p>
+    <div class="hero-ctas reveal">
+      <a href="#appointment" class="btn btn-gold">Begin Your Journey</a>
+      <a href="#services" class="btn btn-outline">Explore Services</a>
+    </div>
+    <div class="hero-features reveal">
+      <div class="hero-feature-pill"><span>🌿</span> Ayurveda</div>
+      <div class="hero-feature-pill"><span>💧</span> Homeopathy</div>
+      <div class="hero-feature-pill"><span>🤲</span> Physiotherapy</div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll to discover</span>
+      <div class="scroll-line"></div>
+    </div>
+  </div>
+
+  <div class="hero-photo-panel">
+    <img src="cover.jpg" alt="Shanthi Wellness sanctuary" class="hero-panel-img" />
+    <div class="hero-panel-overlay"></div>
+    <div class="hero-stat-card hero-stat-card--top">
+      <span class="hsc-num">500<sup>+</sup></span>
+      <span class="hsc-label">Patients Healed</span>
+    </div>
+    <div class="hero-stat-card hero-stat-card--bottom">
+      <span class="hsc-num">15<sup>+</sup></span>
+      <span class="hsc-label">Years of Healing</span>
+    </div>
+    <div class="hero-panel-thumb">
+      <img src="mock2.jpg" alt="Treatment" />
+      <span>Herbal Care</span>
+    </div>
+  </div>
+
+  <div class="hero-decor-left"></div>
+  <div class="hero-decor-right"></div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     MARQUEE STRIP
+═══════════════════════════════════════════════════════════ -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span>Ayurveda</span><span class="marquee-dot">✦</span>
+    <span>Homeopathy</span><span class="marquee-dot">✦</span>
+    <span>Physiotherapy</span><span class="marquee-dot">✦</span>
+    <span>Panchakarma</span><span class="marquee-dot">✦</span>
+    <span>Herbal Medicine</span><span class="marquee-dot">✦</span>
+    <span>Yoga Therapy</span><span class="marquee-dot">✦</span>
+    <span>Shirodhara</span><span class="marquee-dot">✦</span>
+    <span>Abhyanga</span><span class="marquee-dot">✦</span>
+    <span>Ayurveda</span><span class="marquee-dot">✦</span>
+    <span>Homeopathy</span><span class="marquee-dot">✦</span>
+    <span>Physiotherapy</span><span class="marquee-dot">✦</span>
+    <span>Panchakarma</span><span class="marquee-dot">✦</span>
+    <span>Herbal Medicine</span><span class="marquee-dot">✦</span>
+    <span>Yoga Therapy</span><span class="marquee-dot">✦</span>
+    <span>Shirodhara</span><span class="marquee-dot">✦</span>
+    <span>Abhyanga</span><span class="marquee-dot">✦</span>
+  </div>
+</div>
+
+<!-- ORANGE DIVIDER -->
+<div class="orange-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PHOTO STRIP — scrollable thumbnail row
+═══════════════════════════════════════════════════════════ -->
+<section class="photo-strip">
+  <div class="section-header reveal" style="padding:0 32px 32px;max-width:1200px;margin:0 auto;">
+    <p class="section-eyebrow">Quick Glimpse</p>
+    <h2 class="section-heading" style="font-size:clamp(1.4rem,2.5vw,2rem);">Moments from Our <em>Clinic</em></h2>
+  </div>
+
+  <!-- Auto-scrolling carousel — no JS needed, pure CSS -->
+  <div class="photo-carousel-wrap">
+    <!-- Track 1 — scrolls left -->
+    <div class="photo-carousel-track track-left">
+      <div class="photo-thumb-c"><img src="flower.jpg" alt="Shirodhara"/><span>Shirodhara</span></div>
+      <div class="photo-thumb-c"><img src="kizhi.jpg" alt="Abhyanga"/><span>Abhyanga</span></div>
+      <div class="photo-thumb-c"><img src="Medicine.jpg" alt="Consultation"/><span>Consultation</span></div>
+      <div class="photo-thumb-c"><img src="sunset.jpg" alt="Panchakarma"/><span>Panchakarma</span></div>
+      <div class="photo-thumb-c"><img src="mock2.jpg" alt="Treatment"/><span>Treatment</span></div>
+      <div class="photo-thumb-c"><img src="ritual4.jpg" alt="Physiotherapy"/><span>Physiotherapy</span></div>
+      <div class="photo-thumb-c"><img src="herbal.jpg" alt="Herbal"/><span>Herbal</span></div>
+      <div class="photo-thumb-c"><img src="well.jpg" alt="Wellness"/><span>Wellness</span></div>
+      <div class="photo-thumb-c"><img src="mudra.jpg" alt="Mudra"/><span>Mudra</span></div>
+      <div class="photo-thumb-c"><img src="ritual3.jpg" alt="Healing"/><span>Healing</span></div>
+      <!-- Duplicate for seamless loop -->
+      <div class="photo-thumb-c"><img src="flower.jpg" alt="Shirodhara"/><span>Shirodhara</span></div>
+      <div class="photo-thumb-c"><img src="kizhi.jpg" alt="Abhyanga"/><span>Abhyanga</span></div>
+      <div class="photo-thumb-c"><img src="Medicine.jpg" alt="Consultation"/><span>Consultation</span></div>
+      <div class="photo-thumb-c"><img src="sunset.jpg" alt="Panchakarma"/><span>Panchakarma</span></div>
+      <div class="photo-thumb-c"><img src="mock2.jpg" alt="Treatment"/><span>Treatment</span></div>
+      <div class="photo-thumb-c"><img src="ritual4.jpg" alt="Physiotherapy"/><span>Physiotherapy</span></div>
+      <div class="photo-thumb-c"><img src="herbal.jpg" alt="Herbal"/><span>Herbal</span></div>
+      <div class="photo-thumb-c"><img src="well.jpg" alt="Wellness"/><span>Wellness</span></div>
+      <div class="photo-thumb-c"><img src="mudra.jpg" alt="Mudra"/><span>Mudra</span></div>
+      <div class="photo-thumb-c"><img src="ritual3.jpg" alt="Healing"/><span>Healing</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ORANGE DIVIDER -->
+<div class="orange-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ABOUT SECTION
+═══════════════════════════════════════════════════════════ -->
+<section class="about section-pad" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <!-- Left: Images -->
+      <div class="about-images reveal">
+        <div class="about-img-frame">
+          <div class="about-img-main">
+            <img src="dhara2.jpg" alt="Shanthi Wellness clinic interior" />
+          </div>
+          <div class="about-img-secondary">
+            <img src="shirovasthi.jpg" alt="Ayurvedic treatment session" />
+          </div>
+          <div class="about-img-badge">
+            <span>15+</span>
+            <small>Years of<br/>Healing</small>
+          </div>
+          <div class="about-gold-frame"></div>
+        </div>
+      </div>
+      <!-- Right: Text -->
+      <div class="about-text reveal">
+        <p class="section-eyebrow">Our Story</p>
+        <h2 class="section-heading">Shanthi <em>Wellness Medical Center</em></h2>
+        <div class="gold-divider"></div>
+        <p class="about-para">
+          Founded in 2010 by Dr. Meera Krishnan, Shanthi Wellness was born from a deep conviction that true healing transcends the treatment of symptoms. Drawing from the 5,000-year-old science of Ayurveda, the gentle precision of Homeopathy, and the restorative power of Physiotherapy, we offer a sanctuary where ancient wisdom and modern clinical expertise converge.
+        </p>
+        <p class="about-para">
+          Our philosophy is rooted in the understanding that every individual is unique — a distinct constellation of constitution, lifestyle, and life experience. We craft personalised healing journeys that address the root cause of imbalance, not merely its surface manifestations. Each consultation is an unhurried conversation; each treatment, a carefully considered ritual.
+        </p>
+        <p class="about-para">
+          Over fifteen years, we have had the privilege of accompanying thousands of patients through transformations — from chronic pain to vitality, from anxiety to stillness, from illness to wholeness. Shanthi, meaning peace in Sanskrit, is not just our name. It is our promise.
+        </p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-num">500<sup>+</sup></span>
+            <span class="stat-label">Patients Healed</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">15<sup>+</sup></span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">3</span>
+            <span class="stat-label">Specialties</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">98<sup>%</sup></span>
+            <span class="stat-label">Success Rate</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CIRCULAR TREATMENT CAROUSEL
+═══════════════════════════════════════════════════════════ -->
+<section class="circle-carousel-section section-pad" id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Our Treatments</p>
+      <h2 class="section-heading">Classical <em>Ayurvedic Therapies</em></h2>
+      <div class="gold-divider centered"></div>
+      <p class="section-sub">Ancient healing therapies administered by expert practitioners for complete wellness.</p>
+    </div>
+
+    <!-- Carousel wrapper -->
+    <div class="circle-carousel-outer">
+      <button class="cc-btn cc-btn-prev" id="ccPrev" aria-label="Previous">&#8592;</button>
+      <div class="circle-carousel-viewport" id="ccViewport">
+        <div class="circle-carousel-track" id="ccTrack">
+
+          <!-- Nasyam -->
+          <div class="cc-item">
+            <div class="cc-circle">
+              <img src="Nasyam.jpg" alt="Nasyam" />
+              <div class="cc-circle-ring"></div>
+            </div>
+            <div class="cc-info">
+              <h3>Nasyam</h3>
+              <p>Treatment done for certain types of paralysis, headaches, mental disorders etc., in which herbal juices and medicated oils are administered through the nostrils for a period of 7 to 14 days.</p>
+              <a href="#appointment" class="cc-book-btn">Book Now</a>
+            </div>
+          </div>
+
+          <!-- Shirovasthi -->
+          <div class="cc-item">
+            <div class="cc-circle">
+              <img src="shirovasthi.jpg" alt="Shirovasthi" />
+              <div class="cc-circle-ring"></div>
+            </div>
+            <div class="cc-info">
+              <h3>Shirovasthi</h3>
+              <p>In Shirovasthi, medicated oil is poured over a leather cap kept on the head. Very effective for headache, hair falling, burning sensation and treatments of other diseases of ear, nose and throat.</p>
+              <a href="#appointment" class="cc-book-btn">Book Now</a>
+            </div>
+          </div>
+
+          <!-- Pizhichil -->
+          <div class="cc-item">
+            <div class="cc-circle">
+              <img src="pizhichil.jpg" alt="Pizhichil" />
+              <div class="cc-circle-ring"></div>
+            </div>
+            <div class="cc-info">
+              <h3>Pizhichil</h3>
+              <p>Lukewarm oil is poured in the body by squeezing cotton cloth soaked in oil. This is highly effective for Spondylosis, Hemiplegia, and Arthritis. It also helps in body and mind rejuvenation.</p>
+              <a href="#appointment" class="cc-book-btn">Book Now</a>
+            </div>
+          </div>
+
+          <!-- Dhara -->
+          <div class="cc-item">
+            <div class="cc-circle">
+              <img src="Dhara.jpg" alt="Dhara" />
+              <div class="cc-circle-ring"></div>
+            </div>
+            <div class="cc-info">
+              <h3>Dhara</h3>
+              <p>Continuous pouring of warm medicated liquids over the body or forehead. The rhythmic flow induces deep relaxation, calms the nervous system and is profoundly healing for stress-related conditions.</p>
+              <a href="#appointment" class="cc-book-btn">Book Now</a>
+            </div>
+          </div>
+
+          <!-- Abhyanga -->
+          <div class="cc-item">
+            <div class="cc-circle">
+              <img src="ritual2.jpg" alt="Abhyanga" />
+              <div class="cc-circle-ring"></div>
+            </div>
+            <div class="cc-info">
+              <h3>Abhyanga</h3>
+              <p>Full-body warm medicated oil massage that nourishes tissues, improves circulation, calms the nervous system and promotes deep relaxation. A cornerstone of Ayurvedic daily care.</p>
+              <a href="#appointment" class="cc-book-btn">Book Now</a>
+            </div>
+          </div>
+
+          <!-- Panchakarma -->
+          <div class="cc-item">
+            <div class="cc-circle">
+              <img src="ritual3.jpg" alt="Panchakarma" />
+              <div class="cc-circle-ring"></div>
+            </div>
+            <div class="cc-info">
+              <h3>Panchakarma</h3>
+              <p>The classical five-fold purification therapy — a comprehensive detoxification and rejuvenation programme. Removes deep-seated toxins and restores the body's natural balance and vitality.</p>
+              <a href="#appointment" class="cc-book-btn">Book Now</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <button class="cc-btn cc-btn-next" id="ccNext" aria-label="Next">&#8594;</button>
+    </div>
+
+    <!-- Dots -->
+    <div class="cc-dots" id="ccDots"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     AYURVEDIC TREATMENTS — Malayalam + Glassy
+═══════════════════════════════════════════════════════════ -->
+<section class="ayur-treatments section-pad" id="ayur-treatments">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">ആയുർവേദ ചികിത്സകൾ</p>
+      <h2 class="section-heading">നമ്മുടെ <em>ആയുർവേദ ചികിത്സകൾ</em></h2>
+      <div class="gold-divider centered"></div>
+      <p class="section-sub">ഓരോ ചികിത്സയും ഒരു പവിത്ര അനുഷ്ഠാനം — ചികിത്സകനും രോഗിയും തമ്മിലുള്ള സംഭാഷണം.</p>
+    </div>
+
+    <div class="ayur-cards-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;width:100%">
+
+      <!-- Nasyam -->
+      <div class="ayur-card ayur-glass" style="min-height:360px;display:flex;flex-direction:column;overflow:hidden;border-radius:16px;background:rgba(255,255,255,0.65);backdrop-filter:blur(20px);border:1px solid rgba(196,168,130,0.30);box-shadow:0 8px 32px rgba(196,168,130,0.15)" id="ayur-nasya" onclick="toggleAyurCard(this)">
+        <div class="ayur-card-img" style="height:200px;min-height:200px;overflow:hidden;flex-shrink:0;position:relative"><img style="width:100%;height:100%;object-fit:cover;object-position:center;display:block" src="Nasyam.jpg" alt="നസ്യം" />
+          <div class="ayur-card-img-overlay">
+            <span class="ayur-card-tag">ആയുർവേദം</span>
+            <div class="ayur-card-click-hint">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              അറിയാൻ ക്ലിക്ക് ചെയ്യൂ
+            </div>
+          </div>
+        </div>
+        <div class="ayur-card-front">
+          <h3>നസ്യം <span class="ayur-name-en">(Nasyam)</span></h3>
+          <p class="ayur-card-short">മൂക്കിലൂടെ ഔഷധ തൈലം നൽകുന്ന ചികിത്സ</p>
+          <div class="ayur-card-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
+        <div class="ayur-card-desc">
+          <div class="ayur-card-desc-inner">
+            <span class="ayur-desc-tag">ആയുർവേദം · തല & കഴുത്ത്</span>
+            <h3>നസ്യം</h3>
+            <p>നസ്യം എന്നത് മൂക്കിലൂടെ ഔഷധ തൈലങ്ങൾ, ഹെർബൽ ജ്യൂസ് അല്ലെങ്കിൽ പൊടികൾ നൽകുന്ന ചികിത്സയാണ്. തലവേദന, സൈനസൈറ്റിസ്, മാനസിക വ്യക്തത എന്നിവയ്ക്ക് ഏറ്റവും ഫലപ്രദം.</p>
+            <ul class="ayur-desc-benefits">
+              <li>✦ സൈനസൈറ്റിസ് & മൈഗ്രേൻ ഭേദമാക്കുന്നു</li>
+              <li>✦ ഓർമ്മശക്തി & ഏകാഗ്രത മെച്ചപ്പെടുത്തുന്നു</li>
+              <li>✦ സെർവിക്കൽ സ്പോണ്ടൈലോസിസ് ചികിത്സ</li>
+              <li>✦ ഇന്ദ്രിയ വ്യക്തത വർദ്ധിപ്പിക്കുന്നു</li>
+            </ul>
+            <div class="ayur-desc-duration">
+              <span>⏱ സമയം: 30–45 മിനിറ്റ്</span>
+              <span>📅 കോഴ്സ്: 7–14 ദിവസം</span>
+            </div>
+            <a href="#appointment" class="ayur-desc-btn btn btn-gold" onclick="event.stopPropagation()">നസ്യം ബുക്ക് ചെയ്യൂ →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shirovasthi -->
+      <div class="ayur-card ayur-glass" style="min-height:360px;display:flex;flex-direction:column;overflow:hidden;border-radius:16px;background:rgba(255,255,255,0.65);backdrop-filter:blur(20px);border:1px solid rgba(196,168,130,0.30);box-shadow:0 8px 32px rgba(196,168,130,0.15)" id="ayur-shirovasthi" onclick="toggleAyurCard(this)">
+        <div class="ayur-card-img" style="height:200px;min-height:200px;overflow:hidden;flex-shrink:0;position:relative"><img style="width:100%;height:100%;object-fit:cover;object-position:center;display:block" src="shirovasthi.jpg" alt="ശിരോവസ്തി" />
+          <div class="ayur-card-img-overlay">
+            <span class="ayur-card-tag">ആയുർവേദം</span>
+            <div class="ayur-card-click-hint">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              അറിയാൻ ക്ലിക്ക് ചെയ്യൂ
+            </div>
+          </div>
+        </div>
+        <div class="ayur-card-front">
+          <h3>ശിരോവസ്തി <span class="ayur-name-en">(Shirovasthi)</span></h3>
+          <p class="ayur-card-short">തലയിൽ ഔഷധ തൈലം നിലനിർത്തുന്ന ചികിത്സ</p>
+          <div class="ayur-card-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
+        <div class="ayur-card-desc">
+          <div class="ayur-card-desc-inner">
+            <span class="ayur-desc-tag">ആയുർവേദം · നാഡീ ചികിത്സ</span>
+            <h3>ശിരോവസ്തി</h3>
+            <p>ശിരോവസ്തിയിൽ ഒരു പ്രത്യേക തൊലി തൊപ്പി ഉപയോഗിച്ച് തലയിൽ ഊഷ്മള ഔഷധ തൈലം നിലനിർത്തുന്നു. ഇത് തലച്ചോറിനും നാഡീ വ്യൂഹത്തിനും ആഴത്തിൽ പോഷണം നൽകുന്നു.</p>
+            <ul class="ayur-desc-benefits">
+              <li>✦ മുഖ തളർവാതം & ബെൽസ് പാൾസി ചികിത്സ</li>
+              <li>✦ തലവേദന & ഉറക്കമില്ലായ്മ ഭേദമാക്കുന്നു</li>
+              <li>✦ നാഡീ വ്യൂഹത്തെ പോഷിപ്പിക്കുന്നു</li>
+              <li>✦ ഉത്കണ്ഠ & വിഷാദം കുറയ്ക്കുന്നു</li>
+            </ul>
+            <div class="ayur-desc-duration">
+              <span>⏱ സമയം: 45–60 മിനിറ്റ്</span>
+              <span>📅 കോഴ്സ്: 7 ദിവസം</span>
+            </div>
+            <a href="#appointment" class="ayur-desc-btn btn btn-gold" onclick="event.stopPropagation()">ശിരോവസ്തി ബുക്ക് ചെയ്യൂ →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pizhichil -->
+      <div class="ayur-card ayur-glass" style="min-height:360px;display:flex;flex-direction:column;overflow:hidden;border-radius:16px;background:rgba(255,255,255,0.65);backdrop-filter:blur(20px);border:1px solid rgba(196,168,130,0.30);box-shadow:0 8px 32px rgba(196,168,130,0.15)" id="ayur-pizhichil" onclick="toggleAyurCard(this)">
+        <div class="ayur-card-img" style="height:200px;min-height:200px;overflow:hidden;flex-shrink:0;position:relative"><img style="width:100%;height:100%;object-fit:cover;object-position:center;display:block" src="pizhichil.jpg" alt="പിഴിച്ചിൽ" />
+          <div class="ayur-card-img-overlay">
+            <span class="ayur-card-tag">ആയുർവേദം</span>
+            <div class="ayur-card-click-hint">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              അറിയാൻ ക്ലിക്ക് ചെയ്യൂ
+            </div>
+          </div>
+        </div>
+        <div class="ayur-card-front">
+          <h3>പിഴിച്ചിൽ <span class="ayur-name-en">(Pizhichil)</span></h3>
+          <p class="ayur-card-short">രാജകീയ തൈല സ്നാനം — തുടർച്ചയായ ഊഷ്മള തൈല ഒഴുക്ക്</p>
+          <div class="ayur-card-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
+        <div class="ayur-card-desc">
+          <div class="ayur-card-desc-inner">
+            <span class="ayur-desc-tag">ആയുർവേദം · പുനരുജ്ജീവനം</span>
+            <h3>പിഴിച്ചിൽ</h3>
+            <p>"ആയുർവേദ ചികിത്സകളുടെ രാജാവ്" എന്നറിയപ്പെടുന്ന പിഴിച്ചിൽ, ഊഷ്മള ഔഷധ തൈലം ശരീരത്തിൽ തുടർച്ചയായി ഒഴിക്കുന്ന ചികിത്സയാണ്. ആർത്രൈറ്റിസ്, ഹെമിപ്ലേജിയ എന്നിവയ്ക്ക് ഏറ്റവും ഫലപ്രദം.</p>
+            <ul class="ayur-desc-benefits">
+              <li>✦ റൂമറ്റോയ്ഡ് ആർത്രൈറ്റിസ് ചികിത്സ</li>
+              <li>✦ പേശികളും സന്ധികളും ശക്തിപ്പെടുത്തുന്നു</li>
+              <li>✦ ആഴത്തിലുള്ള പുനരുജ്ജീവനം</li>
+              <li>✦ ശരീര വേദന & കാഠിന്യം ഭേദമാക്കുന്നു</li>
+            </ul>
+            <div class="ayur-desc-duration">
+              <span>⏱ സമയം: 60–90 മിനിറ്റ്</span>
+              <span>📅 കോഴ്സ്: 7–14 ദിവസം</span>
+            </div>
+            <a href="#appointment" class="ayur-desc-btn btn btn-gold" onclick="event.stopPropagation()">പിഴിച്ചിൽ ബുക്ക് ചെയ്യൂ →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dhara -->
+      <div class="ayur-card ayur-glass" style="min-height:360px;display:flex;flex-direction:column;overflow:hidden;border-radius:16px;background:rgba(255,255,255,0.65);backdrop-filter:blur(20px);border:1px solid rgba(196,168,130,0.30);box-shadow:0 8px 32px rgba(196,168,130,0.15)" id="ayur-dhara" onclick="toggleAyurCard(this)">
+        <div class="ayur-card-img" style="height:200px;min-height:200px;overflow:hidden;flex-shrink:0;position:relative"><img style="width:100%;height:100%;object-fit:cover;object-position:center;display:block" src="Dhara.jpg" alt="ധാര" />
+          <div class="ayur-card-img-overlay">
+            <span class="ayur-card-tag">ആയുർവേദം</span>
+            <div class="ayur-card-click-hint">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              അറിയാൻ ക്ലിക്ക് ചെയ്യൂ
+            </div>
+          </div>
+        </div>
+        <div class="ayur-card-front">
+          <h3>ധാര <span class="ayur-name-en">(Dhara)</span></h3>
+          <p class="ayur-card-short">ഔഷധ ദ്രാവകത്തിന്റെ തുടർച്ചയായ ഒഴുക്ക്</p>
+          <div class="ayur-card-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
+        <div class="ayur-card-desc">
+          <div class="ayur-card-desc-inner">
+            <span class="ayur-desc-tag">ആയുർവേദം · മനസ്സ് & ശരീരം</span>
+            <h3>ധാര</h3>
+            <p>ധാര എന്നത് ഊഷ്മള ഔഷധ ദ്രാവകങ്ങൾ — തൈലം, മോര്, ഹെർബൽ കഷായം — ശരീരത്തിലോ നെറ്റിയിലോ തുടർച്ചയായി ഒഴിക്കുന്ന ചികിത്സയാണ്. ഇത് ആഴത്തിലുള്ള വിശ്രാന്തി നൽകുകയും നാഡീ വ്യൂഹത്തെ ശാന്തമാക്കുകയും ചെയ്യുന്നു.</p>
+            <ul class="ayur-desc-benefits">
+              <li>✦ ആഴത്തിലുള്ള സ്ട്രെസ് & ഉത്കണ്ഠ ഭേദം</li>
+              <li>✦ ഉറക്കമില്ലായ്മ & മാനസിക ക്ഷീണം ചികിത്സ</li>
+              <li>✦ വാത & പിത്ത ദോഷ സന്തുലനം</li>
+              <li>✦ ചർമ്മ ഭംഗി & തിളക്കം വർദ്ധിപ്പിക്കുന്നു</li>
+            </ul>
+            <div class="ayur-desc-duration">
+              <span>⏱ സമയം: 45–60 മിനിറ്റ്</span>
+              <span>📅 കോഴ്സ്: 7–21 ദിവസം</span>
+            </div>
+            <a href="#appointment" class="ayur-desc-btn btn btn-gold" onclick="event.stopPropagation()">ധാര ബുക്ക് ചെയ്യൂ →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+      <!-- Nasyam -->
+      <div class="ayur-card" id="ayur-nasya" onclick="toggleAyurCard(this)">
+        <div class="ayur-card-img" style="height:200px;min-height:200px;overflow:hidden;flex-shrink:0;position:relative"><img style="width:100%;height:100%;object-fit:cover;object-position:center;display:block" src="Nasyam.jpg" alt="Nasyam Treatment" />
+          <div class="ayur-card-img-overlay">
+            <span class="ayur-card-tag">Ayurveda</span>
+            <div class="ayur-card-click-hint">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              Click to explore
+            </div>
+          </div>
+        </div>
+        <div class="ayur-card-front">
+          <h3>Nasyam</h3>
+          <p class="ayur-card-short">Nasal administration of medicated oils</p>
+          <div class="ayur-card-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="ayur-card-desc">
+          <div class="ayur-card-desc-inner">
+            <span class="ayur-desc-tag">Ayurveda · Head & Neck</span>
+            <h3>Nasyam</h3>
+            <p>Nasyam is the administration of medicated oils, herbal juices or powders through the nasal passages. It is highly effective for disorders of the head, neck, eyes, ears, nose and throat. It clears the sinuses, improves mental clarity, relieves headaches and enhances sensory functions.</p>
+            <ul class="ayur-desc-benefits">
+              <li>✦ Relieves chronic sinusitis & migraines</li>
+              <li>✦ Improves memory & concentration</li>
+              <li>✦ Treats cervical spondylosis</li>
+              <li>✦ Enhances sensory clarity</li>
+            </ul>
+            <div class="ayur-desc-duration">
+              <span>⏱ Duration: 30–45 mins</span>
+              <span>📅 Course: 7–14 days</span>
+            </div>
+            <a href="#appointment" class="ayur-desc-btn btn btn-gold" onclick="event.stopPropagation()">Book Nasyam →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shirovasthi -->
+      <div class="ayur-card" id="ayur-shirovasthi" onclick="toggleAyurCard(this)">
+        <div class="ayur-card-img" style="height:200px;min-height:200px;overflow:hidden;flex-shrink:0;position:relative"><img style="width:100%;height:100%;object-fit:cover;object-position:center;display:block" src="shirovasthi.jpg" alt="Shirovasthi Treatment" />
+          <div class="ayur-card-img-overlay">
+            <span class="ayur-card-tag">Ayurveda</span>
+            <div class="ayur-card-click-hint">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              Click to explore
+            </div>
+          </div>
+        </div>
+        <div class="ayur-card-front">
+          <h3>Shirovasthi</h3>
+          <p class="ayur-card-short">Warm medicated oil retained on the head</p>
+          <div class="ayur-card-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="ayur-card-desc">
+          <div class="ayur-card-desc-inner">
+            <span class="ayur-desc-tag">Ayurveda · Neurological</span>
+            <h3>Shirovasthi</h3>
+            <p>Shirovasthi involves retaining warm medicated oil on the head using a specially fitted leather cap. The oil deeply nourishes the scalp, brain and nervous system. It is one of the most powerful treatments for neurological and psychological conditions.</p>
+            <ul class="ayur-desc-benefits">
+              <li>✦ Treats facial paralysis & Bell's palsy</li>
+              <li>✦ Relieves severe headaches & insomnia</li>
+              <li>✦ Nourishes the nervous system</li>
+              <li>✦ Reduces anxiety & depression</li>
+            </ul>
+            <div class="ayur-desc-duration">
+              <span>⏱ Duration: 45–60 mins</span>
+              <span>📅 Course: 7 days</span>
+            </div>
+            <a href="#appointment" class="ayur-desc-btn btn btn-gold" onclick="event.stopPropagation()">Book Shirovasthi →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pizhichil -->
+      <div class="ayur-card" id="ayur-pizhichil" onclick="toggleAyurCard(this)">
+        <div class="ayur-card-img" style="height:200px;min-height:200px;overflow:hidden;flex-shrink:0;position:relative"><img style="width:100%;height:100%;object-fit:cover;object-position:center;display:block" src="pizhichil.jpg" alt="Pizhichil Treatment" />
+          <div class="ayur-card-img-overlay">
+            <span class="ayur-card-tag">Ayurveda</span>
+            <div class="ayur-card-click-hint">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              Click to explore
+            </div>
+          </div>
+        </div>
+        <div class="ayur-card-front">
+          <h3>Pizhichil</h3>
+          <p class="ayur-card-short">Royal oil bath — continuous warm oil pour</p>
+          <div class="ayur-card-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="ayur-card-desc">
+          <div class="ayur-card-desc-inner">
+            <span class="ayur-desc-tag">Ayurveda · Rejuvenation</span>
+            <h3>Pizhichil</h3>
+            <p>Known as the "King of Ayurvedic treatments," Pizhichil involves squeezing warm medicated oil continuously over the entire body while being gently massaged. It is deeply rejuvenating, strengthens muscles and joints, and is highly effective for rheumatic conditions.</p>
+            <ul class="ayur-desc-benefits">
+              <li>✦ Treats rheumatoid arthritis</li>
+              <li>✦ Strengthens muscles & joints</li>
+              <li>✦ Deep rejuvenation & anti-ageing</li>
+              <li>✦ Relieves body pain & stiffness</li>
+            </ul>
+            <div class="ayur-desc-duration">
+              <span>⏱ Duration: 60–90 mins</span>
+              <span>📅 Course: 7–14 days</span>
+            </div>
+            <a href="#appointment" class="ayur-desc-btn btn btn-gold" onclick="event.stopPropagation()">Book Pizhichil →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dhara -->
+      <div class="ayur-card" id="ayur-dhara" onclick="toggleAyurCard(this)">
+        <div class="ayur-card-img" style="height:200px;min-height:200px;overflow:hidden;flex-shrink:0;position:relative"><img style="width:100%;height:100%;object-fit:cover;object-position:center;display:block" src="Dhara.jpg" alt="Dhara Treatment" />
+          <div class="ayur-card-img-overlay">
+            <span class="ayur-card-tag">Ayurveda</span>
+            <div class="ayur-card-click-hint">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              Click to explore
+            </div>
+          </div>
+        </div>
+        <div class="ayur-card-front">
+          <h3>Dhara</h3>
+          <p class="ayur-card-short">Continuous stream of medicated liquid</p>
+          <div class="ayur-card-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="ayur-card-desc">
+          <div class="ayur-card-desc-inner">
+            <span class="ayur-desc-tag">Ayurveda · Mind & Body</span>
+            <h3>Dhara</h3>
+            <p>Dhara is the continuous pouring of warm medicated liquids — oil, buttermilk, herbal decoctions or milk — over the body or forehead (Shirodhara). The rhythmic flow induces deep relaxation, calms the nervous system and is profoundly healing for stress-related conditions.</p>
+            <ul class="ayur-desc-benefits">
+              <li>✦ Deep stress & anxiety relief</li>
+              <li>✦ Treats insomnia & mental fatigue</li>
+              <li>✦ Balances Vata & Pitta doshas</li>
+              <li>✦ Improves skin texture & lustre</li>
+            </ul>
+            <div class="ayur-desc-duration">
+              <span>⏱ Duration: 45–60 mins</span>
+              <span>📅 Course: 7–21 days</span>
+            </div>
+            <a href="#appointment" class="ayur-desc-btn btn btn-gold" onclick="event.stopPropagation()">Book Dhara →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     WHY CHOOSE US
+═══════════════════════════════════════════════════════════ -->
+<section class="why-us section-pad">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Why Shanthi</p>
+      <h2 class="section-heading">The <em>Shanthi Difference</em></h2>
+      <div class="gold-divider centered"></div>
+    </div>
+    <!-- Row 1: Image Left, Text Right -->
+    <div class="why-row reveal">
+      <div class="why-image">
+        <img src="pcod.png" alt="Holistic approach at Shanthi Wellness" />
+        <div class="why-img-badge">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 3L17.5 10.5L26 11.5L20 17.5L21.5 26L14 22L6.5 26L8 17.5L2 11.5L10.5 10.5L14 3Z" fill="#c89a4a"/></svg>
+          <span>Holistic</span>
+        </div>
+      </div>
+      <div class="why-text">
+        <h3 class="why-heading">A Truly Holistic Approach</h3>
+        <p class="why-para">We believe that lasting health cannot be achieved by treating the body in isolation. Our integrative model weaves together the physical, mental, emotional, and spiritual dimensions of wellbeing into a single, coherent healing journey.</p>
+        <ul class="why-list">
+          <li>
+            <span class="why-icon">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#c89a4a" stroke-width="1.5"/><path d="M5 9L8 12L13 6" stroke="#c89a4a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            Personalised treatment plans based on your unique constitution
+          </li>
+          <li>
+            <span class="why-icon">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#c89a4a" stroke-width="1.5"/><path d="M5 9L8 12L13 6" stroke="#c89a4a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            Integration of Ayurveda, Homeopathy and Physiotherapy
+          </li>
+          <li>
+            <span class="why-icon">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#c89a4a" stroke-width="1.5"/><path d="M5 9L8 12L13 6" stroke="#c89a4a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            Root-cause resolution, not symptom suppression
+          </li>
+          <li>
+            <span class="why-icon">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#c89a4a" stroke-width="1.5"/><path d="M5 9L8 12L13 6" stroke="#c89a4a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            Ongoing support and lifestyle coaching
+          </li>
+        </ul>
+      </div>
+  </div>
+</section>
+
+<!-- ORANGE DIVIDER -->
+<div class="orange-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SMALL PHOTO GRID — 6-column tight squares
+═══════════════════════════════════════════════════════════ -->
+<section class="photo-grid-sm">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Our World</p>
+      <h2 class="section-heading">Life at <em>Shanthi Wellness</em></h2>
+      <div class="gold-divider centered"></div>
+    </div>
+    <div class="photo-grid-sm-inner">
+      <div class="pg-item reveal"><img src="ritual1.jpg" alt="Shirodhara"/><div class="pg-item-overlay"><span>Shirodhara</span></div></div>
+      <div class="pg-item reveal"><img src="mock1.jpg" alt="Clinic"/><div class="pg-item-overlay"><span>Clinic</span></div></div>
+      <div class="pg-item reveal"><img src="kizhi.jpg" alt="Abhyanga"/><div class="pg-item-overlay"><span>Abhyanga</span></div></div>
+      <div class="pg-item reveal"><img src="cover.jpg" alt="Sanctuary"/><div class="pg-item-overlay"><span>Sanctuary</span></div></div>
+      <div class="pg-item reveal"><img src="ritual3.jpg" alt="Panchakarma"/><div class="pg-item-overlay"><span>Panchakarma</span></div></div>
+      <div class="pg-item reveal"><img src="Medicine.jpg" alt="Consultation"/><div class="pg-item-overlay"><span>Consultation</span></div></div>
+      <div class="pg-item reveal"><img src="ritual4.jpg" alt="Physiotherapy"/><div class="pg-item-overlay"><span>Physio</span></div></div>
+      <div class="pg-item reveal"><img src="ritual1.jpg" alt="Herbal"/><div class="pg-item-overlay"><span>Herbal</span></div></div>
+      <div class="pg-item reveal"><img src="ritual2.jpg" alt="Wellness"/><div class="pg-item-overlay"><span>Wellness</span></div></div>
+      <div class="pg-item reveal"><img src="mock1.jpg" alt="Healing"/><div class="pg-item-overlay"><span>Healing</span></div></div>
+      <div class="pg-item reveal"><img src="ritual3.jpg" alt="Detox"/><div class="pg-item-overlay"><span>Detox</span></div></div>
+      <div class="pg-item reveal"><img src="cover.jpg" alt="Nature"/><div class="pg-item-overlay"><span>Nature</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ORANGE DIVIDER -->
+<div class="orange-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PICTURE MOSAIC
+═══════════════════════════════════════════════════════════ -->
+<section class="mosaic section-pad" id="gallery">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Our Sanctuary</p>
+      <h2 class="section-heading">A Glimpse of Our <em>Sanctuary</em></h2>
+      <div class="gold-divider centered"></div>
+    </div>
+    <div class="mosaic-grid reveal">
+      <div class="mosaic-item mosaic-large">
+        <img src="cover.jpg" alt="Shanthi Wellness sanctuary" />
+        <div class="mosaic-overlay"><span>Our Sanctuary</span></div>
+      </div>
+      <div class="mosaic-item mosaic-tall">
+        <img src="mock1.jpg" alt="Treatment room" />
+        <div class="mosaic-overlay"><span>Treatment Rooms</span></div>
+      </div>
+      <div class="mosaic-item">
+        <img src="ritual1.jpg" alt="Shirodhara ritual" />
+        <div class="mosaic-overlay"><span>Shirodhara</span></div>
+      </div>
+      <div class="mosaic-item">
+        <img src="kizhi.jpg" alt="Abhyanga massage" />
+        <div class="mosaic-overlay"><span>Abhyanga</span></div>
+      </div>
+      <div class="mosaic-item mosaic-wide">
+        <img src="ritual3.jpg" alt="Panchakarma" />
+        <div class="mosaic-overlay"><span>Panchakarma</span></div>
+      </div>
+      <div class="mosaic-item">
+        <img src="Medicine.jpg" alt="Consultation" />
+        <div class="mosaic-overlay"><span>Consultation</span></div>
+      </div>
+      <div class="mosaic-item">
+        <img src="ritual4.jpg" alt="Physiotherapy" />
+        <div class="mosaic-overlay"><span>Physiotherapy</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     TESTIMONIALS
+═══════════════════════════════════════════════════════════ -->
+<section class="testimonials section-pad" id="testimonials">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Patient Stories</p>
+      <h2 class="section-heading">Words of <em>Healing</em></h2>
+      <div class="gold-divider centered"></div>
+      <p class="section-sub">The greatest measure of our work is the transformation we witness in our patients.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-quote">
+          <svg width="40" height="32" viewBox="0 0 40 32" fill="none"><path d="M0 32V20C0 13.3 2.7 7.7 8 3L11 6C8.3 8.3 6.7 11 6 14H12V32H0ZM22 32V20C22 13.3 24.7 7.7 30 3L33 6C30.3 8.3 28.7 11 28 14H34V32H22Z" fill="#c89a4a" opacity="0.4"/></svg>
+        </div>
+        <p class="testimonial-text">
+          "After years of struggling with chronic migraines and being told there was no cure, three months of Shirodhara and constitutional homeopathy at Shanthi Wellness changed my life completely. I haven't had a single episode in eight months."
+        </p>
+        <div class="testimonial-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">P</div>
+          <div>
+            <strong>Priya Nair</strong>
+            <small>Ayurveda & Homeopathy Patient</small>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card testimonial-card--featured reveal">
+        <div class="testimonial-quote">
+          <svg width="40" height="32" viewBox="0 0 40 32" fill="none"><path d="M0 32V20C0 13.3 2.7 7.7 8 3L11 6C8.3 8.3 6.7 11 6 14H12V32H0ZM22 32V20C22 13.3 24.7 7.7 30 3L33 6C30.3 8.3 28.7 11 28 14H34V32H22Z" fill="#c89a4a" opacity="0.6"/></svg>
+        </div>
+        <p class="testimonial-text">
+          "The Panchakarma programme was unlike anything I had experienced. The team at Shanthi Wellness guided me through every step with such care and expertise. I left feeling lighter, clearer, and more alive than I had in decades. This is not just a clinic — it is a sanctuary."
+        </p>
+        <div class="testimonial-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">R</div>
+          <div>
+            <strong>Rajesh Menon</strong>
+            <small>Panchakarma Programme</small>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-quote">
+          <svg width="40" height="32" viewBox="0 0 40 32" fill="none"><path d="M0 32V20C0 13.3 2.7 7.7 8 3L11 6C8.3 8.3 6.7 11 6 14H12V32H0ZM22 32V20C22 13.3 24.7 7.7 30 3L33 6C30.3 8.3 28.7 11 28 14H34V32H22Z" fill="#c89a4a" opacity="0.4"/></svg>
+        </div>
+        <p class="testimonial-text">
+          "I came to Shanthi after a knee surgery with very limited mobility. The physiotherapy team designed a rehabilitation programme that was both rigorous and compassionate. Within twelve weeks I was back to running. Their expertise is extraordinary."
+        </p>
+        <div class="testimonial-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">A</div>
+          <div>
+            <strong>Ananya Sharma</strong>
+            <small>Physiotherapy Patient</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORANGE DIVIDER -->
+<div class="orange-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PHOTO BANNER — 3-panel cinematic strip
+═══════════════════════════════════════════════════════════ -->
+<section class="photo-banner">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Healing Spaces</p>
+      <h2 class="section-heading">Inside Our <em>Sanctuary</em></h2>
+      <div class="gold-divider centered"></div>
+    </div>
+    <div class="photo-banner-grid reveal">
+      <div class="pb-panel">
+        <img src="cover.jpg" alt="Shanthi Wellness Sanctuary" />
+        <span class="pb-panel-tag">Featured</span>
+        <div class="pb-panel-info">
+          <h4>The Healing Garden</h4>
+          <p>Where nature and medicine meet in perfect harmony</p>
+        </div>
+      </div>
+      <div class="pb-panel">
+        <img src="Medicine.jpg" alt="Consultation Room" />
+        <span class="pb-panel-tag">Ayurveda</span>
+        <div class="pb-panel-info">
+          <h4>Consultation Rooms</h4>
+          <p>Private, serene spaces for your healing journey</p>
+        </div>
+      </div>
+      <div class="pb-panel">
+        <img src="ritual1.jpg" alt="Treatment Room" />
+        <span class="pb-panel-tag">Treatments</span>
+        <div class="pb-panel-info">
+          <h4>Treatment Suites</h4>
+          <p>Equipped with traditional and modern healing tools</p>
+        </div>
+      </div>
+    </div>
+    <!-- Second row of 3 panels -->
+    <div class="photo-banner-grid reveal" style="margin-top:10px;">
+      <div class="pb-panel">
+        <img src="kizhi.jpg" alt="Abhyanga" />
+        <span class="pb-panel-tag">Massage</span>
+        <div class="pb-panel-info">
+          <h4>Abhyanga Suite</h4>
+          <p>Warm oil therapies in a deeply calming environment</p>
+        </div>
+      </div>
+      <div class="pb-panel">
+        <img src="mock2.jpg" alt="Homeopathy" />
+        <span class="pb-panel-tag">Homeopathy</span>
+        <div class="pb-panel-info">
+          <h4>Homeopathy Clinic</h4>
+          <p>Classical prescribing in a thoughtful, quiet space</p>
+        </div>
+      </div>
+      <div class="pb-panel">
+        <img src="ritual4.jpg" alt="Physiotherapy" />
+        <span class="pb-panel-tag">Physio</span>
+        <div class="pb-panel-info">
+          <h4>Physiotherapy Studio</h4>
+          <p>State-of-the-art rehabilitation and movement therapy</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORANGE DIVIDER -->
+<div class="orange-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     TREATMENTS LIST
+═══════════════════════════════════════════════════════════ -->
+<section class="treatments-list section-pad">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Full Offering</p>
+      <h2 class="section-heading">Complete Treatment <em>Menu</em></h2>
+      <div class="gold-divider centered"></div>
+      <p class="section-sub">Every treatment is delivered with clinical precision and the warmth of traditional healing.</p>
+    </div>
+    <div class="treatments-menu-grid">
+      <!-- Ayurveda treatments -->
+      <div class="treatment-menu-card reveal">
+        <div class="tmc-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="#c89a4a" stroke-width="1" fill="rgba(200,154,74,0.06)"/><path d="M18 6 C18 6 10 12 10 20 C10 24.4 13.6 28 18 28 C22.4 28 26 24.4 26 20 C26 12 18 6 18 6Z" fill="rgba(200,154,74,0.2)" stroke="#c89a4a" stroke-width="1.2"/><circle cx="18" cy="20" r="3" fill="#c89a4a" opacity="0.5"/></svg>
+        </div>
+        <div class="tmc-tag">Ayurveda</div>
+        <h4 class="tmc-title">Panchakarma</h4>
+        <p class="tmc-desc">The classical five-fold purification therapy — a comprehensive detoxification and rejuvenation programme spanning 7 to 21 days.</p>
+        <a href="#appointment" class="tmc-link">Enquire →</a>
+      </div>
+      <div class="treatment-menu-card reveal">
+        <div class="tmc-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="#c89a4a" stroke-width="1" fill="rgba(200,154,74,0.06)"/><path d="M18 8 Q14 14 14 20 Q14 24 18 26 Q22 24 22 20 Q22 14 18 8Z" fill="rgba(200,154,74,0.2)" stroke="#c89a4a" stroke-width="1.2"/><line x1="18" y1="26" x2="18" y2="30" stroke="#c89a4a" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="tmc-tag">Ayurveda</div>
+        <h4 class="tmc-title">Shirodhara</h4>
+        <p class="tmc-desc">A continuous stream of warm medicated oil poured over the forehead — profoundly calming for the nervous system and mind.</p>
+        <a href="#appointment" class="tmc-link">Enquire →</a>
+      </div>
+      <div class="treatment-menu-card reveal">
+        <div class="tmc-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="#c89a4a" stroke-width="1" fill="rgba(200,154,74,0.06)"/><ellipse cx="18" cy="18" rx="8" ry="10" fill="rgba(200,154,74,0.15)" stroke="#c89a4a" stroke-width="1.2"/><path d="M12 14 Q18 10 24 14" stroke="#c89a4a" stroke-width="1" fill="none" stroke-linecap="round"/><path d="M12 18 Q18 14 24 18" stroke="#c89a4a" stroke-width="1" fill="none" stroke-linecap="round"/><path d="M12 22 Q18 18 24 22" stroke="#c89a4a" stroke-width="1" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <div class="tmc-tag">Ayurveda</div>
+        <h4 class="tmc-title">Abhyanga</h4>
+        <p class="tmc-desc">A full-body warm oil massage using dosha-specific herbal oils to nourish tissues, improve circulation, and calm the nervous system.</p>
+        <a href="#appointment" class="tmc-link">Enquire →</a>
+      </div>
+      <!-- Homeopathy treatments -->
+      <div class="treatment-menu-card reveal">
+        <div class="tmc-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="#c89a4a" stroke-width="1" fill="rgba(200,154,74,0.06)"/><rect x="14" y="8" width="8" height="20" rx="4" fill="rgba(200,154,74,0.2)" stroke="#c89a4a" stroke-width="1.2"/><circle cx="18" cy="24" r="2.5" fill="#c89a4a" opacity="0.6"/></svg>
+        </div>
+        <div class="tmc-tag">Homeopathy</div>
+        <h4 class="tmc-title">Constitutional Homeopathy</h4>
+        <p class="tmc-desc">Deep-acting constitutional prescribing that addresses your fundamental susceptibility and restores vital force at the deepest level.</p>
+        <a href="#appointment" class="tmc-link">Enquire →</a>
+      </div>
+      <div class="treatment-menu-card reveal">
+        <div class="tmc-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="#c89a4a" stroke-width="1" fill="rgba(200,154,74,0.06)"/><path d="M12 22 L18 10 L24 22 Q24 28 18 28 Q12 28 12 22Z" fill="rgba(200,154,74,0.2)" stroke="#c89a4a" stroke-width="1.2"/><circle cx="18" cy="22" r="2" fill="#c89a4a" opacity="0.5"/></svg>
+        </div>
+        <div class="tmc-tag">Homeopathy</div>
+        <h4 class="tmc-title">Acute Care</h4>
+        <p class="tmc-desc">Rapid, targeted homeopathic prescribing for acute conditions — infections, injuries, fevers, and sudden onset illnesses.</p>
+        <a href="#appointment" class="tmc-link">Enquire →</a>
+      </div>
+      <div class="treatment-menu-card reveal">
+        <div class="tmc-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="#c89a4a" stroke-width="1" fill="rgba(200,154,74,0.06)"/><path d="M10 18 Q10 10 18 10 Q26 10 26 18 Q26 26 18 26 Q10 26 10 18Z" fill="rgba(200,154,74,0.15)" stroke="#c89a4a" stroke-width="1.2"/><path d="M14 18 Q14 14 18 14 Q22 14 22 18" stroke="#c89a4a" stroke-width="1" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <div class="tmc-tag">Homeopathy</div>
+        <h4 class="tmc-title">Chronic Disease Management</h4>
+        <p class="tmc-desc">Long-term homeopathic management of chronic conditions including autoimmune disorders, allergies, hormonal imbalances, and more.</p>
+        <a href="#appointment" class="tmc-link">Enquire →</a>
+      </div>
+      <!-- Physiotherapy treatments -->
+      <div class="treatment-menu-card reveal">
+        <div class="tmc-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="#c89a4a" stroke-width="1" fill="rgba(200,154,74,0.06)"/><circle cx="18" cy="10" r="3" stroke="#c89a4a" stroke-width="1.2" fill="rgba(200,154,74,0.2)"/><line x1="18" y1="13" x2="18" y2="24" stroke="#c89a4a" stroke-width="1.8" stroke-linecap="round"/><path d="M18 18 L13 22" stroke="#c89a4a" stroke-width="1.5" stroke-linecap="round"/><path d="M18 18 L23 22" stroke="#c89a4a" stroke-width="1.5" stroke-linecap="round"/><path d="M18 24 L15 30" stroke="#c89a4a" stroke-width="1.5" stroke-linecap="round"/><path d="M18 24 L21 30" stroke="#c89a4a" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="tmc-tag">Physiotherapy</div>
+        <h4 class="tmc-title">Manual Therapy</h4>
+        <p class="tmc-desc">Skilled hands-on techniques including joint mobilisation, manipulation, and soft tissue therapy to restore movement and reduce pain.</p>
+        <a href="#appointment" class="tmc-link">Enquire →</a>
+      </div>
+      <div class="treatment-menu-card reveal">
+        <div class="tmc-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="#c89a4a" stroke-width="1" fill="rgba(200,154,74,0.06)"/><path d="M10 26 Q14 16 18 14 Q22 12 26 16" stroke="#c89a4a" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="26" cy="16" r="2.5" fill="#c89a4a" opacity="0.5"/><path d="M10 26 L14 22" stroke="#c89a4a" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="tmc-tag">Physiotherapy</div>
+        <h4 class="tmc-title">Exercise Rehabilitation</h4>
+        <p class="tmc-desc">Structured therapeutic exercise programmes designed to rebuild strength, flexibility, and functional movement after injury or surgery.</p>
+        <a href="#appointment" class="tmc-link">Enquire →</a>
+      </div>
+      <div class="treatment-menu-card reveal">
+        <div class="tmc-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="#c89a4a" stroke-width="1" fill="rgba(200,154,74,0.06)"/><path d="M10 20 L14 14 L18 18 L22 10 L26 16" stroke="#c89a4a" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="18" r="2" fill="#c89a4a" opacity="0.6"/></svg>
+        </div>
+        <div class="tmc-tag">Physiotherapy</div>
+        <h4 class="tmc-title">Sports Injury</h4>
+        <p class="tmc-desc">Specialist assessment and rehabilitation for sports injuries — from acute sprains to complex overuse conditions and performance optimisation.</p>
+        <a href="#appointment" class="tmc-link">Enquire →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     APPOINTMENT CTA
+═══════════════════════════════════════════════════════════ -->
+<section class="appointment section-pad" id="appointment">
+  <div class="appointment-overlay"></div>
+  <div class="container">
+    <div class="appointment-inner reveal">
+      <p class="section-eyebrow light">Take the First Step</p>
+      <h2 class="section-heading light">Begin Your <em>Healing Journey</em></h2>
+      <div class="gold-divider centered"></div>
+      <p class="appointment-sub">Book a consultation with one of our specialists. We will listen, understand, and craft a healing path uniquely yours.</p>
+      <form class="appointment-form" id="appointmentForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 00000 00000" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="service">Service</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <optgroup label="Ayurveda">
+                <option value="panchakarma">Panchakarma</option>
+                <option value="shirodhara">Shirodhara</option>
+                <option value="abhyanga">Abhyanga</option>
+                <option value="ayurveda-consult">Ayurveda Consultation</option>
+              </optgroup>
+              <optgroup label="Homeopathy">
+                <option value="constitutional">Constitutional Homeopathy</option>
+                <option value="acute">Acute Care</option>
+                <option value="chronic">Chronic Disease Management</option>
+              </optgroup>
+              <optgroup label="Physiotherapy">
+                <option value="manual">Manual Therapy</option>
+                <option value="exercise-rehab">Exercise Rehabilitation</option>
+                <option value="sports">Sports Injury</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" required />
+          </div>
+        </div>
+        <div class="form-group form-group--full">
+          <label for="message">Message (Optional)</label>
+          <textarea id="message" name="message" rows="3" placeholder="Tell us briefly about your health concern..."></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn btn-gold btn-large">
+            <span>Book My Consultation</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10H16M10 4L16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CONTACT SECTION
+═══════════════════════════════════════════════════════════ -->
+<section class="contact section-pad" id="contact">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Find Us</p>
+      <h2 class="section-heading">Get in <em>Touch</em></h2>
+      <div class="gold-divider centered"></div>
+    </div>
+    <div class="contact-grid">
+      <!-- Address -->
+      <div class="contact-card reveal">
+        <div class="contact-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="#c89a4a" stroke-width="1.5" fill="rgba(200,154,74,0.08)"/><path d="M16 8C12.7 8 10 10.7 10 14C10 18.5 16 24 16 24C16 24 22 18.5 22 14C22 10.7 19.3 8 16 8Z" stroke="#c89a4a" stroke-width="1.5" fill="rgba(200,154,74,0.15)"/><circle cx="16" cy="14" r="2.5" fill="#c89a4a"/></svg>
+        </div>
+        <h4 class="contact-card-title">Our Address</h4>
+        <p class="contact-card-text">
+          Shanthi Wellness Centre<br />
+          42, Healing Grove Road<br />
+          Koramangala, Bengaluru<br />
+          Karnataka — 560 034
+        </p>
+        <a href="#" class="contact-link">Get Directions →</a>
+      </div>
+      <!-- Phone & Hours -->
+      <div class="contact-card reveal">
+        <div class="contact-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="#c89a4a" stroke-width="1.5" fill="rgba(200,154,74,0.08)"/><path d="M11 9H15L17 13L14.5 14.5C15.5 16.5 17.5 18.5 19.5 19.5L21 17L25 19V23C25 23 22 26 16 22C10 18 9 12 9 12L11 9Z" stroke="#c89a4a" stroke-width="1.5" fill="rgba(200,154,74,0.15)" stroke-linejoin="round"/></svg>
+        </div>
+        <h4 class="contact-card-title">Phone & Hours</h4>
+        <p class="contact-card-text">
+          <strong>+91 98765 43210</strong><br />
+          <strong>+91 80 2345 6789</strong><br /><br />
+          Mon – Sat: 8:00 AM – 7:00 PM<br />
+          Sunday: 9:00 AM – 1:00 PM
+        </p>
+        <a href="tel:+919876543210" class="contact-link">Call Now →</a>
+      </div>
+      <!-- Map Placeholder -->
+      <div class="contact-card contact-card--map reveal">
+        <div class="contact-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="#c89a4a" stroke-width="1.5" fill="rgba(200,154,74,0.08)"/><rect x="8" y="10" width="16" height="12" rx="1" stroke="#c89a4a" stroke-width="1.5" fill="rgba(200,154,74,0.1)"/><path d="M8 14H24" stroke="#c89a4a" stroke-width="1"/><path d="M14 14V22" stroke="#c89a4a" stroke-width="1"/></svg>
+        </div>
+        <h4 class="contact-card-title">Find Us on Map</h4>
+        <div class="map-placeholder">
+          <div class="map-inner">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M24 6C17.4 6 12 11.4 12 18C12 27 24 42 24 42C24 42 36 27 36 18C36 11.4 30.6 6 24 6Z" fill="rgba(200,154,74,0.3)" stroke="#c89a4a" stroke-width="2"/><circle cx="24" cy="18" r="5" fill="#c89a4a"/></svg>
+            <p>Koramangala, Bengaluru</p>
+            <small>Interactive map coming soon</small>
+          </div>
+        </div>
+        <a href="#" class="contact-link">Open in Maps →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo-link">
+            <img src="logo.png" alt="Shanthi Wellness" class="footer-logo-img" />
+          </a>
+          <p class="footer-tagline">Ancient Wisdom. Modern Healing.<br />Your sanctuary of holistic health.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 2H15C13.7 2 12.4 2.5 11.5 3.5C10.5 4.4 10 5.7 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.7 14.1 6.4 14.3 6.2C14.6 6 14.8 5.9 15 5.9H18V2Z" stroke="#c89a4a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#c89a4a" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="#c89a4a" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="#c89a4a"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22.5 6.5C22.2 5.4 21.4 4.5 20.3 4.3C18.4 4 12 4 12 4C12 4 5.6 4 3.7 4.3C2.6 4.5 1.8 5.4 1.5 6.5C1.2 8.4 1.2 12 1.2 12C1.2 12 1.2 15.6 1.5 17.5C1.8 18.6 2.6 19.5 3.7 19.7C5.6 20 12 20 12 20C12 20 18.4 20 20.3 19.7C21.4 19.5 22.2 18.6 22.5 17.5C22.8 15.6 22.8 12 22.8 12C22.8 12 22.8 8.4 22.5 6.5Z" stroke="#c89a4a" stroke-width="1.5"/><path d="M10 15.5L15.5 12L10 8.5V15.5Z" stroke="#c89a4a" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="WhatsApp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 11.5C21 16.7 16.7 21 11.5 21C9.8 21 8.2 20.5 6.8 19.7L3 21L4.3 17.2C3.5 15.8 3 14.2 3 12.5C3 7.3 7.3 3 12.5 3C17.7 3 22 7.3 22 12.5" stroke="#c89a4a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 10C9 10 9.5 11 10.5 12C11.5 13 12.5 13.5 12.5 13.5L14 12L16 14C16 14 14.5 16 12.5 15C10.5 14 9 12 8.5 11L9 10Z" stroke="#c89a4a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h5 class="footer-col-title">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#treatments">Treatments</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+          </ul>
+        </div>
+        <!-- Services -->
+        <div class="footer-col">
+          <h5 class="footer-col-title">Our Services</h5>
+          <ul class="footer-links">
+            <li><a href="#services">Ayurveda</a></li>
+            <li><a href="#services">Homeopathy</a></li>
+            <li><a href="#services">Physiotherapy</a></li>
+            <li><a href="#treatments">Panchakarma</a></li>
+            <li><a href="#treatments">Shirodhara</a></li>
+            <li><a href="#treatments">Abhyanga</a></li>
+          </ul>
+        </div>
+        <!-- Contact -->
+        <div class="footer-col">
+          <h5 class="footer-col-title">Contact</h5>
+          <ul class="footer-contact-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14.5 8 14.5C8 14.5 12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5Z" stroke="#c89a4a" stroke-width="1.2"/><circle cx="8" cy="6" r="1.5" fill="#c89a4a"/></svg>
+              42 Healing Grove Road, Koramangala, Bengaluru
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 7.5C13 11 8 14.5 8 14.5C8 14.5 3 11 3 7.5C3 4.7 5.2 2.5 8 2.5C10.8 2.5 13 4.7 13 7.5Z" stroke="#c89a4a" stroke-width="1.2" fill="none"/><path d="M5.5 5.5L6.5 7L5.5 7.5C6 8.5 7.5 10 8.5 10.5L9 9.5L10.5 10.5C10.5 10.5 9.5 12 8.5 11.5C6.5 10.5 5.5 9 5 8L5.5 5.5Z" fill="#c89a4a" opacity="0.7"/></svg>
+              +91 98765 43210
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="10" rx="1.5" stroke="#c89a4a" stroke-width="1.2"/><path d="M2 5.5L8 9.5L14 5.5" stroke="#c89a4a" stroke-width="1.2" stroke-linecap="round"/></svg>
+              hello@shanthiwellness.in
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2025 Shanthi Wellness. All rights reserved.</p>
+      <p class="footer-credits">Crafted with care for holistic healing.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
