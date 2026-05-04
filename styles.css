@@ -21,7 +21,7 @@ body {
   line-height: 1.7;
   overflow-x: hidden;
 }
-img { display: block; width: 100%; height: 100%; object-fit: cover; }
+img { display: block; width: 100%; height: auto; object-fit: cover; }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
@@ -5294,4 +5294,528 @@ body { padding-top: 140px !important; }
   grid-template-columns: repeat(4, 1fr) !important;
   gap: 20px !important;
   align-items: start !important;
+}
+
+/* Restore height:100% only for specific containers that need it */
+.hero-photo-panel img,
+.hero-panel-img,
+.about-img-main img,
+.about-img-secondary img,
+.why-image img,
+.mosaic-item img,
+.treatment-block img,
+.photo-thumb img,
+.pg-item img,
+.pb-panel img,
+.hpg-block img,
+.hero-thumb img,
+.cc-circle img,
+.photo-thumb-c img,
+.photo-carousel-track .photo-thumb-c img {
+  height: 100% !important;
+}
+
+/* Ayur card images — fixed height, never stretch */
+.ayur-card-img img {
+  height: 200px !important;
+  max-height: 200px !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  display: block !important;
+}
+.ayur-card-img {
+  height: 200px !important;
+  max-height: 200px !important;
+  overflow: hidden !important;
+  flex-shrink: 0 !important;
+}
+
+/* ── Footer bottom bar — distinct matching color ─────────── */
+.footer-bottom {
+  background: linear-gradient(90deg, #3a8a3a, #2d7a2d) !important;
+  border-top: none !important;
+  padding: 18px 0 !important;
+}
+.footer-bottom p {
+  color: #ffffff !important;
+  font-size: 0.82rem !important;
+  font-weight: 500 !important;
+}
+.footer-bottom .footer-credits {
+  color: rgba(255,255,255,0.75) !important;
+  font-style: italic !important;
+}
+.footer-bottom .container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+/* ══════════════════════════════════════════════════════════
+   FULL MOBILE RESPONSIVE — Phone & Tablet
+══════════════════════════════════════════════════════════ */
+
+/* ── Tablet (max 1024px) ─────────────────────────────────── */
+@media (max-width: 1024px) {
+  .container { padding: 0 24px !important; }
+  .section-pad { padding: 70px 0 !important; }
+
+  /* Hero */
+  .hero { grid-template-columns: 100px 1fr 44% !important; }
+
+  /* About */
+  .about-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .about-text { padding-right: 0 !important; }
+  .about-img-main { width: 70% !important; }
+
+  /* Services / Treatments */
+  .services-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+  .treatments-grid { grid-template-columns: repeat(2,1fr) !important; }
+  .treatments-menu-grid { grid-template-columns: repeat(2,1fr) !important; }
+
+  /* Why us */
+  .why-row { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .why-row--reverse { direction: ltr !important; }
+
+  /* Testimonials */
+  .testimonials-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+  .testimonial-card--featured { transform: none !important; }
+
+  /* Contact */
+  .contact-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
+  .footer-brand { grid-column: span 2 !important; }
+
+  /* Mosaic */
+  .mosaic-grid { grid-template-columns: repeat(3,1fr) !important; }
+  .mosaic-large { grid-column: span 2 !important; }
+
+  /* Photo grid */
+  .photo-grid-sm-inner { grid-template-columns: repeat(4,1fr) !important; }
+
+  /* Carousel */
+  .cc-item { flex: 0 0 calc(50% - 12px) !important; }
+  .cc-circle { width: 180px !important; height: 180px !important; }
+
+  /* Ayur cards */
+  #ayur-treatments > div > div:last-child {
+    grid-template-columns: repeat(2,1fr) !important;
+  }
+
+  /* Form */
+  .form-row { grid-template-columns: 1fr !important; }
+}
+
+/* ── Mobile (max 768px) ──────────────────────────────────── */
+@media (max-width: 768px) {
+  body { padding-top: 108px !important; }
+  .container { padding: 0 16px !important; }
+  .section-pad { padding: 56px 0 !important; }
+  .section-heading { font-size: clamp(1.6rem,6vw,2.2rem) !important; }
+  .section-sub { font-size: 0.88rem !important; }
+  .section-header { margin-bottom: 40px !important; }
+
+  /* Navbar */
+  .navbar-topbar-inner { padding: 0 16px !important; flex-wrap: wrap !important; gap: 6px !important; }
+  .navbar-phone { font-size: 0.72rem !important; }
+  .navbar-appt-btn { padding: 6px 14px !important; font-size: 0.72rem !important; }
+  .navbar-main-inner { padding: 0 16px !important; }
+  .nav-logo-img { height: 60px !important; max-width: 220px !important; }
+
+  /* Hero — stack vertically */
+  .hero {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+  .hero-thumb-strip {
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100% !important;
+    height: 80px !important;
+    min-height: 80px !important;
+    padding: 0 !important;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(196,168,130,0.25) !important;
+    overflow: hidden !important;
+  }
+  .hero-thumb {
+    flex: 1 !important;
+    border-bottom: none !important;
+    border-right: 1px solid rgba(196,168,130,0.18) !important;
+    height: 80px !important;
+  }
+  .hero-thumb:last-child { border-right: none !important; }
+  .hero-content {
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 32px 20px 36px !important;
+    text-align: center !important;
+  }
+  .hero-content::before, .hero-content::after { display: none !important; }
+  .hero-eyebrow { justify-content: center !important; }
+  .hero-eyebrow::before { display: none !important; }
+  .hero-logo-display { margin: 0 auto 20px !important; }
+  .hero-heading { font-size: clamp(1.8rem,7vw,2.8rem) !important; }
+  .hero-sub { margin-left: auto !important; margin-right: auto !important; }
+  .hero-ctas { justify-content: center !important; flex-direction: column !important; align-items: center !important; }
+  .hero-ctas .btn { width: 100% !important; max-width: 280px !important; justify-content: center !important; }
+  .hero-features { justify-content: center !important; }
+  .hero-scroll-hint { align-items: center !important; }
+  .hero-badge { top: 88px !important; right: 12px !important; }
+  .badge-inner { width: 60px !important; height: 60px !important; font-size: 0.78rem !important; }
+  .hero-photo-panel {
+    width: 100% !important;
+    height: 55vw !important;
+    min-height: 240px !important;
+    max-height: 380px !important;
+  }
+  .hero-stat-card--top { top: 12px !important; left: 12px !important; min-width: 90px !important; padding: 10px 14px !important; }
+  .hero-stat-card--bottom { bottom: 12px !important; left: 12px !important; min-width: 90px !important; padding: 10px 14px !important; }
+  .hsc-num { font-size: 1.5rem !important; }
+  .hero-panel-thumb { width: 80px !important; bottom: 12px !important; right: 12px !important; }
+  .hero-panel-thumb img { height: 60px !important; }
+
+  /* Marquee */
+  .marquee-track span { font-size: 0.85rem !important; padding: 0 12px !important; }
+
+  /* Photo carousel */
+  .photo-thumb-c { width: 130px !important; height: 130px !important; }
+
+  /* About */
+  .about-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .about-img-main { width: 100% !important; }
+  .about-img-secondary { width: 45% !important; bottom: -16px !important; }
+  .about-stats { flex-wrap: wrap !important; gap: 16px !important; }
+  .stat-item { flex: 1 1 40% !important; }
+  .stat-divider { display: none !important; }
+
+  /* Circular carousel */
+  .cc-item { flex: 0 0 100% !important; }
+  .cc-circle { width: 200px !important; height: 200px !important; }
+  .circle-carousel-outer { gap: 8px !important; }
+  .cc-btn { width: 38px !important; height: 38px !important; font-size: 1rem !important; }
+
+  /* Ayur cards — 1 column on mobile */
+  #ayur-treatments > div > div:last-child {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Services */
+  .services-grid { grid-template-columns: 1fr !important; }
+
+  /* Treatments */
+  .treatments-grid { grid-template-columns: 1fr !important; }
+  .treatment-block { aspect-ratio: 16/9 !important; }
+
+  /* Why us */
+  .why-row { grid-template-columns: 1fr !important; gap: 24px !important; }
+  .why-row--reverse { direction: ltr !important; }
+  .why-img-badge, .why-img-badge--right { left: 12px !important; right: auto !important; bottom: -12px !important; }
+
+  /* Mosaic */
+  .mosaic-grid { grid-template-columns: repeat(2,1fr) !important; }
+  .mosaic-large { grid-column: span 2 !important; }
+  .mosaic-tall { grid-row: span 1 !important; }
+  .mosaic-wide { grid-column: span 2 !important; }
+
+  /* Testimonials */
+  .testimonials-grid { grid-template-columns: 1fr !important; }
+  .testimonial-card--featured { transform: none !important; }
+
+  /* Photo banner */
+  .photo-banner-grid { grid-template-columns: 1fr !important; height: auto !important; }
+  .photo-banner-grid .pb-panel { height: 200px !important; }
+  .photo-banner-grid .pb-panel:last-child { grid-column: span 1 !important; }
+
+  /* Treatments menu */
+  .treatments-menu-grid { grid-template-columns: 1fr !important; }
+
+  /* Appointment form */
+  .appointment-form { padding: 24px 16px !important; }
+  .form-row { grid-template-columns: 1fr !important; gap: 14px !important; }
+
+  /* Contact */
+  .contact-grid { grid-template-columns: 1fr !important; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .footer-brand { grid-column: span 1 !important; }
+  .footer-bottom .container { flex-direction: column !important; gap: 6px !important; text-align: center !important; }
+  .footer-logo-img { height: 52px !important; }
+
+  /* Photo grid */
+  .photo-grid-sm-inner { grid-template-columns: repeat(3,1fr) !important; }
+
+  /* Nav drawer */
+  .nav-drawer { width: 85% !important; max-width: 300px !important; }
+  .nav-drawer-logo { height: 70px !important; }
+}
+
+/* ── Small phones (max 480px) ────────────────────────────── */
+@media (max-width: 480px) {
+  body { padding-top: 100px !important; }
+  .navbar-topbar { display: none !important; } /* Hide topbar on very small screens */
+  body { padding-top: 80px !important; }
+
+  .hero-thumb-strip { height: 70px !important; }
+  .hero-thumb { height: 70px !important; }
+  .hero-heading { font-size: 1.8rem !important; }
+  .hero-photo-panel { height: 60vw !important; }
+
+  .photo-grid-sm-inner { grid-template-columns: repeat(2,1fr) !important; }
+  .treatments-grid { grid-template-columns: 1fr !important; }
+  .cc-circle { width: 170px !important; height: 170px !important; }
+
+  .section-heading { font-size: 1.5rem !important; }
+  .about-stats { flex-direction: column !important; align-items: center !important; }
+  .stat-item { text-align: center !important; flex: 1 1 100% !important; }
+
+  .btn { padding: 12px 22px !important; font-size: 0.78rem !important; }
+  .btn-large { padding: 14px 28px !important; font-size: 0.88rem !important; }
+
+  .footer-grid { gap: 20px !important; }
+  .footer-logo-img { height: 44px !important; }
+}
+
+/* ══════════════════════════════════════════════════════════
+   FIX: Remove extra space at top + Better animations
+══════════════════════════════════════════════════════════ */
+
+/* Fix body padding — match exact navbar height */
+body {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Navbar height calculation:
+   topbar ~38px + main row ~90px = ~128px total */
+.hero,
+section:first-of-type,
+#home {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* The hero section should start right below navbar */
+.hero {
+  margin-top: 128px !important;
+}
+
+/* On mobile — topbar hidden, only main row ~80px */
+@media (max-width: 480px) {
+  .hero { margin-top: 80px !important; }
+}
+@media (max-width: 768px) and (min-width: 481px) {
+  .hero { margin-top: 108px !important; }
+}
+
+/* Fix: topbar hidden on small screens — no gap */
+@media (max-width: 480px) {
+  .navbar-topbar { display: none !important; }
+  .navbar { top: 0 !important; }
+}
+
+/* ── ATTRACTIVE PAGE ANIMATIONS ──────────────────────────── */
+
+/* 1. Navbar — slide down on load */
+.navbar {
+  animation: navSlideDown 0.6s ease both !important;
+}
+@keyframes navSlideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to   { transform: translateY(0);     opacity: 1; }
+}
+
+/* 2. Hero content — fade in from left */
+.hero-content {
+  animation: heroContentIn 0.9s ease 0.3s both !important;
+}
+@keyframes heroContentIn {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* 3. Hero photo — fade in from right */
+.hero-photo-panel {
+  animation: heroPanelIn 0.9s ease 0.2s both !important;
+}
+@keyframes heroPanelIn {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* 4. Hero thumb strip — slide in from left */
+.hero-thumb-strip {
+  animation: thumbStripIn 0.7s ease 0.1s both !important;
+}
+@keyframes thumbStripIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* 5. Marquee strip — fade in */
+.marquee-strip {
+  animation: fadeInUp 0.6s ease 0.4s both !important;
+}
+
+/* 6. Section headers — slide up */
+.section-header {
+  animation: fadeInUp 0.7s ease both !important;
+}
+
+/* 7. Cards — stagger pop in on scroll (via reveal class) */
+.service-card.visible,
+.testimonial-card.visible,
+.treatment-menu-card.visible,
+.contact-card.visible {
+  animation: cardPopIn 0.5s cubic-bezier(0.34,1.56,0.64,1) both !important;
+}
+@keyframes cardPopIn {
+  from { opacity: 0; transform: scale(0.92) translateY(20px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* 8. About images — parallax-like entrance */
+.about-img-main {
+  animation: imgSlideLeft 0.8s ease 0.2s both !important;
+}
+.about-img-secondary {
+  animation: imgSlideRight 0.8s ease 0.4s both !important;
+}
+@keyframes imgSlideLeft {
+  from { opacity: 0; transform: translateX(-40px) scale(0.95); }
+  to   { opacity: 1; transform: translateX(0) scale(1); }
+}
+@keyframes imgSlideRight {
+  from { opacity: 0; transform: translateX(40px) scale(0.95); }
+  to   { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+/* 9. Gold divider — width expand animation */
+.gold-divider.visible,
+.orange-divider.visible {
+  animation: dividerExpand 0.8s ease both !important;
+}
+
+/* 10. Stat numbers — bounce in */
+.stat-item.visible .stat-num {
+  animation: numBounce 0.6s cubic-bezier(0.34,1.56,0.64,1) both !important;
+}
+@keyframes numBounce {
+  from { opacity: 0; transform: scale(0.5); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* 11. Why-us rows — alternate slide */
+.why-row:nth-child(odd).visible  { animation: slideFromLeft  0.7s ease both !important; }
+.why-row:nth-child(even).visible { animation: slideFromRight 0.7s ease both !important; }
+@keyframes slideFromLeft  { from { opacity:0; transform:translateX(-40px); } to { opacity:1; transform:translateX(0); } }
+@keyframes slideFromRight { from { opacity:0; transform:translateX(40px);  } to { opacity:1; transform:translateX(0); } }
+
+/* 12. Mosaic items — zoom in stagger */
+.mosaic-item.visible {
+  animation: mosaicZoom 0.5s ease both !important;
+}
+@keyframes mosaicZoom {
+  from { opacity: 0; transform: scale(0.88); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* 13. Testimonial cards — swing in */
+.testimonial-card.visible {
+  animation: swingIn 0.6s ease both !important;
+}
+@keyframes swingIn {
+  0%   { opacity: 0; transform: rotate(-3deg) translateY(20px); }
+  60%  { transform: rotate(1deg) translateY(-4px); }
+  100% { opacity: 1; transform: rotate(0) translateY(0); }
+}
+
+/* 14. Photo banner panels — scale in */
+.pb-panel.visible {
+  animation: panelScale 0.6s ease both !important;
+}
+@keyframes panelScale {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* 15. Footer — fade up */
+.footer {
+  animation: fadeInUp 0.7s ease both !important;
+}
+
+/* 16. Circular carousel items — pop in */
+.cc-item {
+  animation: ccItemIn 0.5s ease both !important;
+}
+.cc-item:nth-child(1) { animation-delay: 0.0s !important; }
+.cc-item:nth-child(2) { animation-delay: 0.1s !important; }
+.cc-item:nth-child(3) { animation-delay: 0.2s !important; }
+@keyframes ccItemIn {
+  from { opacity: 0; transform: translateY(24px) scale(0.95); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* 17. Ayur cards — flip in */
+.ayur-card {
+  animation: ayurFlipIn 0.6s ease both !important;
+}
+.ayur-card:nth-child(1) { animation-delay: 0.0s !important; }
+.ayur-card:nth-child(2) { animation-delay: 0.12s !important; }
+.ayur-card:nth-child(3) { animation-delay: 0.24s !important; }
+.ayur-card:nth-child(4) { animation-delay: 0.36s !important; }
+@keyframes ayurFlipIn {
+  from { opacity: 0; transform: perspective(600px) rotateX(-15deg) translateY(20px); }
+  to   { opacity: 1; transform: perspective(600px) rotateX(0deg) translateY(0); }
+}
+
+/* 18. Treatment menu cards — wave in */
+.treatment-menu-card.visible {
+  animation: waveIn 0.5s ease both !important;
+}
+
+/* 19. Contact cards — bounce in */
+.contact-card.visible {
+  animation: bounceIn 0.6s ease both !important;
+}
+
+/* 20. Appointment form — slide up */
+.appointment-form {
+  animation: slideUpFade 0.7s ease 0.2s both !important;
+}
+
+/* Hover micro-interactions */
+.nav-drawer-link {
+  transition: padding-left 0.3s ease, color 0.3s ease, background 0.3s ease !important;
+}
+.nav-drawer-link:hover {
+  padding-left: 36px !important;
+  color: #A08060 !important;
+  background: rgba(196,168,130,0.08) !important;
+}
+
+.cc-book-btn:hover {
+  transform: translateY(-3px) scale(1.05) !important;
+}
+
+.footer-links a {
+  transition: padding-left 0.3s ease, color 0.3s ease !important;
+}
+.footer-links a:hover {
+  padding-left: 8px !important;
+}
+
+.social-icon {
+  transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), background 0.3s ease, border-color 0.3s ease !important;
+}
+.social-icon:hover {
+  transform: scale(1.15) translateY(-2px) !important;
 }

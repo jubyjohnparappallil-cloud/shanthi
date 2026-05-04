@@ -251,8 +251,8 @@
       <div class="photo-thumb-c"><img src="mock2.jpg" alt="Treatment"/><span>Treatment</span></div>
       <div class="photo-thumb-c"><img src="ritual4.jpg" alt="Physiotherapy"/><span>Physiotherapy</span></div>
       <div class="photo-thumb-c"><img src="herbal.jpg" alt="Herbal"/><span>Herbal</span></div>
-      <div class="photo-thumb-c"><img src="well.jpg" alt="Wellness"/><span>Wellness</span></div>
-      <div class="photo-thumb-c"><img src="mudra.jpg" alt="Mudra"/><span>Mudra</span></div>
+      <div class="photo-thumb-c"><img src="pizhichil.jpg" alt="Wellness"/><span>Wellness</span></div>
+      <div class="photo-thumb-c"><img src="Dhara.jpg" alt="Mudra"/><span>Mudra</span></div>
       <div class="photo-thumb-c"><img src="ritual3.jpg" alt="Healing"/><span>Healing</span></div>
       <!-- Duplicate for seamless loop -->
       <div class="photo-thumb-c"><img src="flower.jpg" alt="Shirodhara"/><span>Shirodhara</span></div>
@@ -262,8 +262,8 @@
       <div class="photo-thumb-c"><img src="mock2.jpg" alt="Treatment"/><span>Treatment</span></div>
       <div class="photo-thumb-c"><img src="ritual4.jpg" alt="Physiotherapy"/><span>Physiotherapy</span></div>
       <div class="photo-thumb-c"><img src="herbal.jpg" alt="Herbal"/><span>Herbal</span></div>
-      <div class="photo-thumb-c"><img src="well.jpg" alt="Wellness"/><span>Wellness</span></div>
-      <div class="photo-thumb-c"><img src="mudra.jpg" alt="Mudra"/><span>Mudra</span></div>
+      <div class="photo-thumb-c"><img src="pizhichil.jpg" alt="Wellness"/><span>Wellness</span></div>
+      <div class="photo-thumb-c"><img src="Dhara.jpg" alt="Mudra"/><span>Mudra</span></div>
       <div class="photo-thumb-c"><img src="ritual3.jpg" alt="Healing"/><span>Healing</span></div>
     </div>
   </div>
@@ -407,7 +407,7 @@
           <!-- Abhyanga -->
           <div class="cc-item">
             <div class="cc-circle">
-              <img src="ritual2.jpg" alt="Abhyanga" />
+              <img src="kizhi.jpg" alt="Abhyanga" />
               <div class="cc-circle-ring"></div>
             </div>
             <div class="cc-info">
@@ -443,321 +443,82 @@
 <!-- ═══════════════════════════════════════════════════════════
      AYURVEDIC TREATMENTS — Malayalam + Glassy
 ═══════════════════════════════════════════════════════════ -->
-<section class="ayur-treatments section-pad" id="ayur-treatments">
-  <div class="container">
-    <div class="section-header reveal">
-      <p class="section-eyebrow">ആയുർവേദ ചികിത്സകൾ</p>
-      <h2 class="section-heading">നമ്മുടെ <em>ആയുർവേദ ചികിത്സകൾ</em></h2>
-      <div class="gold-divider centered"></div>
-      <p class="section-sub">ഓരോ ചികിത്സയും ഒരു പവിത്ര അനുഷ്ഠാനം — ചികിത്സകനും രോഗിയും തമ്മിലുള്ള സംഭാഷണം.</p>
+<!-- AYURVEDIC TREATMENTS -->
+<section id="ayur-treatments" style="padding:80px 0;background:linear-gradient(160deg,#fdf8f0 0%,#f5ede0 40%,#fdf8f0 100%)">
+  <div style="max-width:1200px;margin:0 auto;padding:0 32px">
+    <div style="text-align:center;margin-bottom:56px">
+      <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:#A08060;margin-bottom:10px">ആയുർവേദ ചികിത്സകൾ</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;color:#1a1a1a;margin-bottom:16px">നമ്മുടെ <em style="color:#C4A882;font-style:italic">ആയുർവേദ ചികിത്സകൾ</em></h2>
+      <p style="font-size:0.95rem;color:#5a4a38;max-width:560px;margin:0 auto">ഓരോ ചികിത്സയും ഒരു പവിത്ര അനുഷ്ഠാനം</p>
     </div>
-
-    <div class="ayur-cards-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;width:100%">
-
-      <!-- Nasyam -->
-      <div class="ayur-card ayur-glass" style="min-height:360px;display:flex;flex-direction:column;overflow:hidden;border-radius:16px;background:rgba(255,255,255,0.65);backdrop-filter:blur(20px);border:1px solid rgba(196,168,130,0.30);box-shadow:0 8px 32px rgba(196,168,130,0.15)" id="ayur-nasya" onclick="toggleAyurCard(this)">
-        <div class="ayur-card-img" style="height:200px;min-height:200px;overflow:hidden;flex-shrink:0;position:relative"><img style="width:100%;height:100%;object-fit:cover;object-position:center;display:block" src="Nasyam.jpg" alt="നസ്യം" />
-          <div class="ayur-card-img-overlay">
-            <span class="ayur-card-tag">ആയുർവേദം</span>
-            <div class="ayur-card-click-hint">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              അറിയാൻ ക്ലിക്ക് ചെയ്യൂ
-            </div>
-          </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
+      <div onclick="toggleAyurCard(this)" id="ayur-nasya" class="ayur-card" style="background:rgba(255,255,255,0.80);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(196,168,130,0.30);border-radius:16px;overflow:hidden;cursor:pointer;box-shadow:0 6px 24px rgba(196,168,130,0.15);transition:transform 0.4s ease">
+        <div style="width:100%;height:200px;overflow:hidden;position:relative">
+          <img src="Nasyam.jpg" alt="Nasyam" style="width:100%;height:200px;object-fit:cover;display:block" />
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,0.6),transparent);padding:8px 10px;font-size:0.6rem;color:rgba(255,255,255,0.85);text-align:right">👆 ക്ലിക്ക് ചെയ്യൂ</div>
         </div>
-        <div class="ayur-card-front">
-          <h3>നസ്യം <span class="ayur-name-en">(Nasyam)</span></h3>
-          <p class="ayur-card-short">മൂക്കിലൂടെ ഔഷധ തൈലം നൽകുന്ന ചികിത്സ</p>
-          <div class="ayur-card-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="ayur-card-front" style="padding:16px 18px 20px">
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#1a1a1a;margin:0 0 6px">നസ്യം <span style="font-size:0.75em;color:#A08060;font-style:italic">(Nasyam)</span></h3>
+          <p style="font-size:0.80rem;color:#5a4a38;line-height:1.5;margin:0 0 10px">മൂക്കിലൂടെ ഔഷധ തൈലം നൽകുന്ന ചികിത്സ</p>
+          <span style="color:#A08060;font-size:1.1rem">→</span>
         </div>
-        <div class="ayur-card-desc">
-          <div class="ayur-card-desc-inner">
-            <span class="ayur-desc-tag">ആയുർവേദം · തല & കഴുത്ത്</span>
-            <h3>നസ്യം</h3>
-            <p>നസ്യം എന്നത് മൂക്കിലൂടെ ഔഷധ തൈലങ്ങൾ, ഹെർബൽ ജ്യൂസ് അല്ലെങ്കിൽ പൊടികൾ നൽകുന്ന ചികിത്സയാണ്. തലവേദന, സൈനസൈറ്റിസ്, മാനസിക വ്യക്തത എന്നിവയ്ക്ക് ഏറ്റവും ഫലപ്രദം.</p>
-            <ul class="ayur-desc-benefits">
-              <li>✦ സൈനസൈറ്റിസ് & മൈഗ്രേൻ ഭേദമാക്കുന്നു</li>
-              <li>✦ ഓർമ്മശക്തി & ഏകാഗ്രത മെച്ചപ്പെടുത്തുന്നു</li>
-              <li>✦ സെർവിക്കൽ സ്പോണ്ടൈലോസിസ് ചികിത്സ</li>
-              <li>✦ ഇന്ദ്രിയ വ്യക്തത വർദ്ധിപ്പിക്കുന്നു</li>
-            </ul>
-            <div class="ayur-desc-duration">
-              <span>⏱ സമയം: 30–45 മിനിറ്റ്</span>
-              <span>📅 കോഴ്സ്: 7–14 ദിവസം</span>
-            </div>
-            <a href="#appointment" class="ayur-desc-btn btn btn-gold" onclick="event.stopPropagation()">നസ്യം ബുക്ക് ചെയ്യൂ →</a>
-          </div>
+        <div class="ayur-card-desc" style="display:none;padding:16px 18px 20px;border-top:1px solid rgba(196,168,130,0.20)">
+          <p style="font-size:0.82rem;color:#3a2a18;line-height:1.8;margin-bottom:12px">നസ്യം — മൂക്കിലൂടെ ഔഷധ തൈലങ്ങൾ നൽകുന്ന ചികിത്സ. തലവേദന, സൈനസൈറ്റിസ് എന്നിവയ്ക്ക് ഏറ്റവും ഫലപ്രദം.</p>
+          <p style="font-size:0.72rem;color:#A08060;margin-bottom:12px">⏱ 30–45 മിനിറ്റ് | 📅 7–14 ദിവസം</p>
+          <a href="#appointment" onclick="event.stopPropagation()" style="display:inline-block;padding:8px 20px;background:linear-gradient(135deg,#2d7a2d,#4aaa4a);color:#fff;border-radius:50px;font-size:0.78rem;font-weight:700;text-decoration:none">ബുക്ക് ചെയ്യൂ →</a>
         </div>
       </div>
-
-      <!-- Shirovasthi -->
-      <div class="ayur-card ayur-glass" style="min-height:360px;display:flex;flex-direction:column;overflow:hidden;border-radius:16px;background:rgba(255,255,255,0.65);backdrop-filter:blur(20px);border:1px solid rgba(196,168,130,0.30);box-shadow:0 8px 32px rgba(196,168,130,0.15)" id="ayur-shirovasthi" onclick="toggleAyurCard(this)">
-        <div class="ayur-card-img" style="height:200px;min-height:200px;overflow:hidden;flex-shrink:0;position:relative"><img style="width:100%;height:100%;object-fit:cover;object-position:center;display:block" src="shirovasthi.jpg" alt="ശിരോവസ്തി" />
-          <div class="ayur-card-img-overlay">
-            <span class="ayur-card-tag">ആയുർവേദം</span>
-            <div class="ayur-card-click-hint">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              അറിയാൻ ക്ലിക്ക് ചെയ്യൂ
-            </div>
-          </div>
+      <div onclick="toggleAyurCard(this)" id="ayur-shirovasthi" class="ayur-card" style="background:rgba(255,255,255,0.80);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(196,168,130,0.30);border-radius:16px;overflow:hidden;cursor:pointer;box-shadow:0 6px 24px rgba(196,168,130,0.15);transition:transform 0.4s ease">
+        <div style="width:100%;height:200px;overflow:hidden;position:relative">
+          <img src="shirovasthi.jpg" alt="Shirovasthi" style="width:100%;height:200px;object-fit:cover;display:block" />
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,0.6),transparent);padding:8px 10px;font-size:0.6rem;color:rgba(255,255,255,0.85);text-align:right">👆 ക്ലിക്ക് ചെയ്യൂ</div>
         </div>
-        <div class="ayur-card-front">
-          <h3>ശിരോവസ്തി <span class="ayur-name-en">(Shirovasthi)</span></h3>
-          <p class="ayur-card-short">തലയിൽ ഔഷധ തൈലം നിലനിർത്തുന്ന ചികിത്സ</p>
-          <div class="ayur-card-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="ayur-card-front" style="padding:16px 18px 20px">
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#1a1a1a;margin:0 0 6px">ശിരോവസ്തി <span style="font-size:0.75em;color:#A08060;font-style:italic">(Shirovasthi)</span></h3>
+          <p style="font-size:0.80rem;color:#5a4a38;line-height:1.5;margin:0 0 10px">തലയിൽ ഔഷധ തൈലം നിലനിർത്തുന്ന ചികിത്സ</p>
+          <span style="color:#A08060;font-size:1.1rem">→</span>
         </div>
-        <div class="ayur-card-desc">
-          <div class="ayur-card-desc-inner">
-            <span class="ayur-desc-tag">ആയുർവേദം · നാഡീ ചികിത്സ</span>
-            <h3>ശിരോവസ്തി</h3>
-            <p>ശിരോവസ്തിയിൽ ഒരു പ്രത്യേക തൊലി തൊപ്പി ഉപയോഗിച്ച് തലയിൽ ഊഷ്മള ഔഷധ തൈലം നിലനിർത്തുന്നു. ഇത് തലച്ചോറിനും നാഡീ വ്യൂഹത്തിനും ആഴത്തിൽ പോഷണം നൽകുന്നു.</p>
-            <ul class="ayur-desc-benefits">
-              <li>✦ മുഖ തളർവാതം & ബെൽസ് പാൾസി ചികിത്സ</li>
-              <li>✦ തലവേദന & ഉറക്കമില്ലായ്മ ഭേദമാക്കുന്നു</li>
-              <li>✦ നാഡീ വ്യൂഹത്തെ പോഷിപ്പിക്കുന്നു</li>
-              <li>✦ ഉത്കണ്ഠ & വിഷാദം കുറയ്ക്കുന്നു</li>
-            </ul>
-            <div class="ayur-desc-duration">
-              <span>⏱ സമയം: 45–60 മിനിറ്റ്</span>
-              <span>📅 കോഴ്സ്: 7 ദിവസം</span>
-            </div>
-            <a href="#appointment" class="ayur-desc-btn btn btn-gold" onclick="event.stopPropagation()">ശിരോവസ്തി ബുക്ക് ചെയ്യൂ →</a>
-          </div>
+        <div class="ayur-card-desc" style="display:none;padding:16px 18px 20px;border-top:1px solid rgba(196,168,130,0.20)">
+          <p style="font-size:0.82rem;color:#3a2a18;line-height:1.8;margin-bottom:12px">ശിരോവസ്തി — തലയിൽ ഊഷ്മള ഔഷധ തൈലം നിലനിർത്തുന്നു. നാഡീ വ്യൂഹത്തിന് ആഴത്തിൽ പോഷണം നൽകുന്നു.</p>
+          <p style="font-size:0.72rem;color:#A08060;margin-bottom:12px">⏱ 45–60 മിനിറ്റ് | 📅 7 ദിവസം</p>
+          <a href="#appointment" onclick="event.stopPropagation()" style="display:inline-block;padding:8px 20px;background:linear-gradient(135deg,#2d7a2d,#4aaa4a);color:#fff;border-radius:50px;font-size:0.78rem;font-weight:700;text-decoration:none">ബുക്ക് ചെയ്യൂ →</a>
         </div>
       </div>
-
-      <!-- Pizhichil -->
-      <div class="ayur-card ayur-glass" style="min-height:360px;display:flex;flex-direction:column;overflow:hidden;border-radius:16px;background:rgba(255,255,255,0.65);backdrop-filter:blur(20px);border:1px solid rgba(196,168,130,0.30);box-shadow:0 8px 32px rgba(196,168,130,0.15)" id="ayur-pizhichil" onclick="toggleAyurCard(this)">
-        <div class="ayur-card-img" style="height:200px;min-height:200px;overflow:hidden;flex-shrink:0;position:relative"><img style="width:100%;height:100%;object-fit:cover;object-position:center;display:block" src="pizhichil.jpg" alt="പിഴിച്ചിൽ" />
-          <div class="ayur-card-img-overlay">
-            <span class="ayur-card-tag">ആയുർവേദം</span>
-            <div class="ayur-card-click-hint">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              അറിയാൻ ക്ലിക്ക് ചെയ്യൂ
-            </div>
-          </div>
+      <div onclick="toggleAyurCard(this)" id="ayur-pizhichil" class="ayur-card" style="background:rgba(255,255,255,0.80);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(196,168,130,0.30);border-radius:16px;overflow:hidden;cursor:pointer;box-shadow:0 6px 24px rgba(196,168,130,0.15);transition:transform 0.4s ease">
+        <div style="width:100%;height:200px;overflow:hidden;position:relative">
+          <img src="pizhichil.jpg" alt="Pizhichil" style="width:100%;height:200px;object-fit:cover;display:block" />
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,0.6),transparent);padding:8px 10px;font-size:0.6rem;color:rgba(255,255,255,0.85);text-align:right">👆 ക്ലിക്ക് ചെയ്യൂ</div>
         </div>
-        <div class="ayur-card-front">
-          <h3>പിഴിച്ചിൽ <span class="ayur-name-en">(Pizhichil)</span></h3>
-          <p class="ayur-card-short">രാജകീയ തൈല സ്നാനം — തുടർച്ചയായ ഊഷ്മള തൈല ഒഴുക്ക്</p>
-          <div class="ayur-card-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="ayur-card-front" style="padding:16px 18px 20px">
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#1a1a1a;margin:0 0 6px">പിഴിച്ചിൽ <span style="font-size:0.75em;color:#A08060;font-style:italic">(Pizhichil)</span></h3>
+          <p style="font-size:0.80rem;color:#5a4a38;line-height:1.5;margin:0 0 10px">രാജകീയ തൈല സ്നാനം</p>
+          <span style="color:#A08060;font-size:1.1rem">→</span>
         </div>
-        <div class="ayur-card-desc">
-          <div class="ayur-card-desc-inner">
-            <span class="ayur-desc-tag">ആയുർവേദം · പുനരുജ്ജീവനം</span>
-            <h3>പിഴിച്ചിൽ</h3>
-            <p>"ആയുർവേദ ചികിത്സകളുടെ രാജാവ്" എന്നറിയപ്പെടുന്ന പിഴിച്ചിൽ, ഊഷ്മള ഔഷധ തൈലം ശരീരത്തിൽ തുടർച്ചയായി ഒഴിക്കുന്ന ചികിത്സയാണ്. ആർത്രൈറ്റിസ്, ഹെമിപ്ലേജിയ എന്നിവയ്ക്ക് ഏറ്റവും ഫലപ്രദം.</p>
-            <ul class="ayur-desc-benefits">
-              <li>✦ റൂമറ്റോയ്ഡ് ആർത്രൈറ്റിസ് ചികിത്സ</li>
-              <li>✦ പേശികളും സന്ധികളും ശക്തിപ്പെടുത്തുന്നു</li>
-              <li>✦ ആഴത്തിലുള്ള പുനരുജ്ജീവനം</li>
-              <li>✦ ശരീര വേദന & കാഠിന്യം ഭേദമാക്കുന്നു</li>
-            </ul>
-            <div class="ayur-desc-duration">
-              <span>⏱ സമയം: 60–90 മിനിറ്റ്</span>
-              <span>📅 കോഴ്സ്: 7–14 ദിവസം</span>
-            </div>
-            <a href="#appointment" class="ayur-desc-btn btn btn-gold" onclick="event.stopPropagation()">പിഴിച്ചിൽ ബുക്ക് ചെയ്യൂ →</a>
-          </div>
+        <div class="ayur-card-desc" style="display:none;padding:16px 18px 20px;border-top:1px solid rgba(196,168,130,0.20)">
+          <p style="font-size:0.82rem;color:#3a2a18;line-height:1.8;margin-bottom:12px">പിഴിച്ചിൽ — ഊഷ്മള ഔഷധ തൈലം ശരീരത്തിൽ തുടർച്ചയായി ഒഴിക്കുന്ന ചികിത്സ. ആർത്രൈറ്റിസ്, ഹെമിപ്ലേജിയ എന്നിവയ്ക്ക് ഏറ്റവും ഫലപ്രദം.</p>
+          <p style="font-size:0.72rem;color:#A08060;margin-bottom:12px">⏱ 60–90 മിനിറ്റ് | 📅 7–14 ദിവസം</p>
+          <a href="#appointment" onclick="event.stopPropagation()" style="display:inline-block;padding:8px 20px;background:linear-gradient(135deg,#2d7a2d,#4aaa4a);color:#fff;border-radius:50px;font-size:0.78rem;font-weight:700;text-decoration:none">ബുക്ക് ചെയ്യൂ →</a>
         </div>
       </div>
-
-      <!-- Dhara -->
-      <div class="ayur-card ayur-glass" style="min-height:360px;display:flex;flex-direction:column;overflow:hidden;border-radius:16px;background:rgba(255,255,255,0.65);backdrop-filter:blur(20px);border:1px solid rgba(196,168,130,0.30);box-shadow:0 8px 32px rgba(196,168,130,0.15)" id="ayur-dhara" onclick="toggleAyurCard(this)">
-        <div class="ayur-card-img" style="height:200px;min-height:200px;overflow:hidden;flex-shrink:0;position:relative"><img style="width:100%;height:100%;object-fit:cover;object-position:center;display:block" src="Dhara.jpg" alt="ധാര" />
-          <div class="ayur-card-img-overlay">
-            <span class="ayur-card-tag">ആയുർവേദം</span>
-            <div class="ayur-card-click-hint">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              അറിയാൻ ക്ലിക്ക് ചെയ്യൂ
-            </div>
-          </div>
+      <div onclick="toggleAyurCard(this)" id="ayur-dhara" class="ayur-card" style="background:rgba(255,255,255,0.80);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(196,168,130,0.30);border-radius:16px;overflow:hidden;cursor:pointer;box-shadow:0 6px 24px rgba(196,168,130,0.15);transition:transform 0.4s ease">
+        <div style="width:100%;height:200px;overflow:hidden;position:relative">
+          <img src="Dhara.jpg" alt="Dhara" style="width:100%;height:200px;object-fit:cover;display:block" />
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,0.6),transparent);padding:8px 10px;font-size:0.6rem;color:rgba(255,255,255,0.85);text-align:right">👆 ക്ലിക്ക് ചെയ്യൂ</div>
         </div>
-        <div class="ayur-card-front">
-          <h3>ധാര <span class="ayur-name-en">(Dhara)</span></h3>
-          <p class="ayur-card-short">ഔഷധ ദ്രാവകത്തിന്റെ തുടർച്ചയായ ഒഴുക്ക്</p>
-          <div class="ayur-card-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="ayur-card-front" style="padding:16px 18px 20px">
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#1a1a1a;margin:0 0 6px">ധാര <span style="font-size:0.75em;color:#A08060;font-style:italic">(Dhara)</span></h3>
+          <p style="font-size:0.80rem;color:#5a4a38;line-height:1.5;margin:0 0 10px">ഔഷധ ദ്രാവകത്തിന്റെ തുടർച്ചയായ ഒഴുക്ക്</p>
+          <span style="color:#A08060;font-size:1.1rem">→</span>
         </div>
-        <div class="ayur-card-desc">
-          <div class="ayur-card-desc-inner">
-            <span class="ayur-desc-tag">ആയുർവേദം · മനസ്സ് & ശരീരം</span>
-            <h3>ധാര</h3>
-            <p>ധാര എന്നത് ഊഷ്മള ഔഷധ ദ്രാവകങ്ങൾ — തൈലം, മോര്, ഹെർബൽ കഷായം — ശരീരത്തിലോ നെറ്റിയിലോ തുടർച്ചയായി ഒഴിക്കുന്ന ചികിത്സയാണ്. ഇത് ആഴത്തിലുള്ള വിശ്രാന്തി നൽകുകയും നാഡീ വ്യൂഹത്തെ ശാന്തമാക്കുകയും ചെയ്യുന്നു.</p>
-            <ul class="ayur-desc-benefits">
-              <li>✦ ആഴത്തിലുള്ള സ്ട്രെസ് & ഉത്കണ്ഠ ഭേദം</li>
-              <li>✦ ഉറക്കമില്ലായ്മ & മാനസിക ക്ഷീണം ചികിത്സ</li>
-              <li>✦ വാത & പിത്ത ദോഷ സന്തുലനം</li>
-              <li>✦ ചർമ്മ ഭംഗി & തിളക്കം വർദ്ധിപ്പിക്കുന്നു</li>
-            </ul>
-            <div class="ayur-desc-duration">
-              <span>⏱ സമയം: 45–60 മിനിറ്റ്</span>
-              <span>📅 കോഴ്സ്: 7–21 ദിവസം</span>
-            </div>
-            <a href="#appointment" class="ayur-desc-btn btn btn-gold" onclick="event.stopPropagation()">ധാര ബുക്ക് ചെയ്യൂ →</a>
-          </div>
+        <div class="ayur-card-desc" style="display:none;padding:16px 18px 20px;border-top:1px solid rgba(196,168,130,0.20)">
+          <p style="font-size:0.82rem;color:#3a2a18;line-height:1.8;margin-bottom:12px">ധാര — ഊഷ്മള ഔഷധ ദ്രാവകങ്ങൾ ശരീരത്തിലോ നെറ്റിയിലോ തുടർച്ചയായി ഒഴിക്കുന്ന ചികിത്സ. ആഴത്തിലുള്ള വിശ്രാന്തി, സ്ട്രെസ് ഭേദം.</p>
+          <p style="font-size:0.72rem;color:#A08060;margin-bottom:12px">⏱ 45–60 മിനിറ്റ് | 📅 7–21 ദിവസം</p>
+          <a href="#appointment" onclick="event.stopPropagation()" style="display:inline-block;padding:8px 20px;background:linear-gradient(135deg,#2d7a2d,#4aaa4a);color:#fff;border-radius:50px;font-size:0.78rem;font-weight:700;text-decoration:none">ബുക്ക് ചെയ്യൂ →</a>
         </div>
       </div>
-
     </div>
   </div>
 </section>
-
-      <!-- Nasyam -->
-      <div class="ayur-card" id="ayur-nasya" onclick="toggleAyurCard(this)">
-        <div class="ayur-card-img" style="height:200px;min-height:200px;overflow:hidden;flex-shrink:0;position:relative"><img style="width:100%;height:100%;object-fit:cover;object-position:center;display:block" src="Nasyam.jpg" alt="Nasyam Treatment" />
-          <div class="ayur-card-img-overlay">
-            <span class="ayur-card-tag">Ayurveda</span>
-            <div class="ayur-card-click-hint">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              Click to explore
-            </div>
-          </div>
-        </div>
-        <div class="ayur-card-front">
-          <h3>Nasyam</h3>
-          <p class="ayur-card-short">Nasal administration of medicated oils</p>
-          <div class="ayur-card-arrow">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-        </div>
-        <div class="ayur-card-desc">
-          <div class="ayur-card-desc-inner">
-            <span class="ayur-desc-tag">Ayurveda · Head & Neck</span>
-            <h3>Nasyam</h3>
-            <p>Nasyam is the administration of medicated oils, herbal juices or powders through the nasal passages. It is highly effective for disorders of the head, neck, eyes, ears, nose and throat. It clears the sinuses, improves mental clarity, relieves headaches and enhances sensory functions.</p>
-            <ul class="ayur-desc-benefits">
-              <li>✦ Relieves chronic sinusitis & migraines</li>
-              <li>✦ Improves memory & concentration</li>
-              <li>✦ Treats cervical spondylosis</li>
-              <li>✦ Enhances sensory clarity</li>
-            </ul>
-            <div class="ayur-desc-duration">
-              <span>⏱ Duration: 30–45 mins</span>
-              <span>📅 Course: 7–14 days</span>
-            </div>
-            <a href="#appointment" class="ayur-desc-btn btn btn-gold" onclick="event.stopPropagation()">Book Nasyam →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Shirovasthi -->
-      <div class="ayur-card" id="ayur-shirovasthi" onclick="toggleAyurCard(this)">
-        <div class="ayur-card-img" style="height:200px;min-height:200px;overflow:hidden;flex-shrink:0;position:relative"><img style="width:100%;height:100%;object-fit:cover;object-position:center;display:block" src="shirovasthi.jpg" alt="Shirovasthi Treatment" />
-          <div class="ayur-card-img-overlay">
-            <span class="ayur-card-tag">Ayurveda</span>
-            <div class="ayur-card-click-hint">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              Click to explore
-            </div>
-          </div>
-        </div>
-        <div class="ayur-card-front">
-          <h3>Shirovasthi</h3>
-          <p class="ayur-card-short">Warm medicated oil retained on the head</p>
-          <div class="ayur-card-arrow">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-        </div>
-        <div class="ayur-card-desc">
-          <div class="ayur-card-desc-inner">
-            <span class="ayur-desc-tag">Ayurveda · Neurological</span>
-            <h3>Shirovasthi</h3>
-            <p>Shirovasthi involves retaining warm medicated oil on the head using a specially fitted leather cap. The oil deeply nourishes the scalp, brain and nervous system. It is one of the most powerful treatments for neurological and psychological conditions.</p>
-            <ul class="ayur-desc-benefits">
-              <li>✦ Treats facial paralysis & Bell's palsy</li>
-              <li>✦ Relieves severe headaches & insomnia</li>
-              <li>✦ Nourishes the nervous system</li>
-              <li>✦ Reduces anxiety & depression</li>
-            </ul>
-            <div class="ayur-desc-duration">
-              <span>⏱ Duration: 45–60 mins</span>
-              <span>📅 Course: 7 days</span>
-            </div>
-            <a href="#appointment" class="ayur-desc-btn btn btn-gold" onclick="event.stopPropagation()">Book Shirovasthi →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Pizhichil -->
-      <div class="ayur-card" id="ayur-pizhichil" onclick="toggleAyurCard(this)">
-        <div class="ayur-card-img" style="height:200px;min-height:200px;overflow:hidden;flex-shrink:0;position:relative"><img style="width:100%;height:100%;object-fit:cover;object-position:center;display:block" src="pizhichil.jpg" alt="Pizhichil Treatment" />
-          <div class="ayur-card-img-overlay">
-            <span class="ayur-card-tag">Ayurveda</span>
-            <div class="ayur-card-click-hint">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              Click to explore
-            </div>
-          </div>
-        </div>
-        <div class="ayur-card-front">
-          <h3>Pizhichil</h3>
-          <p class="ayur-card-short">Royal oil bath — continuous warm oil pour</p>
-          <div class="ayur-card-arrow">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-        </div>
-        <div class="ayur-card-desc">
-          <div class="ayur-card-desc-inner">
-            <span class="ayur-desc-tag">Ayurveda · Rejuvenation</span>
-            <h3>Pizhichil</h3>
-            <p>Known as the "King of Ayurvedic treatments," Pizhichil involves squeezing warm medicated oil continuously over the entire body while being gently massaged. It is deeply rejuvenating, strengthens muscles and joints, and is highly effective for rheumatic conditions.</p>
-            <ul class="ayur-desc-benefits">
-              <li>✦ Treats rheumatoid arthritis</li>
-              <li>✦ Strengthens muscles & joints</li>
-              <li>✦ Deep rejuvenation & anti-ageing</li>
-              <li>✦ Relieves body pain & stiffness</li>
-            </ul>
-            <div class="ayur-desc-duration">
-              <span>⏱ Duration: 60–90 mins</span>
-              <span>📅 Course: 7–14 days</span>
-            </div>
-            <a href="#appointment" class="ayur-desc-btn btn btn-gold" onclick="event.stopPropagation()">Book Pizhichil →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Dhara -->
-      <div class="ayur-card" id="ayur-dhara" onclick="toggleAyurCard(this)">
-        <div class="ayur-card-img" style="height:200px;min-height:200px;overflow:hidden;flex-shrink:0;position:relative"><img style="width:100%;height:100%;object-fit:cover;object-position:center;display:block" src="Dhara.jpg" alt="Dhara Treatment" />
-          <div class="ayur-card-img-overlay">
-            <span class="ayur-card-tag">Ayurveda</span>
-            <div class="ayur-card-click-hint">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              Click to explore
-            </div>
-          </div>
-        </div>
-        <div class="ayur-card-front">
-          <h3>Dhara</h3>
-          <p class="ayur-card-short">Continuous stream of medicated liquid</p>
-          <div class="ayur-card-arrow">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-        </div>
-        <div class="ayur-card-desc">
-          <div class="ayur-card-desc-inner">
-            <span class="ayur-desc-tag">Ayurveda · Mind & Body</span>
-            <h3>Dhara</h3>
-            <p>Dhara is the continuous pouring of warm medicated liquids — oil, buttermilk, herbal decoctions or milk — over the body or forehead (Shirodhara). The rhythmic flow induces deep relaxation, calms the nervous system and is profoundly healing for stress-related conditions.</p>
-            <ul class="ayur-desc-benefits">
-              <li>✦ Deep stress & anxiety relief</li>
-              <li>✦ Treats insomnia & mental fatigue</li>
-              <li>✦ Balances Vata & Pitta doshas</li>
-              <li>✦ Improves skin texture & lustre</li>
-            </ul>
-            <div class="ayur-desc-duration">
-              <span>⏱ Duration: 45–60 mins</span>
-              <span>📅 Course: 7–21 days</span>
-            </div>
-            <a href="#appointment" class="ayur-desc-btn btn btn-gold" onclick="event.stopPropagation()">Book Dhara →</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
 <!-- ═══════════════════════════════════════════════════════════
      WHY CHOOSE US
 ═══════════════════════════════════════════════════════════ -->
@@ -824,16 +585,16 @@
       <div class="gold-divider centered"></div>
     </div>
     <div class="photo-grid-sm-inner">
-      <div class="pg-item reveal"><img src="ritual1.jpg" alt="Shirodhara"/><div class="pg-item-overlay"><span>Shirodhara</span></div></div>
-      <div class="pg-item reveal"><img src="mock1.jpg" alt="Clinic"/><div class="pg-item-overlay"><span>Clinic</span></div></div>
+      <div class="pg-item reveal"><img src="Nasyam.jpg" alt="Shirodhara"/><div class="pg-item-overlay"><span>Shirodhara</span></div></div>
+      <div class="pg-item reveal"><img src="dhara2.jpg" alt="Clinic"/><div class="pg-item-overlay"><span>Clinic</span></div></div>
       <div class="pg-item reveal"><img src="kizhi.jpg" alt="Abhyanga"/><div class="pg-item-overlay"><span>Abhyanga</span></div></div>
       <div class="pg-item reveal"><img src="cover.jpg" alt="Sanctuary"/><div class="pg-item-overlay"><span>Sanctuary</span></div></div>
       <div class="pg-item reveal"><img src="ritual3.jpg" alt="Panchakarma"/><div class="pg-item-overlay"><span>Panchakarma</span></div></div>
       <div class="pg-item reveal"><img src="Medicine.jpg" alt="Consultation"/><div class="pg-item-overlay"><span>Consultation</span></div></div>
       <div class="pg-item reveal"><img src="ritual4.jpg" alt="Physiotherapy"/><div class="pg-item-overlay"><span>Physio</span></div></div>
-      <div class="pg-item reveal"><img src="ritual1.jpg" alt="Herbal"/><div class="pg-item-overlay"><span>Herbal</span></div></div>
-      <div class="pg-item reveal"><img src="ritual2.jpg" alt="Wellness"/><div class="pg-item-overlay"><span>Wellness</span></div></div>
-      <div class="pg-item reveal"><img src="mock1.jpg" alt="Healing"/><div class="pg-item-overlay"><span>Healing</span></div></div>
+      <div class="pg-item reveal"><img src="Nasyam.jpg" alt="Herbal"/><div class="pg-item-overlay"><span>Herbal</span></div></div>
+      <div class="pg-item reveal"><img src="kizhi.jpg" alt="Wellness"/><div class="pg-item-overlay"><span>Wellness</span></div></div>
+      <div class="pg-item reveal"><img src="dhara2.jpg" alt="Healing"/><div class="pg-item-overlay"><span>Healing</span></div></div>
       <div class="pg-item reveal"><img src="ritual3.jpg" alt="Detox"/><div class="pg-item-overlay"><span>Detox</span></div></div>
       <div class="pg-item reveal"><img src="cover.jpg" alt="Nature"/><div class="pg-item-overlay"><span>Nature</span></div></div>
     </div>
@@ -859,11 +620,11 @@
         <div class="mosaic-overlay"><span>Our Sanctuary</span></div>
       </div>
       <div class="mosaic-item mosaic-tall">
-        <img src="mock1.jpg" alt="Treatment room" />
+        <img src="dhara2.jpg" alt="Treatment room" />
         <div class="mosaic-overlay"><span>Treatment Rooms</span></div>
       </div>
       <div class="mosaic-item">
-        <img src="ritual1.jpg" alt="Shirodhara ritual" />
+        <img src="Nasyam.jpg" alt="Shirodhara ritual" />
         <div class="mosaic-overlay"><span>Shirodhara</span></div>
       </div>
       <div class="mosaic-item">
@@ -987,7 +748,7 @@
         </div>
       </div>
       <div class="pb-panel">
-        <img src="ritual1.jpg" alt="Treatment Room" />
+        <img src="Nasyam.jpg" alt="Treatment Room" />
         <span class="pb-panel-tag">Treatments</span>
         <div class="pb-panel-info">
           <h4>Treatment Suites</h4>
@@ -1335,6 +1096,8 @@
 <script src="script.js"></script>
 </body>
 </html>
+
+
 
 
 
