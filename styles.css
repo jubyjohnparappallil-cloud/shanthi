@@ -5819,3 +5819,874 @@ section:first-of-type,
 .social-icon:hover {
   transform: scale(1.15) translateY(-2px) !important;
 }
+
+/* ══════════════════════════════════════════════════════════
+   FOOTER — Warm Brown Theme
+══════════════════════════════════════════════════════════ */
+.footer {
+  background: linear-gradient(160deg, #3d1a00 0%, #5a2800 40%, #3d1a00 100%) !important;
+  border-top: 3px solid #C4A882 !important;
+  animation: none !important;
+}
+.footer-top { padding: 70px 0 50px !important; }
+
+/* Footer text colors on brown bg */
+.footer-tagline { color: #d4b896 !important; }
+.footer-col-title {
+  color: #f5e8d0 !important;
+  border-bottom: 1px solid rgba(196,168,130,0.30) !important;
+  padding-bottom: 12px !important;
+  margin-bottom: 18px !important;
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+}
+.footer-links a {
+  color: #c8a888 !important;
+  font-size: 0.88rem !important;
+  padding: 5px 0 !important;
+  display: block !important;
+  transition: color 0.3s ease, padding-left 0.3s ease !important;
+}
+.footer-links a:hover {
+  color: #e8d5b8 !important;
+  padding-left: 8px !important;
+}
+.footer-contact-list li {
+  color: #c8a888 !important;
+  font-size: 0.85rem !important;
+}
+.footer-contact-list svg { flex-shrink: 0 !important; margin-top: 2px !important; }
+
+/* Social icons on brown */
+.social-icon {
+  border: 1px solid rgba(196,168,130,0.35) !important;
+  background: rgba(255,255,255,0.06) !important;
+}
+.social-icon:hover {
+  background: rgba(196,168,130,0.18) !important;
+  border-color: #C4A882 !important;
+  transform: scale(1.12) translateY(-2px) !important;
+}
+.social-icon svg path, .social-icon svg rect,
+.social-icon svg circle { stroke: #C4A882 !important; }
+
+/* Footer logo */
+.footer-logo-img {
+  background: rgba(255,255,255,0.92) !important;
+  border-radius: 10px !important;
+  padding: 6px 14px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25) !important;
+}
+
+/* Footer bottom bar — darker brown */
+.footer-bottom {
+  background: linear-gradient(90deg, #2a1000, #3d1a00, #2a1000) !important;
+  border-top: 1px solid rgba(196,168,130,0.25) !important;
+  padding: 18px 0 !important;
+}
+.footer-bottom p {
+  color: #c8a888 !important;
+  font-size: 0.82rem !important;
+}
+.footer-bottom .footer-credits {
+  color: rgba(200,168,136,0.65) !important;
+  font-style: italic !important;
+}
+.footer-bottom .container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+/* Divider line between footer top and bottom */
+.footer-top {
+  border-bottom: 1px solid rgba(196,168,130,0.20) !important;
+}
+
+/* ══════════════════════════════════════════════════════════
+   FOOTER GRID — Properly arranged 4 columns
+══════════════════════════════════════════════════════════ */
+.footer-grid {
+  display: grid !important;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr !important;
+  gap: 48px !important;
+  align-items: start !important;
+}
+.footer-brand {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 14px !important;
+}
+.footer-col {
+  display: flex !important;
+  flex-direction: column !important;
+}
+.footer-links {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.footer-contact-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.footer-contact-list li {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+  line-height: 1.5 !important;
+}
+.footer-socials {
+  display: flex !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+  margin-top: 4px !important;
+}
+
+/* Tablet — 2 columns */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 36px !important;
+  }
+  .footer-brand { grid-column: span 2 !important; }
+}
+
+/* Mobile — 1 column */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  .footer-brand { grid-column: span 1 !important; }
+  .footer-bottom .container {
+    flex-direction: column !important;
+    gap: 6px !important;
+    text-align: center !important;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════
+   NAVBAR LAYOUT FIX — Logo left, Menu right
+══════════════════════════════════════════════════════════ */
+.navbar {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 1000 !important;
+  background: #ffffff !important;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08) !important;
+  padding: 0 !important;
+  animation: none !important;
+}
+
+/* Top bar */
+.navbar-topbar {
+  background: #f8f4ee !important;
+  border-bottom: 1px solid rgba(196,168,130,0.22) !important;
+  padding: 8px 0 !important;
+  width: 100% !important;
+}
+.navbar-topbar-inner {
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+  padding: 0 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+}
+
+/* Main logo row */
+.navbar-main {
+  background: #ffffff !important;
+  padding: 8px 0 !important;
+  width: 100% !important;
+  border-bottom: 3px solid transparent !important;
+  background-image: linear-gradient(#ffffff, #ffffff),
+    linear-gradient(90deg, #3a8a3a, #6dcc6d, #C4A882, #6dcc6d, #3a8a3a) !important;
+  background-origin: border-box !important;
+  background-clip: padding-box, border-box !important;
+}
+.navbar-main-inner {
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+  padding: 0 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  gap: 0 !important;
+}
+
+/* Logo — left side */
+.nav-logo {
+  display: flex !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+  text-decoration: none !important;
+  margin-right: auto !important;
+}
+.nav-logo-img {
+  height: 70px !important;
+  width: auto !important;
+  max-width: 300px !important;
+  object-fit: contain !important;
+  display: block !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* Menu button — right side */
+.navbar-menu-right {
+  display: flex !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+  margin-left: auto !important;
+}
+.nav-toggle {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 10px 20px !important;
+  background: transparent !important;
+  border: 1.5px solid rgba(196,168,130,0.45) !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  white-space: nowrap !important;
+}
+.nav-toggle:hover {
+  border-color: #C4A882 !important;
+  background: rgba(196,168,130,0.08) !important;
+}
+.nav-menu-label {
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  color: #2a1a08 !important;
+  letter-spacing: 0.04em !important;
+}
+.nav-menu-icon {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+.nav-menu-icon span {
+  display: block !important;
+  width: 20px !important;
+  height: 2px !important;
+  background: #2a1a08 !important;
+  border-radius: 2px !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Hide nav-links from top bar — only in drawer */
+.nav-links { display: none !important; }
+
+/* Hero margin — exact navbar height */
+.hero {
+  margin-top: 0 !important;
+  padding-top: 128px !important;
+}
+@media (max-width: 768px) {
+  .hero { padding-top: 108px !important; }
+  .navbar-main-inner { padding: 0 16px !important; }
+  .navbar-topbar-inner { padding: 0 16px !important; }
+  .nav-logo-img { height: 52px !important; max-width: 220px !important; }
+}
+@media (max-width: 480px) {
+  .navbar-topbar { display: none !important; }
+  .hero { padding-top: 80px !important; }
+  .nav-logo-img { height: 46px !important; }
+}
+
+/* ══════════════════════════════════════════════════════════
+   NAVBAR FINAL FIX — Big logo left, Menu right
+══════════════════════════════════════════════════════════ */
+.navbar-main-inner {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 6px 40px !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Logo — big, left side */
+.nav-logo {
+  display: flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  flex-shrink: 0 !important;
+}
+.nav-logo-img {
+  height: 90px !important;
+  width: auto !important;
+  max-width: 380px !important;
+  min-width: 200px !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+  display: block !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  filter: none !important;
+}
+
+/* Menu button — far right */
+.navbar-menu-right {
+  display: flex !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+}
+.nav-toggle {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 10px 22px !important;
+  background: transparent !important;
+  border: 1.5px solid rgba(196,168,130,0.40) !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+.nav-toggle:hover {
+  border-color: #C4A882 !important;
+  background: rgba(196,168,130,0.08) !important;
+}
+.nav-menu-label {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.92rem !important;
+  font-weight: 600 !important;
+  color: #2a1a08 !important;
+  letter-spacing: 0.05em !important;
+}
+.nav-menu-icon {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 5px !important;
+}
+.nav-menu-icon span {
+  display: block !important;
+  width: 22px !important;
+  height: 2px !important;
+  background: #2a1a08 !important;
+  border-radius: 2px !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-main-inner { padding: 6px 16px !important; }
+  .nav-logo-img { height: 60px !important; max-width: 240px !important; min-width: 140px !important; }
+  .nav-menu-label { font-size: 0.82rem !important; }
+}
+@media (max-width: 480px) {
+  .nav-logo-img { height: 50px !important; max-width: 200px !important; }
+  .nav-toggle { padding: 8px 14px !important; }
+}
+
+/* ══════════════════════════════════════════════════════════
+   HERO BANNER — show full image below navbar
+══════════════════════════════════════════════════════════ */
+
+/* Hero section starts at top, photo fills from top */
+.hero {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  position: relative !important;
+}
+
+/* Add top offset equal to navbar height so content isn't hidden */
+.hero-content {
+  padding-top: 160px !important;
+}
+
+/* Photo panel — full height from very top, no padding */
+.hero-photo-panel {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+.hero-photo-panel img.hero-panel-img,
+.hero-panel-img {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  object-position: center top !important;
+}
+
+/* Thumb strip — starts from top of page, navbar overlaps it */
+.hero-thumb-strip {
+  padding-top: 160px !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content { padding-top: 120px !important; }
+  .hero-thumb-strip { padding-top: 0 !important; height: 80px !important; }
+  .hero-photo-panel { height: 55vw !important; min-height: 240px !important; }
+}
+@media (max-width: 480px) {
+  .hero-content { padding-top: 90px !important; }
+  .hero-photo-panel { height: 60vw !important; }
+}
+
+/* Push hero banner below the fixed navbar */
+.hero {
+  margin-top: 130px !important;
+  padding-top: 0 !important;
+}
+.hero-content { padding-top: 20px !important; }
+.hero-thumb-strip { padding-top: 0 !important; }
+@media (max-width: 768px) { .hero { margin-top: 108px !important; } }
+@media (max-width: 480px) { .hero { margin-top: 72px !important; } }
+
+/* ══════════════════════════════════════════════════════════
+   FINAL HERO FIX — no gap, full image visible
+══════════════════════════════════════════════════════════ */
+
+/* Hero sits right below navbar — no margin, no padding */
+.hero {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  position: relative !important;
+  top: 0 !important;
+}
+
+/* Hide thumb strip and content — only show photo */
+.hero-thumb-strip { display: none !important; }
+.hero-content     { display: none !important; }
+.hero-stat-card   { display: none !important; }
+.hero-panel-thumb { display: none !important; }
+.hero-badge       { display: none !important; }
+.hero-overlay     { display: none !important; }
+
+/* Photo panel fills full width */
+.hero {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: auto !important;
+  overflow: hidden !important;
+}
+.hero-photo-panel {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: auto !important;
+  grid-column: unset !important;
+  grid-row: unset !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+.hero-panel-img,
+.hero-photo-panel img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  animation: none !important;
+  transform: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+.hero-panel-overlay { display: none !important; }
+.hero-photo-panel::before,
+.hero-photo-panel::after { display: none !important; }
+
+/* Remove the blank space below hero */
+.hero + * { margin-top: 0 !important; }
+
+/* ═══ CRITICAL FIXES ═══ */
+
+/* 1. Body offset for fixed navbar */
+body { padding-top: 0 !important; margin-top: 0 !important; }
+
+/* 2. Hero — sits below navbar using margin */
+.hero {
+  margin-top: 130px !important;
+  padding-top: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: auto !important;
+  overflow: visible !important;
+}
+
+/* 3. Hero photo panel — full width, auto height */
+.hero-photo-panel {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: auto !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+.hero-panel-img,
+.hero-photo-panel > img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  animation: none !important;
+  transform: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+.hero-panel-overlay { display: none !important; }
+.hero-photo-panel::before,
+.hero-photo-panel::after { display: none !important; }
+
+/* 4. Hide unused hero elements */
+.hero-thumb-strip { display: none !important; }
+.hero-content     { display: none !important; }
+.hero-stat-card   { display: none !important; }
+.hero-panel-thumb { display: none !important; }
+.hero-badge       { display: none !important; }
+.hero-overlay     { display: none !important; }
+.hero::before, .hero::after { display: none !important; }
+
+/* 5. About images — ensure they show */
+.about-img-main,
+.about-img-secondary {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+.about-img-main img,
+.about-img-secondary img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  opacity: 1 !important;
+}
+
+/* 6. Nav drawer — proper open/close */
+.nav-drawer {
+  position: fixed !important;
+  top: 0 !important;
+  left: -320px !important;
+  width: 300px !important;
+  height: 100vh !important;
+  background: #ffffff !important;
+  z-index: 9999 !important;
+  transition: left 0.4s ease !important;
+  overflow-y: auto !important;
+  box-shadow: 4px 0 32px rgba(0,0,0,0.15) !important;
+}
+.nav-drawer.open { left: 0 !important; }
+.nav-overlay {
+  display: none !important;
+  position: fixed !important;
+  inset: 0 !important;
+  background: rgba(0,0,0,0.40) !important;
+  z-index: 9998 !important;
+}
+.nav-overlay.open { display: block !important; }
+
+/* 7. Responsive */
+@media (max-width: 768px) {
+  .hero { margin-top: 108px !important; }
+}
+@media (max-width: 480px) {
+  .hero { margin-top: 72px !important; }
+  .navbar-topbar { display: none !important; }
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   FINAL MASTER FIX — appended last, highest specificity
+   Fixes: hero height, about images, drawer, responsive
+══════════════════════════════════════════════════════════ */
+
+/* ── 1. BODY — push all content below fixed navbar ── */
+body {
+  padding-top: 130px !important;
+  margin-top: 0 !important;
+}
+@media (max-width: 768px) { body { padding-top: 108px !important; } }
+@media (max-width: 480px) { body { padding-top: 72px !important; } }
+
+/* ── 2. HERO — no extra margin/padding, photo fills naturally ── */
+.hero {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Hide all hero elements except the photo panel */
+.hero-thumb-strip,
+.hero-content,
+.hero-stat-card,
+.hero-panel-thumb,
+.hero-badge,
+.hero-overlay,
+.hero-scroll-hint,
+.hero-decor-left,
+.hero-decor-right { display: none !important; }
+
+.hero::before,
+.hero::after { display: none !important; }
+
+/* Photo panel — full width, fixed height */
+.hero-photo-panel {
+  display: block !important;
+  width: 100% !important;
+  height: 85vh !important;
+  min-height: 320px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  position: relative !important;
+  animation: none !important;
+  transform: none !important;
+  opacity: 1 !important;
+  overflow: hidden !important;
+}
+
+.hero-photo-panel::before,
+.hero-photo-panel::after { display: none !important; }
+
+.hero-panel-overlay { display: none !important; }
+
+/* The actual hero image */
+.hero-panel-img,
+.hero-photo-panel > img,
+.hero-photo-panel img {
+  display: block !important;
+  width: 100% !important;
+  height: 75vh !important;
+  min-height: 320px !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  opacity: 1 !important;
+  filter: none !important;
+  animation: none !important;
+  transform: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Desktop — taller hero */
+@media (min-width: 769px) {
+  .hero-panel-img,
+  .hero-photo-panel > img,
+  .hero-photo-panel img {
+    height: 85vh !important;
+  }
+}
+
+/* Mobile — good height so image fills screen */
+@media (max-width: 768px) {
+  .hero-photo-panel {
+    height: 70vw !important;
+    min-height: 300px !important;
+  }
+  .hero-panel-img,
+  .hero-photo-panel > img,
+  .hero-photo-panel img {
+    height: 100% !important;
+    min-height: 300px !important;
+    object-position: center center !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-photo-panel {
+    height: 80vw !important;
+    min-height: 260px !important;
+  }
+  .hero-panel-img,
+  .hero-photo-panel > img,
+  .hero-photo-panel img {
+    height: 100% !important;
+    min-height: 260px !important;
+    object-position: center center !important;
+  }
+}
+
+/* ── 3. ABOUT IMAGES — force visible, kill all animations ── */
+.about-images,
+.about-img-frame,
+.about-img-main,
+.about-img-secondary {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+  transition: none !important;
+  visibility: visible !important;
+}
+
+.about-img-main img,
+.about-img-secondary img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Also force .reveal inside about to show */
+.about .reveal,
+.about-images.reveal,
+.about-text.reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* ── 4. NAV DRAWER — left slide-in ── */
+.nav-drawer {
+  position: fixed !important;
+  top: 0 !important;
+  left: -320px !important;
+  width: 300px !important;
+  height: 100vh !important;
+  background: #ffffff !important;
+  z-index: 99999 !important;
+  transition: left 0.35s cubic-bezier(0.4,0,0.2,1) !important;
+  overflow-y: auto !important;
+  box-shadow: 4px 0 32px rgba(0,0,0,0.18) !important;
+  padding: 0 !important;
+}
+.nav-drawer.open {
+  left: 0 !important;
+}
+
+.nav-overlay {
+  display: none !important;
+  position: fixed !important;
+  inset: 0 !important;
+  background: rgba(0,0,0,0.45) !important;
+  z-index: 99998 !important;
+  cursor: pointer !important;
+}
+.nav-overlay.open {
+  display: block !important;
+}
+
+/* Drawer header */
+.nav-drawer-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 20px 20px 16px !important;
+  border-bottom: 1px solid rgba(196,168,130,0.25) !important;
+}
+.nav-drawer-logo {
+  height: 60px !important;
+  width: auto !important;
+  object-fit: contain !important;
+}
+.nav-drawer-close {
+  background: none !important;
+  border: none !important;
+  font-size: 1.4rem !important;
+  cursor: pointer !important;
+  color: #5a4a38 !important;
+  padding: 4px 8px !important;
+  line-height: 1 !important;
+}
+.nav-drawer-links {
+  list-style: none !important;
+  padding: 16px 0 !important;
+  margin: 0 !important;
+}
+.nav-drawer-link {
+  display: block !important;
+  padding: 14px 24px !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  color: #2a1a08 !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid rgba(196,168,130,0.12) !important;
+  transition: background 0.2s, color 0.2s !important;
+}
+.nav-drawer-link:hover,
+.nav-drawer-link.active {
+  background: rgba(196,168,130,0.10) !important;
+  color: #3a8a3a !important;
+}
+.nav-drawer-appt {
+  display: block !important;
+  margin: 20px 20px 24px !important;
+  padding: 12px 20px !important;
+  background: #3a8a3a !important;
+  color: #fff !important;
+  border-radius: 50px !important;
+  text-align: center !important;
+  font-weight: 700 !important;
+  font-size: 0.88rem !important;
+  text-decoration: none !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* ── 5. RESPONSIVE — mobile fixes ── */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .about-img-main { width: 100% !important; }
+  .about-img-secondary { width: 50% !important; }
+
+  #ayur-treatments > div > div:last-child {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .why-row {
+    flex-direction: column !important;
+    gap: 32px !important;
+  }
+
+  .photo-grid-sm-inner {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 32px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-topbar { display: none !important; }
+
+  #ayur-treatments > div > div:last-child {
+    grid-template-columns: 1fr !important;
+  }
+
+  .photo-grid-sm-inner {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .circle-carousel-outer {
+    padding: 0 8px !important;
+  }
+}
