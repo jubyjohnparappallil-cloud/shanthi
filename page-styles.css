@@ -1,0 +1,593 @@
+/* ═══════════════════════════════════════════════════════
+   INNER PAGE SHARED STYLES — Shanthi Wellness
+   Used by: ayurveda, physiotherapy, treatments,
+            packages, testimonials, faqs, contact pages
+═══════════════════════════════════════════════════════ */
+
+/* ── Page Hero Banner ── */
+.page-hero {
+  position: relative;
+  background: linear-gradient(135deg, #3b1f0e 0%, #5a2d12 50%, #3a5a1a 100%);
+  padding: 80px 0 60px;
+  text-align: center;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('herbal.jpg') center/cover no-repeat;
+  opacity: 0.18;
+}
+.page-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.page-hero-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #C4A882;
+  margin-bottom: 12px;
+}
+.page-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+.page-hero-title em {
+  font-style: italic;
+  color: #C4A882;
+}
+.page-hero-sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.page-breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.55);
+}
+.page-breadcrumb a {
+  color: #C4A882;
+  text-decoration: none;
+}
+.page-breadcrumb a:hover { text-decoration: underline; }
+.page-breadcrumb span { color: rgba(255,255,255,0.35); }
+
+/* ── Page Content Wrapper ── */
+.page-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 72px 32px;
+}
+.page-content-narrow {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 72px 32px;
+}
+
+/* ── Section Divider ── */
+.gold-line {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #C4A882, #A08060);
+  border-radius: 2px;
+  margin: 16px auto 32px;
+}
+.gold-line.left { margin-left: 0; }
+
+/* ── Intro Text Block ── */
+.intro-block {
+  background: #fdf8f2;
+  border-left: 4px solid #C4A882;
+  border-radius: 0 12px 12px 0;
+  padding: 28px 32px;
+  margin-bottom: 48px;
+  font-size: 1rem;
+  color: #4a3a28;
+  line-height: 1.9;
+}
+
+/* ── Treatment Cards Grid ── */
+.treatment-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+  margin-top: 40px;
+}
+.treatment-card {
+  background: #fff;
+  border: 1px solid rgba(196,168,130,0.25);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(196,168,130,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.treatment-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(196,168,130,0.22);
+}
+.treatment-card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+.treatment-card-body {
+  padding: 24px;
+}
+.treatment-card-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #3a8a3a;
+  background: rgba(58,138,58,0.08);
+  border: 1px solid rgba(58,138,58,0.2);
+  border-radius: 50px;
+  padding: 3px 10px;
+  margin-bottom: 10px;
+}
+.treatment-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+.treatment-card-desc {
+  font-size: 0.88rem;
+  color: #5a4a38;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.treatment-card-meta {
+  font-size: 0.75rem;
+  color: #A08060;
+  margin-bottom: 16px;
+}
+.btn-book {
+  display: inline-block;
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #3a8a3a, #2d7a2d);
+  color: #fff;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.btn-book:hover { opacity: 0.88; }
+
+/* ── Two-column content layout ── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  margin-bottom: 60px;
+}
+.two-col img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  object-fit: cover;
+  height: 380px;
+}
+.two-col-text h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+.two-col-text p {
+  font-size: 0.95rem;
+  color: #4a3a28;
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+
+/* ── Condition List ── */
+.condition-section {
+  background: #fdf8f2;
+  border-radius: 16px;
+  padding: 36px;
+  margin-bottom: 32px;
+}
+.condition-section h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #3b1f0e;
+  margin-bottom: 8px;
+}
+.condition-section > p {
+  font-size: 0.9rem;
+  color: #5a4a38;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+.condition-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.condition-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #3a2a18;
+  padding: 8px 12px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid rgba(196,168,130,0.2);
+}
+.condition-list li::before {
+  content: '✦';
+  color: #C4A882;
+  font-size: 0.6rem;
+  flex-shrink: 0;
+}
+
+/* ── Package Cards ── */
+.package-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  margin-top: 40px;
+}
+.package-card {
+  background: #fff;
+  border: 1px solid rgba(196,168,130,0.25);
+  border-radius: 20px;
+  padding: 36px 28px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(196,168,130,0.10);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.package-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 48px rgba(196,168,130,0.22);
+}
+.package-card.featured {
+  border-color: #C4A882;
+  background: linear-gradient(160deg, #fdf8f2, #fff);
+}
+.package-card.featured::before {
+  content: 'POPULAR';
+  position: absolute;
+  top: 16px; right: -28px;
+  background: #3a8a3a;
+  color: #fff;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 4px 36px;
+  transform: rotate(45deg);
+}
+.package-icon {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+.package-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+.package-duration {
+  font-size: 0.78rem;
+  color: #A08060;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.package-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  text-align: left;
+}
+.package-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: #4a3a28;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(196,168,130,0.12);
+}
+.package-features li::before {
+  content: '✓';
+  color: #3a8a3a;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ── Testimonial Cards ── */
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+  margin-top: 40px;
+}
+.tcard {
+  background: #fff;
+  border: 1px solid rgba(196,168,130,0.2);
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 4px 20px rgba(196,168,130,0.10);
+  position: relative;
+}
+.tcard-quote {
+  font-size: 4rem;
+  color: rgba(196,168,130,0.25);
+  font-family: Georgia, serif;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.tcard-text {
+  font-size: 0.92rem;
+  color: #4a3a28;
+  line-height: 1.85;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+.tcard-stars {
+  color: #C4A882;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+.tcard-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.tcard-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #C4A882, #A08060);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #fff;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.tcard-name {
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 0.9rem;
+}
+.tcard-role {
+  font-size: 0.75rem;
+  color: #A08060;
+}
+
+/* ── FAQ Accordion ── */
+.faq-list {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  background: #fff;
+  border: 1px solid rgba(196,168,130,0.22);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-align: left;
+  transition: background 0.2s;
+}
+.faq-question:hover { background: #fdf8f2; }
+.faq-question.open { background: #fdf8f2; color: #3b1f0e; }
+.faq-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(196,168,130,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #C4A882;
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+.faq-question.open .faq-icon { transform: rotate(45deg); }
+.faq-answer {
+  display: none;
+  padding: 0 24px 20px;
+  font-size: 0.9rem;
+  color: #5a4a38;
+  line-height: 1.85;
+  border-top: 1px solid rgba(196,168,130,0.15);
+}
+.faq-answer.open { display: block; }
+
+/* ── Contact Page ── */
+.contact-grid-page {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 60px;
+  align-items: start;
+}
+.contact-info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.contact-info-card {
+  background: #fdf8f2;
+  border: 1px solid rgba(196,168,130,0.22);
+  border-radius: 14px;
+  padding: 24px;
+}
+.contact-info-card h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #3b1f0e;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.contact-info-card p, .contact-info-card a {
+  font-size: 0.88rem;
+  color: #5a4a38;
+  line-height: 1.8;
+  text-decoration: none;
+  display: block;
+}
+.contact-info-card a:hover { color: #3a8a3a; }
+.contact-form-wrap {
+  background: #fff;
+  border: 1px solid rgba(196,168,130,0.22);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(196,168,130,0.10);
+}
+.contact-form-wrap h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+}
+.cf-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.cf-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.cf-group label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #3b1f0e;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.cf-group input,
+.cf-group select,
+.cf-group textarea {
+  padding: 12px 14px;
+  border: 1.5px solid rgba(196,168,130,0.35);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+  color: #1a1a1a;
+  background: #fdf8f2;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.cf-group input:focus,
+.cf-group select:focus,
+.cf-group textarea:focus {
+  border-color: #C4A882;
+  background: #fff;
+}
+.cf-group textarea { resize: vertical; min-height: 120px; }
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #3b1f0e, #5a2d12);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: opacity 0.2s;
+}
+.btn-submit:hover { opacity: 0.88; }
+
+/* ── Section heading style ── */
+.pg-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+.pg-section-title em { font-style: italic; color: #C4A882; }
+.pg-section-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #A08060;
+  margin-bottom: 8px;
+}
+.pg-section-sub {
+  font-size: 0.95rem;
+  color: #5a4a38;
+  line-height: 1.8;
+  max-width: 640px;
+  margin-bottom: 40px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .two-col { grid-template-columns: 1fr; gap: 32px; }
+  .two-col img { height: 260px; }
+  .contact-grid-page { grid-template-columns: 1fr; gap: 32px; }
+  .cf-row { grid-template-columns: 1fr; }
+  .page-content, .page-content-narrow { padding: 48px 20px; }
+  .condition-list { grid-template-columns: 1fr 1fr; }
+  .package-cards { grid-template-columns: 1fr; }
+  .contact-form-wrap { padding: 24px; }
+}
+@media (max-width: 480px) {
+  .treatment-cards { grid-template-columns: 1fr; }
+  .testimonial-cards { grid-template-columns: 1fr; }
+  .condition-list { grid-template-columns: 1fr; }
+}

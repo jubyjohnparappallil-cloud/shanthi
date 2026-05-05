@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Contact Us — Shanthi Wellness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/><link rel="stylesheet" href="page-styles.css"/>
+  <style>
+    body{padding-top:130px!important}@media(max-width:768px){body{padding-top:108px!important}}@media(max-width:480px){body{padding-top:72px!important}}
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,0.08);padding:0}
+    .navbar-topbar{background:#f8f4ee;border-bottom:1px solid rgba(196,168,130,0.25);padding:7px 0}
+    .navbar-topbar-inner{max-width:1280px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between}
+    .navbar-phone{display:flex;align-items:center;gap:7px;font-size:0.82rem;font-weight:500;color:#5a4a38}
+    .navbar-appt-btn{display:inline-flex;align-items:center;padding:7px 20px;background:#3a8a3a;color:#fff;border-radius:50px;font-size:0.78rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none}
+    .navbar-main{background:#fff;padding:4px 0;width:100%;border-bottom:3px solid;border-image:linear-gradient(90deg,#3a8a3a,#6dcc6d,#C4A882,#6dcc6d,#3a8a3a) 1}
+    @media(max-width:480px){.navbar-topbar{display:none}}
+    .map-embed{width:100%;height:320px;border:0;border-radius:12px;margin-top:32px;filter:grayscale(20%)}
+  </style>
+</head>
+<body>
+<div class="leaf-container" aria-hidden="true">
+  <div class="leaf leaf-2"><svg viewBox="0 0 50 70" fill="none"><path d="M25 65 C25 65 3 48 3 25 C3 8 14 2 25 2 C36 2 47 8 47 25 C47 48 25 65 25 65Z" fill="#6dcc6d" opacity="0.5"/></svg></div>
+  <div class="leaf leaf-8"><svg viewBox="0 0 50 68" fill="none"><path d="M25 64 C25 64 3 47 3 25 C3 8 13 1 25 1 C37 1 47 8 47 25 C47 47 25 64 25 64Z" fill="#3a8a3a" opacity="0.45"/></svg></div>
+</div>
+
+<nav class="navbar" id="navbar">
+  <div class="navbar-topbar"><div class="navbar-topbar-inner">
+    <span class="navbar-phone"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke="#A08060" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Call : +91 98765 43210, +91 80 2345 6789</span>
+    <a href="contact.html" class="navbar-appt-btn">Appointment</a>
+  </div></div>
+  <div class="navbar-main"><table style="width:100%;border-collapse:collapse;box-sizing:border-box;display:table"><tr>
+    <td style="padding:6px 0 6px 40px;vertical-align:middle"><a href="index.html" style="text-decoration:none;display:inline-block"><img src="logo.png" alt="Shanthi Wellness" style="height:90px;width:auto;max-width:340px;object-fit:contain;display:block"/></a></td>
+    <td style="padding:6px 40px 6px 0;vertical-align:middle;text-align:right;width:1%">
+      <button id="navToggle" style="display:inline-flex;align-items:center;gap:10px;padding:10px 22px;background:transparent;border:1.5px solid rgba(196,168,130,0.45);border-radius:8px;cursor:pointer;white-space:nowrap;font-family:Inter,sans-serif">
+        <span style="font-size:0.92rem;font-weight:600;color:#2a1a08">Menu</span>
+        <span style="display:flex;flex-direction:column;gap:5px"><span style="display:block;width:22px;height:2px;background:#2a1a08;border-radius:2px"></span><span style="display:block;width:22px;height:2px;background:#2a1a08;border-radius:2px"></span><span style="display:block;width:22px;height:2px;background:#2a1a08;border-radius:2px"></span></span>
+      </button>
+    </td>
+  </tr></table></div>
+</nav>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="nav-drawer" id="navDrawer">
+  <div class="nav-drawer-header"><img src="logo.png" alt="Shanthi Wellness" class="nav-drawer-logo"/><button class="nav-drawer-close" id="navDrawerClose">✕</button></div>
+  <ul class="nav-drawer-links">
+    <li><a href="index.html" class="nav-drawer-link">Home</a></li>
+    <li><a href="ayurveda.html" class="nav-drawer-link">Ayurveda</a></li>
+    <li><a href="physiotherapy.html" class="nav-drawer-link">Physiotherapy</a></li>
+    <li><a href="treatments.html" class="nav-drawer-link">Treatments</a></li>
+    <li><a href="packages.html" class="nav-drawer-link">Our Packages</a></li>
+    <li><a href="testimonials.html" class="nav-drawer-link">Testimonials</a></li>
+    <li><a href="contact.html" class="nav-drawer-link active">Make an Appointment</a></li>
+    <li><a href="faqs.html" class="nav-drawer-link">FAQs</a></li>
+    <li><a href="contact.html" class="nav-drawer-link">Contact Us</a></li>
+  </ul>
+  <a href="contact.html" class="nav-drawer-appt">Book Appointment</a>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-eyebrow">We'd Love to Hear From You</p>
+    <h1 class="page-hero-title">Get in <em>Touch</em></h1>
+    <p class="page-hero-sub">Book an appointment, ask a question, or simply reach out. Our team is here to help you begin your healing journey.</p>
+    <div class="page-breadcrumb"><a href="index.html">Home</a><span>›</span><span>Contact Us</span></div>
+  </div>
+</section>
+
+<div class="page-content">
+
+  <div class="contact-grid-page">
+
+    <!-- Left: Contact Info -->
+    <div class="contact-info-block">
+
+      <div class="contact-info-card">
+        <h4>📍 Our Location</h4>
+        <p>42 Healing Grove Road<br/>Koramangala, Bengaluru<br/>Karnataka — 560034</p>
+      </div>
+
+      <div class="contact-info-card">
+        <h4>📞 Phone</h4>
+        <a href="tel:+919876543210">+91 98765 43210</a>
+        <a href="tel:+918023456789">+91 80 2345 6789</a>
+        <p style="margin-top:8px;font-size:0.78rem;color:#A08060">Mon–Sat: 9:00 AM – 7:00 PM<br/>Sunday: 10:00 AM – 2:00 PM</p>
+      </div>
+
+      <div class="contact-info-card">
+        <h4>✉️ Email</h4>
+        <a href="mailto:hello@shanthiwellness.in">hello@shanthiwellness.in</a>
+        <a href="mailto:appointments@shanthiwellness.in">appointments@shanthiwellness.in</a>
+      </div>
+
+      <div class="contact-info-card">
+        <h4>🕐 Clinic Hours</h4>
+        <p>Monday – Friday: 9:00 AM – 7:00 PM</p>
+        <p>Saturday: 9:00 AM – 5:00 PM</p>
+        <p>Sunday: 10:00 AM – 2:00 PM</p>
+        <p style="margin-top:8px;font-size:0.78rem;color:#3a8a3a;font-weight:600">✓ Walk-ins welcome (subject to availability)</p>
+      </div>
+
+      <!-- Social Links -->
+      <div class="contact-info-card">
+        <h4>🌐 Follow Us</h4>
+        <div style="display:flex;gap:12px;margin-top:4px">
+          <a href="#" style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(196,168,130,0.35);color:#C4A882;text-decoration:none;font-size:0.8rem;font-weight:700">FB</a>
+          <a href="#" style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(196,168,130,0.35);color:#C4A882;text-decoration:none;font-size:0.8rem;font-weight:700">IG</a>
+          <a href="#" style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(196,168,130,0.35);color:#C4A882;text-decoration:none;font-size:0.8rem;font-weight:700">YT</a>
+          <a href="#" style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(196,168,130,0.35);color:#C4A882;text-decoration:none;font-size:0.8rem;font-weight:700">WA</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right: Contact Form -->
+    <div class="contact-form-wrap">
+      <h3>Send Us a Message</h3>
+      <div id="formMsg" style="display:none;padding:12px 16px;border-radius:8px;font-size:0.88rem;margin-bottom:16px"></div>
+      <form id="contactForm" novalidate>
+        <div class="cf-row">
+          <div class="cf-group">
+            <label for="cf-name">Full Name *</label>
+            <input type="text" id="cf-name" placeholder="Your full name" required/>
+          </div>
+          <div class="cf-group">
+            <label for="cf-phone">Phone Number *</label>
+            <input type="tel" id="cf-phone" placeholder="+91 00000 00000" required/>
+          </div>
+        </div>
+        <div class="cf-group">
+          <label for="cf-email">Email Address *</label>
+          <input type="email" id="cf-email" placeholder="your@email.com" required/>
+        </div>
+        <div class="cf-group">
+          <label for="cf-service">Interested In</label>
+          <select id="cf-service">
+            <option value="">Select a service (optional)</option>
+            <option>Ayurveda Consultation</option>
+            <option>Panchakarma</option>
+            <option>Shirodhara</option>
+            <option>Abhyanga</option>
+            <option>Pizhichil</option>
+            <option>Physiotherapy</option>
+            <option>Weight Management</option>
+            <option>Stress Relief Package</option>
+            <option>General Enquiry</option>
+          </select>
+        </div>
+        <div class="cf-group">
+          <label for="cf-message">Message *</label>
+          <textarea id="cf-message" placeholder="Tell us about your health concern or question…" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit" id="cfSubmit">Send Message →</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- Map -->
+  <div style="margin-top:60px">
+    <p class="pg-section-eyebrow" style="text-align:center">Find Us</p>
+    <h2 class="pg-section-title" style="text-align:center;margin-bottom:8px">Our <em>Location</em></h2>
+    <div class="gold-line"></div>
+    <iframe
+      class="map-embed"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5965!2d77.6245!3d12.9352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU2JzA2LjciTiA3N8KwMzcnMjguMiJF!5e0!3m2!1sen!2sin!4v1234567890"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      title="Shanthi Wellness Location">
+    </iframe>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-top"><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="footer-logo-link"><img src="logo.png" alt="Shanthi Wellness" class="footer-logo-img"/></a><p class="footer-tagline">Ancient Wisdom. Modern Healing.<br/>Your sanctuary of holistic health.</p></div>
+    <div class="footer-col"><h5 class="footer-col-title">Quick Links</h5><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="ayurveda.html">Ayurveda</a></li><li><a href="treatments.html">Treatments</a></li><li><a href="packages.html">Packages</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h5 class="footer-col-title">Services</h5><ul class="footer-links"><li><a href="ayurveda.html">Ayurveda</a></li><li><a href="physiotherapy.html">Physiotherapy</a></li><li><a href="treatments.html">Treatments</a></li><li><a href="packages.html">Packages</a></li><li><a href="faqs.html">FAQs</a></li></ul></div>
+    <div class="footer-col"><h5 class="footer-col-title">Contact</h5><ul class="footer-contact-list"><li>42 Healing Grove Road, Koramangala, Bengaluru</li><li>+91 98765 43210</li><li>hello@shanthiwellness.in</li></ul></div>
+  </div></div></div>
+  <div class="footer-bottom"><div class="container"><p>© 2025 Shanthi Wellness. All rights reserved.</p><p class="footer-credits">Crafted with care for holistic healing.</p></div></div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var name    = document.getElementById('cf-name').value.trim();
+  var phone   = document.getElementById('cf-phone').value.trim();
+  var email   = document.getElementById('cf-email').value.trim();
+  var message = document.getElementById('cf-message').value.trim();
+  var msgEl   = document.getElementById('formMsg');
+  var btn     = document.getElementById('cfSubmit');
+
+  if (!name || !phone || !email || !message) {
+    msgEl.style.display = 'block';
+    msgEl.style.background = 'rgba(220,38,38,0.08)';
+    msgEl.style.border = '1px solid rgba(220,38,38,0.25)';
+    msgEl.style.color = '#dc2626';
+    msgEl.textContent = 'Please fill in all required fields.';
+    return;
+  }
+
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+
+  setTimeout(function() {
+    msgEl.style.display = 'block';
+    msgEl.style.background = 'rgba(58,138,58,0.08)';
+    msgEl.style.border = '1px solid rgba(58,138,58,0.25)';
+    msgEl.style.color = '#2d7a2d';
+    msgEl.textContent = 'Thank you, ' + name + '! Your message has been received. We will get back to you within 24 hours.';
+    document.getElementById('contactForm').reset();
+    btn.textContent = 'Send Message →';
+    btn.disabled = false;
+  }, 1200);
+});
+</script>
+</body>
+</html>

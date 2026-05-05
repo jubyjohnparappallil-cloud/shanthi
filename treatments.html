@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Treatments — Shanthi Wellness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/><link rel="stylesheet" href="page-styles.css"/>
+  <style>
+    body{padding-top:130px!important}@media(max-width:768px){body{padding-top:108px!important}}@media(max-width:480px){body{padding-top:72px!important}}
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,0.08);padding:0}
+    .navbar-topbar{background:#f8f4ee;border-bottom:1px solid rgba(196,168,130,0.25);padding:7px 0}
+    .navbar-topbar-inner{max-width:1280px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between}
+    .navbar-phone{display:flex;align-items:center;gap:7px;font-size:0.82rem;font-weight:500;color:#5a4a38}
+    .navbar-appt-btn{display:inline-flex;align-items:center;padding:7px 20px;background:#3a8a3a;color:#fff;border-radius:50px;font-size:0.78rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none}
+    .navbar-main{background:#fff;padding:4px 0;width:100%;border-bottom:3px solid;border-image:linear-gradient(90deg,#3a8a3a,#6dcc6d,#C4A882,#6dcc6d,#3a8a3a) 1}
+    @media(max-width:480px){.navbar-topbar{display:none}}
+  </style>
+</head>
+<body>
+<div class="leaf-container" aria-hidden="true">
+  <div class="leaf leaf-1"><svg viewBox="0 0 60 80" fill="none"><path d="M30 75 C30 75 5 55 5 30 C5 10 20 2 30 2 C40 2 55 10 55 30 C55 55 30 75 30 75Z" fill="#4aaa4a" opacity="0.5"/></svg></div>
+  <div class="leaf leaf-4"><svg viewBox="0 0 55 75" fill="none"><path d="M27 70 C27 70 4 52 4 27 C4 9 15 2 27 2 C39 2 51 9 51 27 C51 52 27 70 27 70Z" fill="#57E86A" opacity="0.45"/></svg></div>
+</div>
+
+<nav class="navbar" id="navbar">
+  <div class="navbar-topbar"><div class="navbar-topbar-inner">
+    <span class="navbar-phone"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke="#A08060" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Call : +91 98765 43210, +91 80 2345 6789</span>
+    <a href="index.html#appointment" class="navbar-appt-btn">Appointment</a>
+  </div></div>
+  <div class="navbar-main"><table style="width:100%;border-collapse:collapse;box-sizing:border-box;display:table"><tr>
+    <td style="padding:6px 0 6px 40px;vertical-align:middle"><a href="index.html" style="text-decoration:none;display:inline-block"><img src="logo.png" alt="Shanthi Wellness" style="height:90px;width:auto;max-width:340px;object-fit:contain;display:block"/></a></td>
+    <td style="padding:6px 40px 6px 0;vertical-align:middle;text-align:right;width:1%">
+      <button id="navToggle" style="display:inline-flex;align-items:center;gap:10px;padding:10px 22px;background:transparent;border:1.5px solid rgba(196,168,130,0.45);border-radius:8px;cursor:pointer;white-space:nowrap;font-family:Inter,sans-serif">
+        <span style="font-size:0.92rem;font-weight:600;color:#2a1a08">Menu</span>
+        <span style="display:flex;flex-direction:column;gap:5px"><span style="display:block;width:22px;height:2px;background:#2a1a08;border-radius:2px"></span><span style="display:block;width:22px;height:2px;background:#2a1a08;border-radius:2px"></span><span style="display:block;width:22px;height:2px;background:#2a1a08;border-radius:2px"></span></span>
+      </button>
+    </td>
+  </tr></table></div>
+</nav>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="nav-drawer" id="navDrawer">
+  <div class="nav-drawer-header"><img src="logo.png" alt="Shanthi Wellness" class="nav-drawer-logo"/><button class="nav-drawer-close" id="navDrawerClose">✕</button></div>
+  <ul class="nav-drawer-links">
+    <li><a href="index.html" class="nav-drawer-link">Home</a></li>
+    <li><a href="ayurveda.html" class="nav-drawer-link">Ayurveda</a></li>
+    <li><a href="physiotherapy.html" class="nav-drawer-link">Physiotherapy</a></li>
+    <li><a href="treatments.html" class="nav-drawer-link active">Treatments</a></li>
+    <li><a href="packages.html" class="nav-drawer-link">Our Packages</a></li>
+    <li><a href="testimonials.html" class="nav-drawer-link">Testimonials</a></li>
+    <li><a href="index.html#appointment" class="nav-drawer-link">Make an Appointment</a></li>
+    <li><a href="faqs.html" class="nav-drawer-link">FAQs</a></li>
+    <li><a href="contact.html" class="nav-drawer-link">Contact Us</a></li>
+  </ul>
+  <a href="index.html#appointment" class="nav-drawer-appt">Book Appointment</a>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-eyebrow">Classical Kerala Therapies</p>
+    <h1 class="page-hero-title">Our <em>Ayurvedic Treatments</em></h1>
+    <p class="page-hero-sub">Traditional therapies and herbal medicines to balance the bodily principles and integrate body, mind and spirit.</p>
+    <div class="page-breadcrumb"><a href="index.html">Home</a><span>›</span><span>Treatments</span></div>
+  </div>
+</section>
+
+<div class="page-content">
+  <div class="intro-block">
+    AYURVEDA offers a range of traditional therapies and herbal medicines to balance the bodily principles and to integrate body, mind and spirit. These therapies can be used both to cure various ailments as well as to improve general health (Rejuvenation). The effect of therapies differs with the oil and other ingredients used. Having identified the body constitution (<em>Prakruti</em>) and type of ailment (<em>Vikruti</em>), a suitable type of therapy is carefully selected.
+  </div>
+
+  <div class="treatment-cards">
+
+    <div class="treatment-card">
+      <img src="kizhi.jpg" alt="Abhyanga" class="treatment-card-img"/>
+      <div class="treatment-card-body">
+        <span class="treatment-card-tag">Ayurveda</span>
+        <h3 class="treatment-card-title">Abhyanga</h3>
+        <p class="treatment-card-desc">A traditional full-body massage done with medicated herbal oils by experienced therapists in a synchronized manner for 45 minutes. Treats the whole body physically, mentally and emotionally while balancing the doshas. Relieves joints and muscles from stiffness, increases blood circulation and encourages quick removal of metabolic wastes.</p>
+        <p class="treatment-card-meta">⏱ 45 minutes &nbsp;|&nbsp; Daily or as prescribed</p>
+        <a href="index.html#appointment" class="btn-book">Book Now →</a>
+      </div>
+    </div>
+
+    <div class="treatment-card">
+      <img src="pizhichil.jpg" alt="Pizhichil" class="treatment-card-img"/>
+      <div class="treatment-card-body">
+        <span class="treatment-card-tag">Kerala Specialty</span>
+        <h3 class="treatment-card-title">Pizhichil (Thailadhara)</h3>
+        <p class="treatment-card-desc">A king among traditional therapies — a beautiful combination of Snehana (oleation) and Swedana (sudation). The whole body is subjected to streams of lukewarm medicated oil with simultaneous soft massage. More than three litres of medicated oil is used. Very useful for rheumatic diseases, arthritis, paralysis, sexual weakness and neurological disorders.</p>
+        <p class="treatment-card-meta">⏱ 60–90 minutes &nbsp;|&nbsp; 7–14 days</p>
+        <a href="index.html#appointment" class="btn-book">Book Now →</a>
+      </div>
+    </div>
+
+    <div class="treatment-card">
+      <img src="Nasyam.jpg" alt="Njavarakizhi" class="treatment-card-img"/>
+      <div class="treatment-card-body">
+        <span class="treatment-card-tag">Kerala Specialty</span>
+        <h3 class="treatment-card-title">Njavarakizhi</h3>
+        <p class="treatment-card-desc">A massage with small cotton cloth boluses filled with cooked Njavara rice after a liberal application of medicated oil. The rice is cooked in cow's milk and herbal decoction. Highly rejuvenating and nourishing — strengthens the nervous system and improves the overall appearance of the skin. Effective for neurological disorders, rheumatism and arthritis.</p>
+        <p class="treatment-card-meta">⏱ 60–90 minutes &nbsp;|&nbsp; 7–14 days</p>
+        <a href="index.html#appointment" class="btn-book">Book Now →</a>
+      </div>
+    </div>
+
+    <div class="treatment-card">
+      <img src="Dhara.jpg" alt="Shirodhara" class="treatment-card-img"/>
+      <div class="treatment-card-body">
+        <span class="treatment-card-tag">Ayurveda</span>
+        <h3 class="treatment-card-title">Shirodhara</h3>
+        <p class="treatment-card-desc">A continuous stream of warm medicated oil poured over the forehead in a rhythmic flow. Profoundly calming for the nervous system and mind. Highly effective for stress, anxiety, insomnia, migraine, hypertension and neurological conditions. One of the most iconic and deeply healing of all Ayurvedic therapies.</p>
+        <p class="treatment-card-meta">⏱ 45–60 minutes &nbsp;|&nbsp; 7–21 days</p>
+        <a href="index.html#appointment" class="btn-book">Book Now →</a>
+      </div>
+    </div>
+
+    <div class="treatment-card">
+      <img src="shirovasthi.jpg" alt="Shirovasthi" class="treatment-card-img"/>
+      <div class="treatment-card-body">
+        <span class="treatment-card-tag">Ayurveda</span>
+        <h3 class="treatment-card-title">Shirovasthi</h3>
+        <p class="treatment-card-desc">Medicated oil is poured over a leather cap kept on the head and retained for a prescribed period. Very effective for headache, hair falling, burning sensation and treatments of other diseases of ear, nose and throat. Deeply nourishes the nervous system and brain tissues.</p>
+        <p class="treatment-card-meta">⏱ 45–60 minutes &nbsp;|&nbsp; 7 days</p>
+        <a href="index.html#appointment" class="btn-book">Book Now →</a>
+      </div>
+    </div>
+
+    <div class="treatment-card">
+      <img src="flower.jpg" alt="Elakizhi" class="treatment-card-img"/>
+      <div class="treatment-card-body">
+        <span class="treatment-card-tag">Kerala Specialty</span>
+        <h3 class="treatment-card-title">Elakizhi (Pathrapotala Sweda)</h3>
+        <p class="treatment-card-desc">Begins with the application of suitable medicated oil to the entire body. The body is then subjected to profuse sweating through a massage with boluses of fresh leaves and herbal powders. Highly effective for diseases of the musculoskeletal system, arthritis, spondylosis and sports injuries.</p>
+        <p class="treatment-card-meta">⏱ 45–60 minutes &nbsp;|&nbsp; 7–14 days</p>
+        <a href="index.html#appointment" class="btn-book">Book Now →</a>
+      </div>
+    </div>
+
+    <div class="treatment-card">
+      <img src="Medicine.jpg" alt="Nasyam" class="treatment-card-img"/>
+      <div class="treatment-card-body">
+        <span class="treatment-card-tag">Ayurveda</span>
+        <h3 class="treatment-card-title">Nasyam</h3>
+        <p class="treatment-card-desc">Treatment done for certain types of paralysis, headaches, mental disorders etc., in which herbal juices and medicated oils are administered through the nostrils. Highly effective for sinusitis, migraine, cervical spondylosis and neurological conditions of the head and neck region.</p>
+        <p class="treatment-card-meta">⏱ 30–45 minutes &nbsp;|&nbsp; 7–14 days</p>
+        <a href="index.html#appointment" class="btn-book">Book Now →</a>
+      </div>
+    </div>
+
+    <div class="treatment-card">
+      <img src="ritual3.jpg" alt="Panchakarma" class="treatment-card-img"/>
+      <div class="treatment-card-body">
+        <span class="treatment-card-tag">Detox Programme</span>
+        <h3 class="treatment-card-title">Panchakarma</h3>
+        <p class="treatment-card-desc">The classical five-fold purification therapy — a comprehensive detoxification and rejuvenation programme. Removes deep-seated toxins and restores the body's natural balance and vitality. The five procedures are Vamana, Virechana, Anuvasana, Niruha and Nasya. Effective even for otherwise incurable diseases.</p>
+        <p class="treatment-card-meta">⏱ Full programme &nbsp;|&nbsp; 7–21 days</p>
+        <a href="index.html#appointment" class="btn-book">Book Now →</a>
+      </div>
+    </div>
+
+    <div class="treatment-card">
+      <img src="herbal.jpg" alt="Herbal Steam Bath" class="treatment-card-img"/>
+      <div class="treatment-card-body">
+        <span class="treatment-card-tag">Ayurveda</span>
+        <h3 class="treatment-card-title">Herbal Steam Bath</h3>
+        <p class="treatment-card-desc">A medicated steam bath using a decoction of specific herbs. Opens the pores, removes toxins through sweat, relieves body pain and stiffness, improves blood circulation and promotes weight loss. Often used as a preparatory procedure before other Ayurvedic treatments.</p>
+        <p class="treatment-card-meta">⏱ 20–30 minutes &nbsp;|&nbsp; As prescribed</p>
+        <a href="index.html#appointment" class="btn-book">Book Now →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <div style="background:linear-gradient(135deg,#3b1f0e,#5a2d12);border-radius:20px;padding:56px 40px;text-align:center;color:#fff;margin-top:60px">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;margin-bottom:16px">Not Sure Which <em style="color:#C4A882">Treatment is Right for You?</em></h2>
+    <p style="color:rgba(255,255,255,0.75);max-width:520px;margin:0 auto 32px;line-height:1.8">Book a consultation with our Ayurvedic physician. We will assess your constitution and recommend the most suitable treatment plan.</p>
+    <a href="index.html#appointment" class="btn-book" style="font-size:0.95rem;padding:14px 36px">Book Consultation →</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-top"><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="footer-logo-link"><img src="logo.png" alt="Shanthi Wellness" class="footer-logo-img"/></a><p class="footer-tagline">Ancient Wisdom. Modern Healing.<br/>Your sanctuary of holistic health.</p></div>
+    <div class="footer-col"><h5 class="footer-col-title">Quick Links</h5><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="ayurveda.html">Ayurveda</a></li><li><a href="physiotherapy.html">Physiotherapy</a></li><li><a href="treatments.html">Treatments</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h5 class="footer-col-title">Treatments</h5><ul class="footer-links"><li><a href="treatments.html">Abhyanga</a></li><li><a href="treatments.html">Pizhichil</a></li><li><a href="treatments.html">Shirodhara</a></li><li><a href="treatments.html">Panchakarma</a></li><li><a href="treatments.html">Nasyam</a></li><li><a href="treatments.html">Njavarakizhi</a></li></ul></div>
+    <div class="footer-col"><h5 class="footer-col-title">Contact</h5><ul class="footer-contact-list"><li>42 Healing Grove Road, Koramangala, Bengaluru</li><li>+91 98765 43210</li><li>hello@shanthiwellness.in</li></ul></div>
+  </div></div></div>
+  <div class="footer-bottom"><div class="container"><p>© 2025 Shanthi Wellness. All rights reserved.</p><p class="footer-credits">Crafted with care for holistic healing.</p></div></div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

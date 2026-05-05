@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Packages & Offers — Shanthi Wellness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/><link rel="stylesheet" href="page-styles.css"/>
+  <style>
+    body{padding-top:130px!important}@media(max-width:768px){body{padding-top:108px!important}}@media(max-width:480px){body{padding-top:72px!important}}
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,0.08);padding:0}
+    .navbar-topbar{background:#f8f4ee;border-bottom:1px solid rgba(196,168,130,0.25);padding:7px 0}
+    .navbar-topbar-inner{max-width:1280px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between}
+    .navbar-phone{display:flex;align-items:center;gap:7px;font-size:0.82rem;font-weight:500;color:#5a4a38}
+    .navbar-appt-btn{display:inline-flex;align-items:center;padding:7px 20px;background:#3a8a3a;color:#fff;border-radius:50px;font-size:0.78rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none}
+    .navbar-main{background:#fff;padding:4px 0;width:100%;border-bottom:3px solid;border-image:linear-gradient(90deg,#3a8a3a,#6dcc6d,#C4A882,#6dcc6d,#3a8a3a) 1}
+    @media(max-width:480px){.navbar-topbar{display:none}}
+  </style>
+</head>
+<body>
+<div class="leaf-container" aria-hidden="true">
+  <div class="leaf leaf-2"><svg viewBox="0 0 50 70" fill="none"><path d="M25 65 C25 65 3 48 3 25 C3 8 14 2 25 2 C36 2 47 8 47 25 C47 48 25 65 25 65Z" fill="#6dcc6d" opacity="0.5"/></svg></div>
+  <div class="leaf leaf-5"><svg viewBox="0 0 35 50" fill="none"><path d="M17 47 C17 47 2 34 2 17 C2 5 9 1 17 1 C25 1 33 5 33 17 C33 34 17 47 17 47Z" fill="#C4A882" opacity="0.4"/></svg></div>
+</div>
+
+<nav class="navbar" id="navbar">
+  <div class="navbar-topbar"><div class="navbar-topbar-inner">
+    <span class="navbar-phone"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke="#A08060" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Call : +91 98765 43210, +91 80 2345 6789</span>
+    <a href="index.html#appointment" class="navbar-appt-btn">Appointment</a>
+  </div></div>
+  <div class="navbar-main"><table style="width:100%;border-collapse:collapse;box-sizing:border-box;display:table"><tr>
+    <td style="padding:6px 0 6px 40px;vertical-align:middle"><a href="index.html" style="text-decoration:none;display:inline-block"><img src="logo.png" alt="Shanthi Wellness" style="height:90px;width:auto;max-width:340px;object-fit:contain;display:block"/></a></td>
+    <td style="padding:6px 40px 6px 0;vertical-align:middle;text-align:right;width:1%">
+      <button id="navToggle" style="display:inline-flex;align-items:center;gap:10px;padding:10px 22px;background:transparent;border:1.5px solid rgba(196,168,130,0.45);border-radius:8px;cursor:pointer;white-space:nowrap;font-family:Inter,sans-serif">
+        <span style="font-size:0.92rem;font-weight:600;color:#2a1a08">Menu</span>
+        <span style="display:flex;flex-direction:column;gap:5px"><span style="display:block;width:22px;height:2px;background:#2a1a08;border-radius:2px"></span><span style="display:block;width:22px;height:2px;background:#2a1a08;border-radius:2px"></span><span style="display:block;width:22px;height:2px;background:#2a1a08;border-radius:2px"></span></span>
+      </button>
+    </td>
+  </tr></table></div>
+</nav>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="nav-drawer" id="navDrawer">
+  <div class="nav-drawer-header"><img src="logo.png" alt="Shanthi Wellness" class="nav-drawer-logo"/><button class="nav-drawer-close" id="navDrawerClose">✕</button></div>
+  <ul class="nav-drawer-links">
+    <li><a href="index.html" class="nav-drawer-link">Home</a></li>
+    <li><a href="ayurveda.html" class="nav-drawer-link">Ayurveda</a></li>
+    <li><a href="physiotherapy.html" class="nav-drawer-link">Physiotherapy</a></li>
+    <li><a href="treatments.html" class="nav-drawer-link">Treatments</a></li>
+    <li><a href="packages.html" class="nav-drawer-link active">Our Packages</a></li>
+    <li><a href="testimonials.html" class="nav-drawer-link">Testimonials</a></li>
+    <li><a href="index.html#appointment" class="nav-drawer-link">Make an Appointment</a></li>
+    <li><a href="faqs.html" class="nav-drawer-link">FAQs</a></li>
+    <li><a href="contact.html" class="nav-drawer-link">Contact Us</a></li>
+  </ul>
+  <a href="index.html#appointment" class="nav-drawer-appt">Book Appointment</a>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-eyebrow">Curated Healing Programmes</p>
+    <h1 class="page-hero-title">Our <em>Packages & Offers</em></h1>
+    <p class="page-hero-sub">Carefully designed treatment programmes combining multiple therapies for comprehensive healing and rejuvenation.</p>
+    <div class="page-breadcrumb"><a href="index.html">Home</a><span>›</span><span>Packages</span></div>
+  </div>
+</section>
+
+<div class="page-content">
+
+  <div style="text-align:center;margin-bottom:56px">
+    <p class="pg-section-eyebrow">Choose Your Journey</p>
+    <h2 class="pg-section-title">Healing <em>Programmes</em></h2>
+    <div class="gold-line"></div>
+    <p class="pg-section-sub" style="margin:0 auto">Each package is designed by our Ayurvedic physicians to address specific health goals — from deep detox to stress relief and weight management.</p>
+  </div>
+
+  <div class="package-cards">
+
+    <div class="package-card">
+      <div class="package-icon">🌿</div>
+      <h3 class="package-name">Rejuvenation Package</h3>
+      <p class="package-duration">7 Days Programme</p>
+      <ul class="package-features">
+        <li>Initial Ayurvedic consultation</li>
+        <li>Daily Abhyanga (full body oil massage)</li>
+        <li>Shirodhara (3 sessions)</li>
+        <li>Herbal steam bath daily</li>
+        <li>Personalised herbal medicines</li>
+        <li>Diet & lifestyle guidance</li>
+      </ul>
+      <a href="index.html#appointment" class="btn-book" style="display:block;text-align:center">Enquire Now →</a>
+    </div>
+
+    <div class="package-card featured">
+      <div class="package-icon">✨</div>
+      <h3 class="package-name">Panchakarma Detox</h3>
+      <p class="package-duration">14 Days Programme</p>
+      <ul class="package-features">
+        <li>Comprehensive Ayurvedic assessment</li>
+        <li>Full Panchakarma (5 procedures)</li>
+        <li>Daily Abhyanga & steam bath</li>
+        <li>Shirodhara (7 sessions)</li>
+        <li>Njavarakizhi (4 sessions)</li>
+        <li>Personalised herbal medicines</li>
+        <li>Post-treatment diet plan</li>
+        <li>Follow-up consultation</li>
+      </ul>
+      <a href="index.html#appointment" class="btn-book" style="display:block;text-align:center">Enquire Now →</a>
+    </div>
+
+    <div class="package-card">
+      <div class="package-icon">⚖️</div>
+      <h3 class="package-name">Weight Management</h3>
+      <p class="package-duration">14 Days Programme</p>
+      <ul class="package-features">
+        <li>Body constitution analysis</li>
+        <li>Udvartana (powder massage)</li>
+        <li>Virechana (purgation therapy)</li>
+        <li>Herbal steam bath daily</li>
+        <li>Customised diet plan</li>
+        <li>Yoga & lifestyle coaching</li>
+        <li>Herbal weight-loss medicines</li>
+      </ul>
+      <a href="index.html#appointment" class="btn-book" style="display:block;text-align:center">Enquire Now →</a>
+    </div>
+
+    <div class="package-card">
+      <div class="package-icon">🧘</div>
+      <h3 class="package-name">Stress Relief Package</h3>
+      <p class="package-duration">5 Days Programme</p>
+      <ul class="package-features">
+        <li>Consultation & assessment</li>
+        <li>Shirodhara (5 sessions)</li>
+        <li>Abhyanga daily</li>
+        <li>Shirovasthi (2 sessions)</li>
+        <li>Herbal steam bath</li>
+        <li>Meditation guidance</li>
+      </ul>
+      <a href="index.html#appointment" class="btn-book" style="display:block;text-align:center">Enquire Now →</a>
+    </div>
+
+    <div class="package-card">
+      <div class="package-icon">🦴</div>
+      <h3 class="package-name">Joint Care Package</h3>
+      <p class="package-duration">10 Days Programme</p>
+      <ul class="package-features">
+        <li>Orthopaedic assessment</li>
+        <li>Pizhichil (7 sessions)</li>
+        <li>Elakizhi (5 sessions)</li>
+        <li>Abhyanga daily</li>
+        <li>Herbal steam bath</li>
+        <li>Anti-inflammatory medicines</li>
+        <li>Physiotherapy sessions</li>
+      </ul>
+      <a href="index.html#appointment" class="btn-book" style="display:block;text-align:center">Enquire Now →</a>
+    </div>
+
+    <div class="package-card">
+      <div class="package-icon">💆</div>
+      <h3 class="package-name">Beauty & Skin Care</h3>
+      <p class="package-duration">7 Days Programme</p>
+      <ul class="package-features">
+        <li>Skin type analysis</li>
+        <li>Mukhalepam (herbal face pack)</li>
+        <li>Abhyanga with skin-nourishing oils</li>
+        <li>Herbal steam bath</li>
+        <li>Nasyam (2 sessions)</li>
+        <li>Herbal skin care medicines</li>
+        <li>Diet & beauty guidance</li>
+      </ul>
+      <a href="index.html#appointment" class="btn-book" style="display:block;text-align:center">Enquire Now →</a>
+    </div>
+
+  </div>
+
+  <!-- Special Offers Banner -->
+  <div style="margin-top:60px;background:linear-gradient(135deg,#fdf8f2,#f5ede0);border:2px solid rgba(196,168,130,0.35);border-radius:20px;padding:48px 40px;text-align:center">
+    <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:#A08060;margin-bottom:12px">🎁 Special Offer</p>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:#1a1a1a;margin-bottom:16px">First Visit <em style="color:#C4A882">Consultation Free</em></h2>
+    <p style="font-size:0.95rem;color:#5a4a38;max-width:520px;margin:0 auto 28px;line-height:1.8">New patients receive a complimentary initial Ayurvedic consultation with our senior physician. Understand your body constitution and get a personalised treatment recommendation — at no cost.</p>
+    <a href="index.html#appointment" class="btn-book" style="font-size:0.95rem;padding:14px 36px">Claim Free Consultation →</a>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-top"><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="footer-logo-link"><img src="logo.png" alt="Shanthi Wellness" class="footer-logo-img"/></a><p class="footer-tagline">Ancient Wisdom. Modern Healing.<br/>Your sanctuary of holistic health.</p></div>
+    <div class="footer-col"><h5 class="footer-col-title">Quick Links</h5><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="ayurveda.html">Ayurveda</a></li><li><a href="treatments.html">Treatments</a></li><li><a href="packages.html">Packages</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h5 class="footer-col-title">Packages</h5><ul class="footer-links"><li><a href="packages.html">Rejuvenation</a></li><li><a href="packages.html">Panchakarma Detox</a></li><li><a href="packages.html">Weight Management</a></li><li><a href="packages.html">Stress Relief</a></li><li><a href="packages.html">Joint Care</a></li></ul></div>
+    <div class="footer-col"><h5 class="footer-col-title">Contact</h5><ul class="footer-contact-list"><li>42 Healing Grove Road, Koramangala, Bengaluru</li><li>+91 98765 43210</li><li>hello@shanthiwellness.in</li></ul></div>
+  </div></div></div>
+  <div class="footer-bottom"><div class="container"><p>© 2025 Shanthi Wellness. All rights reserved.</p><p class="footer-credits">Crafted with care for holistic healing.</p></div></div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

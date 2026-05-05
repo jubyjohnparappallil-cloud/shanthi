@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Physiotherapy — Shanthi Wellness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="page-styles.css"/>
+  <style>
+    body{padding-top:130px!important}@media(max-width:768px){body{padding-top:108px!important}}@media(max-width:480px){body{padding-top:72px!important}}
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,0.08);padding:0}
+    .navbar-topbar{background:#f8f4ee;border-bottom:1px solid rgba(196,168,130,0.25);padding:7px 0}
+    .navbar-topbar-inner{max-width:1280px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between}
+    .navbar-phone{display:flex;align-items:center;gap:7px;font-size:0.82rem;font-weight:500;color:#5a4a38}
+    .navbar-appt-btn{display:inline-flex;align-items:center;padding:7px 20px;background:#3a8a3a;color:#fff;border-radius:50px;font-size:0.78rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none}
+    .navbar-main{background:#fff;padding:4px 0;width:100%;border-bottom:3px solid;border-image:linear-gradient(90deg,#3a8a3a,#6dcc6d,#C4A882,#6dcc6d,#3a8a3a) 1}
+    @media(max-width:480px){.navbar-topbar{display:none}}
+  </style>
+</head>
+<body>
+<div class="leaf-container" aria-hidden="true">
+  <div class="leaf leaf-2"><svg viewBox="0 0 50 70" fill="none"><path d="M25 65 C25 65 3 48 3 25 C3 8 14 2 25 2 C36 2 47 8 47 25 C47 48 25 65 25 65Z" fill="#6dcc6d" opacity="0.5"/></svg></div>
+  <div class="leaf leaf-6"><svg viewBox="0 0 45 62" fill="none"><path d="M22 58 C22 58 3 43 3 22 C3 7 12 1 22 1 C32 1 42 7 42 22 C42 43 22 58 22 58Z" fill="#4aaa4a" opacity="0.5"/></svg></div>
+</div>
+
+<nav class="navbar" id="navbar">
+  <div class="navbar-topbar"><div class="navbar-topbar-inner">
+    <span class="navbar-phone"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke="#A08060" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Call : +91 98765 43210, +91 80 2345 6789</span>
+    <a href="index.html#appointment" class="navbar-appt-btn">Appointment</a>
+  </div></div>
+  <div class="navbar-main">
+    <table style="width:100%;border-collapse:collapse;box-sizing:border-box;display:table"><tr>
+      <td style="padding:6px 0 6px 40px;vertical-align:middle"><a href="index.html" style="text-decoration:none;display:inline-block"><img src="logo.png" alt="Shanthi Wellness" style="height:90px;width:auto;max-width:340px;object-fit:contain;display:block"/></a></td>
+      <td style="padding:6px 40px 6px 0;vertical-align:middle;text-align:right;width:1%">
+        <button id="navToggle" style="display:inline-flex;align-items:center;gap:10px;padding:10px 22px;background:transparent;border:1.5px solid rgba(196,168,130,0.45);border-radius:8px;cursor:pointer;white-space:nowrap;font-family:Inter,sans-serif">
+          <span style="font-size:0.92rem;font-weight:600;color:#2a1a08">Menu</span>
+          <span style="display:flex;flex-direction:column;gap:5px"><span style="display:block;width:22px;height:2px;background:#2a1a08;border-radius:2px"></span><span style="display:block;width:22px;height:2px;background:#2a1a08;border-radius:2px"></span><span style="display:block;width:22px;height:2px;background:#2a1a08;border-radius:2px"></span></span>
+        </button>
+      </td>
+    </tr></table>
+  </div>
+</nav>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="nav-drawer" id="navDrawer">
+  <div class="nav-drawer-header"><img src="logo.png" alt="Shanthi Wellness" class="nav-drawer-logo"/><button class="nav-drawer-close" id="navDrawerClose">✕</button></div>
+  <ul class="nav-drawer-links">
+    <li><a href="index.html" class="nav-drawer-link">Home</a></li>
+    <li><a href="ayurveda.html" class="nav-drawer-link">Ayurveda</a></li>
+    <li><a href="physiotherapy.html" class="nav-drawer-link active">Physiotherapy</a></li>
+    <li><a href="treatments.html" class="nav-drawer-link">Treatments</a></li>
+    <li><a href="packages.html" class="nav-drawer-link">Our Packages</a></li>
+    <li><a href="testimonials.html" class="nav-drawer-link">Testimonials</a></li>
+    <li><a href="index.html#appointment" class="nav-drawer-link">Make an Appointment</a></li>
+    <li><a href="faqs.html" class="nav-drawer-link">FAQs</a></li>
+    <li><a href="contact.html" class="nav-drawer-link">Contact Us</a></li>
+  </ul>
+  <a href="index.html#appointment" class="nav-drawer-appt">Book Appointment</a>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-eyebrow">Restore · Rehabilitate · Empower</p>
+    <h1 class="page-hero-title">Physiotherapy & <em>Sports Rehabilitation</em></h1>
+    <p class="page-hero-sub">Our bodies were built for motion. Physiotherapy can be the answer if pain or limited range of motion is keeping you from living life to the fullest.</p>
+    <div class="page-breadcrumb"><a href="index.html">Home</a><span>›</span><span>Physiotherapy</span></div>
+  </div>
+</section>
+
+<div class="page-content">
+
+  <div class="intro-block">
+    Physiotherapy takes a <strong>"whole person" approach</strong> to health and well-being. Our physiotherapists are trained to assess, treat, and empower you to a pain-free life by enabling you to manage your problems or injuries. Physical rehabilitation involves exercise therapy, postural correction, gait and balance re-training, manipulation and mobilisation of tissues and joints.
+  </div>
+
+  <div class="two-col" style="margin-bottom:60px">
+    <img src="ritual4.jpg" alt="Physiotherapy session"/>
+    <div class="two-col-text">
+      <p class="pg-section-eyebrow">Our Approach</p>
+      <h2 class="pg-section-title">What We <em>Treat</em></h2>
+      <div class="gold-line left"></div>
+      <p>The physiotherapy service at Shanthi Wellness offers a complete range of consultation, examination, and treatment services. Our licensed physiotherapists assess the need for orthotics and recommend adaptive equipment tailored to each patient's condition.</p>
+      <p>We help encourage development and facilitate recovery, enabling people to stay in work while helping them remain independent for as long as possible.</p>
+    </div>
+  </div>
+
+  <!-- Manual Therapy -->
+  <div class="condition-section" style="margin-bottom:24px">
+    <h3>🤲 Manual Therapy</h3>
+    <p>A specialised form of physical therapy delivered with hands. Practitioners use their hands to put pressure on muscle tissue and manipulate joints in an attempt to decrease pain caused by muscle spasm, muscle tension, and joint dysfunction.</p>
+  </div>
+
+  <!-- Chiropractic -->
+  <div class="condition-section" style="margin-bottom:24px">
+    <h3>🦴 Chiropractic Treatment</h3>
+    <p>Used most often to treat neuromusculoskeletal complaints including back pain, neck pain, pain in the joints of arms or legs, and headaches. Uses spinal manipulation to restore joint mobility by manually applying a controlled force into restricted joints.</p>
+  </div>
+
+  <!-- Pain Management -->
+  <div class="condition-section" style="margin-bottom:24px">
+    <h3>💊 Pain Management</h3>
+    <p>Important for ongoing pain control, especially for long-term or chronic pain. After a thorough pain assessment, our doctors prescribe appropriate pain medicine, treatments, or psychotherapy for pain relief.</p>
+    <ul class="condition-list" style="margin-top:16px">
+      <li>Neck Pain</li><li>Headaches</li><li>Joint Pain</li>
+      <li>Sports Injuries</li><li>Acute & Chronic Pain</li><li>Biomechanical Dysfunction</li>
+    </ul>
+  </div>
+
+  <!-- Pediatric -->
+  <div class="condition-section" style="margin-bottom:24px">
+    <h3>👶 Pediatric Conditions</h3>
+    <p>Physical therapy helps develop the strength and range of motion children need to move through their environment easily. Goals include help with developmental milestones like sitting, standing, crawling and walking.</p>
+    <ul class="condition-list" style="margin-top:16px">
+      <li>Cerebral Palsy</li><li>Down Syndrome</li><li>Erb's Palsy</li>
+      <li>Autism Spectrum Disorder</li><li>Muscular Dystrophy</li><li>Idiopathic Scoliosis</li>
+      <li>Hydrocephalus</li><li>Juvenile Rheumatoid Arthritis</li><li>Childhood Obesity</li>
+      <li>Congenital Torticollis</li><li>Hereditary Paraplegia</li><li>Klumpke's Paralysis</li>
+    </ul>
+  </div>
+
+  <!-- Neurological -->
+  <div class="condition-section" style="margin-bottom:24px">
+    <h3>🧠 Neurological Conditions</h3>
+    <p>Neurological diseases are disorders of the brain, spinal cord, and nerves. A treatment plan typically involves physiotherapy to align and activate joints and muscles to enable better postural control and stability.</p>
+    <ul class="condition-list" style="margin-top:16px">
+      <li>Stroke</li><li>Scoliosis</li><li>Disc Prolapse</li>
+      <li>Plantar Fasciitis</li><li>Spinal Cord Injury</li><li>Multiple Sclerosis</li>
+      <li>Bell's Palsy</li><li>Parkinson's Disease</li><li>Carpal Tunnel Syndrome</li>
+      <li>Low Back & Neck Pain</li><li>Hip & Knee Pain</li><li>Nerve Impingement</li>
+    </ul>
+  </div>
+
+  <!-- Orthopaedic -->
+  <div class="condition-section" style="margin-bottom:48px">
+    <h3>🦵 Orthopaedic Conditions</h3>
+    <p>Orthopaedic injuries affect the muscle, joint and nervous system. Techniques include strength training, hot/cold packs, joint mobilisations and manipulations, and electrical stimulation.</p>
+    <ul class="condition-list" style="margin-top:16px">
+      <li>Sprains</li><li>Sciatica</li><li>Spondylosis</li>
+      <li>ACL Injuries</li><li>Tennis Elbow</li><li>Osteoarthritis</li>
+      <li>Frozen Shoulder</li><li>Sports Injuries</li><li>Rotator Cuff Tendinitis</li>
+    </ul>
+  </div>
+
+  <!-- CTA -->
+  <div style="background:linear-gradient(135deg,#3b1f0e,#5a2d12);border-radius:20px;padding:56px 40px;text-align:center;color:#fff">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;margin-bottom:16px">Start Your <em style="color:#C4A882">Recovery Today</em></h2>
+    <p style="color:rgba(255,255,255,0.75);max-width:520px;margin:0 auto 32px;line-height:1.8">Our physiotherapy team will design a personalised rehabilitation programme to get you back to full strength.</p>
+    <a href="index.html#appointment" class="btn-book" style="font-size:0.95rem;padding:14px 36px">Book Physiotherapy →</a>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-top"><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="footer-logo-link"><img src="logo.png" alt="Shanthi Wellness" class="footer-logo-img"/></a><p class="footer-tagline">Ancient Wisdom. Modern Healing.<br/>Your sanctuary of holistic health.</p></div>
+    <div class="footer-col"><h5 class="footer-col-title">Quick Links</h5><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="ayurveda.html">Ayurveda</a></li><li><a href="physiotherapy.html">Physiotherapy</a></li><li><a href="treatments.html">Treatments</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h5 class="footer-col-title">Physiotherapy</h5><ul class="footer-links"><li><a href="physiotherapy.html">Manual Therapy</a></li><li><a href="physiotherapy.html">Chiropractic</a></li><li><a href="physiotherapy.html">Pain Management</a></li><li><a href="physiotherapy.html">Pediatric Physio</a></li><li><a href="physiotherapy.html">Neurological</a></li><li><a href="physiotherapy.html">Orthopaedic</a></li></ul></div>
+    <div class="footer-col"><h5 class="footer-col-title">Contact</h5><ul class="footer-contact-list"><li>42 Healing Grove Road, Koramangala, Bengaluru</li><li>+91 98765 43210</li><li>hello@shanthiwellness.in</li></ul></div>
+  </div></div></div>
+  <div class="footer-bottom"><div class="container"><p>© 2025 Shanthi Wellness. All rights reserved.</p><p class="footer-credits">Crafted with care for holistic healing.</p></div></div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Testimonials — Shanthi Wellness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/><link rel="stylesheet" href="page-styles.css"/>
+  <style>
+    body{padding-top:130px!important}@media(max-width:768px){body{padding-top:108px!important}}@media(max-width:480px){body{padding-top:72px!important}}
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,0.08);padding:0}
+    .navbar-topbar{background:#f8f4ee;border-bottom:1px solid rgba(196,168,130,0.25);padding:7px 0}
+    .navbar-topbar-inner{max-width:1280px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between}
+    .navbar-phone{display:flex;align-items:center;gap:7px;font-size:0.82rem;font-weight:500;color:#5a4a38}
+    .navbar-appt-btn{display:inline-flex;align-items:center;padding:7px 20px;background:#3a8a3a;color:#fff;border-radius:50px;font-size:0.78rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none}
+    .navbar-main{background:#fff;padding:4px 0;width:100%;border-bottom:3px solid;border-image:linear-gradient(90deg,#3a8a3a,#6dcc6d,#C4A882,#6dcc6d,#3a8a3a) 1}
+    @media(max-width:480px){.navbar-topbar{display:none}}
+  </style>
+</head>
+<body>
+<div class="leaf-container" aria-hidden="true">
+  <div class="leaf leaf-1"><svg viewBox="0 0 60 80" fill="none"><path d="M30 75 C30 75 5 55 5 30 C5 10 20 2 30 2 C40 2 55 10 55 30 C55 55 30 75 30 75Z" fill="#4aaa4a" opacity="0.5"/></svg></div>
+  <div class="leaf leaf-6"><svg viewBox="0 0 45 62" fill="none"><path d="M22 58 C22 58 3 43 3 22 C3 7 12 1 22 1 C32 1 42 7 42 22 C42 43 22 58 22 58Z" fill="#4aaa4a" opacity="0.45"/></svg></div>
+</div>
+
+<nav class="navbar" id="navbar">
+  <div class="navbar-topbar"><div class="navbar-topbar-inner">
+    <span class="navbar-phone"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke="#A08060" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Call : +91 98765 43210, +91 80 2345 6789</span>
+    <a href="index.html#appointment" class="navbar-appt-btn">Appointment</a>
+  </div></div>
+  <div class="navbar-main"><table style="width:100%;border-collapse:collapse;box-sizing:border-box;display:table"><tr>
+    <td style="padding:6px 0 6px 40px;vertical-align:middle"><a href="index.html" style="text-decoration:none;display:inline-block"><img src="logo.png" alt="Shanthi Wellness" style="height:90px;width:auto;max-width:340px;object-fit:contain;display:block"/></a></td>
+    <td style="padding:6px 40px 6px 0;vertical-align:middle;text-align:right;width:1%">
+      <button id="navToggle" style="display:inline-flex;align-items:center;gap:10px;padding:10px 22px;background:transparent;border:1.5px solid rgba(196,168,130,0.45);border-radius:8px;cursor:pointer;white-space:nowrap;font-family:Inter,sans-serif">
+        <span style="font-size:0.92rem;font-weight:600;color:#2a1a08">Menu</span>
+        <span style="display:flex;flex-direction:column;gap:5px"><span style="display:block;width:22px;height:2px;background:#2a1a08;border-radius:2px"></span><span style="display:block;width:22px;height:2px;background:#2a1a08;border-radius:2px"></span><span style="display:block;width:22px;height:2px;background:#2a1a08;border-radius:2px"></span></span>
+      </button>
+    </td>
+  </tr></table></div>
+</nav>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="nav-drawer" id="navDrawer">
+  <div class="nav-drawer-header"><img src="logo.png" alt="Shanthi Wellness" class="nav-drawer-logo"/><button class="nav-drawer-close" id="navDrawerClose">✕</button></div>
+  <ul class="nav-drawer-links">
+    <li><a href="index.html" class="nav-drawer-link">Home</a></li>
+    <li><a href="ayurveda.html" class="nav-drawer-link">Ayurveda</a></li>
+    <li><a href="physiotherapy.html" class="nav-drawer-link">Physiotherapy</a></li>
+    <li><a href="treatments.html" class="nav-drawer-link">Treatments</a></li>
+    <li><a href="packages.html" class="nav-drawer-link">Our Packages</a></li>
+    <li><a href="testimonials.html" class="nav-drawer-link active">Testimonials</a></li>
+    <li><a href="index.html#appointment" class="nav-drawer-link">Make an Appointment</a></li>
+    <li><a href="faqs.html" class="nav-drawer-link">FAQs</a></li>
+    <li><a href="contact.html" class="nav-drawer-link">Contact Us</a></li>
+  </ul>
+  <a href="index.html#appointment" class="nav-drawer-appt">Book Appointment</a>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-eyebrow">Patient Stories</p>
+    <h1 class="page-hero-title">Words of <em>Healing</em></h1>
+    <p class="page-hero-sub">The greatest measure of our work is the transformation we witness in our patients. Here are their stories.</p>
+    <div class="page-breadcrumb"><a href="index.html">Home</a><span>›</span><span>Testimonials</span></div>
+  </div>
+</section>
+
+<div class="page-content">
+
+  <!-- Stats bar -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:24px;margin-bottom:60px;text-align:center">
+    <div style="background:#fdf8f2;border:1px solid rgba(196,168,130,0.22);border-radius:14px;padding:28px 16px">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:#3b1f0e">500+</div>
+      <div style="font-size:0.78rem;color:#A08060;text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">Patients Healed</div>
+    </div>
+    <div style="background:#fdf8f2;border:1px solid rgba(196,168,130,0.22);border-radius:14px;padding:28px 16px">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:#3b1f0e">15+</div>
+      <div style="font-size:0.78rem;color:#A08060;text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">Years of Healing</div>
+    </div>
+    <div style="background:#fdf8f2;border:1px solid rgba(196,168,130,0.22);border-radius:14px;padding:28px 16px">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:#3b1f0e">98%</div>
+      <div style="font-size:0.78rem;color:#A08060;text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">Patient Satisfaction</div>
+    </div>
+    <div style="background:#fdf8f2;border:1px solid rgba(196,168,130,0.22);border-radius:14px;padding:28px 16px">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:#3b1f0e">⭐ 4.9</div>
+      <div style="font-size:0.78rem;color:#A08060;text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">Average Rating</div>
+    </div>
+  </div>
+
+  <div class="testimonial-cards">
+
+    <div class="tcard">
+      <div class="tcard-quote">"</div>
+      <p class="tcard-text">Excellent experience — felt very refreshing and relaxed. Looking forward to coming back as soon as possible. Thanks for the wonderful service and the caring staff.</p>
+      <div class="tcard-stars">★★★★★</div>
+      <div class="tcard-author"><div class="tcard-avatar">P</div><div><div class="tcard-name">Preethi</div><div class="tcard-role">Abhyanga & Shirodhara</div></div></div>
+    </div>
+
+    <div class="tcard" style="border-color:#C4A882;background:linear-gradient(160deg,#fdf8f2,#fff)">
+      <div class="tcard-quote">"</div>
+      <p class="tcard-text">A place where one will get complete relaxation and peace. Superb ambience, excellent treatment that cures all your health conditions from HEAD TO TOE. Each and every staff member is very friendly — one can feel like home. I am completely satisfied with the treatment and therapy.</p>
+      <div class="tcard-stars">★★★★★</div>
+      <div class="tcard-author"><div class="tcard-avatar">S</div><div><div class="tcard-name">Suresh Kumar</div><div class="tcard-role">Panchakarma Programme</div></div></div>
+    </div>
+
+    <div class="tcard">
+      <div class="tcard-quote">"</div>
+      <p class="tcard-text">I was overweight at 106 kg and selected the 14-day weight reduction treatment package. Within 3 days I felt changes in my body. In those 14 days of treatment I lost 7 kg. The doctor suggested a second session after 3 months. Highly recommended!</p>
+      <div class="tcard-stars">★★★★★</div>
+      <div class="tcard-author"><div class="tcard-avatar">A</div><div><div class="tcard-name">Anoop Mathew</div><div class="tcard-role">Weight Management Package</div></div></div>
+    </div>
+
+    <div class="tcard">
+      <div class="tcard-quote">"</div>
+      <p class="tcard-text">I was really impressed by the approach of the Ayurveda Doctor towards patients. She is very kind and able to understand the patient's issue carefully. She makes patients more comfortable throughout the appointment and plans treatment according to individual requirements.</p>
+      <div class="tcard-stars">★★★★★</div>
+      <div class="tcard-author"><div class="tcard-avatar">R</div><div><div class="tcard-name">Rajesh Menon</div><div class="tcard-role">Ayurveda Consultation</div></div></div>
+    </div>
+
+    <div class="tcard">
+      <div class="tcard-quote">"</div>
+      <p class="tcard-text">The massage for sinus was excellent. By the 7th day I felt like a new me. Thanks to the wonderful staff and doctor. The Nasyam treatment completely cleared my chronic sinusitis that had been troubling me for years.</p>
+      <div class="tcard-stars">★★★★★</div>
+      <div class="tcard-author"><div class="tcard-avatar">D</div><div><div class="tcard-name">David Thomas</div><div class="tcard-role">Nasyam Treatment</div></div></div>
+    </div>
+
+    <div class="tcard">
+      <div class="tcard-quote">"</div>
+      <p class="tcard-text">You came with severe back pain and took treatment for Elakizhi and Abhyanga for 8 days. Now I am free from back pain and relaxed from leg pain. Excellent treatment and good experience with Shanthi Wellness. Excellent customer care and behaviour.</p>
+      <div class="tcard-stars">★★★★★</div>
+      <div class="tcard-author"><div class="tcard-avatar">M</div><div><div class="tcard-name">Mohammed Rashid</div><div class="tcard-role">Elakizhi & Abhyanga</div></div></div>
+    </div>
+
+    <div class="tcard">
+      <div class="tcard-quote">"</div>
+      <p class="tcard-text">After coming, my hand was cured 90%. After meeting Dr. Hridya, my lifestyle changed a lot. She talks very nicely, correctly and positively. My positive energy increased every day. The treatment here was mind-blowing. We plan to continue for other problems also.</p>
+      <div class="tcard-stars">★★★★★</div>
+      <div class="tcard-author"><div class="tcard-avatar">N</div><div><div class="tcard-name">Nisha Pillai</div><div class="tcard-role">Physiotherapy & Ayurveda</div></div></div>
+    </div>
+
+    <div class="tcard">
+      <div class="tcard-quote">"</div>
+      <p class="tcard-text">I enjoyed the weight loss massage. Remya is an incredible masseuse and puts in a lot of effort. I will definitely come back for other massages. The entire team is professional, caring and dedicated to patient wellbeing.</p>
+      <div class="tcard-stars">★★★★★</div>
+      <div class="tcard-author"><div class="tcard-avatar">L</div><div><div class="tcard-name">Lakshmi Devi</div><div class="tcard-role">Weight Loss Programme</div></div></div>
+    </div>
+
+    <div class="tcard">
+      <div class="tcard-quote">"</div>
+      <p class="tcard-text">Rejuvenated, refreshed and feeling good. The Panchakarma programme was a life-changing experience. I came in exhausted and stressed, and left feeling completely renewed. Thank you to the entire Shanthi Wellness team.</p>
+      <div class="tcard-stars">★★★★★</div>
+      <div class="tcard-author"><div class="tcard-avatar">V</div><div><div class="tcard-name">Vijay Krishnan</div><div class="tcard-role">Panchakarma Detox</div></div></div>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <div style="background:linear-gradient(135deg,#3b1f0e,#5a2d12);border-radius:20px;padding:56px 40px;text-align:center;color:#fff;margin-top:60px">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;margin-bottom:16px">Begin Your Own <em style="color:#C4A882">Healing Story</em></h2>
+    <p style="color:rgba(255,255,255,0.75);max-width:520px;margin:0 auto 32px;line-height:1.8">Join hundreds of patients who have transformed their health at Shanthi Wellness. Your journey to wholeness starts with a single step.</p>
+    <a href="index.html#appointment" class="btn-book" style="font-size:0.95rem;padding:14px 36px">Book Your Consultation →</a>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-top"><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="footer-logo-link"><img src="logo.png" alt="Shanthi Wellness" class="footer-logo-img"/></a><p class="footer-tagline">Ancient Wisdom. Modern Healing.<br/>Your sanctuary of holistic health.</p></div>
+    <div class="footer-col"><h5 class="footer-col-title">Quick Links</h5><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="ayurveda.html">Ayurveda</a></li><li><a href="treatments.html">Treatments</a></li><li><a href="packages.html">Packages</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h5 class="footer-col-title">Treatments</h5><ul class="footer-links"><li><a href="treatments.html">Panchakarma</a></li><li><a href="treatments.html">Shirodhara</a></li><li><a href="treatments.html">Abhyanga</a></li><li><a href="treatments.html">Pizhichil</a></li><li><a href="treatments.html">Nasyam</a></li></ul></div>
+    <div class="footer-col"><h5 class="footer-col-title">Contact</h5><ul class="footer-contact-list"><li>42 Healing Grove Road, Koramangala, Bengaluru</li><li>+91 98765 43210</li><li>hello@shanthiwellness.in</li></ul></div>
+  </div></div></div>
+  <div class="footer-bottom"><div class="container"><p>© 2025 Shanthi Wellness. All rights reserved.</p><p class="footer-credits">Crafted with care for holistic healing.</p></div></div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

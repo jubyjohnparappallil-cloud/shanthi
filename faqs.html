@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>FAQs — Shanthi Wellness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/><link rel="stylesheet" href="page-styles.css"/>
+  <style>
+    body{padding-top:130px!important}@media(max-width:768px){body{padding-top:108px!important}}@media(max-width:480px){body{padding-top:72px!important}}
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,0.08);padding:0}
+    .navbar-topbar{background:#f8f4ee;border-bottom:1px solid rgba(196,168,130,0.25);padding:7px 0}
+    .navbar-topbar-inner{max-width:1280px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between}
+    .navbar-phone{display:flex;align-items:center;gap:7px;font-size:0.82rem;font-weight:500;color:#5a4a38}
+    .navbar-appt-btn{display:inline-flex;align-items:center;padding:7px 20px;background:#3a8a3a;color:#fff;border-radius:50px;font-size:0.78rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none}
+    .navbar-main{background:#fff;padding:4px 0;width:100%;border-bottom:3px solid;border-image:linear-gradient(90deg,#3a8a3a,#6dcc6d,#C4A882,#6dcc6d,#3a8a3a) 1}
+    @media(max-width:480px){.navbar-topbar{display:none}}
+  </style>
+</head>
+<body>
+<div class="leaf-container" aria-hidden="true">
+  <div class="leaf leaf-3"><svg viewBox="0 0 40 55" fill="none"><path d="M20 52 C20 52 2 38 2 20 C2 6 10 1 20 1 C30 1 38 6 38 20 C38 38 20 52 20 52Z" fill="#3a8a3a" opacity="0.5"/></svg></div>
+  <div class="leaf leaf-7"><svg viewBox="0 0 30 42" fill="none"><path d="M15 39 C15 39 2 28 2 15 C2 5 8 1 15 1 C22 1 28 5 28 15 C28 28 15 39 15 39Z" fill="#6dcc6d" opacity="0.45"/></svg></div>
+</div>
+
+<nav class="navbar" id="navbar">
+  <div class="navbar-topbar"><div class="navbar-topbar-inner">
+    <span class="navbar-phone"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke="#A08060" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Call : +91 98765 43210, +91 80 2345 6789</span>
+    <a href="index.html#appointment" class="navbar-appt-btn">Appointment</a>
+  </div></div>
+  <div class="navbar-main"><table style="width:100%;border-collapse:collapse;box-sizing:border-box;display:table"><tr>
+    <td style="padding:6px 0 6px 40px;vertical-align:middle"><a href="index.html" style="text-decoration:none;display:inline-block"><img src="logo.png" alt="Shanthi Wellness" style="height:90px;width:auto;max-width:340px;object-fit:contain;display:block"/></a></td>
+    <td style="padding:6px 40px 6px 0;vertical-align:middle;text-align:right;width:1%">
+      <button id="navToggle" style="display:inline-flex;align-items:center;gap:10px;padding:10px 22px;background:transparent;border:1.5px solid rgba(196,168,130,0.45);border-radius:8px;cursor:pointer;white-space:nowrap;font-family:Inter,sans-serif">
+        <span style="font-size:0.92rem;font-weight:600;color:#2a1a08">Menu</span>
+        <span style="display:flex;flex-direction:column;gap:5px"><span style="display:block;width:22px;height:2px;background:#2a1a08;border-radius:2px"></span><span style="display:block;width:22px;height:2px;background:#2a1a08;border-radius:2px"></span><span style="display:block;width:22px;height:2px;background:#2a1a08;border-radius:2px"></span></span>
+      </button>
+    </td>
+  </tr></table></div>
+</nav>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="nav-drawer" id="navDrawer">
+  <div class="nav-drawer-header"><img src="logo.png" alt="Shanthi Wellness" class="nav-drawer-logo"/><button class="nav-drawer-close" id="navDrawerClose">✕</button></div>
+  <ul class="nav-drawer-links">
+    <li><a href="index.html" class="nav-drawer-link">Home</a></li>
+    <li><a href="ayurveda.html" class="nav-drawer-link">Ayurveda</a></li>
+    <li><a href="physiotherapy.html" class="nav-drawer-link">Physiotherapy</a></li>
+    <li><a href="treatments.html" class="nav-drawer-link">Treatments</a></li>
+    <li><a href="packages.html" class="nav-drawer-link">Our Packages</a></li>
+    <li><a href="testimonials.html" class="nav-drawer-link">Testimonials</a></li>
+    <li><a href="index.html#appointment" class="nav-drawer-link">Make an Appointment</a></li>
+    <li><a href="faqs.html" class="nav-drawer-link active">FAQs</a></li>
+    <li><a href="contact.html" class="nav-drawer-link">Contact Us</a></li>
+  </ul>
+  <a href="index.html#appointment" class="nav-drawer-appt">Book Appointment</a>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-eyebrow">Got Questions?</p>
+    <h1 class="page-hero-title">Frequently Asked <em>Questions</em></h1>
+    <p class="page-hero-sub">Everything you need to know about Ayurveda, our treatments, and what to expect at Shanthi Wellness.</p>
+    <div class="page-breadcrumb"><a href="index.html">Home</a><span>›</span><span>FAQs</span></div>
+  </div>
+</section>
+
+<div class="page-content-narrow">
+
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        What is Ayurveda and how does it work?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Ayurveda is a 5,000-year-old holistic healing system from India. It works on the principle that every individual has a unique body constitution (Prakriti) determined by three vital energies called doshas — Vata, Pitta and Kapha. When these doshas are in balance, we are healthy. When they are imbalanced, disease occurs. Ayurvedic treatment aims to restore this balance through personalised diet, lifestyle, herbal medicines and therapeutic treatments.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        What should I expect during my first consultation?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Your first consultation is an unhurried conversation with our Ayurvedic physician. The doctor will assess your body constitution (Prakriti) through pulse diagnosis (Nadi Pariksha), observation and detailed questioning about your health history, lifestyle, diet and current symptoms. Based on this assessment, a personalised treatment plan will be recommended. The consultation typically takes 45–60 minutes.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        What is Panchakarma and who is it suitable for?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Panchakarma is the classical five-fold purification therapy of Ayurveda. It involves five procedures — Vamana (emesis), Virechana (purgation), Anuvasana (oil enema), Niruha (decoction enema) and Nasya (nasal administration). It is suitable for people with chronic diseases, those seeking deep detoxification, or anyone wanting to rejuvenate their body and mind. A prior consultation is essential to determine which procedures are appropriate for you.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How long does a typical treatment programme last?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Treatment duration varies depending on the condition and the therapy prescribed. Single sessions like Abhyanga or Shirodhara take 45–90 minutes. Treatment programmes typically range from 7 to 21 days for conditions like arthritis, spondylosis or neurological disorders. Panchakarma programmes are usually 14–21 days. Your doctor will recommend the appropriate duration during your consultation.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Are Ayurvedic treatments safe? Are there any side effects?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        When administered by qualified practitioners using authentic herbal medicines and oils, Ayurvedic treatments are generally very safe. At Shanthi Wellness, all treatments are prescribed and supervised by qualified Ayurvedic physicians. Herbal medicines are prepared according to classical formulations. Some treatments may cause mild detox reactions (fatigue, loose stools) which are normal and temporary. We always conduct a thorough assessment before recommending any treatment.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Can I continue my regular medications during Ayurvedic treatment?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Yes, in most cases you can continue your regular medications. Our doctors are trained to work alongside conventional medicine. Please inform our physician about all medications you are currently taking during your consultation. We will advise on any necessary adjustments and ensure there are no contraindications with the Ayurvedic treatments prescribed.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        What conditions can Ayurveda treat?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Ayurveda is effective for a wide range of conditions including arthritis, spondylosis, back pain, migraine, sinusitis, skin disorders, digestive problems, hormonal imbalances, stress, anxiety, insomnia, obesity, neurological conditions, and many chronic diseases. It is also highly effective as a preventive and rejuvenative therapy for healthy individuals seeking to maintain optimal health and vitality.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        What is Shirodhara and what conditions does it treat?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Shirodhara involves a continuous stream of warm medicated oil poured over the forehead in a rhythmic flow for 30–45 minutes. It is profoundly calming for the nervous system and is highly effective for stress, anxiety, insomnia, migraine, hypertension, depression, hair loss, premature greying, and neurological conditions. Many patients describe it as one of the most deeply relaxing experiences of their lives.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Do you offer physiotherapy alongside Ayurvedic treatments?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Yes. Shanthi Wellness offers a fully integrated approach combining Ayurveda, Homeopathy and Physiotherapy. Our physiotherapy team provides manual therapy, chiropractic treatment, pain management, exercise rehabilitation and sports injury treatment. Many patients benefit from a combined approach — for example, Ayurvedic oil therapies alongside physiotherapy for musculoskeletal conditions.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How do I book an appointment?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        You can book an appointment by calling us at +91 98765 43210, emailing hello@shanthiwellness.in, or using the online appointment form on our website. We recommend booking at least 2–3 days in advance. For Panchakarma and longer programmes, please book at least a week ahead. Walk-in consultations are also welcome subject to availability.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Still have questions -->
+  <div style="background:#fdf8f2;border:1px solid rgba(196,168,130,0.25);border-radius:16px;padding:40px;text-align:center;margin-top:48px">
+    <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:#A08060;margin-bottom:12px">Still Have Questions?</p>
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:#1a1a1a;margin-bottom:12px">We're Here to Help</h3>
+    <p style="font-size:0.92rem;color:#5a4a38;max-width:440px;margin:0 auto 24px;line-height:1.8">Our team is happy to answer any questions you have about our treatments, packages or how Ayurveda can help your specific condition.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a href="contact.html" class="btn-book">Contact Us →</a>
+      <a href="tel:+919876543210" style="display:inline-block;padding:10px 24px;border:1.5px solid #C4A882;color:#3b1f0e;border-radius:50px;font-size:0.82rem;font-weight:700;text-decoration:none">Call Us Now</a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-top"><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="footer-logo-link"><img src="logo.png" alt="Shanthi Wellness" class="footer-logo-img"/></a><p class="footer-tagline">Ancient Wisdom. Modern Healing.<br/>Your sanctuary of holistic health.</p></div>
+    <div class="footer-col"><h5 class="footer-col-title">Quick Links</h5><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="ayurveda.html">Ayurveda</a></li><li><a href="treatments.html">Treatments</a></li><li><a href="packages.html">Packages</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h5 class="footer-col-title">Help</h5><ul class="footer-links"><li><a href="faqs.html">FAQs</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="index.html#appointment">Book Appointment</a></li></ul></div>
+    <div class="footer-col"><h5 class="footer-col-title">Contact</h5><ul class="footer-contact-list"><li>42 Healing Grove Road, Koramangala, Bengaluru</li><li>+91 98765 43210</li><li>hello@shanthiwellness.in</li></ul></div>
+  </div></div></div>
+  <div class="footer-bottom"><div class="container"><p>© 2025 Shanthi Wellness. All rights reserved.</p><p class="footer-credits">Crafted with care for holistic healing.</p></div></div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+function toggleFaq(btn) {
+  var answer = btn.nextElementSibling;
+  var isOpen = answer.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.faq-answer.open').forEach(function(a) { a.classList.remove('open'); });
+  document.querySelectorAll('.faq-question.open').forEach(function(b) { b.classList.remove('open'); });
+  if (!isOpen) { answer.classList.add('open'); btn.classList.add('open'); }
+}
+</script>
+</body>
+</html>

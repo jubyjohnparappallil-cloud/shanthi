@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Ayurveda — Shanthi Wellness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="page-styles.css"/>
+  <style>
+    body{padding-top:130px!important}
+    @media(max-width:768px){body{padding-top:108px!important}}
+    @media(max-width:480px){body{padding-top:72px!important}}
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,0.08);padding:0}
+    .navbar-topbar{background:#f8f4ee;border-bottom:1px solid rgba(196,168,130,0.25);padding:7px 0}
+    .navbar-topbar-inner{max-width:1280px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between}
+    .navbar-phone{display:flex;align-items:center;gap:7px;font-size:0.82rem;font-weight:500;color:#5a4a38}
+    .navbar-appt-btn{display:inline-flex;align-items:center;padding:7px 20px;background:#3a8a3a;color:#fff;border-radius:50px;font-size:0.78rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none}
+    .navbar-main{background:#fff;padding:4px 0;width:100%;border-bottom:3px solid;border-image:linear-gradient(90deg,#3a8a3a,#6dcc6d,#C4A882,#6dcc6d,#3a8a3a) 1}
+    @media(max-width:480px){.navbar-topbar{display:none}}
+  </style>
+</head>
+<body>
+
+<div class="leaf-container" aria-hidden="true">
+  <div class="leaf leaf-1"><svg viewBox="0 0 60 80" fill="none"><path d="M30 75 C30 75 5 55 5 30 C5 10 20 2 30 2 C40 2 55 10 55 30 C55 55 30 75 30 75Z" fill="#4aaa4a" opacity="0.6"/><path d="M30 75 L30 2" stroke="#2d7a2d" stroke-width="1.5" opacity="0.4"/></svg></div>
+  <div class="leaf leaf-3"><svg viewBox="0 0 40 55" fill="none"><path d="M20 52 C20 52 2 38 2 20 C2 6 10 1 20 1 C30 1 38 6 38 20 C38 38 20 52 20 52Z" fill="#3a8a3a" opacity="0.55"/></svg></div>
+  <div class="leaf leaf-5"><svg viewBox="0 0 35 50" fill="none"><path d="M17 47 C17 47 2 34 2 17 C2 5 9 1 17 1 C25 1 33 5 33 17 C33 34 17 47 17 47Z" fill="#C4A882" opacity="0.45"/></svg></div>
+  <div class="leaf leaf-7"><svg viewBox="0 0 30 42" fill="none"><path d="M15 39 C15 39 2 28 2 15 C2 5 8 1 15 1 C22 1 28 5 28 15 C28 28 15 39 15 39Z" fill="#6dcc6d" opacity="0.5"/></svg></div>
+</div>
+
+<nav class="navbar" id="navbar">
+  <div class="navbar-topbar">
+    <div class="navbar-topbar-inner">
+      <span class="navbar-phone">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke="#A08060" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Call : +91 98765 43210, +91 80 2345 6789
+      </span>
+      <a href="index.html#appointment" class="navbar-appt-btn">Appointment</a>
+    </div>
+  </div>
+  <div class="navbar-main">
+    <table style="width:100%;border-collapse:collapse;box-sizing:border-box;display:table">
+      <tr>
+        <td style="padding:6px 0 6px 40px;vertical-align:middle">
+          <a href="index.html" style="text-decoration:none;display:inline-block">
+            <img src="logo.png" alt="Shanthi Wellness" style="height:90px;width:auto;max-width:340px;object-fit:contain;display:block"/>
+          </a>
+        </td>
+        <td style="padding:6px 40px 6px 0;vertical-align:middle;text-align:right;width:1%">
+          <button id="navToggle" style="display:inline-flex;align-items:center;gap:10px;padding:10px 22px;background:transparent;border:1.5px solid rgba(196,168,130,0.45);border-radius:8px;cursor:pointer;white-space:nowrap;font-family:Inter,sans-serif">
+            <span style="font-size:0.92rem;font-weight:600;color:#2a1a08">Menu</span>
+            <span style="display:flex;flex-direction:column;gap:5px">
+              <span style="display:block;width:22px;height:2px;background:#2a1a08;border-radius:2px"></span>
+              <span style="display:block;width:22px;height:2px;background:#2a1a08;border-radius:2px"></span>
+              <span style="display:block;width:22px;height:2px;background:#2a1a08;border-radius:2px"></span>
+            </span>
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</nav>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="nav-drawer" id="navDrawer">
+  <div class="nav-drawer-header">
+    <img src="logo.png" alt="Shanthi Wellness" class="nav-drawer-logo"/>
+    <button class="nav-drawer-close" id="navDrawerClose">✕</button>
+  </div>
+  <ul class="nav-drawer-links">
+    <li><a href="index.html"         class="nav-drawer-link">Home</a></li>
+    <li><a href="about.html"         class="nav-drawer-link">About Us</a></li>
+    <li><a href="ayurveda.html"      class="nav-drawer-link active">Ayurveda</a></li>
+    <li><a href="physiotherapy.html" class="nav-drawer-link">Physiotherapy</a></li>
+    <li><a href="treatments.html"    class="nav-drawer-link">Treatments</a></li>
+    <li><a href="packages.html"      class="nav-drawer-link">Our Packages</a></li>
+    <li><a href="packages.html"      class="nav-drawer-link">Offers</a></li>
+    <li><a href="testimonials.html"  class="nav-drawer-link">Testimonials</a></li>
+    <li><a href="index.html#appointment" class="nav-drawer-link">Make an Appointment</a></li>
+    <li><a href="faqs.html"          class="nav-drawer-link">FAQs</a></li>
+    <li><a href="contact.html"       class="nav-drawer-link">Contact Us</a></li>
+  </ul>
+  <a href="index.html#appointment" class="nav-drawer-appt">Book Appointment</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-eyebrow">Ancient Science of Life</p>
+    <h1 class="page-hero-title">Ayurveda — <em>The Knowledge of Life</em></h1>
+    <p class="page-hero-sub">A 5,000-year-old holistic healing system that restores balance of body, mind and spirit through personalised care.</p>
+    <div class="page-breadcrumb">
+      <a href="index.html">Home</a><span>›</span><span>Ayurveda</span>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="page-content">
+
+  <div class="intro-block">
+    Ayurveda is the eternal Vedic science of life — the traditional natural healing system of India. Today, Ayurveda is at the forefront of mind-body medicine. Its basic principles are believed to have been remembered by Brahma, the Creator himself, and handed down through the great seers. Ayurveda literally means <strong>knowledge of life</strong> — a science that attempts to set out good and bad practices of life, outlining the cause of happy and unhappy life, what is wholesome and unwholesome.
+  </div>
+
+  <!-- Two-col: image + text -->
+  <div class="two-col" style="margin-bottom:60px">
+    <img src="Dhara.jpg" alt="Ayurvedic treatment"/>
+    <div class="two-col-text">
+      <p class="pg-section-eyebrow">Our Philosophy</p>
+      <h2 class="pg-section-title">Healing Through <em>Balance</em></h2>
+      <div class="gold-line left"></div>
+      <p>Ayurvedic medicines are based on the principle that every individual has a unique constitution related to vital energies — translated in Ayurvedic nosology as <em>dosha</em> or humors. The equilibrium of these humors depends on a variety of factors.</p>
+      <p>The objective of Ayurveda is to reestablish the equilibrium when we are ill and to maintain that equilibrium in order to keep us healthy. Ayurveda explores how to heal our minds on all levels — from the subconscious to super-conscious — along with the role of diet, exercise and many other methods to create wholeness.</p>
+      <p>Ayurveda mainly comprises of eight clinical specialties: General Medicine, Pediatrics, Psychiatry, Treatment of Head & Neck, Surgery, Toxicology, Rejuvenation Therapy and Reproductive Medicine.</p>
+    </div>
+  </div>
+
+  <!-- Panchakarma highlight -->
+  <div class="two-col" style="margin-bottom:60px">
+    <div class="two-col-text">
+      <p class="pg-section-eyebrow">The Essence of Ayurveda</p>
+      <h2 class="pg-section-title">Panchakarma — <em>Five-Fold Purification</em></h2>
+      <div class="gold-line left"></div>
+      <p>Panchakarma is the essence of Ayurvedic treatment. It became popular due to the magical results it can bring out even on otherwise incurable diseases. Purifying the body and regaining the normal rhythm through a healthy line of treatment is a rare concept of medication — and that is the main strength of Panchakarma.</p>
+      <p>The five operative procedures are: <strong>Emesis (Vamana), Purgation (Virechana), Oil Enema (Anuvasana), Decoction Enema (Niruha)</strong> and <strong>Errhines (Nasya)</strong>.</p>
+      <p>Kerala has modulated many special treatments including Pizhichil, Navara Kizhi and Shirodhara — major tools in rejuvenation therapy and providing relaxation to the stressed and strained.</p>
+      <a href="treatments.html" class="btn-book" style="margin-top:8px">Explore Treatments →</a>
+    </div>
+    <img src="kizhi.jpg" alt="Panchakarma treatment"/>
+  </div>
+
+  <!-- Eight Specialties -->
+  <div style="margin-bottom:60px">
+    <p class="pg-section-eyebrow" style="text-align:center">Eight Branches</p>
+    <h2 class="pg-section-title" style="text-align:center">The Eight <em>Clinical Specialties</em></h2>
+    <div class="gold-line"></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:32px">
+      <div class="condition-section" style="text-align:center;padding:28px 20px">
+        <div style="font-size:2rem;margin-bottom:10px">🌿</div>
+        <h3 style="font-size:1rem;margin-bottom:6px">Kaya Chikitsa</h3>
+        <p style="font-size:0.82rem;color:#5a4a38">General Medicine — treatment of systemic diseases affecting the whole body</p>
+      </div>
+      <div class="condition-section" style="text-align:center;padding:28px 20px">
+        <div style="font-size:2rem;margin-bottom:10px">👶</div>
+        <h3 style="font-size:1rem;margin-bottom:6px">Bala Chikitsa</h3>
+        <p style="font-size:0.82rem;color:#5a4a38">Pediatrics — treatment of diseases in children from birth onwards</p>
+      </div>
+      <div class="condition-section" style="text-align:center;padding:28px 20px">
+        <div style="font-size:2rem;margin-bottom:10px">🧠</div>
+        <h3 style="font-size:1rem;margin-bottom:6px">Graha Chikitsa</h3>
+        <p style="font-size:0.82rem;color:#5a4a38">Psychiatry — treatment of mental disorders and psychological conditions</p>
+      </div>
+      <div class="condition-section" style="text-align:center;padding:28px 20px">
+        <div style="font-size:2rem;margin-bottom:10px">👁️</div>
+        <h3 style="font-size:1rem;margin-bottom:6px">Shalakya Tantra</h3>
+        <p style="font-size:0.82rem;color:#5a4a38">Treatment of diseases of the head, eyes, ears, nose and throat</p>
+      </div>
+      <div class="condition-section" style="text-align:center;padding:28px 20px">
+        <div style="font-size:2rem;margin-bottom:10px">🔬</div>
+        <h3 style="font-size:1rem;margin-bottom:6px">Shalya Tantra</h3>
+        <p style="font-size:0.82rem;color:#5a4a38">Surgery — Susruta, the father of plastic surgery, pioneered this branch</p>
+      </div>
+      <div class="condition-section" style="text-align:center;padding:28px 20px">
+        <div style="font-size:2rem;margin-bottom:10px">🌱</div>
+        <h3 style="font-size:1rem;margin-bottom:6px">Rasayana Tantra</h3>
+        <p style="font-size:0.82rem;color:#5a4a38">Rejuvenation therapy — cleanses the body and regains active mind to its best level</p>
+      </div>
+      <div class="condition-section" style="text-align:center;padding:28px 20px">
+        <div style="font-size:2rem;margin-bottom:10px">⚗️</div>
+        <h3 style="font-size:1rem;margin-bottom:6px">Agada Tantra</h3>
+        <p style="font-size:0.82rem;color:#5a4a38">Toxicology — treatment of poisoning and toxic conditions</p>
+      </div>
+      <div class="condition-section" style="text-align:center;padding:28px 20px">
+        <div style="font-size:2rem;margin-bottom:10px">💫</div>
+        <h3 style="font-size:1rem;margin-bottom:6px">Vajikarana</h3>
+        <p style="font-size:0.82rem;color:#5a4a38">Reproductive medicine — pulls out latent energy to create a new lineage of life</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div style="background:linear-gradient(135deg,#3b1f0e,#5a2d12);border-radius:20px;padding:56px 40px;text-align:center;color:#fff">
+    <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:#C4A882;margin-bottom:12px">Begin Your Journey</p>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;margin-bottom:16px">Ready to Experience <em style="color:#C4A882">Authentic Ayurveda?</em></h2>
+    <p style="color:rgba(255,255,255,0.75);max-width:520px;margin:0 auto 32px;line-height:1.8">Book a consultation with our Ayurvedic physician and begin your personalised healing journey today.</p>
+    <a href="index.html#appointment" class="btn-book" style="font-size:0.95rem;padding:14px 36px">Book Consultation →</a>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top"><div class="container"><div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo-link"><img src="logo.png" alt="Shanthi Wellness" class="footer-logo-img"/></a>
+      <p class="footer-tagline">Ancient Wisdom. Modern Healing.<br/>Your sanctuary of holistic health.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-icon" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 2H15C13.7 2 12.4 2.5 11.5 3.5C10.5 4.4 10 5.7 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.7 14.1 6.4 14.3 6.2C14.6 6 14.8 5.9 15 5.9H18V2Z" stroke="#c89a4a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#" class="social-icon" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#c89a4a" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="#c89a4a" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="#c89a4a"/></svg></a>
+        <a href="#" class="social-icon" aria-label="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 11.5C21 16.7 16.7 21 11.5 21C9.8 21 8.2 20.5 6.8 19.7L3 21L4.3 17.2C3.5 15.8 3 14.2 3 12.5C3 7.3 7.3 3 12.5 3C17.7 3 22 7.3 22 12.5" stroke="#c89a4a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h5 class="footer-col-title">Quick Links</h5><ul class="footer-links">
+      <li><a href="index.html">Home</a></li><li><a href="ayurveda.html">Ayurveda</a></li>
+      <li><a href="physiotherapy.html">Physiotherapy</a></li><li><a href="treatments.html">Treatments</a></li>
+      <li><a href="packages.html">Packages</a></li><li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h5 class="footer-col-title">Treatments</h5><ul class="footer-links">
+      <li><a href="treatments.html">Panchakarma</a></li><li><a href="treatments.html">Shirodhara</a></li>
+      <li><a href="treatments.html">Abhyanga</a></li><li><a href="treatments.html">Pizhichil</a></li>
+      <li><a href="treatments.html">Nasyam</a></li><li><a href="treatments.html">Njavarakizhi</a></li>
+    </ul></div>
+    <div class="footer-col"><h5 class="footer-col-title">Contact</h5><ul class="footer-contact-list">
+      <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14.5 8 14.5C8 14.5 12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5Z" stroke="#c89a4a" stroke-width="1.2"/><circle cx="8" cy="6" r="1.5" fill="#c89a4a"/></svg>42 Healing Grove Road, Koramangala, Bengaluru</li>
+      <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M5 4h3l1.5 3.5-2 1a9 9 0 004 4l1-2L16 12v3a1 1 0 01-1 1A14 14 0 012 3a1 1 0 011-1h3z" stroke="#c89a4a" stroke-width="1.2"/></svg>+91 98765 43210</li>
+      <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="10" rx="1.5" stroke="#c89a4a" stroke-width="1.2"/><path d="M2 5.5L8 9.5L14 5.5" stroke="#c89a4a" stroke-width="1.2" stroke-linecap="round"/></svg>hello@shanthiwellness.in</li>
+    </ul></div>
+  </div></div></div>
+  <div class="footer-bottom"><div class="container">
+    <p>© 2025 Shanthi Wellness. All rights reserved.</p>
+    <p class="footer-credits">Crafted with care for holistic healing.</p>
+  </div></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
