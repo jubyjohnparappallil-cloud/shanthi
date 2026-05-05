@@ -591,3 +591,165 @@
   .testimonial-cards { grid-template-columns: 1fr; }
   .condition-list { grid-template-columns: 1fr; }
 }
+
+
+/* ── Scroll-to-top (inner pages) ── */
+#scrollTopBtn {
+  position: fixed !important;
+  bottom: 32px !important;
+  right: 32px !important;
+  width: 48px !important;
+  height: 48px !important;
+  background: linear-gradient(135deg, #8dc26f, #6aaa4a) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 50% !important;
+  cursor: pointer !important;
+  font-size: 1.3rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 8px 24px rgba(141,194,111,0.45) !important;
+  opacity: 0 !important;
+  transform: translateY(20px) !important;
+  transition: all 0.4s cubic-bezier(0.34,1.56,0.64,1) !important;
+  z-index: 9990 !important;
+}
+#scrollTopBtn.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+#scrollTopBtn:hover {
+  transform: translateY(-4px) scale(1.1) !important;
+  box-shadow: 0 16px 40px rgba(141,194,111,0.55) !important;
+}
+
+/* ── Card entrance animation ── */
+.treatment-card,
+.package-card,
+.tcard,
+.value-card,
+.team-card,
+.treatment-menu-card,
+.contact-info-card {
+  will-change: transform, opacity;
+}
+
+/* ── Smooth image loading ── */
+img {
+  transition: opacity 0.4s ease;
+}
+img[loading="lazy"] {
+  opacity: 0;
+}
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   INNER PAGES — DEFINITIVE RESPONSIVE
+══════════════════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .page-content, .page-content-narrow { padding: 56px 24px !important; }
+  .two-col { gap: 40px !important; }
+  .contact-grid-page { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .package-cards { grid-template-columns: repeat(2, 1fr) !important; }
+  .treatment-cards { grid-template-columns: repeat(2, 1fr) !important; }
+  .testimonial-cards { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+@media (max-width: 768px) {
+  .page-content, .page-content-narrow { padding: 40px 16px !important; }
+
+  /* Page hero */
+  .page-hero { padding: 56px 16px 40px !important; }
+  .page-hero-title { font-size: clamp(1.5rem, 6vw, 2.2rem) !important; }
+  .page-hero-sub { font-size: 0.88rem !important; }
+
+  /* Two column → single */
+  .two-col { grid-template-columns: 1fr !important; gap: 24px !important; }
+  .two-col img { height: 220px !important; }
+
+  /* Treatment cards */
+  .treatment-cards { grid-template-columns: 1fr !important; gap: 20px !important; }
+  .treatment-card-img { height: 200px !important; }
+
+  /* Package cards */
+  .package-cards { grid-template-columns: 1fr !important; gap: 20px !important; }
+
+  /* Testimonial cards */
+  .testimonial-cards { grid-template-columns: 1fr !important; gap: 20px !important; }
+
+  /* Condition sections */
+  .condition-list { grid-template-columns: 1fr 1fr !important; }
+  .condition-section { padding: 24px 20px !important; }
+
+  /* Contact */
+  .contact-grid-page { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .cf-row { grid-template-columns: 1fr !important; }
+  .contact-form-wrap { padding: 24px 20px !important; }
+  .contact-info-block { gap: 16px !important; }
+
+  /* FAQ */
+  .faq-question { padding: 16px 18px !important; font-size: 0.88rem !important; }
+  .faq-answer { padding: 0 18px 16px !important; }
+
+  /* Values grid */
+  .values-grid { grid-template-columns: 1fr 1fr !important; gap: 16px !important; }
+  .value-card { padding: 24px 18px !important; }
+
+  /* Team grid */
+  .team-grid { grid-template-columns: 1fr 1fr !important; gap: 16px !important; }
+  .team-card-img, .team-card-avatar { height: 200px !important; }
+
+  /* Timeline */
+  .timeline { padding-left: 24px !important; }
+  .timeline-dot { left: -20px !important; }
+
+  /* About story grid */
+  .about-story-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .about-slider-wrap { height: 260px !important; }
+
+  /* About stats row */
+  .about-stats-row { flex-wrap: wrap !important; }
+  .about-stat { flex: 1 1 45% !important; border-right: none !important; border-bottom: 1px solid rgba(196,168,130,0.2) !important; padding: 12px 8px !important; }
+
+  /* Intro block */
+  .intro-block { padding: 20px 20px !important; font-size: 0.9rem !important; }
+
+  /* Maps grid */
+  .locations-grid { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 480px) {
+  .page-content, .page-content-narrow { padding: 32px 14px !important; }
+
+  /* Page hero */
+  .page-hero { padding: 40px 14px 28px !important; }
+  .page-hero-title { font-size: 1.5rem !important; }
+  .page-breadcrumb { font-size: 0.72rem !important; }
+
+  /* Condition list */
+  .condition-list { grid-template-columns: 1fr !important; }
+
+  /* Values grid */
+  .values-grid { grid-template-columns: 1fr !important; }
+
+  /* Team grid */
+  .team-grid { grid-template-columns: 1fr !important; }
+
+  /* Package cards */
+  .package-card { padding: 28px 20px !important; }
+
+  /* FAQ */
+  .faq-question { font-size: 0.85rem !important; padding: 14px 16px !important; }
+
+  /* Contact form */
+  .contact-form-wrap h3 { font-size: 1.3rem !important; }
+
+  /* About stats */
+  .about-stat { flex: 1 1 100% !important; }
+  .about-stat-num { font-size: 1.6rem !important; }
+}

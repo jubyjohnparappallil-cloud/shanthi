@@ -6791,3 +6791,1246 @@ body {
 .nav-drawer-appt:hover {
   background: #2d7a2d !important;
 }
+
+
+/* ══════════════════════════════════════════════════════════
+   PISTA GREEN THEME — light sage/pistachio green accent
+   Replaces dark green (#3a8a3a) with pista (#7ab648 / #8dc26f)
+══════════════════════════════════════════════════════════ */
+
+/* ── CSS variables override ── */
+:root {
+  --pista:        #8dc26f;
+  --pista-dark:   #6aaa4a;
+  --pista-light:  #c8e6b0;
+  --pista-soft:   rgba(141,194,111,0.15);
+  --pista-border: rgba(141,194,111,0.35);
+}
+
+/* ── Navbar top bar ── */
+.navbar-topbar {
+  background: #f4faf0 !important;
+  border-bottom: 1px solid rgba(141,194,111,0.30) !important;
+}
+
+/* ── Navbar bottom border gradient ── */
+.navbar-main {
+  border-image: linear-gradient(90deg,#8dc26f,#b5d98a,#C4A882,#b5d98a,#8dc26f) 1 !important;
+}
+
+/* ── Appointment button (top bar) ── */
+.navbar-appt-btn {
+  background: #8dc26f !important;
+  box-shadow: 0 3px 12px rgba(141,194,111,0.35) !important;
+}
+.navbar-appt-btn:hover { background: #6aaa4a !important; }
+
+/* ── Marquee strip ── */
+.marquee-strip {
+  background: linear-gradient(90deg, #8dc26f, #a8d88a, #8dc26f) !important;
+}
+
+/* ── Orange divider → pista ── */
+.orange-divider {
+  background: linear-gradient(90deg, transparent, #8dc26f, #b5d98a, #8dc26f, transparent) !important;
+  height: 2px !important;
+  opacity: 0.6 !important;
+}
+
+/* ── Section eyebrow text ── */
+.section-eyebrow,
+.pg-section-eyebrow,
+.page-hero-eyebrow {
+  color: #6aaa4a !important;
+}
+
+/* ── Gold divider → pista ── */
+.gold-divider,
+.gold-line {
+  background: linear-gradient(90deg, #8dc26f, #6aaa4a) !important;
+}
+
+/* ── Section heading italic/em ── */
+.section-heading em,
+.pg-section-title em,
+.page-hero-title em,
+.two-col-text h2 em {
+  color: #6aaa4a !important;
+}
+
+/* ── Buttons ── */
+.btn-book,
+.btn.btn-gold,
+.cc-book-btn,
+.tmc-link,
+.nav-drawer-appt {
+  background: linear-gradient(135deg, #8dc26f, #6aaa4a) !important;
+  color: #fff !important;
+}
+.btn-book:hover,
+.cc-book-btn:hover { opacity: 0.88 !important; }
+
+/* ── Circular carousel book button ── */
+.cc-book-btn {
+  border-color: #8dc26f !important;
+}
+
+/* ── Treatment card tag ── */
+.treatment-card-tag,
+.tmc-tag {
+  color: #6aaa4a !important;
+  background: rgba(141,194,111,0.10) !important;
+  border-color: rgba(141,194,111,0.30) !important;
+}
+
+/* ── Stat numbers ── */
+.stat-num,
+.about-stat-num {
+  color: #6aaa4a !important;
+}
+
+/* ── Why-us check icons ── */
+.why-icon svg circle,
+.why-icon svg path { stroke: #8dc26f !important; }
+
+/* ── Testimonial stars ── */
+.testimonial-stars span,
+.tcard-stars { color: #8dc26f !important; }
+
+/* ── Photo strip section heading ── */
+.photo-strip .section-heading em { color: #8dc26f !important; }
+
+/* ── Appointment section background ── */
+.appointment {
+  background: linear-gradient(135deg, #2d5a1a 0%, #4a8a2a 50%, #2d5a1a 100%) !important;
+}
+
+/* ── Form focus ── */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+.cf-group input:focus,
+.cf-group select:focus,
+.cf-group textarea:focus {
+  border-color: #8dc26f !important;
+  box-shadow: 0 0 0 3px rgba(141,194,111,0.18) !important;
+}
+
+/* ── Appointment submit button ── */
+.appointment-form button[type="submit"] {
+  background: linear-gradient(135deg, #8dc26f, #6aaa4a) !important;
+}
+
+/* ── Drawer active link ── */
+.nav-drawer-link.active { color: #6aaa4a !important; }
+.nav-drawer-link:hover  { color: #6aaa4a !important; }
+
+/* ── Drawer appointment button ── */
+.nav-drawer-appt {
+  background: #8dc26f !important;
+}
+.nav-drawer-appt:hover { background: #6aaa4a !important; }
+
+/* ── Footer bottom bar ── */
+.footer-bottom {
+  background: #3d6b28 !important;
+}
+.footer-links a:hover { color: #b5d98a !important; }
+.footer-col-title { color: #d4f0b8 !important; }
+
+/* ── Page hero banner ── */
+.page-hero {
+  background: linear-gradient(135deg, #2d5a1a 0%, #4a8a2a 50%, #3a6a20 100%) !important;
+}
+
+/* ── About page gold accent ── */
+.about-gold-accent,
+.about-story-badge {
+  background: linear-gradient(135deg, #4a8a2a, #6aaa4a) !important;
+}
+.about-story-badge span { color: #d4f0b8 !important; }
+
+/* ── Timeline dot ── */
+.timeline-dot { background: #8dc26f !important; box-shadow: 0 0 0 2px #8dc26f !important; }
+.timeline::before { background: linear-gradient(180deg, #8dc26f, rgba(141,194,111,0.2)) !important; }
+
+/* ── Package card featured border ── */
+.package-card.featured { border-color: #8dc26f !important; }
+.package-card.featured::before { background: #8dc26f !important; }
+
+/* ── FAQ open state ── */
+.faq-question.open { color: #4a8a2a !important; }
+.faq-icon { color: #8dc26f !important; background: rgba(141,194,111,0.12) !important; }
+
+/* ── Contact submit button ── */
+.btn-submit {
+  background: linear-gradient(135deg, #4a8a2a, #6aaa4a) !important;
+}
+
+/* ── Social icons hover ── */
+.social-icon:hover {
+  border-color: #8dc26f !important;
+  background: rgba(141,194,111,0.12) !important;
+}
+
+/* ── Mosaic overlay ── */
+.mosaic-item:hover { border-color: #8dc26f !important; }
+
+/* ── Photo grid overlay ── */
+.pg-item:hover .pg-item-overlay { background: rgba(74,138,42,0.75) !important; }
+
+/* ── Scroll-up button (if any) ── */
+.scroll-up-btn { background: #8dc26f !important; }
+
+/* ── Body background — very faint pista tint ── */
+body { background: #f8fdf5 !important; }
+
+/* ── Section backgrounds ── */
+.about, .services, .why-us, .photo-grid-sm,
+.mosaic, .testimonials, .treatments-list,
+.contact, .photo-banner, .circle-carousel-section {
+  background: transparent !important;
+}
+
+/* ── Intro block left border ── */
+.intro-block { border-left-color: #8dc26f !important; }
+
+/* ── Condition list item border ── */
+.condition-list li { border-color: rgba(141,194,111,0.25) !important; }
+.condition-list li::before { color: #8dc26f !important; }
+
+/* ── Package features checkmark ── */
+.package-features li::before { color: #6aaa4a !important; }
+
+/* ── Value card hover border ── */
+.value-card:hover { border-color: #8dc26f !important; box-shadow: 0 16px 40px rgba(141,194,111,0.18) !important; }
+
+/* ── Treatment card hover ── */
+.treatment-card:hover { box-shadow: 0 16px 40px rgba(141,194,111,0.20) !important; }
+
+/* ── CTA section backgrounds ── */
+.page-content > div[style*="background:linear-gradient(135deg,#3b1f0e"] {
+  background: linear-gradient(135deg, #2d5a1a, #4a8a2a) !important;
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   TULSI.JPG FOOTER BACKGROUND — text clearly visible
+══════════════════════════════════════════════════════════ */
+
+/* ── Main footer wrapper ── */
+.footer {
+  position: relative !important;
+  background: none !important;
+  overflow: hidden !important;
+}
+
+/* ── Tulsi image as background ── */
+.footer::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: url('tulsi.jpg') center center / cover no-repeat !important;
+  z-index: 0 !important;
+}
+
+/* ── Dark overlay so text is readable ── */
+.footer::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: rgba(10, 30, 10, 0.82) !important;
+  z-index: 1 !important;
+}
+
+/* ── All footer content sits above the overlay ── */
+.footer-top,
+.footer-bottom {
+  position: relative !important;
+  z-index: 2 !important;
+  background: transparent !important;
+}
+
+/* ── Text colours — bright & visible on dark bg ── */
+.footer-tagline {
+  color: rgba(220, 240, 210, 0.85) !important;
+}
+.footer-col-title {
+  color: #b5e890 !important;
+  border-bottom-color: rgba(141, 194, 111, 0.30) !important;
+}
+.footer-links a {
+  color: rgba(220, 240, 210, 0.78) !important;
+}
+.footer-links a:hover {
+  color: #b5e890 !important;
+  padding-left: 6px;
+}
+.footer-contact-list li {
+  color: rgba(220, 240, 210, 0.78) !important;
+}
+.footer-bottom {
+  border-top: 1px solid rgba(141, 194, 111, 0.25) !important;
+  background: rgba(0, 0, 0, 0.35) !important;
+}
+.footer-bottom p {
+  color: rgba(220, 240, 210, 0.65) !important;
+}
+.footer-credits {
+  color: rgba(220, 240, 210, 0.45) !important;
+}
+
+/* ── Social icons ── */
+.social-icon {
+  border-color: rgba(141, 194, 111, 0.35) !important;
+  background: rgba(141, 194, 111, 0.08) !important;
+}
+.social-icon:hover {
+  border-color: #8dc26f !important;
+  background: rgba(141, 194, 111, 0.22) !important;
+}
+
+/* ── Logo — slight brightness boost ── */
+.footer-logo-img {
+  filter: brightness(1.15) drop-shadow(0 2px 8px rgba(0,0,0,0.4)) !important;
+}
+
+/* ── SVG icons in contact list ── */
+.footer-contact-list svg path,
+.footer-contact-list svg circle,
+.footer-contact-list svg rect {
+  stroke: #8dc26f !important;
+}
+.footer-contact-list svg path[fill="#c89a4a"] {
+  fill: #8dc26f !important;
+}
+
+
+/* ── Footer contact list links — ensure visible on tulsi bg ── */
+.footer-contact-list a {
+  color: rgba(220,240,210,0.80) !important;
+  text-decoration: none !important;
+  display: block !important;
+  margin-top: 4px !important;
+  font-size: 0.85rem !important;
+  transition: color 0.2s !important;
+}
+.footer-contact-list a:hover {
+  color: #b5e890 !important;
+}
+.footer-contact-list li {
+  font-size: 0.85rem !important;
+  line-height: 1.7 !important;
+  color: rgba(220,240,210,0.78) !important;
+  padding: 2px 0 !important;
+  border: none !important;
+  display: block !important;
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   MODERN STYLE UPGRADE — Animations, Glass, Depth, Polish
+   Makes the entire site look premium and impressive
+══════════════════════════════════════════════════════════ */
+
+/* ── 1. SMOOTH SCROLL & SELECTION ── */
+html { scroll-behavior: smooth; }
+::selection { background: rgba(141,194,111,0.30); color: #1a1a1a; }
+
+/* ── 2. GLOBAL FONT SMOOTHING ── */
+body {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  text-rendering: optimizeLegibility !important;
+}
+
+/* ── 3. KEYFRAME ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.88); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes floatY {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(141,194,111,0.4); }
+  50%       { box-shadow: 0 0 0 12px rgba(141,194,111,0); }
+}
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes borderFlow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInNav {
+  from { opacity: 0; transform: translateY(-100%); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── 4. NAVBAR — glass morphism + animated border ── */
+.navbar {
+  animation: slideInNav 0.6s ease both !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  background: rgba(255,255,255,0.96) !important;
+}
+.navbar.scrolled {
+  box-shadow: 0 4px 32px rgba(0,0,0,0.12) !important;
+  background: rgba(255,255,255,0.98) !important;
+}
+.navbar-main {
+  border-bottom: 2px solid transparent !important;
+  background-image: linear-gradient(white, white),
+    linear-gradient(90deg, #8dc26f, #b5d98a, #C4A882, #b5d98a, #8dc26f) !important;
+  background-origin: border-box !important;
+  background-clip: padding-box, border-box !important;
+  border-image: none !important;
+}
+
+/* ── 5. HERO SECTION — cinematic ── */
+.hero-photo-panel {
+  position: relative !important;
+  overflow: hidden !important;
+}
+.hero-panel-img,
+.hero-photo-panel img {
+  transition: transform 8s ease !important;
+  animation: none !important;
+}
+.hero-photo-panel:hover .hero-panel-img,
+.hero-photo-panel:hover img {
+  transform: scale(1.04) !important;
+}
+
+/* ── 6. REVEAL ANIMATIONS — staggered, smooth ── */
+.reveal {
+  opacity: 0 !important;
+  transform: translateY(32px) !important;
+  transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1),
+              transform 0.8s cubic-bezier(0.16,1,0.3,1) !important;
+}
+.reveal.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.reveal:nth-child(1) { transition-delay: 0.05s !important; }
+.reveal:nth-child(2) { transition-delay: 0.12s !important; }
+.reveal:nth-child(3) { transition-delay: 0.19s !important; }
+.reveal:nth-child(4) { transition-delay: 0.26s !important; }
+.reveal:nth-child(5) { transition-delay: 0.33s !important; }
+.reveal:nth-child(6) { transition-delay: 0.40s !important; }
+
+/* ── 7. SECTION HEADINGS — gradient shimmer ── */
+.section-heading em,
+.pg-section-title em,
+.page-hero-title em {
+  background: linear-gradient(90deg, #6aaa4a, #8dc26f, #C4A882, #8dc26f, #6aaa4a) !important;
+  background-size: 200% auto !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  animation: shimmer 4s linear infinite !important;
+}
+
+/* ── 8. MARQUEE STRIP — glowing ── */
+.marquee-strip {
+  background: linear-gradient(90deg, #4a8a2a, #6aaa4a, #8dc26f, #6aaa4a, #4a8a2a) !important;
+  background-size: 200% auto !important;
+  animation: borderFlow 6s ease infinite !important;
+  box-shadow: 0 4px 24px rgba(141,194,111,0.35) !important;
+}
+
+/* ── 9. PHOTO CAROUSEL THUMBNAILS — hover lift ── */
+.photo-thumb-c {
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 0.4s ease !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+}
+.photo-thumb-c:hover {
+  transform: translateY(-8px) scale(1.03) !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.18) !important;
+}
+.photo-thumb-c img {
+  transition: transform 0.6s ease !important;
+}
+.photo-thumb-c:hover img {
+  transform: scale(1.08) !important;
+}
+
+/* ── 10. TREATMENT CARDS — glass morphism ── */
+.cc-item {
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 0.4s ease !important;
+}
+.cc-item:hover, .cc-item.cc-active {
+  transform: translateY(-10px) !important;
+  box-shadow: 0 24px 56px rgba(141,194,111,0.22) !important;
+}
+.cc-circle {
+  position: relative !important;
+  overflow: hidden !important;
+}
+.cc-circle img {
+  transition: transform 0.6s ease !important;
+}
+.cc-item:hover .cc-circle img {
+  transform: scale(1.08) !important;
+}
+
+/* ── 11. AYURVEDIC CARDS — flip-style reveal ── */
+.ayur-card {
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 0.4s ease !important;
+}
+.ayur-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 24px 56px rgba(141,194,111,0.22) !important;
+}
+
+/* ── 12. ABOUT SECTION IMAGES — parallax feel ── */
+.about-img-main,
+.about-img-secondary,
+.about-slider-wrap {
+  transition: transform 0.6s cubic-bezier(0.16,1,0.3,1),
+              box-shadow 0.6s ease !important;
+}
+.about-img-main:hover,
+.about-slider-wrap:hover {
+  transform: scale(1.02) !important;
+  box-shadow: 0 32px 64px rgba(0,0,0,0.18) !important;
+}
+
+/* ── 13. STAT NUMBERS — float animation ── */
+.stat-item {
+  animation: fadeUp 0.8s ease both !important;
+}
+.stat-num {
+  display: inline-block !important;
+  transition: transform 0.3s ease !important;
+}
+.stat-item:hover .stat-num {
+  transform: scale(1.15) !important;
+}
+
+/* ── 14. TREATMENT MENU CARDS — hover glow ── */
+.treatment-menu-card {
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 0.4s ease,
+              border-color 0.3s ease !important;
+  border: 1px solid rgba(141,194,111,0.15) !important;
+}
+.treatment-menu-card:hover {
+  transform: translateY(-10px) !important;
+  box-shadow: 0 24px 56px rgba(141,194,111,0.20) !important;
+  border-color: rgba(141,194,111,0.40) !important;
+}
+.tmc-icon {
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1) !important;
+}
+.treatment-menu-card:hover .tmc-icon {
+  transform: scale(1.2) rotate(5deg) !important;
+}
+
+/* ── 15. TESTIMONIAL CARDS — hover lift ── */
+.testimonial-card {
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 0.4s ease !important;
+}
+.testimonial-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 24px 56px rgba(141,194,111,0.18) !important;
+}
+
+/* ── 16. PHOTO BANNER PANELS — cinematic hover ── */
+.pb-panel {
+  overflow: hidden !important;
+  border-radius: 16px !important;
+  transition: transform 0.4s ease, box-shadow 0.4s ease !important;
+}
+.pb-panel:hover {
+  transform: scale(1.02) !important;
+  box-shadow: 0 24px 56px rgba(0,0,0,0.20) !important;
+}
+.pb-panel img {
+  transition: transform 0.8s ease !important;
+}
+.pb-panel:hover img {
+  transform: scale(1.08) !important;
+}
+
+/* ── 17. MOSAIC GRID — hover zoom ── */
+.mosaic-item {
+  overflow: hidden !important;
+  border-radius: 12px !important;
+  transition: transform 0.4s ease, box-shadow 0.4s ease !important;
+}
+.mosaic-item:hover {
+  transform: scale(1.03) !important;
+  box-shadow: 0 20px 48px rgba(0,0,0,0.18) !important;
+  z-index: 2 !important;
+}
+.mosaic-item img {
+  transition: transform 0.8s ease !important;
+}
+.mosaic-item:hover img {
+  transform: scale(1.10) !important;
+}
+
+/* ── 18. PHOTO GRID SMALL — hover ── */
+.pg-item {
+  overflow: hidden !important;
+  border-radius: 12px !important;
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 0.4s ease !important;
+}
+.pg-item:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.16) !important;
+  z-index: 2 !important;
+}
+.pg-item img {
+  transition: transform 0.6s ease !important;
+}
+.pg-item:hover img {
+  transform: scale(1.12) !important;
+}
+
+/* ── 19. BUTTONS — animated gradient + pulse ── */
+.btn-book,
+.navbar-appt-btn,
+.nav-drawer-appt,
+.appointment-form button[type="submit"],
+.btn-submit {
+  position: relative !important;
+  overflow: hidden !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+.btn-book::after,
+.navbar-appt-btn::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.25) 50%, transparent 70%) !important;
+  transform: translateX(-100%) !important;
+  transition: transform 0.5s ease !important;
+}
+.btn-book:hover::after,
+.navbar-appt-btn:hover::after {
+  transform: translateX(100%) !important;
+}
+.btn-book:hover,
+.navbar-appt-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(141,194,111,0.45) !important;
+}
+.btn-book:active,
+.navbar-appt-btn:active {
+  transform: translateY(0) !important;
+}
+
+/* ── 20. SECTION EYEBROW — animated underline ── */
+.section-eyebrow,
+.pg-section-eyebrow {
+  position: relative !important;
+  display: inline-block !important;
+}
+.section-eyebrow::before,
+.pg-section-eyebrow::before {
+  content: '— ' !important;
+  opacity: 0.6 !important;
+}
+.section-eyebrow::after,
+.pg-section-eyebrow::after {
+  content: ' —' !important;
+  opacity: 0.6 !important;
+}
+
+/* ── 21. GOLD DIVIDER — animated width ── */
+.gold-divider,
+.gold-line {
+  transition: width 0.8s cubic-bezier(0.16,1,0.3,1) !important;
+  height: 3px !important;
+  border-radius: 2px !important;
+}
+
+/* ── 22. APPOINTMENT FORM — glass card ── */
+.appointment-inner {
+  background: rgba(255,255,255,0.08) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255,255,255,0.15) !important;
+  border-radius: 24px !important;
+  padding: 56px !important;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.25) !important;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  transition: border-color 0.3s ease,
+              box-shadow 0.3s ease,
+              transform 0.2s ease !important;
+  border-radius: 10px !important;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  transform: translateY(-1px) !important;
+}
+
+/* ── 23. WHY-US SECTION — icon float ── */
+.why-icon {
+  animation: floatY 3s ease-in-out infinite !important;
+}
+.why-list li:nth-child(2) .why-icon { animation-delay: 0.5s !important; }
+.why-list li:nth-child(3) .why-icon { animation-delay: 1s !important; }
+.why-list li:nth-child(4) .why-icon { animation-delay: 1.5s !important; }
+
+/* ── 24. CIRCULAR CAROUSEL DOTS — animated ── */
+.cc-dot {
+  transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1) !important;
+}
+.cc-dot.active {
+  transform: scale(1.3) !important;
+  box-shadow: 0 0 0 3px rgba(141,194,111,0.3) !important;
+}
+
+/* ── 25. SCROLL-TO-TOP BUTTON ── */
+#scrollTopBtn {
+  position: fixed !important;
+  bottom: 32px !important;
+  right: 32px !important;
+  width: 48px !important;
+  height: 48px !important;
+  background: linear-gradient(135deg, #8dc26f, #6aaa4a) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 50% !important;
+  cursor: pointer !important;
+  font-size: 1.2rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 8px 24px rgba(141,194,111,0.45) !important;
+  opacity: 0 !important;
+  transform: translateY(20px) !important;
+  transition: all 0.4s cubic-bezier(0.34,1.56,0.64,1) !important;
+  z-index: 9990 !important;
+}
+#scrollTopBtn.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+#scrollTopBtn:hover {
+  transform: translateY(-4px) scale(1.1) !important;
+  box-shadow: 0 16px 40px rgba(141,194,111,0.55) !important;
+}
+
+/* ── 26. PAGE HERO — animated gradient ── */
+.page-hero {
+  background-size: 200% 200% !important;
+  animation: borderFlow 8s ease infinite !important;
+}
+.page-hero-title {
+  animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.2s both !important;
+}
+.page-hero-eyebrow {
+  animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.05s both !important;
+}
+.page-hero-sub {
+  animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.35s both !important;
+}
+.page-breadcrumb {
+  animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.5s both !important;
+}
+
+/* ── 27. CONTACT INFO CARDS — hover lift ── */
+.contact-info-card {
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 0.4s ease !important;
+}
+.contact-info-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 16px 40px rgba(141,194,111,0.15) !important;
+}
+
+/* ── 28. TEAM CARDS — hover ── */
+.team-card {
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 0.4s ease !important;
+}
+.team-card:hover {
+  transform: translateY(-10px) !important;
+  box-shadow: 0 24px 56px rgba(141,194,111,0.22) !important;
+}
+.team-card-img {
+  transition: transform 0.6s ease !important;
+}
+.team-card:hover .team-card-img {
+  transform: scale(1.05) !important;
+}
+
+/* ── 29. VALUE CARDS — hover ── */
+.value-card {
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 0.4s ease,
+              border-color 0.3s ease !important;
+}
+.value-card:hover {
+  transform: translateY(-8px) !important;
+}
+.value-icon {
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1) !important;
+  display: inline-block !important;
+}
+.value-card:hover .value-icon {
+  transform: scale(1.25) rotate(-5deg) !important;
+}
+
+/* ── 30. PACKAGE CARDS — hover ── */
+.package-card {
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 0.4s ease !important;
+}
+.package-card:hover {
+  transform: translateY(-10px) !important;
+}
+.package-icon {
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1) !important;
+  display: inline-block !important;
+}
+.package-card:hover .package-icon {
+  transform: scale(1.3) !important;
+  animation: floatY 2s ease-in-out infinite !important;
+}
+
+/* ── 31. FOOTER SOCIAL ICONS — hover spin ── */
+.social-icon {
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1),
+              border-color 0.3s ease,
+              background 0.3s ease !important;
+  border-radius: 50% !important;
+}
+.social-icon:hover {
+  transform: translateY(-4px) scale(1.15) !important;
+}
+
+/* ── 32. SECTION DIVIDERS — animated ── */
+.orange-divider {
+  position: relative !important;
+  overflow: hidden !important;
+}
+.orange-divider::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 60% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent) !important;
+  animation: shimmer 3s ease infinite !important;
+}
+
+/* ── 33. ABOUT STORY BADGE — pulse ── */
+.about-story-badge {
+  animation: pulseGlow 3s ease-in-out infinite !important;
+}
+
+/* ── 34. TIMELINE — animated dots ── */
+.timeline-dot {
+  transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1) !important;
+}
+.timeline-item:hover .timeline-dot {
+  transform: scale(1.5) !important;
+}
+.timeline-item {
+  transition: transform 0.3s ease !important;
+}
+.timeline-item:hover {
+  transform: translateX(6px) !important;
+}
+
+/* ── 35. FAQ ITEMS — smooth expand ── */
+.faq-answer {
+  overflow: hidden !important;
+  transition: max-height 0.4s cubic-bezier(0.16,1,0.3,1),
+              padding 0.3s ease !important;
+}
+.faq-question {
+  transition: background 0.2s ease, color 0.2s ease !important;
+}
+.faq-item {
+  transition: box-shadow 0.3s ease, transform 0.3s ease !important;
+}
+.faq-item:hover {
+  box-shadow: 0 8px 32px rgba(141,194,111,0.12) !important;
+  transform: translateX(4px) !important;
+}
+
+/* ── 36. NAVBAR LOGO — subtle hover ── */
+.nav-logo-img,
+.navbar table img {
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1),
+              filter 0.3s ease !important;
+}
+.nav-logo-img:hover,
+.navbar table img:hover {
+  transform: scale(1.04) !important;
+}
+
+/* ── 37. DRAWER LINKS — slide in on open ── */
+.nav-drawer.open .nav-drawer-link {
+  animation: fadeLeft 0.4s cubic-bezier(0.16,1,0.3,1) both !important;
+}
+.nav-drawer.open .nav-drawer-links li:nth-child(1) .nav-drawer-link { animation-delay: 0.05s !important; }
+.nav-drawer.open .nav-drawer-links li:nth-child(2) .nav-drawer-link { animation-delay: 0.10s !important; }
+.nav-drawer.open .nav-drawer-links li:nth-child(3) .nav-drawer-link { animation-delay: 0.15s !important; }
+.nav-drawer.open .nav-drawer-links li:nth-child(4) .nav-drawer-link { animation-delay: 0.20s !important; }
+.nav-drawer.open .nav-drawer-links li:nth-child(5) .nav-drawer-link { animation-delay: 0.25s !important; }
+.nav-drawer.open .nav-drawer-links li:nth-child(6) .nav-drawer-link { animation-delay: 0.30s !important; }
+.nav-drawer.open .nav-drawer-links li:nth-child(7) .nav-drawer-link { animation-delay: 0.35s !important; }
+.nav-drawer.open .nav-drawer-links li:nth-child(8) .nav-drawer-link { animation-delay: 0.40s !important; }
+.nav-drawer.open .nav-drawer-links li:nth-child(9) .nav-drawer-link { animation-delay: 0.45s !important; }
+
+/* ── 38. TCARD (testimonial) — hover ── */
+.tcard {
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 0.4s ease !important;
+}
+.tcard:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 24px 56px rgba(141,194,111,0.18) !important;
+}
+
+/* ── 39. CONDITION LIST ITEMS — hover ── */
+.condition-list li {
+  transition: transform 0.3s ease,
+              background 0.2s ease,
+              box-shadow 0.3s ease !important;
+}
+.condition-list li:hover {
+  transform: translateX(6px) !important;
+  background: rgba(141,194,111,0.08) !important;
+  box-shadow: 0 4px 16px rgba(141,194,111,0.12) !important;
+}
+
+/* ── 40. SCROLL-TO-TOP — inject via CSS content trick ── */
+body::after {
+  content: '' !important;
+}
+
+/* ── 41. RESPONSIVE ANIMATION REDUCTION ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── 42. MOBILE TOUCH IMPROVEMENTS ── */
+@media (max-width: 768px) {
+  .btn-book, .navbar-appt-btn {
+    -webkit-tap-highlight-color: transparent !important;
+  }
+  .photo-thumb-c:hover { transform: none !important; }
+  .cc-item:hover { transform: none !important; }
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   DEFINITIVE RESPONSIVE — overrides all conflicts
+   Breakpoints: 1024px (tablet), 768px (mobile), 480px (small)
+══════════════════════════════════════════════════════════ */
+
+/* ── TABLET (≤1024px) ── */
+@media (max-width: 1024px) {
+  body { padding-top: 120px !important; }
+  .container { padding: 0 24px !important; max-width: 100% !important; }
+  .section-pad { padding: 60px 0 !important; }
+
+  /* Navbar */
+  .navbar table img { height: 72px !important; }
+  .navbar-topbar-inner { padding: 0 24px !important; }
+
+  /* Hero */
+  .hero { display: block !important; height: auto !important; }
+  .hero-photo-panel { height: 55vw !important; min-height: 300px !important; }
+  .hero-thumb-strip, .hero-content, .hero-stat-card,
+  .hero-panel-thumb, .hero-badge { display: none !important; }
+
+  /* About */
+  .about-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .about-img-main { width: 100% !important; }
+
+  /* Treatments carousel */
+  .circle-carousel-outer { padding: 0 40px !important; }
+
+  /* Ayurvedic cards */
+  #ayur-treatments > div > div:last-child {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Why us */
+  .why-row { flex-direction: column !important; gap: 32px !important; }
+  .why-image { max-width: 480px !important; margin: 0 auto !important; }
+
+  /* Photo grid */
+  .photo-grid-sm-inner { grid-template-columns: repeat(4, 1fr) !important; }
+
+  /* Mosaic */
+  .mosaic-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .mosaic-large { grid-column: span 2 !important; }
+
+  /* Testimonials */
+  .testimonials-grid { grid-template-columns: 1fr 1fr !important; }
+
+  /* Photo banner */
+  .photo-banner-grid { grid-template-columns: 1fr 1fr !important; }
+
+  /* Treatments menu */
+  .treatments-menu-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* Appointment form */
+  .form-row { grid-template-columns: 1fr 1fr !important; }
+
+  /* Contact */
+  .contact-grid { grid-template-columns: 1fr !important; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
+  .footer-brand { grid-column: span 2 !important; }
+}
+
+/* ── MOBILE (≤768px) ── */
+@media (max-width: 768px) {
+  body { padding-top: 100px !important; }
+  .container { padding: 0 16px !important; }
+  .section-pad { padding: 48px 0 !important; }
+
+  /* Navbar */
+  .navbar table img { height: 60px !important; }
+  .navbar table td:first-child { padding-left: 16px !important; }
+  .navbar table td:last-child { padding-right: 16px !important; }
+  .navbar-topbar-inner { padding: 0 16px !important; }
+  .navbar-phone { font-size: 0.72rem !important; }
+  .navbar-appt-btn { padding: 6px 14px !important; font-size: 0.7rem !important; }
+
+  /* Hero */
+  .hero-photo-panel { height: 65vw !important; min-height: 240px !important; }
+
+  /* Section headings */
+  .section-heading { font-size: clamp(1.4rem, 5vw, 2rem) !important; }
+  .section-sub { font-size: 0.88rem !important; }
+
+  /* About */
+  .about-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .about-img-main { width: 100% !important; }
+  .about-img-secondary { width: 48% !important; }
+  .about-stats { flex-wrap: wrap !important; gap: 16px !important; }
+  .stat-item { flex: 1 1 40% !important; }
+  .stat-divider { display: none !important; }
+
+  /* Circular carousel */
+  .circle-carousel-outer { padding: 0 32px !important; }
+  .cc-circle { width: 160px !important; height: 160px !important; }
+  .cc-info h3 { font-size: 1.1rem !important; }
+  .cc-info p { font-size: 0.82rem !important; }
+
+  /* Ayurvedic cards */
+  #ayur-treatments > div > div:last-child {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 14px !important;
+  }
+
+  /* Why us */
+  .why-row { flex-direction: column !important; gap: 24px !important; }
+  .why-image img { max-height: 280px !important; object-fit: cover !important; }
+
+  /* Photo grid */
+  .photo-grid-sm-inner { grid-template-columns: repeat(3, 1fr) !important; gap: 8px !important; }
+
+  /* Mosaic */
+  .mosaic-grid { grid-template-columns: 1fr 1fr !important; }
+  .mosaic-large, .mosaic-tall, .mosaic-wide { grid-column: span 2 !important; }
+
+  /* Testimonials */
+  .testimonials-grid { grid-template-columns: 1fr !important; }
+  .testimonial-card--featured { order: -1 !important; }
+
+  /* Photo banner */
+  .photo-banner-grid { grid-template-columns: 1fr !important; }
+  .pb-panel { height: 220px !important; }
+
+  /* Treatments menu */
+  .treatments-menu-grid { grid-template-columns: 1fr 1fr !important; gap: 16px !important; }
+
+  /* Appointment form */
+  .form-row { grid-template-columns: 1fr !important; gap: 0 !important; }
+  .appointment-inner { padding: 32px 20px !important; }
+
+  /* Contact */
+  .contact-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .contact-grid-page { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .cf-row { grid-template-columns: 1fr !important; }
+  .contact-form-wrap { padding: 24px 20px !important; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 24px !important; }
+  .footer-brand { grid-column: span 2 !important; }
+  .footer-top { padding: 48px 0 32px !important; }
+  .footer-bottom .container { flex-direction: column !important; gap: 6px !important; text-align: center !important; }
+
+  /* Page hero */
+  .page-hero { padding: 56px 0 40px !important; }
+  .page-hero-title { font-size: clamp(1.6rem, 6vw, 2.4rem) !important; }
+
+  /* Inner page two-col */
+  .two-col { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .two-col img { height: 240px !important; }
+
+  /* About page */
+  .about-story-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .about-slider-wrap { height: 280px !important; }
+  .about-stats-row { flex-wrap: wrap !important; }
+  .about-stat { flex: 1 1 40% !important; border-right: none !important; border-bottom: 1px solid rgba(196,168,130,0.22) !important; padding-bottom: 12px !important; }
+  .about-stat:last-child { border-bottom: none !important; }
+
+  /* Team grid */
+  .team-grid { grid-template-columns: 1fr 1fr !important; gap: 16px !important; }
+  .team-card-img { height: 200px !important; }
+
+  /* Values grid */
+  .values-grid { grid-template-columns: 1fr 1fr !important; gap: 16px !important; }
+
+  /* Timeline */
+  .timeline-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+
+  /* Package cards */
+  .package-cards { grid-template-columns: 1fr 1fr !important; gap: 16px !important; }
+
+  /* Treatment cards */
+  .treatment-cards { grid-template-columns: 1fr 1fr !important; gap: 16px !important; }
+
+  /* Testimonial cards */
+  .testimonial-cards { grid-template-columns: 1fr !important; }
+
+  /* Condition list */
+  .condition-list { grid-template-columns: 1fr 1fr !important; }
+
+  /* Scroll-to-top */
+  #scrollTopBtn { bottom: 20px !important; right: 20px !important; width: 42px !important; height: 42px !important; }
+
+  /* Disable heavy hover animations on touch */
+  .photo-thumb-c:hover { transform: none !important; }
+  .cc-item:hover { transform: none !important; }
+  .mosaic-item:hover { transform: none !important; }
+  .pg-item:hover { transform: none !important; }
+}
+
+/* ── SMALL PHONES (≤480px) ── */
+@media (max-width: 480px) {
+  body { padding-top: 80px !important; }
+
+  /* Hide topbar */
+  .navbar-topbar { display: none !important; }
+  .navbar table img { height: 52px !important; }
+  .navbar table td:first-child { padding-left: 12px !important; }
+  .navbar table td:last-child { padding-right: 12px !important; }
+
+  /* Hero */
+  .hero-photo-panel { height: 72vw !important; min-height: 200px !important; }
+
+  /* Section headings */
+  .section-heading { font-size: 1.4rem !important; }
+
+  /* Ayurvedic cards — single column */
+  #ayur-treatments > div > div:last-child {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Photo grid */
+  .photo-grid-sm-inner { grid-template-columns: repeat(2, 1fr) !important; gap: 6px !important; }
+
+  /* Treatments menu */
+  .treatments-menu-grid { grid-template-columns: 1fr !important; }
+
+  /* Team grid */
+  .team-grid { grid-template-columns: 1fr !important; }
+
+  /* Values grid */
+  .values-grid { grid-template-columns: 1fr !important; }
+
+  /* Package cards */
+  .package-cards { grid-template-columns: 1fr !important; }
+
+  /* Treatment cards */
+  .treatment-cards { grid-template-columns: 1fr !important; }
+
+  /* Condition list */
+  .condition-list { grid-template-columns: 1fr !important; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr !important; }
+  .footer-brand { grid-column: span 1 !important; }
+
+  /* Page hero */
+  .page-hero { padding: 40px 0 28px !important; }
+  .page-hero-title { font-size: 1.6rem !important; }
+  .page-hero-sub { font-size: 0.85rem !important; }
+
+  /* About page */
+  .about-slider-wrap { height: 240px !important; }
+  .about-story-badge { padding: 12px 14px !important; }
+  .about-story-badge span { font-size: 1.5rem !important; }
+
+  /* Appointment form */
+  .appointment-inner { padding: 24px 16px !important; border-radius: 16px !important; }
+
+  /* Contact form */
+  .contact-form-wrap { padding: 20px 16px !important; }
+
+  /* Circular carousel */
+  .cc-circle { width: 140px !important; height: 140px !important; }
+  .circle-carousel-outer { padding: 0 24px !important; }
+  .cc-btn { width: 36px !important; height: 36px !important; font-size: 0.9rem !important; }
+
+  /* Marquee */
+  .marquee-track span { font-size: 0.72rem !important; }
+
+  /* Scroll-to-top */
+  #scrollTopBtn { bottom: 16px !important; right: 16px !important; }
+}
+
+/* ── VERY SMALL (≤360px) ── */
+@media (max-width: 360px) {
+  body { padding-top: 72px !important; }
+  .navbar table img { height: 46px !important; }
+  .section-heading { font-size: 1.25rem !important; }
+  .page-hero-title { font-size: 1.4rem !important; }
+  .hero-photo-panel { height: 80vw !important; }
+}

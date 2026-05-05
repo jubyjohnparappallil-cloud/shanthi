@@ -412,3 +412,127 @@ document.addEventListener('click', function (e) {
   s.textContent = '@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}';
   document.head.appendChild(s);
 })();
+
+
+/* ═══════════════════════════════════════════════════════
+   SCROLL-TO-TOP BUTTON
+═══════════════════════════════════════════════════════ */
+(function () {
+  var btn = document.createElement('button');
+  btn.id = 'scrollTopBtn';
+  btn.setAttribute('aria-label', 'Scroll to top');
+  btn.innerHTML = '↑';
+  document.body.appendChild(btn);
+
+  window.addEventListener('scroll', function () {
+    btn.classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
+
+  btn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+
+
+/* ═══════════════════════════════════════════════════════
+   NAVBAR SCROLL SHRINK
+═══════════════════════════════════════════════════════ */
+(function () {
+  var navbar = document.getElementById('navbar');
+  if (!navbar) return;
+  var logoImg = navbar.querySelector('img');
+
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 80) {
+      navbar.classList.add('scrolled');
+      if (logoImg) logoImg.style.height = '64px';
+    } else {
+      navbar.classList.remove('scrolled');
+      if (logoImg) logoImg.style.height = '90px';
+    }
+  }, { passive: true });
+})();
+
+
+/* ═══════════════════════════════════════════════════════
+   STAGGERED CARD ANIMATIONS ON SCROLL
+═══════════════════════════════════════════════════════ */
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+
+  var grids = document.querySelectorAll(
+    '.treatment-cards, .package-cards, .testimonial-cards, .values-grid, .team-grid, .treatments-menu-grid'
+  );
+
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      var cards = entry.target.querySelectorAll(
+        '.treatment-card, .package-card, .tcard, .value-card, .team-card, .treatment-menu-card'
+      );
+      cards.forEach(function (card, i) {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(40px)';
+        setTimeout(function () {
+          card.style.transition = 'opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1)';
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, i * 100);
+      });
+      obs.unobserve(entry.target);
+    });
+  }, { threshold: 0.08 });
+
+  grids.forEach(function (g) { obs.observe(g); });
+})();
+
+
+/* ═══════════════════════════════════════════════════════
+   PARALLAX ON HERO IMAGE
+═══════════════════════════════════════════════════════ */
+(function () {
+  var heroPanel = document.querySelector('.hero-photo-panel');
+  if (!heroPanel) return;
+
+  window.addEventListener('scroll', function () {
+    var scrolled = window.scrollY;
+    if (scrolled < window.innerHeight * 1.5) {
+      var img = heroPanel.querySelector('img');
+      if (img) img.style.transform = 'translateY(' + (scrolled * 0.15) + 'px)';
+    }
+  }, { passive: true });
+})();
+
+
+/* ═══════════════════════════════════════════════════════
+   SECTION ENTRANCE — number counter animation
+═══════════════════════════════════════════════════════ */
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+
+  var statsRow = document.querySelector('.about-stats-row');
+  if (!statsRow) return;
+
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      entry.target.querySelectorAll('.about-stat-num').forEach(function (el) {
+        var target = parseInt(el.textContent.replace(/\D/g, ''), 10);
+        if (isNaN(target)) return;
+        var suffix = el.textContent.replace(/[\d]/g, '').trim();
+        var start = performance.now();
+        var duration = 1600;
+        function update(now) {
+          var p = Math.min((now - start) / duration, 1);
+          var ease = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(ease * target) + suffix;
+          if (p < 1) requestAnimationFrame(update);
+        }
+        requestAnimationFrame(update);
+      });
+      obs.unobserve(entry.target);
+    });
+  }, { threshold: 0.5 });
+
+  obs.observe(statsRow);
+})();

@@ -1,0 +1,434 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>About Us — Shanthi Wellness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="page-styles.css"/>
+  <style>
+    body{padding-top:130px!important}
+    @media(max-width:768px){body{padding-top:108px!important}}
+    @media(max-width:480px){body{padding-top:72px!important}}
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,0.08);padding:0}
+    .navbar-topbar{background:#f8f4ee;border-bottom:1px solid rgba(196,168,130,0.25);padding:7px 0}
+    .navbar-topbar-inner{max-width:1280px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between}
+    .navbar-phone{display:flex;align-items:center;gap:7px;font-size:0.82rem;font-weight:500;color:#5a4a38}
+    .navbar-appt-btn{display:inline-flex;align-items:center;padding:7px 20px;background:#3a8a3a;color:#fff;border-radius:50px;font-size:0.78rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none}
+    .navbar-main{background:#fff;padding:4px 0;width:100%;border-bottom:3px solid;border-image:linear-gradient(90deg,#3a8a3a,#6dcc6d,#C4A882,#6dcc6d,#3a8a3a) 1}
+    @media(max-width:480px){.navbar-topbar{display:none}}
+
+    /* ── About page specific styles ── */
+    .about-story-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:72px}
+
+    /* ── Image Slider ── */
+    .about-slider-wrap{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 20px 56px rgba(0,0,0,0.18);height:460px}
+    .about-slider-track{display:flex;height:100%;transition:transform 0.7s cubic-bezier(0.4,0,0.2,1)}
+    .about-slider-track img{min-width:100%;width:100%;height:100%;object-fit:cover;object-position:center;flex-shrink:0}
+    /* Gradient overlay on image */
+    .about-slider-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.35) 0%,transparent 55%);pointer-events:none;z-index:1}
+    /* Dot indicators */
+    .about-slider-dots{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:3}
+    .about-slider-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.45);border:none;cursor:pointer;padding:0;transition:all 0.3s}
+    .about-slider-dot.active{background:#fff;width:24px;border-radius:4px}
+    /* Prev / Next arrows */
+    .about-slider-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:3;background:rgba(255,255,255,0.22);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.35);color:#fff;width:38px;height:38px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:background 0.2s}
+    .about-slider-btn:hover{background:rgba(255,255,255,0.40)}
+    .about-slider-btn.prev{left:14px}
+    .about-slider-btn.next{right:14px}
+    /* Badge */
+    .about-story-badge{position:absolute;bottom:28px;right:20px;background:linear-gradient(135deg,#4a8a2a,#6aaa4a);color:#fff;border-radius:12px;padding:16px 18px;text-align:center;box-shadow:0 8px 24px rgba(74,138,42,0.40);z-index:3}
+    .about-story-badge span{display:block;font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;line-height:1;color:#fff}
+    .about-story-badge small{font-size:0.62rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;opacity:0.9}
+    .about-gold-accent{width:60px;height:3px;background:linear-gradient(90deg,#C4A882,#A08060);border-radius:2px;margin:14px 0 24px}
+    .about-para{font-size:0.95rem;color:#4a3a28;line-height:1.9;margin-bottom:18px}
+    .about-stats-row{display:flex;gap:0;border-top:1px solid rgba(196,168,130,0.22);border-bottom:1px solid rgba(196,168,130,0.22);padding:24px 0;margin-top:32px}
+    .about-stat{flex:1;text-align:center;padding:0 16px;border-right:1px solid rgba(196,168,130,0.22)}
+    .about-stat:last-child{border-right:none}
+    .about-stat-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#3b1f0e;display:block}
+    .about-stat-lbl{font-size:0.72rem;color:#A08060;text-transform:uppercase;letter-spacing:0.08em;margin-top:2px;display:block}
+
+    /* Values grid */
+    .values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:40px}
+    .value-card{background:#fff;border:1px solid rgba(196,168,130,0.22);border-radius:16px;padding:32px 24px;text-align:center;transition:transform 0.3s,box-shadow 0.3s}
+    .value-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(196,168,130,0.18)}
+    .value-icon{font-size:2.4rem;margin-bottom:16px}
+    .value-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#1a1a1a;margin-bottom:10px}
+    .value-desc{font-size:0.86rem;color:#5a4a38;line-height:1.8}
+
+    /* Team cards */
+    .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px;margin-top:40px}
+    .team-card{background:#fff;border:1px solid rgba(196,168,130,0.2);border-radius:16px;overflow:hidden;text-align:center;box-shadow:0 4px 20px rgba(196,168,130,0.10);transition:transform 0.3s,box-shadow 0.3s}
+    .team-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(196,168,130,0.20)}
+    .team-card-img{width:100%;height:300px;object-fit:cover;object-position:top center;display:block}
+    .team-card-avatar{width:100%;height:300px;background:linear-gradient(135deg,#fdf8f2,#f5ede0);display:flex;align-items:center;justify-content:center;font-size:5rem}
+    .team-card-body{padding:24px 20px}
+    .team-card-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#1a1a1a;margin-bottom:4px}
+    .team-card-role{font-size:0.78rem;color:#3a8a3a;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px}
+    .team-card-bio{font-size:0.84rem;color:#5a4a38;line-height:1.7}
+
+    /* Timeline */
+    .timeline{position:relative;padding-left:32px;margin-top:40px}
+    .timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,#C4A882,rgba(196,168,130,0.2))}
+    .timeline-item{position:relative;margin-bottom:36px}
+    .timeline-dot{position:absolute;left:-28px;top:4px;width:14px;height:14px;border-radius:50%;background:#C4A882;border:3px solid #fff;box-shadow:0 0 0 2px #C4A882}
+    .timeline-year{font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A08060;margin-bottom:4px}
+    .timeline-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:#1a1a1a;margin-bottom:6px}
+    .timeline-desc{font-size:0.88rem;color:#5a4a38;line-height:1.8}
+
+    @media(max-width:768px){
+      .about-story-grid{grid-template-columns:1fr;gap:40px}
+      .about-slider-wrap{height:300px}
+      .about-stats-row{flex-wrap:wrap;gap:16px}
+      .about-stat{flex:1 1 40%;border-right:none;border-bottom:1px solid rgba(196,168,130,0.22);padding-bottom:16px}
+      .about-stat:last-child{border-bottom:none}
+    }
+  </style>
+</head>
+<body>
+
+
+<!-- Leaf animations -->
+<div class="leaf-container" aria-hidden="true">
+  <div class="leaf leaf-1"><svg viewBox="0 0 60 80" fill="none"><path d="M30 75 C30 75 5 55 5 30 C5 10 20 2 30 2 C40 2 55 10 55 30 C55 55 30 75 30 75Z" fill="#4aaa4a" opacity="0.55"/><path d="M30 75 L30 2" stroke="#2d7a2d" stroke-width="1.5" opacity="0.4"/></svg></div>
+  <div class="leaf leaf-3"><svg viewBox="0 0 40 55" fill="none"><path d="M20 52 C20 52 2 38 2 20 C2 6 10 1 20 1 C30 1 38 6 38 20 C38 38 20 52 20 52Z" fill="#3a8a3a" opacity="0.5"/></svg></div>
+  <div class="leaf leaf-5"><svg viewBox="0 0 35 50" fill="none"><path d="M17 47 C17 47 2 34 2 17 C2 5 9 1 17 1 C25 1 33 5 33 17 C33 34 17 47 17 47Z" fill="#C4A882" opacity="0.4"/></svg></div>
+  <div class="leaf leaf-7"><svg viewBox="0 0 30 42" fill="none"><path d="M15 39 C15 39 2 28 2 15 C2 5 8 1 15 1 C22 1 28 5 28 15 C28 28 15 39 15 39Z" fill="#6dcc6d" opacity="0.45"/></svg></div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="navbar-topbar">
+    <div class="navbar-topbar-inner">
+      <span class="navbar-phone">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke="#A08060" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Call : +91 98765 43210, +91 80 2345 6789
+      </span>
+      <a href="index.html#appointment" class="navbar-appt-btn">Appointment</a>
+    </div>
+  </div>
+  <div class="navbar-main">
+    <table style="width:100%;border-collapse:collapse;box-sizing:border-box;display:table">
+      <tr>
+        <td style="padding:6px 0 6px 40px;vertical-align:middle">
+          <a href="index.html" style="text-decoration:none;display:inline-block">
+            <img src="logo.png" alt="Shanthi Wellness" style="height:90px;width:auto;max-width:340px;object-fit:contain;display:block"/>
+          </a>
+        </td>
+        <td style="padding:6px 40px 6px 0;vertical-align:middle;text-align:right;width:1%">
+          <button id="navToggle" style="display:inline-flex;align-items:center;gap:10px;padding:10px 22px;background:transparent;border:1.5px solid rgba(196,168,130,0.45);border-radius:8px;cursor:pointer;white-space:nowrap;font-family:Inter,sans-serif">
+            <span style="font-size:0.92rem;font-weight:600;color:#2a1a08">Menu</span>
+            <span style="display:flex;flex-direction:column;gap:5px">
+              <span style="display:block;width:22px;height:2px;background:#2a1a08;border-radius:2px"></span>
+              <span style="display:block;width:22px;height:2px;background:#2a1a08;border-radius:2px"></span>
+              <span style="display:block;width:22px;height:2px;background:#2a1a08;border-radius:2px"></span>
+            </span>
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</nav>
+
+<!-- Overlay + Drawer -->
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="nav-drawer" id="navDrawer">
+  <div class="nav-drawer-header">
+    <img src="logo.png" alt="Shanthi Wellness" class="nav-drawer-logo"/>
+    <button class="nav-drawer-close" id="navDrawerClose">✕</button>
+  </div>
+  <ul class="nav-drawer-links">
+    <li><a href="index.html"             class="nav-drawer-link">Home</a></li>
+    <li><a href="about.html"             class="nav-drawer-link active">About Us</a></li>
+    <li><a href="ayurveda.html"          class="nav-drawer-link">Ayurveda</a></li>
+    <li><a href="physiotherapy.html"     class="nav-drawer-link">Physiotherapy</a></li>
+    <li><a href="treatments.html"        class="nav-drawer-link">Treatments</a></li>
+    <li><a href="packages.html"          class="nav-drawer-link">Our Packages</a></li>
+    <li><a href="packages.html"          class="nav-drawer-link">Offers</a></li>
+    <li><a href="index.html#gallery"     class="nav-drawer-link">Videos</a></li>
+    <li><a href="testimonials.html"      class="nav-drawer-link">Testimonials</a></li>
+    <li><a href="index.html#appointment" class="nav-drawer-link">Make an Appointment</a></li>
+    <li><a href="faqs.html"              class="nav-drawer-link">FAQs</a></li>
+    <li><a href="contact.html"           class="nav-drawer-link">Contact Us</a></li>
+  </ul>
+  <a href="index.html#appointment" class="nav-drawer-appt">Book Appointment</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-eyebrow">Est. 2010 · Bengaluru</p>
+    <h1 class="page-hero-title">About <em>Shanthi Wellness</em></h1>
+    <p class="page-hero-sub">A sanctuary where ancient Ayurvedic wisdom meets modern clinical expertise — restoring balance of body, mind and spirit since 2010.</p>
+    <div class="page-breadcrumb">
+      <a href="index.html">Home</a><span>›</span><span>About Us</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- MAIN CONTENT -->
+<div class="page-content">
+
+  <!-- ── OUR STORY ── -->
+  <div class="about-story-grid">
+    <!-- Single Image -->
+    <div class="about-slider-wrap">
+      <img src="Diya.jpg" alt="Shanthi Wellness clinic" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block"/>
+      <div class="about-story-badge">
+        <span>15+</span>
+        <small>Years of<br/>Healing</small>
+      </div>
+    </div>
+    <!-- Text -->
+    <div>
+      <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:#A08060;margin-bottom:10px">Our Story</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;color:#1a1a1a;line-height:1.2;margin-bottom:0">Shanthi <em style="font-style:italic;color:#C4A882">Wellness Medical Center</em></h2>
+      <div class="about-gold-accent"></div>
+      <p class="about-para">Founded in 2010 by Dr. Meera Krishnan, Shanthi Wellness was born from a deep conviction that true healing transcends the treatment of symptoms. Drawing from the 5,000-year-old science of Ayurveda, the gentle precision of Homeopathy, and the restorative power of Physiotherapy, we offer a sanctuary where ancient wisdom and modern clinical expertise converge.</p>
+      <p class="about-para">Shanthi Wellness Medical Center is a unique facility that helps restore the natural balance of your mind, body and spirit by combining ancient medical techniques and complementary therapies. We provide authentic traditional Ayurveda treatments under the guidance of well-experienced Ayurveda physicians with years of international experience.</p>
+      <p class="about-para">Our philosophy is rooted in the understanding that every individual is unique — a distinct constellation of constitution, lifestyle and life experience. We craft personalised healing journeys that address the root cause of imbalance, not merely its surface manifestations. <em>Shanthi</em>, meaning peace in Sanskrit, is not just our name. It is our promise.</p>
+      <!-- Stats -->
+      <div class="about-stats-row">
+        <div class="about-stat"><span class="about-stat-num">500+</span><span class="about-stat-lbl">Patients Healed</span></div>
+        <div class="about-stat"><span class="about-stat-num">15+</span><span class="about-stat-lbl">Years Experience</span></div>
+        <div class="about-stat"><span class="about-stat-num">3</span><span class="about-stat-lbl">Specialties</span></div>
+        <div class="about-stat"><span class="about-stat-num">98%</span><span class="about-stat-lbl">Success Rate</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── WHAT MAKES US DIFFERENT ── -->
+  <div style="background:#fdf8f2;border-radius:20px;padding:56px 48px;margin-bottom:72px">
+    <div style="text-align:center;margin-bottom:48px">
+      <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:#A08060;margin-bottom:10px">Our Approach</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;color:#1a1a1a;margin-bottom:0">What Makes Us <em style="font-style:italic;color:#C4A882">Different</em></h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="two-col" style="margin-bottom:0;gap:48px">
+      <img src="mom.jpg" alt="Holistic healing at Shanthi Wellness" style="height:340px"/>
+      <div class="two-col-text">
+        <p class="about-para">At Shanthi Wellness Medical Center, the evaluation begins by examining the patient through observation, touch and knowing how the person got to the current state of health. After identifying the root cause of the disorder, we move toward selecting the right Ayurveda treatment to battle the disease based on patient condition.</p>
+        <p class="about-para">We look at the whole person — not only at the symptom and the disease the individual has been diagnosed with, but also the disease process, the root cause and constitution of the person. Thus keeping the person healthy and protecting against the further recurrence of the condition.</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px">
+          <li style="display:flex;align-items:flex-start;gap:12px;font-size:0.9rem;color:#3a2a18">
+            <span style="color:#3a8a3a;font-weight:700;flex-shrink:0;margin-top:2px">✓</span>
+            Personalised treatment plans based on your unique body constitution (Prakriti)
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:12px;font-size:0.9rem;color:#3a2a18">
+            <span style="color:#3a8a3a;font-weight:700;flex-shrink:0;margin-top:2px">✓</span>
+            Integration of Ayurveda, Homeopathy and Physiotherapy under one roof
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:12px;font-size:0.9rem;color:#3a2a18">
+            <span style="color:#3a8a3a;font-weight:700;flex-shrink:0;margin-top:2px">✓</span>
+            Root-cause resolution — not symptom suppression
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:12px;font-size:0.9rem;color:#3a2a18">
+            <span style="color:#3a8a3a;font-weight:700;flex-shrink:0;margin-top:2px">✓</span>
+            Separate male and female fully equipped treatment rooms with bath facility
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:12px;font-size:0.9rem;color:#3a2a18">
+            <span style="color:#3a8a3a;font-weight:700;flex-shrink:0;margin-top:2px">✓</span>
+            Highly qualified, experienced and licensed Panchakarma technicians
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── OUR VALUES ── -->
+  <div style="margin-bottom:72px">
+    <div style="text-align:center;margin-bottom:48px">
+      <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:#A08060;margin-bottom:10px">What We Stand For</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;color:#1a1a1a;margin-bottom:0">Our Core <em style="font-style:italic;color:#C4A882">Values</em></h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">🌿</div>
+        <h3 class="value-title">Authenticity</h3>
+        <p class="value-desc">We practice Ayurveda in its purest classical form — using authentic herbal medicines, traditional formulations and time-tested procedures as described in the ancient texts.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🤝</div>
+        <h3 class="value-title">Compassion</h3>
+        <p class="value-desc">Every patient is treated with deep care and respect. We listen unhurriedly, understand individually, and walk alongside each person on their healing journey.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🔬</div>
+        <h3 class="value-title">Clinical Excellence</h3>
+        <p class="value-desc">Our physicians combine classical Ayurvedic knowledge with modern clinical understanding to deliver treatments that are both traditional and evidence-informed.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🌱</div>
+        <h3 class="value-title">Holistic Healing</h3>
+        <p class="value-desc">We address the physical, mental, emotional and spiritual dimensions of wellbeing — because lasting health cannot be achieved by treating the body in isolation.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🛡️</div>
+        <h3 class="value-title">Safety First</h3>
+        <p class="value-desc">All treatments are prescribed and supervised by qualified physicians. We conduct thorough assessments before recommending any therapy to ensure complete safety.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">♾️</div>
+        <h3 class="value-title">Continuity of Care</h3>
+        <p class="value-desc">Healing is a journey, not a single event. We provide ongoing support, follow-up consultations and lifestyle coaching to sustain your transformation long-term.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── OUR TEAM ── -->
+  <div style="margin-bottom:72px">
+    <div style="text-align:center;margin-bottom:48px">
+      <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:#A08060;margin-bottom:10px">The People Behind Your Healing</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;color:#1a1a1a;margin-bottom:0">Meet Our <em style="font-style:italic;color:#C4A882">Team</em></h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="01.jpg" alt="Dr. Meera Krishnan" class="team-card-img"/>
+        <div class="team-card-body">
+          <h3 class="team-card-name">Dr. Meera Krishnan</h3>
+          <p class="team-card-role">Founder & Chief Ayurvedic Physician</p>
+          <p class="team-card-bio">BAMS, MD (Ayurveda) with 20+ years of clinical experience. Specialises in Panchakarma, chronic disease management and women's health. Founded Shanthi Wellness in 2010 with a vision to make authentic Ayurveda accessible.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="02.jpg" alt="Dr. Suresh Nair" class="team-card-img"/>
+        <div class="team-card-body">
+          <h3 class="team-card-name">Dr. Suresh Nair</h3>
+          <p class="team-card-role">Senior Ayurvedic Physician</p>
+          <p class="team-card-bio">BAMS with specialisation in Kaya Chikitsa (internal medicine). Expert in Rasayana therapy, rejuvenation programmes and the management of neurological conditions through classical Ayurvedic protocols.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="03.jpg" alt="Dr. Hridya Pillai" class="team-card-img"/>
+        <div class="team-card-body">
+          <h3 class="team-card-name">Dr. Hridya Pillai</h3>
+          <p class="team-card-role">Homeopathic Physician</p>
+          <p class="team-card-bio">BHMS with 12 years of experience in constitutional homeopathy. Known for her empathetic approach and exceptional results in chronic conditions, autoimmune disorders and paediatric cases.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-card-avatar">🧑‍⚕️</div>
+        <div class="team-card-body">
+          <h3 class="team-card-name">Mr. Arun Thomas</h3>
+          <p class="team-card-role">Senior Physiotherapist</p>
+          <p class="team-card-bio">BPT, MPT (Orthopaedics) with expertise in manual therapy, sports rehabilitation and neurological physiotherapy. Has worked with professional athletes and post-surgical rehabilitation patients.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── OUR JOURNEY (Timeline) ── -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-bottom:72px">
+    <div>
+      <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:#A08060;margin-bottom:10px">Our Journey</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;color:#1a1a1a;margin-bottom:0">Milestones of <em style="font-style:italic;color:#C4A882">Healing</em></h2>
+      <div class="about-gold-accent"></div>
+      <p class="about-para">From a small clinic with a single treatment room to a comprehensive wellness centre serving hundreds of patients — our journey has been guided by one constant: the commitment to authentic, compassionate healing.</p>
+      <img src="lotus.jpg" alt="Shanthi Wellness journey" style="width:100%;border-radius:14px;object-fit:cover;height:260px;margin-top:8px;box-shadow:0 8px 28px rgba(0,0,0,0.12)"/>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-year">2010</p>
+        <h4 class="timeline-title">Founded</h4>
+        <p class="timeline-desc">Dr. Meera Krishnan opens Shanthi Wellness with a single treatment room and a vision to bring authentic Ayurveda to Bengaluru.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-year">2013</p>
+        <h4 class="timeline-title">Homeopathy Wing Added</h4>
+        <p class="timeline-desc">Dr. Hridya Pillai joins the team, establishing a dedicated Homeopathy clinic and expanding our integrative approach.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-year">2016</p>
+        <h4 class="timeline-title">Panchakarma Centre</h4>
+        <p class="timeline-desc">A dedicated Panchakarma centre with separate male and female treatment suites is inaugurated, offering full classical detox programmes.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-year">2019</p>
+        <h4 class="timeline-title">Physiotherapy Department</h4>
+        <p class="timeline-desc">A fully equipped physiotherapy and sports rehabilitation department is launched, completing our three-specialty integrative model.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-year">2022</p>
+        <h4 class="timeline-title">500+ Patients Milestone</h4>
+        <p class="timeline-desc">Shanthi Wellness celebrates having accompanied over 500 patients through transformative healing journeys.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot" style="background:#3a8a3a;box-shadow:0 0 0 2px #3a8a3a"></div>
+        <p class="timeline-year">Today</p>
+        <h4 class="timeline-title">Growing Every Day</h4>
+        <p class="timeline-desc">We continue to serve our community with the same dedication, compassion and commitment to authentic healing that has defined us from day one.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CTA ── -->
+  <div style="background:linear-gradient(135deg,#3b1f0e,#5a2d12);border-radius:20px;padding:56px 40px;text-align:center;color:#fff">
+    <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:#C4A882;margin-bottom:12px">Begin Your Journey</p>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;margin-bottom:16px">Experience the <em style="color:#C4A882">Shanthi Difference</em></h2>
+    <p style="color:rgba(255,255,255,0.75);max-width:520px;margin:0 auto 32px;line-height:1.8">Book a consultation with our Ayurvedic physician and begin your personalised healing journey. Your path to wholeness starts here.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a href="index.html#appointment" class="btn-book" style="font-size:0.95rem;padding:14px 36px">Book Consultation →</a>
+      <a href="contact.html" style="display:inline-block;padding:14px 36px;border:1.5px solid rgba(196,168,130,0.5);color:#C4A882;border-radius:50px;font-size:0.95rem;font-weight:700;text-decoration:none;transition:all 0.2s">Contact Us</a>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top"><div class="container"><div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo-link"><img src="logo.png" alt="Shanthi Wellness" class="footer-logo-img"/></a>
+      <p class="footer-tagline">Shanthi Wellness Medical Center is a branch of Vayalarikathu Ayurvedic Nursing Home at Varkala, Trivandrum, Kerala, established since 1980.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-icon" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 2H15C13.7 2 12.4 2.5 11.5 3.5C10.5 4.4 10 5.7 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.7 14.1 6.4 14.3 6.2C14.6 6 14.8 5.9 15 5.9H18V2Z" stroke="#c89a4a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#" class="social-icon" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#c89a4a" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="#c89a4a" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="#c89a4a"/></svg></a>
+        <a href="https://wa.me/971528434127" class="social-icon" aria-label="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 11.5C21 16.7 16.7 21 11.5 21C9.8 21 8.2 20.5 6.8 19.7L3 21L4.3 17.2C3.5 15.8 3 14.2 3 12.5C3 7.3 7.3 3 12.5 3C17.7 3 22 7.3 22 12.5" stroke="#c89a4a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5 class="footer-col-title">🇦🇪 Sharjah Branch</h5>
+      <ul class="footer-contact-list">
+        <li>Al Estiqlal St, Opp. Biriyani Point, Bu Shaghara, Sharjah</li>
+        <li><a href="tel:+97165558429" style="color:inherit;text-decoration:none">+971 6 555 8429</a></li>
+        <li><a href="mailto:info@ayurvedauae.com" style="color:inherit;text-decoration:none">info@ayurvedauae.com</a></li>
+        <li><a href="https://wa.me/971528434127" style="color:inherit;text-decoration:none">WA: +971 52 843 4127</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5 class="footer-col-title">🇦🇪 Dubai Branch</h5>
+      <ul class="footer-contact-list">
+        <li>Royal House, Mezzanine M19, 15C St, Hor Al Anz East, Dubai</li>
+        <li><a href="tel:+97142255133" style="color:inherit;text-decoration:none">+971 4 225 5133</a></li>
+        <li><a href="mailto:doctor@ayurvedauae.com" style="color:inherit;text-decoration:none">doctor@ayurvedauae.com</a></li>
+        <li><a href="https://wa.me/971544630447" style="color:inherit;text-decoration:none">WA: +971 54 463 0447</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5 class="footer-col-title">🇮🇳 India Branch</h5>
+      <ul class="footer-contact-list">
+        <li>Janatha Mukku, Edava, Varkala, Kerala — 695311</li>
+        <li><a href="tel:+917902700875" style="color:inherit;text-decoration:none">+91 79027 00875</a></li>
+        <li><a href="mailto:info@vayalarikam.com" style="color:inherit;text-decoration:none">info@vayalarikam.com</a></li>
+        <li><a href="https://www.vayalarikam.com" target="_blank" style="color:inherit;text-decoration:none">www.vayalarikam.com</a></li>
+      </ul>
+    </div>
+  </div></div></div>
+  <div class="footer-bottom"><div class="container"><p>© 2025 Shanthi Wellness Medical Center. All rights reserved.</p><p class="footer-credits">A branch of Vayalarikathu Ayurvedic Nursing Home, Kerala, Est. 1980.</p></div></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
