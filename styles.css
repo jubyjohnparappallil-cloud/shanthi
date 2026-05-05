@@ -3748,13 +3748,12 @@ body { padding-top: 120px !important; }
 
 /* Decorative green leaf strip at bottom of navbar */
 .navbar-main {
-  border-bottom: 3px solid transparent !important;
-  background-image: linear-gradient(#ffffff, #ffffff),
-    linear-gradient(90deg, #3a8a3a, #6dcc6d, #C4A882, #6dcc6d, #3a8a3a) !important;
-  background-origin: border-box !important;
-  background-clip: padding-box, border-box !important;
-  animation: navBorderFlow 4s linear infinite !important;
-  background-size: 100%, 300% 100% !important;
+  border-bottom: 3px solid #6b8f3e !important;
+  background-image: none !important;
+  background-origin: unset !important;
+  background-clip: unset !important;
+  animation: none !important;
+  background-size: unset !important;
 }
 @keyframes navBorderFlow {
   0%   { background-position: 0 0, 0% 50%; }
@@ -6813,9 +6812,10 @@ body {
   border-bottom: 1px solid rgba(141,194,111,0.30) !important;
 }
 
-/* ── Navbar bottom border gradient ── */
+/* ── Navbar bottom border ── */
 .navbar-main {
-  border-image: linear-gradient(90deg,#8dc26f,#b5d98a,#C4A882,#b5d98a,#8dc26f) 1 !important;
+  border-bottom: 3px solid #6b8f3e !important;
+  border-image: none !important;
 }
 
 /* ── Appointment button (top bar) ── */
@@ -7203,11 +7203,10 @@ body {
   background: rgba(255,255,255,0.98) !important;
 }
 .navbar-main {
-  border-bottom: 2px solid transparent !important;
-  background-image: linear-gradient(white, white),
-    linear-gradient(90deg, #8dc26f, #b5d98a, #C4A882, #b5d98a, #8dc26f) !important;
-  background-origin: border-box !important;
-  background-clip: padding-box, border-box !important;
+  border-bottom: 3px solid #6b8f3e !important;
+  background-image: none !important;
+  background-origin: unset !important;
+  background-clip: unset !important;
   border-image: none !important;
 }
 
@@ -8034,3 +8033,1239 @@ body::after {
   .page-hero-title { font-size: 1.4rem !important; }
   .hero-photo-panel { height: 80vw !important; }
 }
+
+
+/* ══════════════════════════════════════════════════════════
+   FLOATING BUTTONS — Our Branch LEFT, WhatsApp RIGHT
+══════════════════════════════════════════════════════════ */
+
+/* Our Branch — fixed to LEFT edge */
+.float-branch-btn {
+  position: fixed !important;
+  left: 0 !important;
+  right: auto !important;
+  bottom: 160px !important;
+  border-radius: 0 8px 8px 0 !important;
+  box-shadow: 3px 3px 16px rgba(0,0,0,0.20) !important;
+}
+.float-branch-btn:hover {
+  transform: translateX(4px) !important;
+}
+
+/* WhatsApp container — stays on RIGHT */
+.float-btns {
+  position: fixed !important;
+  right: 0 !important;
+  left: auto !important;
+  bottom: 120px !important;
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   FONT UPGRADE — Raleway headings + Open Sans body
+   Matches the reference site style
+══════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+/* Apply Raleway to all headings */
+h1, h2, h3, h4, h5, h6,
+.section-heading,
+.pg-section-title,
+.page-hero-title,
+.doctor-name,
+.team-card-name,
+.package-name,
+.treatment-card-title,
+.tmc-title,
+.profile-section-title,
+.footer-col-title,
+.about-stat-num,
+.cc-info h3,
+.tcard-quote,
+.contact-form-wrap h3,
+.sidebar-card h4,
+.condition-section h3,
+.value-title,
+.timeline-title,
+.why-heading {
+  font-family: 'Raleway', 'Cormorant Garamond', serif !important;
+  letter-spacing: 0.04em !important;
+}
+
+/* Section headings — wide spaced uppercase style */
+.section-heading,
+.pg-section-title,
+.page-hero-title {
+  font-family: 'Raleway', serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+}
+
+/* Eyebrow labels — wide uppercase like reference */
+.section-eyebrow,
+.pg-section-eyebrow,
+.page-hero-eyebrow,
+.doctor-eyebrow,
+.team-card-role,
+.treatment-card-tag,
+.tmc-tag,
+.package-duration,
+.footer-col-title {
+  font-family: 'Raleway', 'Inter', sans-serif !important;
+  letter-spacing: 0.18em !important;
+  font-weight: 700 !important;
+}
+
+/* Body text — Open Sans */
+body,
+p, li, a, span, label, input, select, textarea, button,
+.about-para, .profile-para, .tcard-text, .testimonial-text,
+.treatment-card-desc, .package-features li, .condition-list li,
+.footer-tagline, .footer-links a, .footer-contact-list li,
+.nav-drawer-link, .faq-question, .faq-answer {
+  font-family: 'Open Sans', 'Inter', sans-serif !important;
+}
+
+/* Navbar menu button */
+.navbar table span,
+#navToggle span:first-child {
+  font-family: 'Raleway', sans-serif !important;
+  letter-spacing: 0.12em !important;
+  font-weight: 700 !important;
+}
+
+/* Drawer links */
+.nav-drawer-link {
+  font-family: 'Raleway', sans-serif !important;
+  letter-spacing: 0.14em !important;
+}
+
+/* Floating branch button */
+.float-branch-btn {
+  font-family: 'Raleway', sans-serif !important;
+  letter-spacing: 0.14em !important;
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   VAYALARIKAM.COM COLOUR THEME
+   Dark olive green navbar · White body · Brown/maroon accents
+   Cream section backgrounds · Gold dividers
+   Matching the reference site standard look
+══════════════════════════════════════════════════════════ */
+
+:root {
+  --vk-green:       #4a6741;   /* dark olive green — navbar, headings */
+  --vk-green-dark:  #2e4228;   /* deeper green — hover, footer */
+  --vk-green-light: #6b8f5e;   /* medium green — accents */
+  --vk-brown:       #7a3b1e;   /* warm brown — buttons, highlights */
+  --vk-brown-light: #a0522d;   /* lighter brown — links hover */
+  --vk-cream:       #f9f5ef;   /* cream — section backgrounds */
+  --vk-cream-dark:  #f0e8d8;   /* darker cream — alternating sections */
+  --vk-gold:        #c8a84b;   /* gold — dividers, borders */
+  --vk-text:        #2c2c2c;   /* near-black — body text */
+  --vk-muted:       #5a4a38;   /* muted brown — secondary text */
+  --vk-white:       #ffffff;
+}
+
+/* ── Body ── */
+body {
+  background: var(--vk-white) !important;
+  color: var(--vk-text) !important;
+}
+
+/* ── Navbar ── */
+.navbar {
+  background: var(--vk-white) !important;
+  border-bottom: none !important;
+  box-shadow: 0 2px 16px rgba(46,66,40,0.12) !important;
+}
+.navbar-topbar {
+  background: var(--vk-green) !important;
+  border-bottom: none !important;
+}
+.navbar-topbar-inner .navbar-phone,
+.navbar-topbar-inner .navbar-phone svg path {
+  color: rgba(255,255,255,0.90) !important;
+  stroke: rgba(255,255,255,0.80) !important;
+}
+.navbar-appt-btn {
+  background: var(--vk-brown) !important;
+  box-shadow: 0 3px 12px rgba(122,59,30,0.35) !important;
+}
+.navbar-appt-btn:hover { background: var(--vk-brown-light) !important; }
+
+/* Navbar bottom border — olive green */
+.navbar-main {
+  border-bottom: 3px solid var(--vk-green) !important;
+  border-image: none !important;
+  background: var(--vk-white) !important;
+}
+
+/* ── Section eyebrows ── */
+.section-eyebrow,
+.pg-section-eyebrow,
+.page-hero-eyebrow {
+  color: var(--vk-brown) !important;
+}
+
+/* ── Section heading italic ── */
+.section-heading em,
+.pg-section-title em,
+.page-hero-title em,
+.two-col-text h2 em {
+  background: none !important;
+  -webkit-text-fill-color: var(--vk-green) !important;
+  color: var(--vk-green) !important;
+  animation: none !important;
+}
+
+/* ── Gold dividers → olive green ── */
+.gold-divider,
+.gold-line,
+.about-gold-accent {
+  background: var(--vk-green) !important;
+}
+
+/* ── Marquee strip ── */
+.marquee-strip {
+  background: var(--vk-green) !important;
+  animation: none !important;
+  box-shadow: none !important;
+}
+
+/* ── Orange divider ── */
+.orange-divider {
+  background: linear-gradient(90deg, transparent, var(--vk-green), transparent) !important;
+  opacity: 0.5 !important;
+}
+
+/* ── Buttons ── */
+.btn-book,
+.btn.btn-gold,
+.cc-book-btn,
+.tmc-link,
+.nav-drawer-appt,
+.appointment-form button[type="submit"],
+.btn-submit,
+.sidebar-appt-btn,
+.btn-appt {
+  background: var(--vk-brown) !important;
+  color: var(--vk-white) !important;
+}
+.btn-book:hover,
+.btn.btn-gold:hover,
+.cc-book-btn:hover {
+  background: var(--vk-brown-light) !important;
+  opacity: 1 !important;
+}
+
+/* ── Stat numbers ── */
+.stat-num,
+.about-stat-num {
+  color: var(--vk-green) !important;
+}
+
+/* ── Treatment card tags ── */
+.treatment-card-tag,
+.tmc-tag {
+  color: var(--vk-green) !important;
+  background: rgba(74,103,65,0.08) !important;
+  border-color: rgba(74,103,65,0.25) !important;
+}
+
+/* ── Testimonial stars ── */
+.testimonial-stars span,
+.tcard-stars { color: var(--vk-gold) !important; }
+
+/* ── Section backgrounds — alternating cream ── */
+.about,
+.circle-carousel-section,
+.photo-grid-sm,
+.treatments-list {
+  background: var(--vk-cream) !important;
+}
+.why-us,
+.testimonials,
+.mosaic,
+.photo-banner {
+  background: var(--vk-white) !important;
+}
+#ayur-treatments {
+  background: var(--vk-cream-dark) !important;
+}
+
+/* ── Appointment section ── */
+.appointment {
+  background: linear-gradient(135deg, var(--vk-green-dark) 0%, var(--vk-green) 100%) !important;
+}
+
+/* ── Form focus ── */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+.cf-group input:focus,
+.cf-group select:focus,
+.cf-group textarea:focus {
+  border-color: var(--vk-green) !important;
+  box-shadow: 0 0 0 3px rgba(74,103,65,0.15) !important;
+}
+
+/* ── Drawer ── */
+.nav-drawer-link:hover,
+.nav-drawer-link.active {
+  color: var(--vk-green) !important;
+  background: rgba(74,103,65,0.06) !important;
+}
+.nav-drawer-appt {
+  background: var(--vk-brown) !important;
+}
+.nav-drawer-appt:hover { background: var(--vk-brown-light) !important; }
+
+/* ── Page hero banners ── */
+.page-hero {
+  background: linear-gradient(135deg, var(--vk-green-dark) 0%, var(--vk-green) 60%, #5a7a4a 100%) !important;
+  animation: none !important;
+}
+
+/* ── Doctor hero ── */
+.doctor-hero {
+  background: linear-gradient(135deg, var(--vk-green-dark) 0%, var(--vk-green) 60%, #5a7a4a 100%) !important;
+}
+
+/* ── About story badge ── */
+.about-story-badge {
+  background: linear-gradient(135deg, var(--vk-green-dark), var(--vk-green)) !important;
+  animation: none !important;
+}
+
+/* ── Timeline ── */
+.timeline-dot {
+  background: var(--vk-green) !important;
+  box-shadow: 0 0 0 2px var(--vk-green) !important;
+}
+.timeline::before {
+  background: linear-gradient(180deg, var(--vk-green), rgba(74,103,65,0.2)) !important;
+}
+
+/* ── Package card featured ── */
+.package-card.featured { border-color: var(--vk-green) !important; }
+.package-card.featured::before { background: var(--vk-green) !important; }
+
+/* ── FAQ ── */
+.faq-question.open { color: var(--vk-green-dark) !important; }
+.faq-icon { color: var(--vk-green) !important; background: rgba(74,103,65,0.10) !important; }
+
+/* ── Contact info card border ── */
+.contact-info-card[style*="border-left"] {
+  border-left-color: var(--vk-green) !important;
+}
+
+/* ── Social icons ── */
+.social-icon:hover {
+  border-color: var(--vk-green) !important;
+  background: rgba(74,103,65,0.12) !important;
+}
+
+/* ── Mosaic hover ── */
+.mosaic-item:hover { border-color: var(--vk-green) !important; }
+.pg-item:hover .pg-item-overlay { background: rgba(46,66,40,0.78) !important; }
+
+/* ── Scroll-to-top ── */
+#scrollTopBtn {
+  background: linear-gradient(135deg, var(--vk-green), var(--vk-green-dark)) !important;
+  box-shadow: 0 8px 24px rgba(46,66,40,0.40) !important;
+}
+
+/* ── Floating buttons ── */
+.float-branch-btn {
+  background: var(--vk-green) !important;
+}
+.float-branch-btn:hover { background: var(--vk-green-dark) !important; }
+
+/* ── WhatsApp popup header ── */
+.wa-popup-header { background: var(--vk-green) !important; }
+.wa-branch-row { border-left-color: var(--vk-green) !important; }
+
+/* ── Intro block ── */
+.intro-block { border-left-color: var(--vk-green) !important; }
+
+/* ── Condition list ── */
+.condition-list li::before { color: var(--vk-green) !important; }
+.condition-list li { border-color: rgba(74,103,65,0.20) !important; }
+
+/* ── Package features ── */
+.package-features li::before { color: var(--vk-green) !important; }
+
+/* ── Value card hover ── */
+.value-card:hover { border-color: var(--vk-green) !important; }
+
+/* ── Treatment card hover ── */
+.treatment-card:hover { box-shadow: 0 16px 40px rgba(74,103,65,0.18) !important; }
+
+/* ── Team card role ── */
+.team-card-role { color: var(--vk-green) !important; }
+
+/* ── Doctor title ── */
+.doctor-eyebrow { color: #c8e6a0 !important; }
+.doctor-tag {
+  background: rgba(255,255,255,0.15) !important;
+  border-color: rgba(255,255,255,0.40) !important;
+}
+
+/* ── Sidebar appt button ── */
+.sidebar-card[style*="background:linear-gradient"] {
+  background: linear-gradient(160deg, #f4faf0, #e8f0e0) !important;
+}
+
+/* ── "Read More" link ── */
+.team-read-more { color: var(--vk-green) !important; }
+.team-read-more:hover { color: var(--vk-green-dark) !important; }
+
+/* ── Footer ── */
+.footer-bottom { background: var(--vk-green-dark) !important; }
+.footer-col-title { color: #c8e6a0 !important; }
+.footer-links a:hover { color: #c8e6a0 !important; }
+
+/* ── CC carousel dots ── */
+.cc-dot.active { background: var(--vk-green) !important; box-shadow: 0 0 0 3px rgba(74,103,65,0.3) !important; }
+
+/* ── Why-us icons ── */
+.why-icon svg circle,
+.why-icon svg path { stroke: var(--vk-green) !important; }
+
+/* ── Appointment form submit ── */
+.appointment-form button[type="submit"] {
+  background: var(--vk-brown) !important;
+}
+
+/* ── Section heading colour ── */
+.section-heading,
+.pg-section-title {
+  color: var(--vk-green-dark) !important;
+}
+
+/* ── Body text ── */
+.about-para,
+.profile-para,
+.tcard-text,
+.testimonial-text,
+.treatment-card-desc,
+.why-para,
+.section-sub {
+  color: var(--vk-muted) !important;
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   LOCATIONS SECTION — dark green gradient background
+   Glass-morphism cards on top
+══════════════════════════════════════════════════════════ */
+
+/* Location cards — glass effect on dark bg */
+#locations .locations-home-grid > div {
+  background: rgba(255,255,255,0.95) !important;
+  border: 1px solid rgba(200,168,75,0.25) !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25) !important;
+  backdrop-filter: blur(8px) !important;
+}
+#locations .locations-home-grid > div:hover {
+  background: #ffffff !important;
+  box-shadow: 0 20px 56px rgba(0,0,0,0.35) !important;
+  border-color: rgba(200,168,75,0.50) !important;
+}
+
+/* Card headings stay dark */
+#locations h3 {
+  color: #2e4228 !important;
+}
+
+/* Get Directions buttons */
+#locations a[style*="Get Directions"] {
+  background: linear-gradient(135deg, #4a6741, #2e4228) !important;
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .locations-home-grid { grid-template-columns: 1fr 1fr !important; }
+}
+@media(max-width:600px){
+  .locations-home-grid { grid-template-columns: 1fr !important; }
+}
+
+
+/* ── Reduce hero banner height ── */
+.hero-photo-panel {
+  height: 65vh !important;
+  min-height: 280px !important;
+}
+.hero-panel-img,
+.hero-photo-panel img {
+  height: 100% !important;
+  max-height: none !important;
+}
+@media (max-width: 768px) {
+  .hero-photo-panel { height: 55vw !important; min-height: 220px !important; }
+}
+@media (max-width: 480px) {
+  .hero-photo-panel { height: 65vw !important; min-height: 200px !important; }
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   WHATSAPP POPUP — final fix, always on top, correct position
+══════════════════════════════════════════════════════════ */
+.wa-popup {
+  position: fixed !important;
+  bottom: 90px !important;
+  right: 16px !important;
+  width: 320px !important;
+  max-width: calc(100vw - 32px) !important;
+  background: #fff !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 48px rgba(0,0,0,0.28) !important;
+  z-index: 999999 !important;
+  overflow: hidden !important;
+  display: none !important;
+}
+.wa-popup.open {
+  display: block !important;
+}
+.wa-popup-header {
+  background: #25a244 !important;
+  padding: 20px 20px 18px !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 14px !important;
+}
+.wa-popup-header h3 {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  margin: 0 0 4px !important;
+  font-family: 'Raleway', sans-serif !important;
+}
+.wa-popup-header p {
+  font-size: 0.82rem !important;
+  color: rgba(255,255,255,0.90) !important;
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+.wa-popup-body {
+  padding: 14px 16px 8px !important;
+  background: #fff !important;
+}
+.wa-popup-note {
+  font-size: 0.78rem !important;
+  color: #888 !important;
+  margin-bottom: 12px !important;
+  font-style: italic !important;
+}
+.wa-branch-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  padding: 14px 12px !important;
+  background: #f5f5f5 !important;
+  border-radius: 10px !important;
+  margin-bottom: 10px !important;
+  text-decoration: none !important;
+  border-left: 3px solid #25D366 !important;
+  transition: background 0.2s !important;
+}
+.wa-branch-row:hover { background: #e8f5e9 !important; }
+.wa-branch-icon {
+  width: 44px !important;
+  height: 44px !important;
+  background: #25D366 !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+.wa-branch-info { flex: 1 !important; }
+.wa-branch-info strong {
+  display: block !important;
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+  color: #1a1a1a !important;
+  margin-bottom: 2px !important;
+}
+.wa-branch-info span {
+  font-size: 0.78rem !important;
+  color: #666 !important;
+}
+.wa-popup-close {
+  position: absolute !important;
+  bottom: 12px !important;
+  right: 12px !important;
+  width: 36px !important;
+  height: 36px !important;
+  background: #25D366 !important;
+  border: none !important;
+  border-radius: 50% !important;
+  color: #fff !important;
+  font-size: 1.1rem !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 2 !important;
+}
+
+/* Float buttons — ensure always on top */
+.float-btns {
+  position: fixed !important;
+  right: 0 !important;
+  bottom: 120px !important;
+  z-index: 99995 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+  gap: 10px !important;
+}
+.float-wa-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 52px !important;
+  height: 52px !important;
+  background: #25D366 !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.45) !important;
+  cursor: pointer !important;
+  border: none !important;
+  margin-right: 12px !important;
+  z-index: 99995 !important;
+}
+.float-wa-label {
+  background: #fff !important;
+  color: #333 !important;
+  font-size: 0.78rem !important;
+  font-weight: 500 !important;
+  padding: 7px 12px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12) !important;
+  white-space: nowrap !important;
+  pointer-events: none !important;
+}
+.float-wa-wrap {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+.float-branch-btn {
+  position: fixed !important;
+  left: 0 !important;
+  bottom: 160px !important;
+  z-index: 99995 !important;
+  background: #4a6741 !important;
+  color: #fff !important;
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  padding: 10px 16px !important;
+  border-radius: 0 8px 8px 0 !important;
+  box-shadow: 3px 3px 16px rgba(0,0,0,0.20) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  white-space: nowrap !important;
+}
+.float-branch-btn:hover {
+  background: #2e4228 !important;
+  transform: translateX(4px) !important;
+}
+
+@media(max-width:480px){
+  .wa-popup { width: calc(100vw - 24px) !important; right: 12px !important; bottom: 80px !important; }
+  .float-wa-label { display: none !important; }
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   OUR BRANCH BUTTON — vertical tab style, right side
+   White icon top + green text bottom, rotated text
+══════════════════════════════════════════════════════════ */
+.float-branch-btn {
+  position: fixed !important;
+  right: 0 !important;
+  left: auto !important;
+  bottom: 200px !important;
+  z-index: 99995 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 44px !important;
+  padding: 0 !important;
+  border-radius: 10px 0 0 10px !important;
+  overflow: hidden !important;
+  box-shadow: -3px 3px 16px rgba(0,0,0,0.22) !important;
+  text-decoration: none !important;
+  transform: none !important;
+  transition: box-shadow 0.3s ease, transform 0.3s ease !important;
+}
+.float-branch-btn:hover {
+  transform: translateX(-4px) !important;
+  box-shadow: -6px 4px 24px rgba(0,0,0,0.30) !important;
+}
+
+/* Icon section — white background */
+.float-branch-btn .fb-icon {
+  width: 44px !important;
+  height: 48px !important;
+  background: #ffffff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  border-bottom: 1px solid rgba(74,103,65,0.15) !important;
+}
+.float-branch-btn .fb-icon img,
+.float-branch-btn .fb-icon svg {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+/* Text section — green background, rotated */
+.float-branch-btn .fb-text {
+  width: 44px !important;
+  background: linear-gradient(180deg, #6aaa4a, #4a6741) !important;
+  color: #fff !important;
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 0.68rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  writing-mode: vertical-rl !important;
+  text-orientation: mixed !important;
+  transform: rotate(180deg) !important;
+  padding: 14px 0 !important;
+  text-align: center !important;
+  line-height: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 90px !important;
+}
+
+@media(max-width:480px){
+  .float-branch-btn { bottom: 160px !important; }
+}
+
+
+/* ── Navbar border — medium sage green matching reference ── */
+.navbar-main {
+  border-bottom: 3px solid #6b8f3e !important;
+  border-image: none !important;
+  background-image: none !important;
+}
+
+
+/* ── Navbar border — final override, solid sage green ── */
+.navbar-main,
+nav .navbar-main,
+#navbar .navbar-main {
+  border-bottom: 3px solid #6b8f3e !important;
+  border-image: none !important;
+  background-image: none !important;
+}
+
+
+/* ══ ABSOLUTE FINAL — navbar border solid sage green, no gradient ══ */
+.navbar-main,
+.navbar .navbar-main,
+nav.navbar .navbar-main,
+#navbar .navbar-main {
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 3px solid #6b8f3e !important;
+  border-image: none !important;
+  border-image-source: none !important;
+  background-image: none !important;
+  outline: none !important;
+}
+
+
+/* ══ PARROT GREEN NAVBAR BORDER — absolute final, kills all conflicts ══ */
+.navbar-main,
+.navbar .navbar-main,
+nav .navbar-main,
+#navbar .navbar-main,
+div.navbar-main {
+  border: none !important;
+  border-bottom: 4px solid #39d353 !important;
+  border-image: none !important;
+  border-image-source: none !important;
+  background-image: none !important;
+  background-clip: unset !important;
+  background-origin: unset !important;
+  -webkit-background-clip: unset !important;
+  animation: none !important;
+  box-shadow: 0 2px 0 0 #39d353 !important;
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   PARROT GREEN MASTER THEME — #39D353
+   Maps ALL old variables to parrot green
+   Applies to every border, button, glow, accent
+══════════════════════════════════════════════════════════ */
+
+:root {
+  /* Parrot green system */
+  --pg:          #39D353;
+  --pg-dark:     #2aaa40;
+  --pg-glow:     rgba(57,211,83,0.35);
+  --pg-soft:     rgba(57,211,83,0.12);
+  --pg-border:   rgba(57,211,83,0.40);
+
+  /* Map ALL old variables → parrot green */
+  --green:        #39D353;
+  --green2:       #2aaa40;
+  --green-glow:   rgba(57,211,83,0.35);
+  --glass-border: rgba(57,211,83,0.40);
+  --pista:        #39D353;
+  --pista-dark:   #2aaa40;
+  --pista-light:  rgba(57,211,83,0.20);
+  --pista-soft:   rgba(57,211,83,0.12);
+  --pista-border: rgba(57,211,83,0.40);
+  --vk-green:     #39D353;
+  --vk-green-dark:#2aaa40;
+  --vk-green-light:#5de870;
+}
+
+/* ── NAVBAR BORDER — parrot green, no gradient ── */
+.navbar-main,
+.navbar .navbar-main,
+#navbar .navbar-main {
+  border: none !important;
+  border-bottom: 3px solid #39D353 !important;
+  border-image: none !important;
+  border-image-source: none !important;
+  background-image: none !important;
+  background-clip: unset !important;
+  background-origin: unset !important;
+  animation: none !important;
+}
+
+/* ── ALL CARD BORDERS ── */
+.treatment-menu-card,
+.treatment-card,
+.testimonial-card,
+.tcard,
+.package-card,
+.value-card,
+.team-card,
+.contact-info-card,
+.contact-form-wrap,
+.sidebar-card,
+.faq-item,
+.condition-section,
+.cc-item,
+.about-img-frame,
+.photo-thumb-c,
+.pg-item,
+.pb-panel {
+  border-color: var(--pg-border) !important;
+}
+
+/* ── CARD HOVER GLOW ── */
+.treatment-menu-card:hover,
+.treatment-card:hover,
+.testimonial-card:hover,
+.tcard:hover,
+.package-card:hover,
+.value-card:hover,
+.team-card:hover,
+.contact-info-card:hover,
+.faq-item:hover,
+.cc-item:hover,
+.cc-item.cc-active {
+  border-color: var(--pg) !important;
+  box-shadow: 0 0 12px var(--pg-glow), 0 16px 40px rgba(57,211,83,0.15) !important;
+}
+
+/* ── BUTTONS ── */
+.btn-book,
+.btn.btn-gold,
+.cc-book-btn,
+.tmc-link,
+.nav-drawer-appt,
+.appointment-form button[type="submit"],
+.btn-submit,
+.sidebar-appt-btn,
+.btn-appt,
+.navbar-appt-btn,
+.float-wa-btn {
+  background: var(--pg) !important;
+  color: #fff !important;
+  border-color: var(--pg) !important;
+}
+.btn-book:hover,
+.navbar-appt-btn:hover,
+.btn-appt:hover {
+  background: var(--pg-dark) !important;
+  box-shadow: 0 8px 24px var(--pg-glow) !important;
+}
+
+/* ── SECTION EYEBROWS ── */
+.section-eyebrow,
+.pg-section-eyebrow,
+.page-hero-eyebrow,
+.doctor-eyebrow {
+  color: var(--pg-dark) !important;
+}
+
+/* ── SECTION HEADING EM/ITALIC ── */
+.section-heading em,
+.pg-section-title em,
+.page-hero-title em,
+.two-col-text h2 em {
+  color: var(--pg-dark) !important;
+  -webkit-text-fill-color: var(--pg-dark) !important;
+  background: none !important;
+  animation: none !important;
+}
+
+/* ── GOLD DIVIDERS → parrot green ── */
+.gold-divider,
+.gold-line,
+.about-gold-accent {
+  background: var(--pg) !important;
+}
+
+/* ── MARQUEE STRIP ── */
+.marquee-strip {
+  background: var(--pg-dark) !important;
+  animation: none !important;
+}
+
+/* ── STAT NUMBERS ── */
+.stat-num,
+.about-stat-num {
+  color: var(--pg-dark) !important;
+}
+
+/* ── FORM FOCUS ── */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+.cf-group input:focus,
+.cf-group select:focus,
+.cf-group textarea:focus {
+  border-color: var(--pg) !important;
+  box-shadow: 0 0 0 3px var(--pg-soft) !important;
+}
+
+/* ── DRAWER LINKS ── */
+.nav-drawer-link:hover,
+.nav-drawer-link.active {
+  color: var(--pg-dark) !important;
+  background: var(--pg-soft) !important;
+}
+.nav-drawer-appt {
+  background: var(--pg) !important;
+}
+
+/* ── TIMELINE ── */
+.timeline-dot {
+  background: var(--pg) !important;
+  box-shadow: 0 0 0 3px var(--pg-glow) !important;
+}
+.timeline::before {
+  background: linear-gradient(180deg, var(--pg), rgba(57,211,83,0.1)) !important;
+}
+
+/* ── FAQ ── */
+.faq-question.open { color: var(--pg-dark) !important; }
+.faq-icon {
+  color: var(--pg) !important;
+  background: var(--pg-soft) !important;
+}
+
+/* ── SCROLL TO TOP ── */
+#scrollTopBtn {
+  background: var(--pg) !important;
+  box-shadow: 0 8px 24px var(--pg-glow) !important;
+}
+
+/* ── TEAM CARD ROLE ── */
+.team-card-role { color: var(--pg-dark) !important; }
+.team-read-more { color: var(--pg-dark) !important; }
+
+/* ── TREATMENT CARD TAG ── */
+.treatment-card-tag,
+.tmc-tag {
+  color: var(--pg-dark) !important;
+  background: var(--pg-soft) !important;
+  border-color: var(--pg-border) !important;
+}
+
+/* ── TESTIMONIAL STARS ── */
+.testimonial-stars span,
+.tcard-stars { color: var(--pg) !important; }
+
+/* ── PACKAGE CARD FEATURED ── */
+.package-card.featured {
+  border-color: var(--pg) !important;
+  box-shadow: 0 0 16px var(--pg-glow) !important;
+}
+.package-card.featured::before { background: var(--pg) !important; }
+
+/* ── SOCIAL ICONS ── */
+.social-icon:hover {
+  border-color: var(--pg) !important;
+  background: var(--pg-soft) !important;
+}
+
+/* ── CONDITION LIST ── */
+.condition-list li::before { color: var(--pg) !important; }
+.condition-list li { border-color: var(--pg-border) !important; }
+.condition-list li:hover {
+  background: var(--pg-soft) !important;
+  border-color: var(--pg) !important;
+}
+
+/* ── PACKAGE FEATURES ── */
+.package-features li::before { color: var(--pg) !important; }
+
+/* ── INTRO BLOCK ── */
+.intro-block { border-left-color: var(--pg) !important; }
+
+/* ── ABOUT STORY BADGE ── */
+.about-story-badge {
+  background: linear-gradient(135deg, var(--pg-dark), var(--pg)) !important;
+}
+
+/* ── FLOAT BRANCH BUTTON ── */
+.float-branch-btn {
+  background: var(--pg-dark) !important;
+}
+.float-branch-btn .fb-text {
+  background: linear-gradient(180deg, var(--pg), var(--pg-dark)) !important;
+}
+.float-branch-btn:hover { background: #1e8a30 !important; }
+
+/* ── WA POPUP ── */
+.wa-popup-header { background: var(--pg-dark) !important; }
+.wa-branch-row { border-left-color: var(--pg) !important; }
+.wa-branch-icon { background: var(--pg) !important; }
+.wa-popup-close { background: var(--pg) !important; }
+.float-wa-btn { background: var(--pg) !important; }
+
+/* ── ORANGE DIVIDER → parrot green ── */
+.orange-divider {
+  background: linear-gradient(90deg, transparent, var(--pg), transparent) !important;
+  opacity: 0.4 !important;
+}
+
+/* ── CC CAROUSEL DOTS ── */
+.cc-dot.active {
+  background: var(--pg) !important;
+  box-shadow: 0 0 0 3px var(--pg-glow) !important;
+}
+
+/* ── WHY-US ICONS ── */
+.why-icon svg circle,
+.why-icon svg path { stroke: var(--pg) !important; }
+
+/* ── MOSAIC HOVER ── */
+.mosaic-item:hover { border-color: var(--pg) !important; }
+.pg-item:hover .pg-item-overlay { background: rgba(42,170,64,0.78) !important; }
+
+
+/* ══════════════════════════════════════════════════════════
+   FINAL COLOUR — Olive/Sage Green #6B8C3E (matches reference)
+   Replaces parrot green #39D353 everywhere
+══════════════════════════════════════════════════════════ */
+
+:root {
+  --pg:           #6B8C3E !important;
+  --pg-dark:      #4e6a2a !important;
+  --pg-glow:      rgba(107,140,62,0.30) !important;
+  --pg-soft:      rgba(107,140,62,0.10) !important;
+  --pg-border:    rgba(107,140,62,0.35) !important;
+  --green:        #6B8C3E !important;
+  --green2:       #4e6a2a !important;
+  --pista:        #6B8C3E !important;
+  --pista-dark:   #4e6a2a !important;
+  --vk-green:     #6B8C3E !important;
+  --vk-green-dark:#4e6a2a !important;
+}
+
+/* Navbar border */
+.navbar-main,
+.navbar .navbar-main,
+#navbar .navbar-main,
+div.navbar-main {
+  border: none !important;
+  border-bottom: 3px solid #6B8C3E !important;
+  border-image: none !important;
+  border-image-source: none !important;
+  background-image: none !important;
+  background-clip: unset !important;
+  background-origin: unset !important;
+  animation: none !important;
+}
+
+/* Navbar topbar */
+.navbar-topbar { background: #6B8C3E !important; }
+
+/* Appointment button */
+.navbar-appt-btn { background: #8B4513 !important; }
+.navbar-appt-btn:hover { background: #6d3410 !important; }
+
+/* All buttons */
+.btn-book,
+.btn.btn-gold,
+.cc-book-btn,
+.tmc-link,
+.nav-drawer-appt,
+.appointment-form button[type="submit"],
+.btn-submit,
+.sidebar-appt-btn,
+.btn-appt {
+  background: #6B8C3E !important;
+  color: #fff !important;
+}
+.btn-book:hover { background: #4e6a2a !important; }
+
+/* Section eyebrows */
+.section-eyebrow,
+.pg-section-eyebrow,
+.page-hero-eyebrow { color: #6B8C3E !important; }
+
+/* Heading em */
+.section-heading em,
+.pg-section-title em,
+.page-hero-title em {
+  color: #6B8C3E !important;
+  -webkit-text-fill-color: #6B8C3E !important;
+  background: none !important;
+  animation: none !important;
+}
+
+/* Dividers */
+.gold-divider, .gold-line { background: #6B8C3E !important; }
+
+/* Marquee */
+.marquee-strip { background: #6B8C3E !important; animation: none !important; }
+
+/* Stat numbers */
+.stat-num, .about-stat-num { color: #6B8C3E !important; }
+
+/* Form focus */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+.cf-group input:focus,
+.cf-group select:focus,
+.cf-group textarea:focus {
+  border-color: #6B8C3E !important;
+  box-shadow: 0 0 0 3px rgba(107,140,62,0.15) !important;
+}
+
+/* Drawer */
+.nav-drawer-link:hover,
+.nav-drawer-link.active { color: #6B8C3E !important; background: rgba(107,140,62,0.08) !important; }
+.nav-drawer-appt { background: #6B8C3E !important; }
+
+/* Timeline */
+.timeline-dot { background: #6B8C3E !important; box-shadow: 0 0 0 3px rgba(107,140,62,0.25) !important; }
+
+/* FAQ */
+.faq-question.open { color: #4e6a2a !important; }
+.faq-icon { color: #6B8C3E !important; background: rgba(107,140,62,0.10) !important; }
+
+/* Scroll top */
+#scrollTopBtn { background: #6B8C3E !important; }
+
+/* Team */
+.team-card-role { color: #6B8C3E !important; }
+.team-read-more { color: #6B8C3E !important; }
+
+/* Treatment tags */
+.treatment-card-tag, .tmc-tag {
+  color: #6B8C3E !important;
+  background: rgba(107,140,62,0.08) !important;
+  border-color: rgba(107,140,62,0.25) !important;
+}
+
+/* Stars */
+.testimonial-stars span, .tcard-stars { color: #6B8C3E !important; }
+
+/* Package featured */
+.package-card.featured { border-color: #6B8C3E !important; }
+.package-card.featured::before { background: #6B8C3E !important; }
+
+/* Social icons */
+.social-icon:hover { border-color: #6B8C3E !important; background: rgba(107,140,62,0.10) !important; }
+
+/* Condition list */
+.condition-list li::before { color: #6B8C3E !important; }
+.package-features li::before { color: #6B8C3E !important; }
+
+/* Intro block */
+.intro-block { border-left-color: #6B8C3E !important; }
+
+/* About badge */
+.about-story-badge { background: linear-gradient(135deg, #4e6a2a, #6B8C3E) !important; }
+
+/* Float branch */
+.float-branch-btn { background: #6B8C3E !important; }
+.float-branch-btn .fb-text { background: linear-gradient(180deg, #6B8C3E, #4e6a2a) !important; }
+
+/* WA popup */
+.wa-popup-header { background: #6B8C3E !important; }
+.wa-branch-row { border-left-color: #6B8C3E !important; }
+.wa-branch-icon { background: #6B8C3E !important; }
+.wa-popup-close { background: #6B8C3E !important; }
+.float-wa-btn { background: #6B8C3E !important; }
+
+/* Orange divider */
+.orange-divider {
+  background: linear-gradient(90deg, transparent, #6B8C3E, transparent) !important;
+  opacity: 0.4 !important;
+}
+
+/* Carousel dots */
+.cc-dot.active { background: #6B8C3E !important; }
+
+/* Why-us icons */
+.why-icon svg circle, .why-icon svg path { stroke: #6B8C3E !important; }
+
+/* Card hover */
+.treatment-menu-card:hover,
+.treatment-card:hover,
+.tcard:hover,
+.package-card:hover,
+.value-card:hover,
+.team-card:hover {
+  border-color: #6B8C3E !important;
+  box-shadow: 0 16px 40px rgba(107,140,62,0.18) !important;
+}
+
+/* Page hero */
+.page-hero, .doctor-hero {
+  background: linear-gradient(135deg, #3a5220 0%, #6B8C3E 60%, #7a9e4a 100%) !important;
+}
+
+/* Appointment section */
+.appointment {
+  background: linear-gradient(135deg, #3a5220 0%, #6B8C3E 100%) !important;
+}
+
+/* Locations section */
+#locations {
+  background: linear-gradient(160deg, #2e4228 0%, #4a6741 35%, #6B8C3E 60%, #3a5220 100%) !important;
+}
+
+/* Footer bottom */
+.footer-bottom { background: #3a5220 !important; }
+.footer-col-title { color: #c8e6a0 !important; }

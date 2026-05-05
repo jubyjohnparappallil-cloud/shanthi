@@ -1,31 +1,102 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Testimonials — Shanthi Wellness</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <title>Dr. Neethu B. Deepak — Shanthi Wellness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="styles.css"/><link rel="stylesheet" href="page-styles.css"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="page-styles.css"/>
   <style>
-    body{padding-top:130px!important}@media(max-width:768px){body{padding-top:108px!important}}@media(max-width:480px){body{padding-top:72px!important}}
+    body{padding-top:130px!important}
+    @media(max-width:768px){body{padding-top:100px!important}}
+    @media(max-width:480px){body{padding-top:80px!important}}
     .navbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,0.08);padding:0}
-    .navbar-topbar{background:#f8f4ee;border-bottom:1px solid rgba(196,168,130,0.25);padding:7px 0}
+    .navbar-topbar{background:#f4faf0;border-bottom:1px solid rgba(141,194,111,0.30);padding:7px 0}
     .navbar-topbar-inner{max-width:1280px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between}
     .navbar-phone{display:flex;align-items:center;gap:7px;font-size:0.82rem;font-weight:500;color:#5a4a38}
-    .navbar-appt-btn{display:inline-flex;align-items:center;padding:7px 20px;background:#3a8a3a;color:#fff;border-radius:50px;font-size:0.78rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none}
+    .navbar-appt-btn{display:inline-flex;align-items:center;padding:7px 20px;background:#8dc26f;color:#fff;border-radius:50px;font-size:0.78rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none}
     .navbar-main{background:#fff;padding:4px 0;width:100%;border-bottom:4px solid #39d353!important;border-image:none!important;background-image:none!important}
     @media(max-width:480px){.navbar-topbar{display:none}}
+
+    /* ── Doctor Profile Styles ── */
+    .doctor-hero{background:linear-gradient(135deg,#1a3a0a 0%,#2d5a1a 50%,#1a3a0a 100%);padding:72px 0 0;position:relative;overflow:hidden}
+    .doctor-hero::before{content:'';position:absolute;inset:0;background:url('herbal.jpg') center/cover no-repeat;opacity:0.08;mix-blend-mode:multiply}
+    .doctor-hero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:320px 1fr;gap:56px;align-items:end}
+    .doctor-photo-wrap{position:relative}
+    .doctor-photo{width:100%;max-width:300px;border-radius:20px 20px 0 0;object-fit:cover;object-position:top;height:380px;display:block;box-shadow:0 -8px 40px rgba(0,0,0,0.25)}
+    .doctor-photo-placeholder{width:100%;max-width:300px;height:380px;background:linear-gradient(160deg,rgba(255,255,255,0.15),rgba(255,255,255,0.05));border-radius:20px 20px 0 0;display:flex;align-items:center;justify-content:center;font-size:6rem}
+    .doctor-hero-text{padding-bottom:48px;color:#fff}
+    .doctor-eyebrow{font-size:0.72rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:#b5e890;margin-bottom:12px;text-shadow:0 1px 4px rgba(0,0,0,0.5)}
+    .doctor-name{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1.15;margin-bottom:8px;color:#ffffff;text-shadow:0 2px 16px rgba(0,0,0,0.6)}
+    .doctor-title{font-size:1rem;color:rgba(255,255,255,0.92);margin-bottom:24px;font-style:italic;text-shadow:0 1px 8px rgba(0,0,0,0.5)}
+    .doctor-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+    .doctor-tag{background:rgba(141,194,111,0.30);border:1.5px solid rgba(141,194,111,0.70);color:#ffffff;border-radius:50px;padding:6px 16px;font-size:0.78rem;font-weight:700;letter-spacing:0.04em;text-shadow:0 1px 4px rgba(0,0,0,0.4)}
+    .doctor-cta-row{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-appt{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;background:#8dc26f;color:#fff;border-radius:50px;font-size:0.88rem;font-weight:700;text-decoration:none;transition:all 0.3s ease}
+    .btn-appt:hover{background:#6aaa4a;transform:translateY(-2px);box-shadow:0 8px 24px rgba(141,194,111,0.45)}
+    .btn-back{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:rgba(255,255,255,0.20);border:2px solid rgba(255,255,255,0.60);color:#fff;border-radius:50px;font-size:0.88rem;font-weight:700;text-decoration:none;transition:all 0.3s ease;text-shadow:0 1px 4px rgba(0,0,0,0.3)}
+    .btn-back:hover{background:rgba(255,255,255,0.35);border-color:#fff}
+
+    /* Profile content */
+    .profile-content{max-width:1200px;margin:0 auto;padding:64px 32px;display:grid;grid-template-columns:1fr 340px;gap:56px;align-items:start}
+    .profile-main{}
+    .profile-section{margin-bottom:48px}
+    .profile-section-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:#1a1a1a;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid rgba(141,194,111,0.25);display:flex;align-items:center;gap:10px}
+    .profile-section-title span{font-size:1.2rem}
+    .profile-para{font-size:0.95rem;color:#4a3a28;line-height:1.9;margin-bottom:16px}
+    .profile-para:last-child{margin-bottom:0}
+
+    /* Specialties list */
+    .specialty-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+    .specialty-item{display:flex;align-items:flex-start;gap:10px;background:#f8fdf5;border:1px solid rgba(141,194,111,0.20);border-radius:10px;padding:12px 14px;font-size:0.86rem;color:#3a2a18;line-height:1.5}
+    .specialty-item::before{content:'✦';color:#8dc26f;font-size:0.65rem;flex-shrink:0;margin-top:3px}
+
+    /* Sidebar */
+    .profile-sidebar{}
+    .sidebar-card{background:#fff;border:1px solid rgba(141,194,111,0.20);border-radius:16px;padding:28px 24px;margin-bottom:24px;box-shadow:0 4px 20px rgba(141,194,111,0.08)}
+    .sidebar-card h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:#1a1a1a;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+    .sidebar-info-row{display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:0.86rem;color:#4a3a28;line-height:1.6}
+    .sidebar-info-row:last-child{margin-bottom:0}
+    .sidebar-info-icon{color:#8dc26f;flex-shrink:0;font-size:1rem;margin-top:1px}
+    .sidebar-appt-btn{display:block;width:100%;padding:14px;background:linear-gradient(135deg,#8dc26f,#6aaa4a);color:#fff;border:none;border-radius:12px;font-size:0.92rem;font-weight:700;text-align:center;text-decoration:none;cursor:pointer;transition:all 0.3s ease;letter-spacing:0.03em}
+    .sidebar-appt-btn:hover{opacity:0.88;transform:translateY(-2px);box-shadow:0 8px 24px rgba(141,194,111,0.40)}
+
+    /* Quote block */
+    .doctor-quote{background:linear-gradient(135deg,#f4faf0,#e8f5e0);border-left:4px solid #8dc26f;border-radius:0 16px 16px 0;padding:28px 32px;margin:32px 0;position:relative}
+    .doctor-quote::before{content:'"';font-family:'Cormorant Garamond',serif;font-size:5rem;color:rgba(141,194,111,0.25);position:absolute;top:-10px;left:16px;line-height:1}
+    .doctor-quote p{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;color:#2d5a1a;line-height:1.8;margin:0;padding-left:16px}
+
+    @media(max-width:900px){
+      .doctor-hero-inner{grid-template-columns:1fr;gap:32px}
+      .doctor-photo,.doctor-photo-placeholder{max-width:220px;height:280px;border-radius:16px}
+      .doctor-hero-text{padding-bottom:32px}
+      .profile-content{grid-template-columns:1fr;gap:32px}
+      .specialty-list{grid-template-columns:1fr}
+    }
+    @media(max-width:480px){
+      .doctor-hero{padding:48px 0 0}
+      .doctor-hero-inner{padding:0 16px}
+      .profile-content{padding:40px 16px}
+      .doctor-name{font-size:1.8rem}
+    }
   </style>
 </head>
 <body>
+
+
+<!-- Leaf animations -->
 <div class="leaf-container" aria-hidden="true">
   <div class="leaf leaf-1"><svg viewBox="0 0 60 80" fill="none"><path d="M30 75 C30 75 5 55 5 30 C5 10 20 2 30 2 C40 2 55 10 55 30 C55 55 30 75 30 75Z" fill="#4aaa4a" opacity="0.5"/></svg></div>
-  <div class="leaf leaf-6"><svg viewBox="0 0 45 62" fill="none"><path d="M22 58 C22 58 3 43 3 22 C3 7 12 1 22 1 C32 1 42 7 42 22 C42 43 22 58 22 58Z" fill="#4aaa4a" opacity="0.45"/></svg></div>
+  <div class="leaf leaf-5"><svg viewBox="0 0 35 50" fill="none"><path d="M17 47 C17 47 2 34 2 17 C2 5 9 1 17 1 C25 1 33 5 33 17 C33 34 17 47 17 47Z" fill="#C4A882" opacity="0.4"/></svg></div>
 </div>
 
+<!-- NAVBAR -->
 <nav class="navbar" id="navbar">
   <div class="navbar-topbar"><div class="navbar-topbar-inner">
-    <span class="navbar-phone"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke="#A08060" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Call : +91 98765 43210, +91 80 2345 6789</span>
+    <span class="navbar-phone"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke="#A08060" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Call : +971 6 555 8429 &nbsp;|&nbsp; +971 4 225 5133</span>
     <a href="index.html#appointment" class="navbar-appt-btn">Appointment</a>
   </div></div>
   <div class="navbar-main"><table style="width:100%;border-collapse:collapse;box-sizing:border-box;display:table"><tr>
@@ -43,14 +114,14 @@
   <div class="nav-drawer-header"><img src="logo.png" alt="Shanthi Wellness" class="nav-drawer-logo"/><button class="nav-drawer-close" id="navDrawerClose">✕</button></div>
   <ul class="nav-drawer-links">
     <li><a href="index.html"         class="nav-drawer-link">Home</a></li>
-    <li><a href="about.html"         class="nav-drawer-link">About Us</a></li>
+    <li><a href="about.html"         class="nav-drawer-link active">About Us</a></li>
     <li><a href="ayurveda.html"      class="nav-drawer-link">Ayurveda</a></li>
     <li><a href="physiotherapy.html" class="nav-drawer-link">Physiotherapy</a></li>
     <li><a href="treatments.html"    class="nav-drawer-link">Treatments</a></li>
     <li><a href="packages.html"      class="nav-drawer-link">Our Packages</a></li>
     <li><a href="packages.html"      class="nav-drawer-link">Offers</a></li>
     <li><a href="index.html#gallery" class="nav-drawer-link">Videos</a></li>
-    <li><a href="testimonials.html"  class="nav-drawer-link active">Testimonials</a></li>
+    <li><a href="testimonials.html"  class="nav-drawer-link">Testimonials</a></li>
     <li><a href="index.html#appointment" class="nav-drawer-link">Make an Appointment</a></li>
     <li><a href="faqs.html"          class="nav-drawer-link">FAQs</a></li>
     <li><a href="contact.html"       class="nav-drawer-link">Contact Us</a></li>
@@ -59,123 +130,173 @@
   <a href="index.html#appointment" class="nav-drawer-appt">Book Appointment</a>
 </div>
 
-<section class="page-hero">
-  <div class="page-hero-inner">
-    <p class="page-hero-eyebrow">Patient Stories</p>
-    <h1 class="page-hero-title">Words of <em>Healing</em></h1>
-    <p class="page-hero-sub">The greatest measure of our work is the transformation we witness in our patients. Here are their stories.</p>
-    <div class="page-breadcrumb"><a href="index.html">Home</a><span>›</span><span>Testimonials</span></div>
+<!-- ── DOCTOR HERO ── -->
+<section class="doctor-hero">
+  <div class="doctor-hero-inner">
+
+    <!-- Photo -->
+    <div class="doctor-photo-wrap">
+      <img src="01.jpg" alt="Dr. Neethu B. Deepak" class="doctor-photo"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div class="doctor-photo-placeholder" style="display:none">👩‍⚕️</div>
+    </div>
+
+    <!-- Text -->
+    <div class="doctor-hero-text">
+      <p class="doctor-eyebrow">Meet Our Doctor</p>
+      <h1 class="doctor-name">Dr. Neethu B. Deepak</h1>
+      <p class="doctor-title">BAMS — Ayurvedic Physician &amp; Keraleeya Panchakarma Specialist</p>
+      <div class="doctor-tags">
+        <span class="doctor-tag">Panchakarma</span>
+        <span class="doctor-tag">Skin Diseases</span>
+        <span class="doctor-tag">PCOD &amp; Gynaecology</span>
+        <span class="doctor-tag">Spondylosis</span>
+        <span class="doctor-tag">Arthritis</span>
+        <span class="doctor-tag">Lifestyle Disorders</span>
+      </div>
+      <div class="doctor-cta-row">
+        <a href="index.html#appointment" class="btn-appt">📅 Book Appointment</a>
+        <a href="about.html" class="btn-back">← Back to Team</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<div class="page-content">
+<!-- ── PROFILE CONTENT ── -->
+<div class="profile-content">
 
-  <!-- Stats bar -->
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:24px;margin-bottom:60px;text-align:center">
-    <div style="background:#fdf8f2;border:1px solid rgba(196,168,130,0.22);border-radius:14px;padding:28px 16px">
-      <div style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:#3b1f0e">500+</div>
-      <div style="font-size:0.78rem;color:#A08060;text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">Patients Healed</div>
-    </div>
-    <div style="background:#fdf8f2;border:1px solid rgba(196,168,130,0.22);border-radius:14px;padding:28px 16px">
-      <div style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:#3b1f0e">15+</div>
-      <div style="font-size:0.78rem;color:#A08060;text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">Years of Healing</div>
-    </div>
-    <div style="background:#fdf8f2;border:1px solid rgba(196,168,130,0.22);border-radius:14px;padding:28px 16px">
-      <div style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:#3b1f0e">98%</div>
-      <div style="font-size:0.78rem;color:#A08060;text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">Patient Satisfaction</div>
-    </div>
-    <div style="background:#fdf8f2;border:1px solid rgba(196,168,130,0.22);border-radius:14px;padding:28px 16px">
-      <div style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:#3b1f0e">⭐ 4.9</div>
-      <div style="font-size:0.78rem;color:#A08060;text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">Average Rating</div>
-    </div>
-  </div>
+  <!-- Left: Main Bio -->
+  <div class="profile-main">
 
-  <div class="testimonial-cards">
+    <!-- About -->
+    <div class="profile-section">
+      <h2 class="profile-section-title"><span>🌿</span> About Dr. Neethu</h2>
+      <p class="profile-para">
+        Dr. Neethu B. Deepak is one among the finest Ayurvedic medical practitioners, having graduated in Ayurvedic Medicine and Surgery (BAMS) from Mahatma Gandhi University, Kerala — one of India's most prestigious institutions for Ayurvedic education.
+      </p>
+      <p class="profile-para">
+        She worked as a <strong>Junior Consultant at the National Research Institute for Panchakarma, Cheruthuruthy</strong> — a premier government institution dedicated to Panchakarma research and clinical practice. She subsequently served as <strong>Medical Officer at Nagarjuna Ayurvedic Centre, Kalady</strong>, one of Kerala's most respected Ayurvedic hospitals.
+      </p>
 
-    <div class="tcard">
-      <div class="tcard-quote">"</div>
-      <p class="tcard-text">Excellent experience — felt very refreshing and relaxed. Looking forward to coming back as soon as possible. Thanks for the wonderful service and the caring staff.</p>
-      <div class="tcard-stars">★★★★★</div>
-      <div class="tcard-author"><div class="tcard-avatar">P</div><div><div class="tcard-name">Preethi</div><div class="tcard-role">Abhyanga & Shirodhara</div></div></div>
+      <div class="doctor-quote">
+        <p>Ayurveda is not just a system of medicine — it is a way of life. True healing begins when we align our diet, exercise and daily routine with the wisdom of nature.</p>
+      </div>
+
+      <p class="profile-para">
+        Dr. Neethu is known for her <strong>excellent patient care</strong> and is a strong believer in Ayurveda. She strictly recommends the Ayurvedic way of living — encompassing diet, exercise and medicine — in her medical practice. She is also an expert in <strong>Keraleeya Panchakarma treatments</strong>, the classical Kerala-specific therapeutic procedures that form the cornerstone of authentic Ayurvedic healing.
+      </p>
     </div>
 
-    <div class="tcard" style="border-color:#C4A882;background:linear-gradient(160deg,#fdf8f2,#fff)">
-      <div class="tcard-quote">"</div>
-      <p class="tcard-text">A place where one will get complete relaxation and peace. Superb ambience, excellent treatment that cures all your health conditions from HEAD TO TOE. Each and every staff member is very friendly — one can feel like home. I am completely satisfied with the treatment and therapy.</p>
-      <div class="tcard-stars">★★★★★</div>
-      <div class="tcard-author"><div class="tcard-avatar">S</div><div><div class="tcard-name">Suresh Kumar</div><div class="tcard-role">Panchakarma Programme</div></div></div>
+    <!-- Areas of Practice -->
+    <div class="profile-section">
+      <h2 class="profile-section-title"><span>🎯</span> Areas of Practice</h2>
+      <p class="profile-para">Dr. Neethu's clinical expertise spans a wide range of conditions, with particular depth in the following areas:</p>
+      <div class="specialty-list">
+        <div class="specialty-item">Various Skin Diseases (Psoriasis, Eczema, Dermatitis)</div>
+        <div class="specialty-item">PCOD / PCOS &amp; Hormonal Imbalances</div>
+        <div class="specialty-item">Dysmenorrhea (Painful Periods)</div>
+        <div class="specialty-item">Endometriosis</div>
+        <div class="specialty-item">Gynaecological Disorders</div>
+        <div class="specialty-item">Cervical &amp; Lumbar Spondylosis</div>
+        <div class="specialty-item">Rheumatoid Arthritis</div>
+        <div class="specialty-item">Osteoarthritis</div>
+        <div class="specialty-item">Gout &amp; Hyperuricemia</div>
+        <div class="specialty-item">Metabolic Disorders (Diabetes, Obesity)</div>
+        <div class="specialty-item">Lifestyle Disorders</div>
+        <div class="specialty-item">Keraleeya Panchakarma Treatments</div>
+      </div>
     </div>
 
-    <div class="tcard">
-      <div class="tcard-quote">"</div>
-      <p class="tcard-text">I was overweight at 106 kg and selected the 14-day weight reduction treatment package. Within 3 days I felt changes in my body. In those 14 days of treatment I lost 7 kg. The doctor suggested a second session after 3 months. Highly recommended!</p>
-      <div class="tcard-stars">★★★★★</div>
-      <div class="tcard-author"><div class="tcard-avatar">A</div><div><div class="tcard-name">Anoop Mathew</div><div class="tcard-role">Weight Management Package</div></div></div>
+    <!-- Panchakarma Expertise -->
+    <div class="profile-section">
+      <h2 class="profile-section-title"><span>💆</span> Panchakarma Expertise</h2>
+      <p class="profile-para">
+        As a specialist in <strong>Keraleeya Panchakarma</strong>, Dr. Neethu administers the full range of classical Kerala Ayurvedic therapies including Abhyanga, Shirodhara, Pizhichil, Njavarakizhi, Elakizhi, Nasyam, Shirovasthi and the complete Panchakarma detoxification programme.
+      </p>
+      <p class="profile-para">
+        Her training at the National Research Institute for Panchakarma — the country's foremost Panchakarma research centre — gives her a uniquely deep understanding of these therapies, both in their classical application and their evidence-based clinical use.
+      </p>
     </div>
 
-    <div class="tcard">
-      <div class="tcard-quote">"</div>
-      <p class="tcard-text">I was really impressed by the approach of the Ayurveda Doctor towards patients. She is very kind and able to understand the patient's issue carefully. She makes patients more comfortable throughout the appointment and plans treatment according to individual requirements.</p>
-      <div class="tcard-stars">★★★★★</div>
-      <div class="tcard-author"><div class="tcard-avatar">R</div><div><div class="tcard-name">Rajesh Menon</div><div class="tcard-role">Ayurveda Consultation</div></div></div>
-    </div>
-
-    <div class="tcard">
-      <div class="tcard-quote">"</div>
-      <p class="tcard-text">The massage for sinus was excellent. By the 7th day I felt like a new me. Thanks to the wonderful staff and doctor. The Nasyam treatment completely cleared my chronic sinusitis that had been troubling me for years.</p>
-      <div class="tcard-stars">★★★★★</div>
-      <div class="tcard-author"><div class="tcard-avatar">D</div><div><div class="tcard-name">David Thomas</div><div class="tcard-role">Nasyam Treatment</div></div></div>
-    </div>
-
-    <div class="tcard">
-      <div class="tcard-quote">"</div>
-      <p class="tcard-text">You came with severe back pain and took treatment for Elakizhi and Abhyanga for 8 days. Now I am free from back pain and relaxed from leg pain. Excellent treatment and good experience with Shanthi Wellness. Excellent customer care and behaviour.</p>
-      <div class="tcard-stars">★★★★★</div>
-      <div class="tcard-author"><div class="tcard-avatar">M</div><div><div class="tcard-name">Mohammed Rashid</div><div class="tcard-role">Elakizhi & Abhyanga</div></div></div>
-    </div>
-
-    <div class="tcard">
-      <div class="tcard-quote">"</div>
-      <p class="tcard-text">After coming, my hand was cured 90%. After meeting Dr. Hridya, my lifestyle changed a lot. She talks very nicely, correctly and positively. My positive energy increased every day. The treatment here was mind-blowing. We plan to continue for other problems also.</p>
-      <div class="tcard-stars">★★★★★</div>
-      <div class="tcard-author"><div class="tcard-avatar">N</div><div><div class="tcard-name">Nisha Pillai</div><div class="tcard-role">Physiotherapy & Ayurveda</div></div></div>
-    </div>
-
-    <div class="tcard">
-      <div class="tcard-quote">"</div>
-      <p class="tcard-text">I enjoyed the weight loss massage. Remya is an incredible masseuse and puts in a lot of effort. I will definitely come back for other massages. The entire team is professional, caring and dedicated to patient wellbeing.</p>
-      <div class="tcard-stars">★★★★★</div>
-      <div class="tcard-author"><div class="tcard-avatar">L</div><div><div class="tcard-name">Lakshmi Devi</div><div class="tcard-role">Weight Loss Programme</div></div></div>
-    </div>
-
-    <div class="tcard">
-      <div class="tcard-quote">"</div>
-      <p class="tcard-text">Rejuvenated, refreshed and feeling good. The Panchakarma programme was a life-changing experience. I came in exhausted and stressed, and left feeling completely renewed. Thank you to the entire Shanthi Wellness team.</p>
-      <div class="tcard-stars">★★★★★</div>
-      <div class="tcard-author"><div class="tcard-avatar">V</div><div><div class="tcard-name">Vijay Krishnan</div><div class="tcard-role">Panchakarma Detox</div></div></div>
+    <!-- Philosophy -->
+    <div class="profile-section">
+      <h2 class="profile-section-title"><span>🌱</span> Her Philosophy</h2>
+      <p class="profile-para">
+        Dr. Neethu believes that the root cause of most modern diseases lies in the disconnect between our lifestyle and the natural rhythms described in Ayurvedic texts. Her approach goes beyond prescribing medicines — she guides each patient toward a sustainable Ayurvedic lifestyle that includes <strong>Dinacharya</strong> (daily routine), <strong>Ritucharya</strong> (seasonal regimen), appropriate diet and therapeutic yoga.
+      </p>
+      <p class="profile-para">
+        She is particularly passionate about women's health, having helped hundreds of patients manage PCOD, endometriosis and other gynaecological conditions through Ayurvedic protocols — without the side effects of hormonal medications.
+      </p>
     </div>
 
   </div>
 
-  <!-- CTA -->
-  <div style="background:linear-gradient(135deg,#3b1f0e,#5a2d12);border-radius:20px;padding:56px 40px;text-align:center;color:#fff;margin-top:60px">
-    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;margin-bottom:16px">Begin Your Own <em style="color:#C4A882">Healing Story</em></h2>
-    <p style="color:rgba(255,255,255,0.75);max-width:520px;margin:0 auto 32px;line-height:1.8">Join hundreds of patients who have transformed their health at Shanthi Wellness. Your journey to wholeness starts with a single step.</p>
-    <a href="index.html#appointment" class="btn-book" style="font-size:0.95rem;padding:14px 36px">Book Your Consultation →</a>
-  </div>
+  <!-- Right: Sidebar -->
+  <div class="profile-sidebar">
 
+    <!-- Quick Info -->
+    <div class="sidebar-card">
+      <h4>📋 Quick Info</h4>
+      <div class="sidebar-info-row">
+        <span class="sidebar-info-icon">🎓</span>
+        <span><strong>Qualification:</strong><br/>BAMS — Mahatma Gandhi University, Kerala</span>
+      </div>
+      <div class="sidebar-info-row">
+        <span class="sidebar-info-icon">🏥</span>
+        <span><strong>Previous:</strong><br/>National Research Institute for Panchakarma, Cheruthuruthy</span>
+      </div>
+      <div class="sidebar-info-row">
+        <span class="sidebar-info-icon">🏥</span>
+        <span><strong>Previous:</strong><br/>Nagarjuna Ayurvedic Centre, Kalady</span>
+      </div>
+      <div class="sidebar-info-row">
+        <span class="sidebar-info-icon">🌿</span>
+        <span><strong>Speciality:</strong><br/>Keraleeya Panchakarma, Women's Health, Skin &amp; Lifestyle Disorders</span>
+      </div>
+      <div class="sidebar-info-row">
+        <span class="sidebar-info-icon">🗣️</span>
+        <span><strong>Languages:</strong><br/>Malayalam, English, Hindi</span>
+      </div>
+    </div>
+
+    <!-- Book Appointment -->
+    <div class="sidebar-card" style="background:linear-gradient(160deg,#f4faf0,#e8f5e0);border-color:rgba(141,194,111,0.30)">
+      <h4>📅 Book a Consultation</h4>
+      <p style="font-size:0.86rem;color:#4a3a28;line-height:1.7;margin-bottom:20px">Schedule a personal consultation with Dr. Neethu. She will assess your constitution and design a personalised treatment plan.</p>
+      <a href="index.html#appointment" class="sidebar-appt-btn">Book Appointment →</a>
+    </div>
+
+    <!-- Contact -->
+    <div class="sidebar-card">
+      <h4>📞 Contact</h4>
+      <div class="sidebar-info-row">
+        <span class="sidebar-info-icon">🇦🇪</span>
+        <span><strong>Dubai:</strong><br/><a href="tel:+97142255133" style="color:#6aaa4a;text-decoration:none">+971 4 225 5133</a></span>
+      </div>
+      <div class="sidebar-info-row">
+        <span class="sidebar-info-icon">🇦🇪</span>
+        <span><strong>Sharjah:</strong><br/><a href="tel:+97165558429" style="color:#6aaa4a;text-decoration:none">+971 6 555 8429</a></span>
+      </div>
+      <div class="sidebar-info-row">
+        <span class="sidebar-info-icon">💬</span>
+        <span><a href="https://wa.me/971544630447" target="_blank" rel="noopener" style="color:#6aaa4a;text-decoration:none">WhatsApp: +971 54 463 0447</a></span>
+      </div>
+      <div class="sidebar-info-row">
+        <span class="sidebar-info-icon">✉️</span>
+        <span><a href="mailto:doctor@ayurvedauae.com" style="color:#6aaa4a;text-decoration:none">doctor@ayurvedauae.com</a></span>
+      </div>
+    </div>
+
+  </div>
 </div>
 
+<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-top"><div class="container"><div class="footer-grid">
     <div class="footer-brand">
       <a href="index.html" class="footer-logo-link"><img src="logo.png" alt="Shanthi Wellness" class="footer-logo-img"/></a>
       <p class="footer-tagline">Shanthi Wellness Medical Center is a branch of Vayalarikathu Ayurvedic Nursing Home at Varkala, Trivandrum, Kerala, established since 1980.</p>
-      <div class="footer-socials">
-        <a href="#" class="social-icon" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 2H15C13.7 2 12.4 2.5 11.5 3.5C10.5 4.4 10 5.7 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.7 14.1 6.4 14.3 6.2C14.6 6 14.8 5.9 15 5.9H18V2Z" stroke="#c89a4a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <a href="#" class="social-icon" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#c89a4a" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="#c89a4a" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="#c89a4a"/></svg></a>
-        <a href="https://wa.me/971528434127" class="social-icon" aria-label="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 11.5C21 16.7 16.7 21 11.5 21C9.8 21 8.2 20.5 6.8 19.7L3 21L4.3 17.2C3.5 15.8 3 14.2 3 12.5C3 7.3 7.3 3 12.5 3C17.7 3 22 7.3 22 12.5" stroke="#c89a4a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      </div>
     </div>
     <div class="footer-col">
       <h5 class="footer-col-title">🇦🇪 Sharjah Branch</h5>
@@ -207,6 +328,7 @@
   </div></div></div>
   <div class="footer-bottom"><div class="container"><p>© 2025 Shanthi Wellness Medical Center. All rights reserved.</p><p class="footer-credits">A branch of Vayalarikathu Ayurvedic Nursing Home, Kerala, Est. 1980.</p></div></div>
 </footer>
+
 <script src="script.js"></script>
 <!-- ═══ FLOATING BUTTONS — Our Branch + WhatsApp ═══ -->
 <style>

@@ -63,8 +63,12 @@
       background: #fff;
       padding: 4px 0;
       width: 100%;
-      border-bottom: 3px solid;
-      border-image: linear-gradient(90deg,#3a8a3a,#6dcc6d,#C4A882,#6dcc6d,#3a8a3a) 1;
+      border-bottom: 3px solid #6B8C3E !important;
+      border-image: none !important;
+      background-image: none !important;
+      background-clip: unset !important;
+      background-origin: unset !important;
+      animation: none !important;
     }
     .navbar-main-inner {
       display: flex !important;
@@ -265,7 +269,7 @@
   </div>
   <ul class="nav-drawer-links">
     <li><a href="index.html"         class="nav-drawer-link active">Home</a></li>
-    <li><a href="about.html"          class="nav-drawer-link">About Us</a></li>
+    <li><a href="about.html"         class="nav-drawer-link">About Us</a></li>
     <li><a href="ayurveda.html"      class="nav-drawer-link">Ayurveda</a></li>
     <li><a href="physiotherapy.html" class="nav-drawer-link">Physiotherapy</a></li>
     <li><a href="treatments.html"    class="nav-drawer-link">Treatments</a></li>
@@ -276,6 +280,7 @@
     <li><a href="index.html#appointment" class="nav-drawer-link">Make an Appointment</a></li>
     <li><a href="faqs.html"          class="nav-drawer-link">FAQs</a></li>
     <li><a href="contact.html"       class="nav-drawer-link">Contact Us</a></li>
+    <li><a href="index.html#locations" class="nav-drawer-link">Our Locations</a></li>
   </ul>
   <a href="index.html#appointment" class="nav-drawer-appt">Book Appointment</a>
 </div>
@@ -724,79 +729,6 @@
 <div class="orange-divider"></div>
 
 <!-- ═══════════════════════════════════════════════════════════
-     SMALL PHOTO GRID — 6-column tight squares
-═══════════════════════════════════════════════════════════ -->
-<section class="photo-grid-sm">
-  <div class="container">
-    <div class="section-header reveal">
-      <p class="section-eyebrow">Our World</p>
-      <h2 class="section-heading">Life at <em>Shanthi Wellness</em></h2>
-      <div class="gold-divider centered"></div>
-    </div>
-    <div class="photo-grid-sm-inner">
-      <div class="pg-item reveal"><img src="Nasyam.jpg" alt="Shirodhara"/><div class="pg-item-overlay"><span>Shirodhara</span></div></div>
-      <div class="pg-item reveal"><img src="dhara2.jpg" alt="Clinic"/><div class="pg-item-overlay"><span>Clinic</span></div></div>
-      <div class="pg-item reveal"><img src="kizhi.jpg" alt="Abhyanga"/><div class="pg-item-overlay"><span>Abhyanga</span></div></div>
-      <div class="pg-item reveal"><img src="cover.jpg" alt="Sanctuary"/><div class="pg-item-overlay"><span>Sanctuary</span></div></div>
-      <div class="pg-item reveal"><img src="ritual3.jpg" alt="Panchakarma"/><div class="pg-item-overlay"><span>Panchakarma</span></div></div>
-      <div class="pg-item reveal"><img src="Medicine.jpg" alt="Consultation"/><div class="pg-item-overlay"><span>Consultation</span></div></div>
-      <div class="pg-item reveal"><img src="ritual4.jpg" alt="Physiotherapy"/><div class="pg-item-overlay"><span>Physio</span></div></div>
-      <div class="pg-item reveal"><img src="Nasyam.jpg" alt="Herbal"/><div class="pg-item-overlay"><span>Herbal</span></div></div>
-      <div class="pg-item reveal"><img src="kizhi.jpg" alt="Wellness"/><div class="pg-item-overlay"><span>Wellness</span></div></div>
-      <div class="pg-item reveal"><img src="dhara2.jpg" alt="Healing"/><div class="pg-item-overlay"><span>Healing</span></div></div>
-      <div class="pg-item reveal"><img src="ritual3.jpg" alt="Detox"/><div class="pg-item-overlay"><span>Detox</span></div></div>
-      <div class="pg-item reveal"><img src="cover.jpg" alt="Nature"/><div class="pg-item-overlay"><span>Nature</span></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ORANGE DIVIDER -->
-<div class="orange-divider"></div>
-
-<!-- ═══════════════════════════════════════════════════════════
-     PICTURE MOSAIC
-═══════════════════════════════════════════════════════════ -->
-<section class="mosaic section-pad" id="gallery">
-  <div class="container">
-    <div class="section-header reveal">
-      <p class="section-eyebrow">Our Sanctuary</p>
-      <h2 class="section-heading">A Glimpse of Our <em>Sanctuary</em></h2>
-      <div class="gold-divider centered"></div>
-    </div>
-    <div class="mosaic-grid reveal">
-      <div class="mosaic-item mosaic-large">
-        <img src="cover.jpg" alt="Shanthi Wellness sanctuary" />
-        <div class="mosaic-overlay"><span>Our Sanctuary</span></div>
-      </div>
-      <div class="mosaic-item mosaic-tall">
-        <img src="dhara2.jpg" alt="Treatment room" />
-        <div class="mosaic-overlay"><span>Treatment Rooms</span></div>
-      </div>
-      <div class="mosaic-item">
-        <img src="Nasyam.jpg" alt="Shirodhara ritual" />
-        <div class="mosaic-overlay"><span>Shirodhara</span></div>
-      </div>
-      <div class="mosaic-item">
-        <img src="kizhi.jpg" alt="Abhyanga massage" />
-        <div class="mosaic-overlay"><span>Abhyanga</span></div>
-      </div>
-      <div class="mosaic-item mosaic-wide">
-        <img src="ritual3.jpg" alt="Panchakarma" />
-        <div class="mosaic-overlay"><span>Panchakarma</span></div>
-      </div>
-      <div class="mosaic-item">
-        <img src="Medicine.jpg" alt="Consultation" />
-        <div class="mosaic-overlay"><span>Consultation</span></div>
-      </div>
-      <div class="mosaic-item">
-        <img src="ritual4.jpg" alt="Physiotherapy" />
-        <div class="mosaic-overlay"><span>Physiotherapy</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════
      TESTIMONIALS
 ═══════════════════════════════════════════════════════════ -->
 <section class="testimonials section-pad" id="testimonials">
@@ -1106,60 +1038,171 @@
 <!-- ═══════════════════════════════════════════════════════════
      CONTACT SECTION
 ═══════════════════════════════════════════════════════════ -->
-<section class="contact section-pad" id="contact">
+<!-- ═══════════════════════════════════════════════════════════
+     CLINIC HOURS
+═══════════════════════════════════════════════════════════ -->
+<section style="padding:48px 0;background:#f4faf0;border-top:1px solid rgba(141,194,111,0.20);border-bottom:1px solid rgba(141,194,111,0.20)" id="contact">
   <div class="container">
-    <div class="section-header reveal">
-      <p class="section-eyebrow">Find Us</p>
-      <h2 class="section-heading">Get in <em>Touch</em></h2>
-      <div class="gold-divider centered"></div>
-    </div>
-    <div class="contact-grid">
-      <!-- Address -->
-      <div class="contact-card reveal">
-        <div class="contact-icon">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="#c89a4a" stroke-width="1.5" fill="rgba(200,154,74,0.08)"/><path d="M16 8C12.7 8 10 10.7 10 14C10 18.5 16 24 16 24C16 24 22 18.5 22 14C22 10.7 19.3 8 16 8Z" stroke="#c89a4a" stroke-width="1.5" fill="rgba(200,154,74,0.15)"/><circle cx="16" cy="14" r="2.5" fill="#c89a4a"/></svg>
-        </div>
-        <h4 class="contact-card-title">Our Address</h4>
-        <p class="contact-card-text">
-          Shanthi Wellness Centre<br />
-          42, Healing Grove Road<br />
-          Koramangala, Bengaluru<br />
-          Karnataka — 560 034
-        </p>
-        <a href="#" class="contact-link">Get Directions →</a>
+    <div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px 48px">
+
+      <!-- Label -->
+      <div style="display:flex;align-items:center;gap:10px;flex-shrink:0">
+        <span style="width:40px;height:40px;background:linear-gradient(135deg,#8dc26f,#6aaa4a);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0">🕐</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#1a1a1a">Clinic Hours</span>
       </div>
-      <!-- Phone & Hours -->
-      <div class="contact-card reveal">
-        <div class="contact-icon">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="#c89a4a" stroke-width="1.5" fill="rgba(200,154,74,0.08)"/><path d="M11 9H15L17 13L14.5 14.5C15.5 16.5 17.5 18.5 19.5 19.5L21 17L25 19V23C25 23 22 26 16 22C10 18 9 12 9 12L11 9Z" stroke="#c89a4a" stroke-width="1.5" fill="rgba(200,154,74,0.15)" stroke-linejoin="round"/></svg>
-        </div>
-        <h4 class="contact-card-title">Phone & Hours</h4>
-        <p class="contact-card-text">
-          <strong>+91 98765 43210</strong><br />
-          <strong>+91 80 2345 6789</strong><br /><br />
-          Mon – Sat: 8:00 AM – 7:00 PM<br />
-          Sunday: 9:00 AM – 1:00 PM
-        </p>
-        <a href="tel:+919876543210" class="contact-link">Call Now →</a>
+
+      <!-- Divider -->
+      <span style="width:1px;height:36px;background:rgba(141,194,111,0.35);flex-shrink:0;display:block"></span>
+
+      <!-- Mon–Fri -->
+      <div style="text-align:center">
+        <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#8dc26f;margin:0 0 3px">Monday – Friday</p>
+        <p style="font-size:1rem;font-weight:600;color:#1a1a1a;margin:0">9:00 AM – 9:00 PM</p>
       </div>
-      <!-- Map Placeholder -->
-      <div class="contact-card contact-card--map reveal">
-        <div class="contact-icon">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="#c89a4a" stroke-width="1.5" fill="rgba(200,154,74,0.08)"/><rect x="8" y="10" width="16" height="12" rx="1" stroke="#c89a4a" stroke-width="1.5" fill="rgba(200,154,74,0.1)"/><path d="M8 14H24" stroke="#c89a4a" stroke-width="1"/><path d="M14 14V22" stroke="#c89a4a" stroke-width="1"/></svg>
-        </div>
-        <h4 class="contact-card-title">Find Us on Map</h4>
-        <div class="map-placeholder">
-          <div class="map-inner">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M24 6C17.4 6 12 11.4 12 18C12 27 24 42 24 42C24 42 36 27 36 18C36 11.4 30.6 6 24 6Z" fill="rgba(200,154,74,0.3)" stroke="#c89a4a" stroke-width="2"/><circle cx="24" cy="18" r="5" fill="#c89a4a"/></svg>
-            <p>Koramangala, Bengaluru</p>
-            <small>Interactive map coming soon</small>
-          </div>
-        </div>
-        <a href="#" class="contact-link">Open in Maps →</a>
+
+      <!-- Divider -->
+      <span style="width:1px;height:36px;background:rgba(141,194,111,0.35);flex-shrink:0;display:block"></span>
+
+      <!-- Saturday -->
+      <div style="text-align:center">
+        <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#8dc26f;margin:0 0 3px">Saturday</p>
+        <p style="font-size:1rem;font-weight:600;color:#1a1a1a;margin:0">9:00 AM – 5:00 PM</p>
       </div>
+
+      <!-- Divider -->
+      <span style="width:1px;height:36px;background:rgba(141,194,111,0.35);flex-shrink:0;display:block"></span>
+
+      <!-- Sunday -->
+      <div style="text-align:center">
+        <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#8dc26f;margin:0 0 3px">Sunday</p>
+        <p style="font-size:1rem;font-weight:600;color:#1a1a1a;margin:0">10:00 AM – 2:00 PM</p>
+      </div>
+
+      <!-- Divider -->
+      <span style="width:1px;height:36px;background:rgba(141,194,111,0.35);flex-shrink:0;display:block"></span>
+
+      <!-- Walk-in note -->
+      <div style="display:flex;align-items:center;gap:8px">
+        <span style="color:#8dc26f;font-size:1rem">✓</span>
+        <span style="font-size:0.85rem;font-weight:600;color:#4a8a2a">Walk-ins Welcome</span>
+      </div>
+
+      <!-- Book button -->
+      <a href="#appointment" style="display:inline-flex;align-items:center;gap:7px;padding:10px 22px;background:linear-gradient(135deg,#8dc26f,#6aaa4a);color:#fff;border-radius:50px;font-size:0.82rem;font-weight:700;text-decoration:none;flex-shrink:0;transition:all 0.3s ease" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 20px rgba(141,194,111,0.40)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        📅 Book Appointment
+      </a>
+
     </div>
   </div>
 </section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     OUR LOCATIONS
+═══════════════════════════════════════════════════════════ -->
+<section style="padding:80px 0;background:linear-gradient(160deg,#2e4228 0%,#3d5c32 35%,#4a6741 60%,#3a5530 100%);position:relative;overflow:hidden" id="locations">
+
+  <!-- Subtle texture overlay -->
+  <div style="position:absolute;inset:0;background:url('herbal.jpg') center/cover no-repeat;opacity:0.07;pointer-events:none"></div>
+  <!-- Radial glow -->
+  <div style="position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(200,168,75,0.12) 0%,transparent 70%);pointer-events:none"></div>
+  <div style="position:absolute;bottom:-80px;left:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(74,103,65,0.25) 0%,transparent 70%);pointer-events:none"></div>
+  <div class="container">
+
+    <!-- Header -->
+    <div class="section-header reveal" style="text-align:center;margin-bottom:56px;position:relative;z-index:2">
+      <p class="section-eyebrow" style="color:#c8e6a0!important">Find Us</p>
+      <h2 class="section-heading" style="color:#ffffff!important">Our <em style="color:#c8a84b!important;-webkit-text-fill-color:#c8a84b!important;background:none!important;animation:none!important">Locations</em></h2>
+      <div class="gold-divider centered" style="background:#c8a84b!important;margin:16px auto 24px"></div>
+      <p class="section-sub" style="color:rgba(255,255,255,0.75)!important">Visit us at any of our branches in Dubai, Sharjah or Kerala, India.</p>
+    </div>
+
+        <!-- Location Cards — Dubai & Sharjah only, 2 columns -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:920px;margin:0 auto 48px;position:relative;z-index:2" class="locations-home-grid">
+
+      <!-- Dubai -->
+      <div class="reveal" style="background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.22);transition:transform 0.4s ease,box-shadow 0.4s ease" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 24px 56px rgba(0,0,0,0.32)'" onmouseout="this.style.transform='';this.style.boxShadow='0 8px 40px rgba(0,0,0,0.22)'">
+        <div style="height:200px;overflow:hidden;position:relative">
+          <iframe style="width:100%;height:100%;border:0;display:block" loading="lazy"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.5!2d55.3347!3d25.2697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5d3e5f5d3e5f%3A0x0!2sHor+Al+Anz+East%2C+Dubai!5e0!3m2!1sen!2sae!4v1"
+            allowfullscreen="" referrerpolicy="no-referrer-when-downgrade" title="Dubai Branch"></iframe>
+        </div>
+        <div style="padding:24px">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+            <span style="background:linear-gradient(135deg,#4a6741,#2e4228);color:#fff;border-radius:50%;width:38px;height:38px;display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:800;flex-shrink:0;font-family:'Raleway',sans-serif">DXB</span>
+            <div>
+              <h3 style="font-family:'Raleway',sans-serif;font-size:1rem;font-weight:700;color:#2e4228;margin:0;letter-spacing:0.04em">Dubai Branch</h3>
+              <p style="font-size:0.68rem;color:#4a6741;font-weight:700;margin:0;text-transform:uppercase;letter-spacing:0.12em;font-family:'Raleway',sans-serif">Shanthi Ayurveda Wellness</p>
+            </div>
+          </div>
+          <p style="font-size:0.85rem;color:#5a4a38;line-height:1.75;margin-bottom:14px">
+            Royal Hypermarket Building — Royal House<br/>
+            Mezzanine Floor, M19 — 15C Street<br/>
+            Hor Al Anz East, Dubai, UAE
+          </p>
+          <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:18px">
+            <a href="tel:+97142255133" style="display:flex;align-items:center;gap:8px;font-size:0.83rem;color:#4a3a28;text-decoration:none"><span style="color:#4a6741">📞</span> +971 4 225 5133</a>
+            <a href="mailto:doctor@ayurvedauae.com" style="display:flex;align-items:center;gap:8px;font-size:0.83rem;color:#4a3a28;text-decoration:none"><span style="color:#4a6741">✉️</span> doctor@ayurvedauae.com</a>
+            <a href="https://wa.me/971544630447" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;font-size:0.83rem;color:#4a3a28;text-decoration:none"><span style="color:#4a6741">💬</span> WhatsApp: +971 54 463 0447</a>
+          </div>
+          <a href="https://maps.google.com/?q=Hor+Al+Anz+East+Dubai+Royal+House+Mezzanine+M19" target="_blank" rel="noopener"
+             style="display:inline-flex;align-items:center;gap:6px;padding:10px 22px;background:linear-gradient(135deg,#4a6741,#2e4228);color:#fff;border-radius:50px;font-size:0.78rem;font-weight:700;text-decoration:none;font-family:'Raleway',sans-serif;letter-spacing:0.08em">
+            📍 Get Directions
+          </a>
+        </div>
+      </div>
+
+      <!-- Sharjah -->
+      <div class="reveal" style="background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.22);transition:transform 0.4s ease,box-shadow 0.4s ease" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 24px 56px rgba(0,0,0,0.32)'" onmouseout="this.style.transform='';this.style.boxShadow='0 8px 40px rgba(0,0,0,0.22)'">
+        <div style="height:200px;overflow:hidden;position:relative">
+          <iframe style="width:100%;height:100%;border:0;display:block" loading="lazy"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.2!2d55.3894!3d25.3462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5f5f5f5f5f5f%3A0x0!2sBu+Shaghara%2C+Sharjah!5e0!3m2!1sen!2sae!4v1"
+            allowfullscreen="" referrerpolicy="no-referrer-when-downgrade" title="Sharjah Branch"></iframe>
+        </div>
+        <div style="padding:24px">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+            <span style="background:linear-gradient(135deg,#7a3b1e,#a0522d);color:#fff;border-radius:50%;width:38px;height:38px;display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:800;flex-shrink:0;font-family:'Raleway',sans-serif">SHJ</span>
+            <div>
+              <h3 style="font-family:'Raleway',sans-serif;font-size:1rem;font-weight:700;color:#2e4228;margin:0;letter-spacing:0.04em">Sharjah Branch</h3>
+              <p style="font-size:0.68rem;color:#7a3b1e;font-weight:700;margin:0;text-transform:uppercase;letter-spacing:0.12em;font-family:'Raleway',sans-serif">Shanthi Ayurveda</p>
+            </div>
+          </div>
+          <p style="font-size:0.85rem;color:#5a4a38;line-height:1.75;margin-bottom:14px">
+            Al Estiqlal Street<br/>
+            Opposite Biriyani Point<br/>
+            Bu Shaghara, Hay Al Qasimiah, Sharjah, UAE
+          </p>
+          <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:18px">
+            <a href="tel:+97165558429" style="display:flex;align-items:center;gap:8px;font-size:0.83rem;color:#4a3a28;text-decoration:none"><span style="color:#7a3b1e">📞</span> +971 6 555 8429</a>
+            <a href="mailto:info@ayurvedauae.com" style="display:flex;align-items:center;gap:8px;font-size:0.83rem;color:#4a3a28;text-decoration:none"><span style="color:#7a3b1e">✉️</span> info@ayurvedauae.com</a>
+            <a href="https://wa.me/971528434127" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;font-size:0.83rem;color:#4a3a28;text-decoration:none"><span style="color:#7a3b1e">💬</span> WhatsApp: +971 52 843 4127</a>
+          </div>
+          <a href="https://maps.google.com/?q=Al+Estiqlal+Street+Bu+Shaghara+Sharjah+Shanthi+Ayurveda" target="_blank" rel="noopener"
+             style="display:inline-flex;align-items:center;gap:6px;padding:10px 22px;background:linear-gradient(135deg,#7a3b1e,#a0522d);color:#fff;border-radius:50px;font-size:0.78rem;font-weight:700;text-decoration:none;font-family:'Raleway',sans-serif;letter-spacing:0.08em">
+            📍 Get Directions
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <!-- View full contact page link -->
+    <div style="text-align:center;position:relative;z-index:2">
+      <a href="contact.html" style="display:inline-flex;align-items:center;gap:8px;padding:13px 32px;border:2px solid rgba(200,168,75,0.60);color:#c8a84b;border-radius:50px;font-size:0.88rem;font-weight:700;text-decoration:none;transition:all 0.3s ease;font-family:'Raleway',sans-serif;letter-spacing:0.10em;text-transform:uppercase" onmouseover="this.style.background='rgba(200,168,75,0.15)';this.style.borderColor='#c8a84b'" onmouseout="this.style.background='';this.style.borderColor='rgba(200,168,75,0.60)'">
+        View Full Contact Page →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Responsive: stack location cards on mobile -->
+<style>
+@media(max-width:900px){
+  .locations-home-grid{grid-template-columns:1fr 1fr!important}
+}
+@media(max-width:600px){
+  .locations-home-grid{grid-template-columns:1fr!important}
+}
+</style>
 
 <!-- ═══════════════════════════════════════════════════════════
      FOOTER
@@ -1173,7 +1216,7 @@
           <a href="#home" class="footer-logo-link">
             <img src="logo.png" alt="Shanthi Wellness" class="footer-logo-img" />
           </a>
-          <p class="footer-tagline">Shanthi Wellness Medical Center is a branch of Vayalarikathu Ayurvedic Nursing Home at Varkala, Trivandrum, Kerala, established since 1980.</p>
+          <p class="footer-tagline">Shanthi Wellness Medical Center is a branch of <strong>വയലാരിക്കത്ത് ആയുർവേദ നഴ്സിംഗ് ഹോം</strong> at Varkala, Trivandrum, Kerala, established since 1980.</p>
           <div class="footer-socials">
             <a href="#" class="social-icon" aria-label="Facebook">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 2H15C13.7 2 12.4 2.5 11.5 3.5C10.5 4.4 10 5.7 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.7 14.1 6.4 14.3 6.2C14.6 6 14.8 5.9 15 5.9H18V2Z" stroke="#c89a4a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -1213,7 +1256,8 @@
         <div class="footer-col">
           <h5 class="footer-col-title">🇮🇳 India Branch</h5>
           <ul class="footer-contact-list">
-            <li>Janatha Mukku, Edava, Varkala, Kerala — 695311</li>
+            <li><strong>വയലാരിക്കത്ത് ആയുർവേദ വെൽനസ് &amp; നഴ്സിംഗ് ഹോം</strong></li>
+            <li>ജനതാ മുക്ക്, എടവ, വർക്കല, കേരളം — 695311</li>
             <li><a href="tel:+917902700875" style="color:inherit;text-decoration:none">+91 79027 00875</a></li>
             <li><a href="mailto:info@vayalarikam.com" style="color:inherit;text-decoration:none">info@vayalarikam.com</a></li>
             <li><a href="https://www.vayalarikam.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">www.vayalarikam.com</a></li>
@@ -1231,6 +1275,306 @@
 </footer>
 
 <script src="script.js"></script>
+
+<!-- ═══ FLOATING BUTTONS — Our Branch + WhatsApp ═══ -->
+<style>
+  /* Floating container — WhatsApp on RIGHT */
+  .float-btns {
+    position: fixed;
+    right: 0;
+    bottom: 120px;
+    z-index: 9995;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+
+  /* Our Branch button — LEFT side */
+  .float-branch-btn {
+    position: fixed;
+    left: 0;
+    bottom: 160px;
+    z-index: 9995;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: #25a244;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 16px 10px 14px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 3px 3px 16px rgba(0,0,0,0.20);
+    transition: background 0.2s, transform 0.2s;
+    white-space: nowrap;
+  }
+  .float-branch-btn:hover {
+    background: #1e8a38;
+    transform: translateX(4px);
+  }
+
+  /* WhatsApp button */
+  .float-wa-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    background: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+    cursor: pointer;
+    border: none;
+    transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s;
+    margin-right: 12px;
+  }
+  .float-wa-btn:hover {
+    transform: scale(1.12);
+    box-shadow: 0 8px 28px rgba(37,211,102,0.55);
+  }
+  .float-wa-btn svg { width: 28px; height: 28px; }
+
+  /* "Need Help? Chat with us" label */
+  .float-wa-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 0;
+  }
+  .float-wa-label {
+    background: #fff;
+    color: #333;
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 7px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  /* WhatsApp popup */
+  .wa-popup {
+    position: fixed;
+    bottom: 90px;
+    right: 16px;
+    width: 320px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 48px rgba(0,0,0,0.22);
+    z-index: 9996;
+    overflow: hidden;
+    display: none;
+    animation: waPop 0.35s cubic-bezier(0.34,1.56,0.64,1) both;
+  }
+  .wa-popup.open { display: block; }
+  @keyframes waPop {
+    from { opacity:0; transform: scale(0.85) translateY(20px); }
+    to   { opacity:1; transform: scale(1) translateY(0); }
+  }
+
+  /* Popup header */
+  .wa-popup-header {
+    background: #25a244;
+    padding: 20px 20px 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .wa-popup-header svg { flex-shrink: 0; margin-top: 2px; }
+  .wa-popup-header h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 4px;
+  }
+  .wa-popup-header p {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.88);
+    margin: 0;
+    line-height: 1.5;
+  }
+  .wa-popup-header strong { color: #fff; }
+
+  /* Popup body */
+  .wa-popup-body {
+    padding: 14px 16px 8px;
+  }
+  .wa-popup-note {
+    font-size: 0.78rem;
+    color: #888;
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+
+  /* Branch rows */
+  .wa-branch-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 12px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: background 0.2s;
+    border-left: 3px solid #25D366;
+  }
+  .wa-branch-row:hover { background: #e8f5e9; }
+  .wa-branch-icon {
+    width: 44px;
+    height: 44px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .wa-branch-icon svg { width: 24px; height: 24px; }
+  .wa-branch-info { flex: 1; }
+  .wa-branch-info strong {
+    display: block;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 2px;
+  }
+  .wa-branch-info span {
+    font-size: 0.78rem;
+    color: #666;
+  }
+  .wa-branch-wa svg { width: 22px; height: 22px; }
+
+  /* Close button */
+  .wa-popup-close {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    background: #25D366;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(37,211,102,0.40);
+    transition: transform 0.2s;
+  }
+  .wa-popup-close:hover { transform: scale(1.1); }
+
+  @media(max-width:480px){
+    .wa-popup { width: calc(100vw - 24px); right: 12px; bottom: 80px; }
+    .float-wa-label { display: none; }
+  }
+</style>
+
+<!-- Floating buttons HTML -->
+<a href="https://www.vayalarikam.com/" target="_blank" rel="noopener" class="float-branch-btn" title="Our Branch - Vayalarikath Ayurveda">
+  <span class="fb-icon">
+    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+      <ellipse cx="20" cy="28" rx="14" ry="5" fill="#8dc26f" opacity="0.3"/>
+      <path d="M10 22 Q10 14 20 12 Q30 14 30 22 Q30 28 20 30 Q10 28 10 22Z" fill="#6aaa4a"/>
+      <path d="M14 18 Q20 14 26 18" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M12 22 Q20 17 28 22" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <rect x="18" y="8" width="4" height="8" rx="2" fill="#4a6741"/>
+      <circle cx="20" cy="7" r="3" fill="#8dc26f"/>
+    </svg>
+  </span>
+  <span class="fb-text">Our Branch</span>
+</a>
+<div class="float-btns">
+  <!-- WhatsApp -->
+  <div class="float-wa-wrap">
+    <span class="float-wa-label">Need Help? Chat with us</span>
+    <button class="float-wa-btn" id="waFloatBtn" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 2C8.268 2 2 8.268 2 16c0 2.478.676 4.8 1.854 6.79L2 30l7.41-1.822A13.94 13.94 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z" fill="#fff"/>
+        <path d="M22.5 19.5c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z" fill="#25a244"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<!-- WhatsApp Popup -->
+<div class="wa-popup" id="waPopup">
+  <!-- Header -->
+  <div class="wa-popup-header">
+    <svg viewBox="0 0 32 32" fill="none" width="40" height="40">
+      <path d="M16 2C8.268 2 2 8.268 2 16c0 2.478.676 4.8 1.854 6.79L2 30l7.41-1.822A13.94 13.94 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z" fill="rgba(255,255,255,0.25)"/>
+      <path d="M22.5 19.5c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z" fill="#fff"/>
+    </svg>
+    <div>
+      <h3>Start a Conversation</h3>
+      <p>Hi! Click one of our branch below to chat on <strong>WhatsApp</strong></p>
+    </div>
+  </div>
+  <!-- Body -->
+  <div class="wa-popup-body">
+    <p class="wa-popup-note">The team typically replies in a few minutes.</p>
+    <!-- Dubai -->
+    <a href="https://wa.me/971544630447?text=Hello%20Shanthi%20Wellness%20Dubai%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener" class="wa-branch-row">
+      <div class="wa-branch-icon">
+        <svg viewBox="0 0 32 32" fill="none"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.478.676 4.8 1.854 6.79L2 30l7.41-1.822A13.94 13.94 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z" fill="#fff"/><path d="M22.5 19.5c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z" fill="#25a244"/></svg>
+      </div>
+      <div class="wa-branch-info">
+        <strong>Dubai Branch</strong>
+        <span>+971 54 463 0447</span>
+      </div>
+      <div class="wa-branch-wa">
+        <svg viewBox="0 0 32 32" fill="none"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.478.676 4.8 1.854 6.79L2 30l7.41-1.822A13.94 13.94 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z" fill="#25D366"/><path d="M22.5 19.5c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z" fill="#fff"/></svg>
+      </div>
+    </a>
+    <!-- Sharjah -->
+    <a href="https://wa.me/971528434127?text=Hello%20Shanthi%20Wellness%20Sharjah%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener" class="wa-branch-row">
+      <div class="wa-branch-icon">
+        <svg viewBox="0 0 32 32" fill="none"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.478.676 4.8 1.854 6.79L2 30l7.41-1.822A13.94 13.94 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z" fill="#fff"/><path d="M22.5 19.5c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z" fill="#25a244"/></svg>
+      </div>
+      <div class="wa-branch-info">
+        <strong>Sharjah Branch</strong>
+        <span>+971 52 843 4127</span>
+      </div>
+      <div class="wa-branch-wa">
+        <svg viewBox="0 0 32 32" fill="none"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.478.676 4.8 1.854 6.79L2 30l7.41-1.822A13.94 13.94 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z" fill="#25D366"/><path d="M22.5 19.5c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z" fill="#fff"/></svg>
+      </div>
+    </a>
+    <div style="height:48px"></div><!-- space for close btn -->
+  </div>
+  <!-- Close -->
+  <button class="wa-popup-close" id="waPopupClose" aria-label="Close">✕</button>
+</div>
+
+<script>
+(function(){
+  var btn   = document.getElementById('waFloatBtn');
+  var popup = document.getElementById('waPopup');
+  var close = document.getElementById('waPopupClose');
+  if(!btn||!popup) return;
+
+  btn.addEventListener('click', function(e){
+    e.stopPropagation();
+    popup.classList.toggle('open');
+  });
+  if(close) close.addEventListener('click', function(){
+    popup.classList.remove('open');
+  });
+  document.addEventListener('click', function(e){
+    if(!popup.contains(e.target) && e.target !== btn){
+      popup.classList.remove('open');
+    }
+  });
+})();
+</script>
 </body>
 </html>
 
