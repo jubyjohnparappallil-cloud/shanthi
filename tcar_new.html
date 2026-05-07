@@ -1,0 +1,175 @@
+<!-- ════ TREATMENTS CAROUSEL ════ -->
+<div class="tcar-section-wrap" id="services">
+
+  <!-- Three.js warm golden particle animation background -->
+  <canvas id="tcar-canvas"></canvas>
+  <div class="tcar-bg-vignette"></div>
+
+  <!-- Content -->
+  <div class="tcar-content">
+    <div style="text-align:center;" class="reveal">
+      <span class="eyebrow" style="color:rgba(141,194,111,0.95);">Classical Therapies</span>
+      <h2 class="section-title" style="color:#fff;text-shadow:0 4px 24px rgba(0,0,0,0.6);">Our <em style="color:#c89a4a;">Treatments</em></h2>
+      <div class="gold-line" style="margin:0 auto 40px;"></div>
+    </div>
+
+    <div class="tcar-wrap">
+      <button class="tcar-arrow tcar-prev" id="tcarPrev" aria-label="Previous">&#8592;</button>
+      <div class="tcar-viewport">
+        <div class="tcar-track" id="tcarTrack">
+
+          <div class="tcar-card">
+            <div class="tcar-img"><img src="Dhara.jpg" alt="Shirodhara"/>
+              <div class="tcar-hover"><p class="tcar-hover-text">A continuous stream of warm medicated oil poured over the forehead — deeply calming for the nervous system, stress, and insomnia.</p><a href="#appointment" class="tcar-hover-btn">Book Now</a></div>
+            </div>
+            <div class="tcar-body"><h3 class="tcar-title">Shirodhara</h3><span class="tcar-tag">Ayurveda</span></div>
+          </div>
+
+          <div class="tcar-card">
+            <div class="tcar-img"><img src="ritual3.jpg" alt="Panchakarma"/>
+              <div class="tcar-hover"><p class="tcar-hover-text">The classical five-fold purification therapy — comprehensive detoxification and rejuvenation over 7-21 days.</p><a href="#appointment" class="tcar-hover-btn">Book Now</a></div>
+            </div>
+            <div class="tcar-body"><h3 class="tcar-title">Panchakarma</h3><span class="tcar-tag">Detox</span></div>
+          </div>
+
+          <div class="tcar-card">
+            <div class="tcar-img"><img src="kizhi.jpg" alt="Kizhi"/>
+              <div class="tcar-hover"><p class="tcar-hover-text">Herbal pouch massage using warm bundles of medicinal herbs — effective for arthritis, muscle pain, and joint stiffness.</p><a href="#appointment" class="tcar-hover-btn">Book Now</a></div>
+            </div>
+            <div class="tcar-body"><h3 class="tcar-title">Kizhi</h3><span class="tcar-tag">Massage</span></div>
+          </div>
+
+          <div class="tcar-card">
+            <div class="tcar-img"><img src="pizhichil.jpg" alt="Pizhichil"/>
+              <div class="tcar-hover"><p class="tcar-hover-text">Lukewarm medicated oil poured over the body — the king of Kerala therapies for paralysis, spondylosis, and neurological conditions.</p><a href="#appointment" class="tcar-hover-btn">Book Now</a></div>
+            </div>
+            <div class="tcar-body"><h3 class="tcar-title">Pizhichil</h3><span class="tcar-tag">Kerala Special</span></div>
+          </div>
+
+          <div class="tcar-card">
+            <div class="tcar-img"><img src="Nasyam.jpg" alt="Nasyam"/>
+              <div class="tcar-hover"><p class="tcar-hover-text">Nasal administration of medicated oils — highly effective for sinusitis, migraines, and neurological disorders.</p><a href="#appointment" class="tcar-hover-btn">Book Now</a></div>
+            </div>
+            <div class="tcar-body"><h3 class="tcar-title">Nasyam</h3><span class="tcar-tag">Nasal Therapy</span></div>
+          </div>
+
+          <div class="tcar-card">
+            <div class="tcar-img"><img src="ritual4.jpg" alt="Abhyanga"/>
+              <div class="tcar-hover"><p class="tcar-hover-text">Full body warm oil massage by two therapists in synchrony — nourishes tissues, improves circulation, and induces deep relaxation.</p><a href="#appointment" class="tcar-hover-btn">Book Now</a></div>
+            </div>
+            <div class="tcar-body"><h3 class="tcar-title">Abhyanga</h3><span class="tcar-tag">Massage</span></div>
+          </div>
+
+          <div class="tcar-card">
+            <div class="tcar-img"><img src="mudra.jpg" alt="Yoga"/>
+              <div class="tcar-hover"><p class="tcar-hover-text">Guided yoga and meditation sessions tailored to your dosha — restoring mental clarity, flexibility, and inner peace.</p><a href="#appointment" class="tcar-hover-btn">Book Now</a></div>
+            </div>
+            <div class="tcar-body"><h3 class="tcar-title">Yoga &amp; Meditation</h3><span class="tcar-tag">Wellness</span></div>
+          </div>
+
+          <div class="tcar-card">
+            <div class="tcar-img"><img src="shirovasthi.jpg" alt="Shirovasthi"/>
+              <div class="tcar-hover"><p class="tcar-hover-text">Medicated oil retained on the head — highly effective for facial paralysis, insomnia, and neurological conditions.</p><a href="#appointment" class="tcar-hover-btn">Book Now</a></div>
+            </div>
+            <div class="tcar-body"><h3 class="tcar-title">Shirovasthi</h3><span class="tcar-tag">Head Therapy</span></div>
+          </div>
+
+        </div>
+      </div>
+      <button class="tcar-arrow tcar-next" id="tcarNext" aria-label="Next">&#8594;</button>
+    </div>
+    <div class="tcar-dots" id="tcarDots"></div>
+  </div>
+</div>
+
+<style>
+.tcar-section-wrap{position:relative;width:100%;overflow:hidden;background:#0a1208;border-top:56px solid #060e04;border-bottom:56px solid #060e04;}
+#tcar-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;display:block;}
+.tcar-bg-vignette{position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse 90% 80% at 50% 50%,transparent 30%,rgba(4,10,3,0.65) 100%);pointer-events:none;}
+.tcar-content{position:relative;z-index:2;padding:52px 40px 48px;width:100%;}
+.tcar-wrap{display:flex;align-items:center;gap:14px;width:100%;}
+.tcar-arrow{flex-shrink:0;width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(255,255,255,0.35);background:rgba(255,255,255,0.07);backdrop-filter:blur(8px);color:#fff;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .25s ease;z-index:2;}
+.tcar-arrow:hover{background:var(--green);border-color:var(--green);transform:scale(1.1);}
+.tcar-arrow:disabled{opacity:.2;cursor:default;transform:none;}
+.tcar-viewport{overflow:hidden;flex:1;}
+.tcar-track{display:flex;gap:16px;transition:transform .55s cubic-bezier(.4,0,.2,1);will-change:transform;}
+.tcar-card{flex:0 0 calc((100% - 32px) / 3);background:#111a0e;border-radius:12px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.07);transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .35s ease,border-color .3s ease;}
+.tcar-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,.6);border-color:rgba(107,140,62,.4);}
+.tcar-img{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;}
+.tcar-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;}
+.tcar-card:hover .tcar-img img{transform:scale(1.06);}
+.tcar-hover{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,14,4,.97) 0%,rgba(6,14,4,.82) 50%,rgba(6,14,4,.35) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:18px 16px;transform:translateY(100%);transition:transform .4s cubic-bezier(.4,0,.2,1);}
+.tcar-card:hover .tcar-hover{transform:translateY(0);}
+.tcar-hover-text{font-family:'Lato',sans-serif;font-size:.82rem;line-height:1.6;color:rgba(255,255,255,.82);margin-bottom:12px;}
+.tcar-hover-btn{display:inline-block;font-family:'Raleway',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--green);padding:7px 16px;border-radius:30px;text-decoration:none;transition:background .2s;}
+.tcar-hover-btn:hover{background:#4e6a2a;}
+.tcar-body{padding:12px 14px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;background:#111a0e;}
+.tcar-title{font-family:'Cinzel',serif;font-size:.82rem;font-weight:700;color:rgba(255,255,255,.9);letter-spacing:.04em;text-transform:uppercase;}
+.tcar-tag{font-family:'Raleway',sans-serif;font-size:.55rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--green2);background:rgba(107,140,62,.15);border:1px solid rgba(107,140,62,.3);padding:3px 9px;border-radius:20px;white-space:nowrap;flex-shrink:0;}
+.tcar-dots{display:flex;justify-content:center;gap:8px;margin-top:22px;}
+.tcar-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);border:none;cursor:pointer;transition:all .25s ease;padding:0;}
+.tcar-dot.active{background:rgba(141,194,111,.9);width:22px;border-radius:4px;}
+@media(max-width:900px){.tcar-card{flex:0 0 calc((100% - 16px) / 2);}.tcar-content{padding:36px 20px 32px;}.tcar-section-wrap{border-top-width:36px;border-bottom-width:36px;}}
+@media(max-width:560px){.tcar-card{flex:0 0 88%;}.tcar-arrow{width:34px;height:34px;font-size:.9rem;}.tcar-content{padding:28px 12px 24px;}.tcar-section-wrap{border-top-width:24px;border-bottom-width:24px;}}
+</style>
+
+<script>
+(function(){
+  if(typeof THREE==='undefined')return;
+  var canvas=document.getElementById('tcar-canvas');
+  if(!canvas)return;
+  var wrap=canvas.parentElement;
+  var W=wrap.offsetWidth||window.innerWidth;
+  var H=wrap.offsetHeight||500;
+  var renderer=new THREE.WebGLRenderer({canvas:canvas,alpha:true,antialias:false});
+  renderer.setSize(W,H);renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));renderer.setClearColor(0x000000,0);
+  var scene=new THREE.Scene();
+  var camera=new THREE.PerspectiveCamera(60,W/H,0.1,1000);
+  camera.position.z=5;
+  var COUNT=160;
+  var positions=new Float32Array(COUNT*3);
+  var velocities=[];
+  var colors=new Float32Array(COUNT*3);
+  var palette=[new THREE.Color(0xc89a4a),new THREE.Color(0xe8b86d),new THREE.Color(0xd4a855),new THREE.Color(0xffd080),new THREE.Color(0xa07830)];
+  for(var i=0;i<COUNT;i++){
+    positions[i*3]=(Math.random()-.5)*14;
+    positions[i*3+1]=(Math.random()-.5)*8;
+    positions[i*3+2]=(Math.random()-.5)*3;
+    velocities.push({x:(Math.random()-.5)*.004,y:.003+Math.random()*.005});
+    var c=palette[Math.floor(Math.random()*palette.length)];
+    colors[i*3]=c.r;colors[i*3+1]=c.g;colors[i*3+2]=c.b;
+  }
+  var geo=new THREE.BufferGeometry();
+  geo.setAttribute('position',new THREE.BufferAttribute(positions,3));
+  geo.setAttribute('color',new THREE.BufferAttribute(colors,3));
+  var mat=new THREE.PointsMaterial({size:.06,vertexColors:true,transparent:true,opacity:.65,sizeAttenuation:true,blending:THREE.AdditiveBlending,depthWrite:false});
+  scene.add(new THREE.Points(geo,mat));
+  function animate(){
+    requestAnimationFrame(animate);
+    var pos=geo.attributes.position.array;
+    for(var i=0;i<COUNT;i++){pos[i*3]+=velocities[i].x;pos[i*3+1]+=velocities[i].y;if(pos[i*3+1]>4.5){pos[i*3+1]=-4.5;pos[i*3]=(Math.random()-.5)*14;}}
+    geo.attributes.position.needsUpdate=true;
+    renderer.render(scene,camera);
+  }
+  animate();
+  window.addEventListener('resize',function(){W=wrap.offsetWidth||window.innerWidth;H=wrap.offsetHeight||500;camera.aspect=W/H;camera.updateProjectionMatrix();renderer.setSize(W,H);});
+})();
+(function(){
+  var track=document.getElementById('tcarTrack');
+  var prevBtn=document.getElementById('tcarPrev');
+  var nextBtn=document.getElementById('tcarNext');
+  var dotsWrap=document.getElementById('tcarDots');
+  if(!track)return;
+  var cards=track.querySelectorAll('.tcar-card');
+  var total=cards.length;var current=0;
+  function getVisible(){var w=track.parentElement.offsetWidth;if(w<560)return 1;if(w<900)return 2;return 3;}
+  function maxIndex(){return Math.max(0,total-getVisible());}
+  function buildDots(){dotsWrap.innerHTML='';for(var i=0;i<=maxIndex();i++){var d=document.createElement('button');d.className='tcar-dot'+(i===current?' active':'');d.setAttribute('aria-label','Slide '+(i+1));(function(idx){d.addEventListener('click',function(){go(idx);});})(i);dotsWrap.appendChild(d);}}
+  function go(idx){current=Math.max(0,Math.min(idx,maxIndex()));var cardW=cards[0].offsetWidth;track.style.transform='translateX(-'+(current*(cardW+16))+'px)';prevBtn.disabled=current===0;nextBtn.disabled=current>=maxIndex();dotsWrap.querySelectorAll('.tcar-dot').forEach(function(d,i){d.classList.toggle('active',i===current);});}
+  prevBtn.addEventListener('click',function(){go(current-1);});
+  nextBtn.addEventListener('click',function(){go(current+1);});
+  buildDots();go(0);
+  window.addEventListener('resize',function(){buildDots();go(Math.min(current,maxIndex()));});
+})();
+</script>
+

@@ -1,0 +1,474 @@
+<!-- ADD THIS TO THE <HEAD> SECTION AFTER OTHER SCRIPTS -->
+<style>
+/* ═══════════════════════════════════════════════════════
+   ENHANCED ANIMATIONS & EFFECTS
+═══════════════════════════════════════════════════════ */
+
+/* ── FLOATING PARTICLES IN HERO ── */
+#particles-js {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ── GRADIENT TEXT ANIMATION ── */
+.gradient-text {
+  background: linear-gradient(135deg, #6B8C3E 0%, #8dc26f 50%, #6B8C3E 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ── MAGNETIC BUTTON EFFECT ── */
+.magnetic-btn {
+  position: relative;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── PARALLAX SECTIONS ── */
+.parallax-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-bg {
+  position: absolute;
+  inset: -10%;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+}
+
+/* ── REVEAL ANIMATIONS ── */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-scale.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── STAGGER CHILDREN ── */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.stagger-children.active > *:nth-child(1) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+.stagger-children.active > *:nth-child(2) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+.stagger-children.active > *:nth-child(3) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+.stagger-children.active > *:nth-child(4) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
+.stagger-children.active > *:nth-child(5) { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
+.stagger-children.active > *:nth-child(6) { transition-delay: 0.6s; opacity: 1; transform: translateY(0); }
+
+/* ── GLOW EFFECT ON HOVER ── */
+.glow-on-hover {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.glow-on-hover::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  background: linear-gradient(135deg, #6B8C3E, #8dc26f);
+  border-radius: inherit;
+  opacity: 0;
+  filter: blur(20px);
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.glow-on-hover:hover::before {
+  opacity: 0.6;
+}
+
+/* ── FLOATING ANIMATION ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.float-element {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ── PULSE ANIMATION ── */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+.pulse-element {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+/* ── SHIMMER EFFECT ── */
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* ── SECTION TRANSITIONS ── */
+section {
+  position: relative;
+  z-index: 1;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #6B8C3E, transparent);
+  opacity: 0.3;
+}
+
+/* ── SMOOTH SCROLL INDICATOR ── */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #6B8C3E, #8dc26f);
+  z-index: 99999;
+  transition: width 0.1s ease;
+}
+
+/* ── IMAGE ZOOM ON HOVER ── */
+.zoom-img {
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.zoom-img img {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.zoom-img:hover img {
+  transform: scale(1.08);
+}
+
+/* ── CARD LIFT EFFECT ── */
+.lift-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lift-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(107,140,62,0.25);
+}
+
+/* ── TYPING CURSOR ── */
+.typing-cursor::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+  margin-left: 4px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ── BACKGROUND PATTERNS ── */
+.pattern-dots {
+  background-image: radial-gradient(circle, rgba(107,140,62,0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.pattern-grid {
+  background-image: 
+    linear-gradient(rgba(107,140,62,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(107,140,62,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ── COUNTER ANIMATION ── */
+.counter {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── RIPPLE EFFECT ── */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.ripple:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* ── SECTION SPACING ── */
+.section-pad {
+  padding: 100px 0;
+}
+
+@media (max-width: 768px) {
+  .section-pad {
+    padding: 60px 0;
+  }
+}
+
+/* ── ENHANCED HERO STATS ── */
+.prem-stats {
+  backdrop-filter: blur(20px) !important;
+}
+
+.prem-stat {
+  position: relative;
+}
+
+.prem-stat::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: #6B8C3E;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.prem-stat:hover::before {
+  opacity: 1;
+}
+
+/* ── ENHANCED BUTTONS ── */
+.prem-btn, .atm-card-overlay-btn, .fpb-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.prem-btn::before, .atm-card-overlay-btn::before, .fpb-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s, height 0.5s;
+}
+
+.prem-btn:hover::before, .atm-card-overlay-btn:hover::before, .fpb-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+</style>
+
+<!-- ADD THIS SCRIPT BEFORE CLOSING </BODY> TAG -->
+<script>
+(function() {
+  'use strict';
+
+  /* ═══ PARTICLES.JS IN HERO ═══ */
+  if (typeof particlesJS !== 'undefined') {
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 60, density: { enable: true, value_area: 800 } },
+        color: { value: '#8dc26f' },
+        shape: { type: 'circle' },
+        opacity: { value: 0.3, random: true },
+        size: { value: 3, random: true },
+        line_linked: { enable: true, distance: 150, color: '#6B8C3E', opacity: 0.2, width: 1 },
+        move: { enable: true, speed: 1, direction: 'none', random: true, out_mode: 'out' }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: { onhover: { enable: true, mode: 'grab' }, resize: true },
+        modes: { grab: { distance: 140, line_linked: { opacity: 0.5 } } }
+      }
+    });
+  }
+
+  /* ═══ SCROLL PROGRESS BAR ═══ */
+  var progressBar = document.createElement('div');
+  progressBar.className = 'scroll-progress';
+  document.body.appendChild(progressBar);
+
+  window.addEventListener('scroll', function() {
+    var winScroll = document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    progressBar.style.width = scrolled + '%';
+  });
+
+  /* ═══ REVEAL ON SCROLL ═══ */
+  var revealElements = document.querySelectorAll('.reveal-up, .reveal-scale, .reveal-left, .reveal-right, .stagger-children');
+  
+  var revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealElements.forEach(function(el) {
+    revealObserver.observe(el);
+  });
+
+  /* ═══ PARALLAX SCROLL ═══ */
+  var parallaxBgs = document.querySelectorAll('.parallax-bg');
+  
+  window.addEventListener('scroll', function() {
+    var scrolled = window.pageYOffset;
+    parallaxBgs.forEach(function(bg) {
+      var speed = bg.dataset.speed || 0.5;
+      bg.style.transform = 'translateY(' + (scrolled * speed) + 'px)';
+    });
+  });
+
+  /* ═══ MAGNETIC BUTTONS ═══ */
+  var magneticBtns = document.querySelectorAll('.magnetic-btn, .prem-btn, .atm-arrow, .fpb-btn');
+  
+  magneticBtns.forEach(function(btn) {
+    btn.addEventListener('mousemove', function(e) {
+      var rect = btn.getBoundingClientRect();
+      var x = e.clientX - rect.left - rect.width / 2;
+      var y = e.clientY - rect.top - rect.height / 2;
+      btn.style.transform = 'translate(' + (x * 0.3) + 'px, ' + (y * 0.3) + 'px)';
+    });
+    
+    btn.addEventListener('mouseleave', function() {
+      btn.style.transform = 'translate(0, 0)';
+    });
+  });
+
+  /* ═══ COUNTER ANIMATION ═══ */
+  var counters = document.querySelectorAll('.counter, .prem-stat-num, .stat-num, .fpb-num');
+  
+  var counterObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+        entry.target.classList.add('counted');
+        var target = parseInt(entry.target.textContent.replace(/[^0-9]/g, ''));
+        var current = 0;
+        var increment = target / 60;
+        var suffix = entry.target.textContent.replace(/[0-9]/g, '');
+        
+        var timer = setInterval(function() {
+          current += increment;
+          if (current >= target) {
+            entry.target.textContent = target + suffix;
+            clearInterval(timer);
+          } else {
+            entry.target.textContent = Math.floor(current) + suffix;
+          }
+        }, 30);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(function(counter) {
+    counterObserver.observe(counter);
+  });
+
+  /* ═══ SMOOTH ANCHOR LINKS ═══ */
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      var href = this.getAttribute('href');
+      if (href === '#') return;
+      e.preventDefault();
+      var target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  /* ═══ ADD PARTICLES CONTAINER TO HERO ═══ */
+  var hero = document.querySelector('.prem-hero');
+  if (hero && !document.getElementById('particles-js')) {
+    var particlesDiv = document.createElement('div');
+    particlesDiv.id = 'particles-js';
+    hero.insertBefore(particlesDiv, hero.firstChild);
+  }
+
+  console.log('✨ Enhanced animations loaded');
+})();
+</script>

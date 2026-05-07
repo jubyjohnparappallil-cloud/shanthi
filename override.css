@@ -1,0 +1,1376 @@
+﻿/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   OVERRIDE.CSS â€” Clean final rules, loaded LAST
+   This file wins over everything in styles.css
+   Keep this file small and focused
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+
+/* â”€â”€ FONTS â”€â”€ */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600;700;800&family=Lato:wght@300;400;700&display=swap');
+
+/* â”€â”€ BODY â”€â”€ */
+body {
+  font-family: 'Lato', sans-serif !important;
+  background: #ffffff !important;
+  color: #2c2c2c !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/* â”€â”€ HEADINGS â”€â”€ */
+h1, h2, h3, h4, h5, h6,
+.section-heading,
+.pg-section-title,
+.page-hero-title,
+.prem-heading,
+.team-card-name,
+.package-name,
+.treatment-card-title,
+.tmc-title,
+.footer-col-title,
+.cc-info h3,
+.value-title,
+.timeline-title,
+.why-heading {
+  font-family: 'Cinzel', 'Cormorant Garamond', serif !important;
+}
+
+/* â”€â”€ NAVBAR â”€â”€ */
+.navbar {
+  position: fixed !important;
+  top: 0 !important; left: 0 !important; right: 0 !important;
+  z-index: 9999 !important;
+  background: rgba(255,255,255,0.97) !important;
+  backdrop-filter: blur(16px) !important;
+  box-shadow: 0 2px 20px rgba(107,140,62,0.10) !important;
+}
+.navbar-topbar {
+  background: #4a6741 !important;
+}
+.navbar-topbar .navbar-phone,
+.navbar-topbar .navbar-phone svg path {
+  color: rgba(255,255,255,0.90) !important;
+  stroke: rgba(255,255,255,0.80) !important;
+}
+.navbar-main {
+  background: #ffffff !important;
+  border-bottom: 3px solid #6B8C3E !important;
+  border-image: none !important;
+  background-image: none !important;
+  animation: none !important;
+}
+.navbar-appt-btn {
+  background: #8B4513 !important;
+  color: #fff !important;
+}
+.navbar-appt-btn:hover { background: #6d3410 !important; }
+
+/* â”€â”€ BODY PADDING â”€â”€ */
+body { padding-top: 130px !important; }
+@media(max-width:768px) { body { padding-top: 100px !important; } }
+@media(max-width:480px) { body { padding-top: 72px !important; } }
+
+/* â”€â”€ PREMIUM HERO â”€â”€ */
+.prem-hero {
+  position: relative !important;
+  width: 100% !important;
+  height: 100vh !important;
+  min-height: 600px !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+.prem-hero-bg {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+}
+.prem-hero-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+.prem-hero-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(135deg, rgba(10,20,8,0.75) 0%, rgba(20,40,15,0.55) 50%, rgba(10,20,8,0.70) 100%) !important;
+  z-index: 1 !important;
+}
+.prem-hero-overlay-bottom {
+  position: absolute !important;
+  bottom: 0 !important; left: 0 !important; right: 0 !important;
+  height: 200px !important;
+  background: linear-gradient(to top, rgba(46,66,40,0.60) 0%, transparent 100%) !important;
+  z-index: 2 !important;
+}
+.prem-hero-content {
+  position: relative !important;
+  z-index: 10 !important;
+  text-align: center !important;
+  max-width: 860px !important;
+  padding: 0 32px !important;
+  margin: 0 auto !important;
+}
+.prem-eyebrow {
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.32em !important;
+  text-transform: uppercase !important;
+  color: #8dc26f !important;
+  margin-bottom: 20px !important;
+  display: block !important;
+}
+.prem-heading {
+  font-family: 'Cinzel', serif !important;
+  font-size: clamp(2.2rem, 5.5vw, 4.5rem) !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  line-height: 1.2 !important;
+  margin-bottom: 24px !important;
+  text-shadow: 0 4px 32px rgba(0,0,0,0.50) !important;
+}
+.prem-line { display: block !important; }
+.prem-line-em { font-style: italic !important; color: #8dc26f !important; }
+.prem-sub {
+  font-family: 'Lato', sans-serif !important;
+  font-size: clamp(0.9rem, 1.8vw, 1.05rem) !important;
+  color: rgba(255,255,255,0.82) !important;
+  line-height: 1.85 !important;
+  margin-bottom: 36px !important;
+  max-width: 640px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.prem-ctas {
+  display: flex !important;
+  gap: 16px !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 32px !important;
+}
+.prem-btn {
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  padding: 14px 36px !important;
+  border-radius: 50px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  transition: all 0.3s ease !important;
+}
+.prem-btn-primary {
+  background: #6B8C3E !important;
+  color: #fff !important;
+  box-shadow: 0 8px 32px rgba(107,140,62,0.40) !important;
+}
+.prem-btn-primary:hover {
+  background: #4e6a2a !important;
+  transform: translateY(-3px) !important;
+}
+.prem-btn-outline {
+  background: rgba(255,255,255,0.12) !important;
+  color: #fff !important;
+  border: 1.5px solid rgba(255,255,255,0.45) !important;
+  backdrop-filter: blur(8px) !important;
+}
+.prem-btn-outline:hover {
+  background: rgba(255,255,255,0.22) !important;
+  transform: translateY(-3px) !important;
+}
+.prem-pills {
+  display: flex !important;
+  gap: 12px !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+}
+.prem-pill {
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  color: rgba(255,255,255,0.85) !important;
+  background: rgba(107,140,62,0.22) !important;
+  border: 1px solid rgba(107,140,62,0.45) !important;
+  border-radius: 50px !important;
+  padding: 6px 16px !important;
+  backdrop-filter: blur(6px) !important;
+}
+.prem-scroll {
+  position: absolute !important;
+  bottom: 100px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 10 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+.prem-scroll span {
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 0.60rem !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  color: rgba(255,255,255,0.55) !important;
+}
+.prem-scroll-line {
+  width: 1px !important;
+  height: 48px !important;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.60), transparent) !important;
+  animation: scrollPulseO 2s ease-in-out infinite !important;
+}
+@keyframes scrollPulseO {
+  0%,100% { opacity:0.4; transform:scaleY(1); }
+  50%      { opacity:1;   transform:scaleY(1.2); }
+}
+.prem-stats {
+  position: absolute !important;
+  bottom: 0 !important; left: 0 !important; right: 0 !important;
+  z-index: 10 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(10,20,8,0.65) !important;
+  backdrop-filter: blur(16px) !important;
+  border-top: 1px solid rgba(107,140,62,0.25) !important;
+  padding: 20px 32px !important;
+}
+.prem-stat {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  padding: 0 40px !important;
+}
+.prem-stat-num {
+  font-family: 'Cinzel', serif !important;
+  font-size: 1.6rem !important;
+  font-weight: 700 !important;
+  color: #8dc26f !important;
+  line-height: 1 !important;
+  margin-bottom: 4px !important;
+}
+.prem-stat-lbl {
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 0.60rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: rgba(255,255,255,0.60) !important;
+}
+.prem-stat-div {
+  width: 1px !important;
+  height: 40px !important;
+  background: rgba(107,140,62,0.30) !important;
+}
+
+/* â”€â”€ ABOUT STACKED PHOTOS â”€â”€ */
+.about-stack-wrap {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 460px !important;
+  padding-bottom: 80px !important;
+  padding-right: 70px !important;
+}
+.about-stack-bg {
+  position: absolute !important;
+  top: 20px !important; left: 20px !important;
+  right: 0 !important; bottom: 0 !important;
+  background: #f5f0e8 !important;
+  border-radius: 20px !important;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.06) !important;
+  z-index: 0 !important;
+}
+.about-stack-main {
+  position: relative !important;
+  z-index: 2 !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.18) !important;
+  width: calc(100% - 60px) !important;
+  aspect-ratio: 3/4 !important;
+}
+.about-stack-main img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  display: block !important;
+  transition: transform 0.8s ease !important;
+}
+.about-stack-main:hover img { transform: scale(1.05) !important; }
+.about-stack-small {
+  position: absolute !important;
+  bottom: 0 !important; right: 0 !important;
+  width: 58% !important;
+  aspect-ratio: 4/3 !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  border: 4px solid #ffffff !important;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.22) !important;
+  z-index: 4 !important;
+  transition: transform 0.5s ease !important;
+}
+.about-stack-small:hover { transform: scale(1.04) translateY(-4px) !important; }
+.about-stack-small img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+.about-stack-badge {
+  position: absolute !important;
+  top: 24px !important; right: 0 !important;
+  z-index: 5 !important;
+  background: rgba(196,168,130,0.92) !important;
+  backdrop-filter: blur(8px) !important;
+  border-radius: 14px !important;
+  padding: 18px 20px !important;
+  text-align: center !important;
+  box-shadow: 0 8px 28px rgba(196,168,130,0.40) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 4px !important;
+  min-width: 90px !important;
+  animation: badgeFloatO 3s ease-in-out infinite !important;
+}
+@keyframes badgeFloatO {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+.about-stack-num {
+  font-family: 'Cinzel', serif !important;
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  line-height: 1 !important;
+  display: block !important;
+}
+.about-stack-lbl {
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 0.60rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: rgba(255,255,255,0.90) !important;
+  line-height: 1.4 !important;
+  display: block !important;
+}
+
+/* â”€â”€ SECTION EYEBROWS â”€â”€ */
+.section-eyebrow,
+.pg-section-eyebrow {
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.28em !important;
+  text-transform: uppercase !important;
+  color: #6B8C3E !important;
+}
+
+/* â”€â”€ SECTION HEADINGS â”€â”€ */
+.section-heading {
+  font-family: 'Cinzel', serif !important;
+  color: #1a2a0a !important;
+}
+.section-heading em,
+.pg-section-title em {
+  font-style: italic !important;
+  color: #6B8C3E !important;
+  -webkit-text-fill-color: #6B8C3E !important;
+  background: none !important;
+  animation: none !important;
+}
+
+/* â”€â”€ GOLD DIVIDERS â”€â”€ */
+.gold-divider, .gold-line {
+  background: #6B8C3E !important;
+  height: 3px !important;
+  border-radius: 2px !important;
+}
+
+/* â”€â”€ BUTTONS â”€â”€ */
+.btn-book, .btn.btn-gold, .cc-book-btn,
+.appointment-form button[type="submit"],
+.btn-submit, .sidebar-appt-btn {
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  background: #6B8C3E !important;
+  color: #fff !important;
+  border-radius: 50px !important;
+}
+.btn-book:hover { background: #4e6a2a !important; }
+
+/* â”€â”€ DRAWER â”€â”€ */
+.nav-drawer {
+  position: fixed !important;
+  top: 0 !important; left: -300px !important;
+  width: 280px !important;
+  height: 100vh !important;
+  background: #fff !important;
+  z-index: 999999 !important;
+  transition: left 0.35s cubic-bezier(0.4,0,0.2,1) !important;
+  overflow-y: auto !important;
+  box-shadow: 4px 0 40px rgba(0,0,0,0.15) !important;
+}
+.nav-drawer.open { left: 0 !important; }
+.nav-overlay {
+  display: none !important;
+  position: fixed !important;
+  inset: 0 !important;
+  background: rgba(0,0,0,0.45) !important;
+  z-index: 999998 !important;
+}
+.nav-overlay.open { display: block !important; }
+.nav-drawer-link {
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: #2a1a08 !important;
+  display: block !important;
+  padding: 15px 24px !important;
+  border-bottom: 1px solid #f0e8dc !important;
+  text-decoration: none !important;
+}
+.nav-drawer-link:hover, .nav-drawer-link.active {
+  color: #6B8C3E !important;
+  background: rgba(107,140,62,0.06) !important;
+}
+.nav-drawer-appt {
+  display: block !important;
+  margin: 20px !important;
+  padding: 12px 20px !important;
+  background: #6B8C3E !important;
+  color: #fff !important;
+  border-radius: 50px !important;
+  text-align: center !important;
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+}
+
+/* â”€â”€ FOOTER â”€â”€ */
+.footer { position: relative !important; overflow: hidden !important; }
+.footer::before {
+  content: '' !important;
+  position: absolute !important; inset: 0 !important;
+  background: url('tulsi.jpg') center/cover no-repeat !important;
+  z-index: 0 !important;
+}
+.footer::after {
+  content: '' !important;
+  position: absolute !important; inset: 0 !important;
+  background: rgba(5,10,5,0.88) !important;
+  z-index: 1 !important;
+}
+.footer-top, .footer-bottom {
+  position: relative !important;
+  z-index: 2 !important;
+  background: transparent !important;
+}
+.footer-col-title {
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 0.68rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+  border-bottom: 1px solid rgba(107,140,62,0.30) !important;
+  padding-bottom: 10px !important;
+  margin-bottom: 16px !important;
+}
+.footer-tagline { color: rgba(200,220,190,0.75) !important; }
+.footer-links a { color: rgba(200,220,190,0.72) !important; text-decoration: none !important; }
+.footer-links a:hover { color: #ffffff !important; }
+.footer-contact-list li, .footer-contact-list a {
+  color: rgba(200,220,190,0.72) !important;
+  font-size: 0.84rem !important;
+  text-decoration: none !important;
+}
+.footer-bottom {
+  background: rgba(0,0,0,0.55) !important;
+  border-top: 1px solid rgba(107,140,62,0.20) !important;
+}
+.footer-bottom p { color: rgba(200,220,190,0.55) !important; font-size: 0.78rem !important; }
+
+/* â”€â”€ FLOATING BUTTONS â”€â”€ */
+.float-branch-btn {
+  position: fixed !important;
+  right: 0 !important; left: auto !important;
+  bottom: 200px !important;
+  z-index: 99995 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 44px !important;
+  border-radius: 10px 0 0 10px !important;
+  overflow: hidden !important;
+  box-shadow: -3px 3px 16px rgba(0,0,0,0.22) !important;
+  text-decoration: none !important;
+}
+.float-branch-btn .fb-icon {
+  width: 44px !important; height: 48px !important;
+  background: #ffffff !important;
+  display: flex !important;
+  align-items: center !important; justify-content: center !important;
+}
+.float-branch-btn .fb-text {
+  width: 44px !important;
+  background: linear-gradient(180deg, #6B8C3E, #4e6a2a) !important;
+  color: #fff !important;
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 0.65rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  writing-mode: vertical-rl !important;
+  transform: rotate(180deg) !important;
+  padding: 14px 0 !important;
+  text-align: center !important;
+  min-height: 90px !important;
+  display: flex !important;
+  align-items: center !important; justify-content: center !important;
+}
+.float-btns {
+  position: fixed !important;
+  right: 0 !important; bottom: 120px !important;
+  z-index: 99995 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+  gap: 10px !important;
+}
+.float-wa-btn {
+  width: 52px !important; height: 52px !important;
+  background: #25D366 !important;
+  border-radius: 50% !important;
+  border: none !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important; justify-content: center !important;
+  margin-right: 12px !important;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.45) !important;
+}
+.float-wa-label {
+  background: #fff !important;
+  color: #333 !important;
+  font-size: 0.78rem !important;
+  padding: 7px 12px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12) !important;
+  white-space: nowrap !important;
+  pointer-events: none !important;
+}
+.wa-popup {
+  position: fixed !important;
+  bottom: 90px !important; right: 16px !important;
+  width: 320px !important;
+  background: #fff !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 48px rgba(0,0,0,0.28) !important;
+  z-index: 999999 !important;
+  overflow: hidden !important;
+  display: none !important;
+}
+.wa-popup.open { display: block !important; }
+.wa-popup-header { background: #4a6741 !important; }
+
+/* â”€â”€ SCROLL TO TOP â”€â”€ */
+#scrollTopBtn {
+  position: fixed !important;
+  bottom: 32px !important; right: 32px !important;
+  width: 48px !important; height: 48px !important;
+  background: #6B8C3E !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 50% !important;
+  cursor: pointer !important;
+  font-size: 1.2rem !important;
+  display: flex !important;
+  align-items: center !important; justify-content: center !important;
+  box-shadow: 0 8px 24px rgba(107,140,62,0.40) !important;
+  z-index: 9990 !important;
+  opacity: 0 !important;
+  transform: translateY(20px) !important;
+  transition: all 0.4s cubic-bezier(0.34,1.56,0.64,1) !important;
+}
+#scrollTopBtn.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* â”€â”€ RESPONSIVE â”€â”€ */
+@media(max-width:768px) {
+  body { padding-top: 100px !important; }
+  .prem-hero { height: 85vh !important; }
+  .prem-stat { padding: 0 16px !important; }
+  .prem-stat-num { font-size: 1.2rem !important; }
+  .about-stack-wrap { max-width: 100% !important; padding-bottom: 60px !important; padding-right: 55px !important; }
+  .about-stack-small { width: 52% !important; }
+  .footer-grid { grid-template-columns: 1fr 1fr !important; }
+  .footer-brand { grid-column: span 2 !important; }
+}
+@media(max-width:480px) {
+  body { padding-top: 72px !important; }
+  .navbar-topbar { display: none !important; }
+  .prem-hero { height: 90vh !important; }
+  .prem-heading { font-size: 1.9rem !important; }
+  .prem-ctas { flex-direction: column !important; align-items: center !important; }
+  .prem-stats { padding: 14px 12px !important; }
+  .prem-stat { padding: 0 10px !important; }
+  .prem-stat-div { display: none !important; }
+  .footer-grid { grid-template-columns: 1fr !important; }
+  .footer-brand { grid-column: span 1 !important; }
+  .float-wa-label { display: none !important; }
+}
+
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   CINEMATIC HERO SLIDESHOW
+   Images cycle like a video with Ken Burns + crossfade
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+
+/* Slideshow container */
+.hero-slideshow {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Each slide */
+.hero-slide {
+  position: absolute !important;
+  inset: 0 !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  opacity: 0 !important;
+  transform: scale(1.08) !important;
+  transition: opacity 1.8s cubic-bezier(0.4,0,0.2,1),
+              transform 8s cubic-bezier(0.25,0.46,0.45,0.94) !important;
+  will-change: opacity, transform !important;
+}
+
+/* Active slide â€” visible + Ken Burns zoom */
+.hero-slide.active {
+  opacity: 1 !important;
+  transform: scale(1.0) !important;
+}
+
+/* Exiting slide â€” fade out */
+.hero-slide.exit {
+  opacity: 0 !important;
+  transform: scale(1.05) !important;
+  transition: opacity 1.8s cubic-bezier(0.4,0,0.2,1),
+              transform 1.8s ease !important;
+}
+
+/* Progress bar */
+.hero-progress-bar {
+  position: absolute !important;
+  bottom: 72px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 200px !important;
+  height: 2px !important;
+  background: rgba(255,255,255,0.20) !important;
+  border-radius: 2px !important;
+  z-index: 12 !important;
+  overflow: hidden !important;
+}
+.hero-progress-fill {
+  height: 100% !important;
+  width: 0% !important;
+  background: linear-gradient(90deg, #6B8C3E, #8dc26f) !important;
+  border-radius: 2px !important;
+  transition: width linear !important;
+}
+
+/* Slide dots */
+.hero-dots {
+  position: absolute !important;
+  bottom: 84px !important;
+  right: 40px !important;
+  z-index: 12 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+.hero-dot {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 50% !important;
+  background: rgba(255,255,255,0.35) !important;
+  border: none !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  transition: all 0.3s ease !important;
+}
+.hero-dot.active {
+  background: #8dc26f !important;
+  height: 20px !important;
+  border-radius: 3px !important;
+}
+
+@media(max-width:480px){
+  .hero-dots { display: none !important; }
+  .hero-progress-bar { bottom: 80px !important; width: 140px !important; }
+}
+
+
+/* â”€â”€ Remove dark overlay from hero â€” show video fully clear â”€â”€ */
+.prem-hero-overlay {
+  display: none !important;
+}
+.prem-hero-overlay-bottom {
+  background: linear-gradient(to top, rgba(10,20,8,0.45) 0%, transparent 40%) !important;
+}
+
+/* Text needs shadow to stay readable without dark overlay */
+.prem-heading,
+.prem-eyebrow,
+.prem-sub,
+.prem-pill {
+  text-shadow: 0 2px 16px rgba(0,0,0,0.70) !important;
+}
+.prem-stats {
+  background: rgba(0,0,0,0.40) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   HERO VIDEO â€” FULLY RESPONSIVE
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+
+/* Canvas fills hero perfectly on all screens */
+#heroCanvas {
+  position: absolute !important;
+  top: 0 !important; left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* Hero section â€” full viewport height */
+.prem-hero {
+  position: relative !important;
+  width: 100% !important;
+  height: 100vh !important;
+  min-height: 500px !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Content â€” centered, responsive padding */
+.prem-hero-content {
+  position: relative !important;
+  z-index: 10 !important;
+  text-align: center !important;
+  width: 100% !important;
+  max-width: 900px !important;
+  padding: 0 24px !important;
+  margin: 0 auto !important;
+}
+
+/* Heading */
+.prem-heading {
+  font-size: clamp(1.8rem, 5vw, 4.5rem) !important;
+  line-height: 1.2 !important;
+  margin-bottom: 20px !important;
+}
+
+/* Subtext */
+.prem-sub {
+  font-size: clamp(0.85rem, 1.8vw, 1.05rem) !important;
+  margin-bottom: 28px !important;
+}
+
+/* Buttons */
+.prem-ctas {
+  display: flex !important;
+  gap: 12px !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 24px !important;
+}
+.prem-btn {
+  padding: 12px 28px !important;
+  font-size: 0.75rem !important;
+}
+
+/* Pills */
+.prem-pills {
+  display: flex !important;
+  gap: 8px !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+}
+.prem-pill {
+  font-size: 0.70rem !important;
+  padding: 5px 14px !important;
+}
+
+/* Stats bar */
+.prem-stats {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important; right: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  padding: 14px 20px !important;
+  gap: 0 !important;
+}
+.prem-stat {
+  padding: 0 20px !important;
+  text-align: center !important;
+}
+.prem-stat-num {
+  font-size: 1.4rem !important;
+  display: block !important;
+}
+.prem-stat-lbl {
+  font-size: 0.58rem !important;
+  display: block !important;
+}
+.prem-stat-div {
+  width: 1px !important;
+  height: 32px !important;
+  background: rgba(255,255,255,0.25) !important;
+  flex-shrink: 0 !important;
+}
+
+/* Scroll hint */
+.prem-scroll {
+  position: absolute !important;
+  bottom: 80px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 10 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+/* â”€â”€ TABLET (â‰¤768px) â”€â”€ */
+@media (max-width: 768px) {
+  .prem-hero { height: 80vh !important; min-height: 420px !important; }
+  .prem-heading { font-size: clamp(1.5rem, 6vw, 2.4rem) !important; }
+  .prem-sub { font-size: 0.88rem !important; display: none !important; }
+  .prem-stat { padding: 0 12px !important; }
+  .prem-stat-num { font-size: 1.1rem !important; }
+  .prem-stat-lbl { font-size: 0.52rem !important; }
+  .prem-scroll { bottom: 70px !important; }
+  .prem-ctas { gap: 10px !important; }
+  .prem-btn { padding: 10px 22px !important; font-size: 0.72rem !important; }
+}
+
+/* â”€â”€ MOBILE (â‰¤480px) â”€â”€ */
+@media (max-width: 480px) {
+  .prem-hero { height: 85vh !important; min-height: 380px !important; }
+  .prem-heading { font-size: clamp(1.3rem, 7vw, 2rem) !important; }
+  .prem-eyebrow { font-size: 0.60rem !important; letter-spacing: 0.20em !important; }
+  .prem-ctas { flex-direction: column !important; align-items: center !important; gap: 8px !important; }
+  .prem-btn { width: 200px !important; justify-content: center !important; }
+  .prem-pills { gap: 6px !important; }
+  .prem-pill { font-size: 0.65rem !important; padding: 4px 10px !important; }
+  .prem-stat-div { display: none !important; }
+  .prem-stat { padding: 0 8px !important; }
+  .prem-stat-num { font-size: 1rem !important; }
+  .prem-stat-lbl { font-size: 0.50rem !important; }
+  .prem-scroll { display: none !important; }
+  .prem-stats { padding: 10px 12px !important; gap: 4px !important; }
+}
+
+/* â”€â”€ VERY SMALL (â‰¤360px) â”€â”€ */
+@media (max-width: 360px) {
+  .prem-heading { font-size: 1.3rem !important; }
+  .prem-stats { flex-wrap: wrap !important; gap: 8px !important; }
+  .prem-stat { flex: 1 1 40% !important; }
+}
+
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   CRITICAL RESPONSIVE FIX â€” canvas + hero full width
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+
+/* Prevent horizontal scroll causing width issues */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+}
+
+/* Hero must be exactly viewport width */
+.prem-hero {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  left: 0 !important;
+  right: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Canvas fills hero completely */
+#heroCanvas {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  display: block !important;
+  object-fit: cover !important;
+}
+
+/* Loader also full width */
+#heroLoader {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   THREE.JS ABOUT SECTION â€” WebGL 3D image
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+
+.about-threejs-wrap {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 460px !important;
+  height: 520px !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  box-shadow: 0 24px 64px rgba(107,140,62,0.20), 0 8px 32px rgba(0,0,0,0.15) !important;
+  cursor: crosshair !important;
+  background: #0a1a08 !important;
+}
+
+#aboutThreeCanvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  border-radius: 20px !important;
+}
+
+/* Subtle green glow border */
+.about-threejs-wrap::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  border-radius: 20px !important;
+  border: 1px solid rgba(107,140,62,0.30) !important;
+  pointer-events: none !important;
+  z-index: 5 !important;
+}
+
+@media(max-width:768px){
+  .about-threejs-wrap { height: 380px !important; max-width: 100% !important; }
+}
+@media(max-width:480px){
+  .about-threejs-wrap { height: 300px !important; }
+}
+
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   ABOUT â€” Animated 3D-style image layout
+   Main image + floating small + herb + particles + glow
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+
+.about-img-3d {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 460px !important;
+  height: 520px !important;
+  cursor: pointer !important;
+}
+
+/* â”€â”€ Main large image â”€â”€ */
+.ai3-main {
+  position: absolute !important;
+  top: 0 !important; left: 0 !important;
+  width: 82% !important;
+  height: 88% !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.22) !important;
+  z-index: 2 !important;
+  animation: ai3Float 4s ease-in-out infinite !important;
+  transform-origin: center !important;
+}
+.ai3-main img {
+  width: 100% !important; height: 100% !important;
+  object-fit: cover !important; display: block !important;
+  transition: transform 0.8s ease !important;
+}
+.ai3-main:hover img { transform: scale(1.06) !important; }
+
+/* â”€â”€ Floating small image â€” bottom right â”€â”€ */
+.ai3-float {
+  position: absolute !important;
+  bottom: 0 !important; right: 0 !important;
+  width: 52% !important;
+  height: 44% !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  border: 4px solid #fff !important;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.20) !important;
+  z-index: 4 !important;
+  animation: ai3FloatAlt 5s ease-in-out infinite !important;
+}
+.ai3-float img {
+  width: 100% !important; height: 100% !important;
+  object-fit: cover !important; display: block !important;
+  transition: transform 0.6s ease !important;
+}
+.ai3-float:hover img { transform: scale(1.08) !important; }
+
+/* â”€â”€ Floating herb circle â€” top right â”€â”€ */
+.ai3-herb {
+  position: absolute !important;
+  top: -20px !important; right: -10px !important;
+  width: 90px !important; height: 90px !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  border: 3px solid rgba(107,140,62,0.40) !important;
+  box-shadow: 0 8px 24px rgba(107,140,62,0.30) !important;
+  z-index: 5 !important;
+  animation: ai3Spin 8s linear infinite !important;
+}
+.ai3-herb img {
+  width: 100% !important; height: 100% !important;
+  object-fit: cover !important; display: block !important;
+}
+
+/* â”€â”€ Glow ring behind main image â”€â”€ */
+.ai3-ring {
+  position: absolute !important;
+  top: -12px !important; left: -12px !important;
+  width: 84% !important; height: 90% !important;
+  border-radius: 24px !important;
+  border: 2px solid rgba(107,140,62,0.25) !important;
+  z-index: 1 !important;
+  animation: ai3Pulse 3s ease-in-out infinite !important;
+}
+
+/* â”€â”€ Floating dot particles â”€â”€ */
+.ai3-dot {
+  position: absolute !important;
+  border-radius: 50% !important;
+  background: #6B8C3E !important;
+  z-index: 6 !important;
+}
+.ai3-d1 { width:10px;height:10px;top:15%;left:85%;opacity:0.7;animation:ai3Dot1 3s ease-in-out infinite; }
+.ai3-d2 { width:7px;height:7px;top:55%;left:88%;opacity:0.5;animation:ai3Dot2 4s ease-in-out infinite; }
+.ai3-d3 { width:12px;height:12px;top:80%;left:5%;opacity:0.6;animation:ai3Dot3 3.5s ease-in-out infinite; background:#C4A882 !important; }
+.ai3-d4 { width:6px;height:6px;top:30%;left:90%;opacity:0.4;animation:ai3Dot1 5s ease-in-out infinite reverse; }
+
+/* â”€â”€ Keyframes â”€â”€ */
+@keyframes ai3Float {
+  0%,100% { transform: translateY(0px) rotate(0deg); }
+  33%      { transform: translateY(-10px) rotate(0.5deg); }
+  66%      { transform: translateY(-5px) rotate(-0.5deg); }
+}
+@keyframes ai3FloatAlt {
+  0%,100% { transform: translateY(0px) translateX(0px); }
+  50%      { transform: translateY(-12px) translateX(4px); }
+}
+@keyframes ai3Spin {
+  0%   { transform: rotate(0deg) scale(1); }
+  50%  { transform: rotate(180deg) scale(1.08); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+@keyframes ai3Pulse {
+  0%,100% { opacity:0.4; transform:scale(1); }
+  50%      { opacity:0.8; transform:scale(1.02); }
+}
+@keyframes ai3Dot1 {
+  0%,100% { transform:translateY(0); }
+  50%      { transform:translateY(-14px); }
+}
+@keyframes ai3Dot2 {
+  0%,100% { transform:translateX(0); }
+  50%      { transform:translateX(-10px); }
+}
+@keyframes ai3Dot3 {
+  0%,100% { transform:translateY(0) scale(1); }
+  50%      { transform:translateY(-8px) scale(1.2); }
+}
+
+/* â”€â”€ Responsive â”€â”€ */
+@media(max-width:768px){
+  .about-img-3d { height:380px !important; max-width:100% !important; }
+  .ai3-herb { width:70px !important; height:70px !important; }
+}
+@media(max-width:480px){
+  .about-img-3d { height:300px !important; }
+  .ai3-herb { display:none !important; }
+  .ai3-float { width:48% !important; height:40% !important; }
+}
+
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   ABOUT â€” Single image with WebGL oil drop overlay
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.about-webgl-wrap {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 460px !important;
+  height: 520px !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.20) !important;
+}
+.about-webgl-img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  display: block !important;
+  z-index: 1 !important;
+}
+#aboutOilCanvas {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+}
+@media(max-width:768px){
+  .about-webgl-wrap { height:380px !important; max-width:100% !important; }
+}
+@media(max-width:480px){
+  .about-webgl-wrap { height:300px !important; }
+}
+
+
+/* â”€â”€ Fix about image â€” show full image including person â”€â”€ */
+.about-webgl-wrap {
+  overflow: visible !important;
+}
+.about-webgl-img {
+  object-position: center center !important;
+  border-radius: 20px !important;
+}
+
+/* Fix page overflow causing brown gap */
+.about-grid {
+  overflow: visible !important;
+}
+.about-images {
+  overflow: visible !important;
+}
+
+
+/* â”€â”€ Show full Shirodhara image â€” pot + person â”€â”€ */
+.about-webgl-wrap {
+  height: 560px !important;
+  overflow: hidden !important;
+  border-radius: 20px !important;
+}
+.about-webgl-img {
+  object-fit: cover !important;
+  object-position: center 20% !important;
+}
+
+/* Fix the brown gap on right side */
+.about-section,
+.about,
+#about {
+  overflow: hidden !important;
+}
+.about-grid {
+  overflow: hidden !important;
+}
+
+/* Fix Our Branch button overlapping */
+.float-branch-btn {
+  z-index: 99995 !important;
+}
+
+
+/* â•â• LAYOUT FOUNDATION â€” safe overflow + box-sizing â•â• */
+
+/* Use box-sizing universally but do NOT set max-width on everything â€”
+   that breaks position:sticky, canvas, and full-bleed sections. */
+*, *::before, *::after {
+  box-sizing: border-box !important;
+}
+
+/* CRITICAL: overflow:hidden on a scroll container breaks position:sticky.
+   overflow:clip prevents horizontal scroll WITHOUT breaking sticky.       */
+html {
+  overflow-x: clip !important;
+  width: 100% !important;
+}
+body {
+  overflow-x: clip !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+}
+
+.container {
+  max-width: 1200px !important;
+  width: 100% !important;
+  padding: 0 24px !important;
+  margin: 0 auto !important;
+  overflow: visible !important;
+}
+
+/* About grid â€” proper 2 column */
+.about-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 60px !important;
+  align-items: center !important;
+  overflow: hidden !important;
+}
+@media(max-width:900px){
+  .about-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .about-webgl-wrap { max-width: 100% !important; height: 400px !important; }
+}
+@media(max-width:480px){
+  .about-webgl-wrap { height: 320px !important; }
+}
+
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   FIXED BACKGROUND PARALLAX SCROLL â€” THE CORE FIX
+   Background image stays FIXED, content panels scroll over it.
+   Requires:  1) no overflow:hidden on body/html (use clip above)
+              2) section must NOT have overflow:hidden
+              3) .psb-bg must be position:sticky inside a tall parent
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+
+/* Section wrapper â€” must be taller than 100vh for sticky to scroll */
+.parallax-scroll-section {
+  position: relative !important;
+  overflow: visible !important;           /* NEVER hidden â€” breaks sticky */
+  z-index: 3 !important;
+  /* Height = 4 panels Ã— 100vh so sticky has room to stick */
+  min-height: 400vh !important;
+}
+
+/* â”€â”€ Sticky background container â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* Sticks to top while panels scroll, then scrolls away   */
+.psb-bg {
+  position: sticky !important;
+  top: 0 !important;
+  height: 100vh !important;
+  width: 100% !important;
+  max-width: 100vw !important;            /* override any * rule */
+  overflow: hidden !important;            /* clip images inside */
+  /* Pull bg BEHIND the panels that follow it */
+  margin-bottom: -100vh !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+
+/* Individual images inside the fixed background */
+.psb-img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  opacity: 0 !important;
+  transform: scale(1.05) !important;
+  transition: opacity 1.2s ease, transform 8s ease !important;
+  will-change: opacity, transform !important;
+}
+.psb-img.active {
+  opacity: 1 !important;
+  transform: scale(1.0) !important;
+}
+
+/* Dark gradient overlay inside the sticky bg */
+.psb-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(
+    135deg,
+    rgba(5,15,5,0.60) 0%,
+    rgba(10,25,10,0.40) 100%
+  ) !important;
+  z-index: 2 !important;
+}
+
+/* â”€â”€ Scrolling panels â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* These panels sit ABOVE the sticky bg (z-index higher)  */
+/* Each panel is exactly 100vh â€” the user scrolls through  */
+.psb-panels {
+  position: relative !important;
+  z-index: 3 !important;
+  /* Explicit height = 4 panels Ã— 100vh */
+  min-height: 400vh !important;
+}
+
+.psb-panel {
+  height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 60px !important;
+  /* Panel itself is transparent so bg shows through */
+  background: transparent !important;
+}
+
+/* Glass content cards */
+.psb-panel-inner {
+  max-width: 520px !important;
+  padding: 48px 52px !important;
+  background: rgba(5,15,5,0.50) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+  border: 1px solid rgba(141,194,111,0.25) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.40) !important;
+  transition: transform 0.5s ease, box-shadow 0.5s ease !important;
+}
+.psb-panel-inner:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 36px 80px rgba(0,0,0,0.50) !important;
+}
+.psb-panel-right {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .psb-panel { padding: 0 20px !important; }
+  .psb-panel-inner { padding: 28px 24px !important; max-width: 100% !important; }
+  .psb-panel-right { margin-left: 0 !important; }
+}
+@media(max-width: 480px) {
+  .psb-panel-inner { padding: 20px 16px !important; }
+  .psb-heading { font-size: 1.4rem !important; }
+}
+
+
+/* end of override.css */
