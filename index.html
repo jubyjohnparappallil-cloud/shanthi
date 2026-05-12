@@ -100,9 +100,8 @@ section{position:relative;overflow:hidden}
 /* LOGO � exposed, no background */
 .nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none;position:relative;}
 .nav-logo-img-wrap{position:relative;display:flex;align-items:center;justify-content:center;}
-.nav-logo img{height:clamp(70px,10vw,100px);width:auto;object-fit:contain;display:block;transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1);animation:logoPulse 4s ease-in-out infinite;}
-@keyframes logoPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
-.nav-logo:hover img{transform:scale(1.06);animation:none;}
+.nav-logo img{height:auto;width:clamp(180px,30vw,280px);object-fit:contain;display:block;transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1);image-rendering:auto;}
+.nav-logo:hover img{transform:scale(1.06);}
 .nav-logo-text{font-family:'Cinzel',serif;font-size:1.3rem;color:var(--dark);font-weight:700;line-height:1.2;letter-spacing:0.03em;}
 .nav-logo-text span{display:block;font-size:0.65rem;font-family:'Raleway',sans-serif;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--green);margin-top:3px;}
 /* DESKTOP LINKS � hidden by default, shown via hamburger */
@@ -145,8 +144,8 @@ section{position:relative;overflow:hidden}
 .mobile-menu-contact a{color:var(--text-light);text-decoration:none;transition:color 0.2s;display:flex;align-items:center;gap:6px;}
 .mobile-menu-contact a:hover{color:var(--green);}
 /* RESPONSIVE */
-@media(max-width:900px){.nav-inner{padding:10px 24px;}.navbar.scrolled .nav-inner{padding:8px 24px;}.nav-logo img{height:clamp(55px,9vw,70px);}}
-@media(max-width:560px){.top-bar-left a:last-child{display:none;}.nav-logo img{height:clamp(50px,14vw,65px);}.mobile-nav-link{font-size:1rem;}.mobile-menu-links{padding:16px 24px;}}
+@media(max-width:900px){.nav-inner{padding:10px 24px;}.navbar.scrolled .nav-inner{padding:8px 24px;}.nav-logo img{width:clamp(160px,28vw,220px);}}
+@media(max-width:560px){.top-bar-left a:last-child{display:none;}.nav-logo img{width:clamp(140px,40vw,200px);}.mobile-nav-link{font-size:1rem;}.mobile-menu-links{padding:16px 24px;}}
 </style>
 
 <div class="top-bar">
@@ -298,14 +297,44 @@ section{position:relative;overflow:hidden}
 
 <!-- ===== HERO SECTION ===== -->
 <style>
-.hero{position:relative;height:100vh;min-height:600px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;background-image:url('cover.jpg');background-size:cover;background-position:center center;z-index:0;}
-.hero-content{position:relative;z-index:5;text-align:center;padding:120px 24px 80px;max-width:900px;margin:0 auto}
+.hero{position:relative;overflow:hidden;width:100%;margin-top:80px;}
+.hero-slider{position:relative;width:100%;overflow:hidden;}
+.hero-slider-track{display:flex;transition:transform 0.6s ease;}
+.hero-slide{flex:0 0 100%;width:100%;}
+.hero-slide img{width:100%;height:auto;display:block;object-fit:cover;}
+@media(max-width:768px){
+  .hero{margin-top:70px;}
+  .hero-slide img{height:50vh;object-fit:cover;}
+}
+@media(max-width:560px){
+  .hero{margin-top:60px;}
+  .hero-slide img{height:45vh;object-fit:cover;}
+}
+.hero-slider-btn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.85);border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;font-size:1.2rem;color:var(--green);box-shadow:0 2px 12px rgba(0,0,0,0.15);transition:all 0.3s;}
+.hero-slider-btn:hover{background:#fff;transform:translateY(-50%) scale(1.1);}
+.hero-slider-btn.prev{left:16px;}
+.hero-slider-btn.next{right:16px;}
+.hero-tagline{text-align:center;padding:48px 24px;background:#fff;}
+.hero-tagline .tagline-label{font-family:'Raleway',sans-serif;font-size:0.8rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--green);margin-bottom:12px;display:block;}
+.hero-tagline h2{font-family:'Cinzel',serif;font-size:clamp(1.6rem,4vw,2.4rem);color:var(--dark);line-height:1.3;margin-bottom:24px;}
+.hero-tagline .btn-explore{display:inline-block;padding:14px 36px;background:var(--green);color:#fff;border-radius:50px;font-family:'Raleway',sans-serif;font-weight:700;font-size:0.9rem;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;transition:all 0.3s;box-shadow:0 4px 16px rgba(107,140,62,0.3);}
+.hero-tagline .btn-explore:hover{background:var(--green3);transform:translateY(-2px);box-shadow:0 6px 24px rgba(107,140,62,0.4);}
 </style>
 
 <section class="hero" id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-content" style="position:relative;z-index:5;">
+  <div class="hero-slider">
+    <div class="hero-slider-track" id="heroSliderTrack">
+      <div class="hero-slide"><img src="cover.jpg" alt="Shanthi Wellness Treatment"></div>
+      <div class="hero-slide"><img src="Dhara.jpg" alt="Shirodhara Treatment"></div>
+      <div class="hero-slide"><img src="pizhichil.jpg" alt="Pizhichil Treatment"></div>
+    </div>
+    <button class="hero-slider-btn prev" id="heroSliderPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+    <button class="hero-slider-btn next" id="heroSliderNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+  </div>
+  <div class="hero-tagline">
+    <span class="tagline-label">The Essence of Nature</span>
+    <h2>We Treat The Cause<br>Not The Symptoms</h2>
+    <a href="#treatments" class="btn-explore">Explore More</a>
   </div>
 </section>
 
@@ -313,10 +342,10 @@ section{position:relative;overflow:hidden}
 <style>
 .about{background:#ffffff;padding:100px 0;overflow:hidden}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.about-image-wrap{position:relative;border-radius:20px;overflow:hidden}
-.about-image-wrap::before{content:"";position:absolute;inset:0;background:var(--green);z-index:3;transform-origin:top;transition:transform 1.4s cubic-bezier(0.77,0,0.175,1)}
+.about-image-wrap{position:relative;border-radius:20px;overflow:hidden;height:520px}
+.about-image-wrap::before{content:"";position:absolute;inset:0;background:var(--green);z-index:3;transform-origin:top;transition:transform 1.4s cubic-bezier(0.77,0,0.175,1);transform:translateY(-100%)}
 .about-image-wrap.revealed::before{transform:translateY(-100%)}
-.about-image-wrap img,.about-image-wrap video{width:100%;height:520px;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow-lg)}
+.about-image-wrap img,.about-image-wrap video{width:100%;height:100%;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow-lg)}
 .about-badge{position:absolute;bottom:32px;right:-24px;background:var(--green);color:#fff;padding:20px 24px;border-radius:var(--radius);text-align:center;box-shadow:var(--shadow)}
 .about-badge .num{font-family:'Cinzel',serif;font-size:2rem;font-weight:700;display:block;line-height:1}
 .about-badge .label{font-family:'Raleway',sans-serif;font-size:0.75rem;font-weight:500;opacity:0.9;letter-spacing:0.05em}
@@ -337,7 +366,7 @@ section{position:relative;overflow:hidden}
   <div class="container">
     <div class="about-grid">
       <div class="about-image-wrap" id="aboutVideo">
-        <video src="video.mp4" autoplay muted loop playsinline style="width:100%;height:520px;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow-lg)"></video>
+        <video src="video.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow-lg)"></video>
         <div class="about-badge">
           <span class="num">15+</span>
           <span class="label">Years of Healing</span>
@@ -574,7 +603,7 @@ section{position:relative;overflow:hidden}
             <div class="treatment-card-img">
               <img src="pizhichil.jpg" alt="Pizhichil" loading="lazy">
               <div class="treatment-card-overlay"></div>
-              <div class="treatment-card-desc"><p>Warm medicated oil is continuously poured over the body while being gently massaged � the royal treatment for rejuvenation and paralysis.</p></div>
+              <div class="treatment-card-desc"><p>Warm medicated oil is continuously poured over the body while being gently massaged — the royal treatment for rejuvenation and paralysis.</p></div>
             </div>
             <div class="treatment-card-body">
               <div class="treatment-card-tag">Ayurveda</div>
@@ -610,7 +639,7 @@ section{position:relative;overflow:hidden}
             <div class="treatment-card-img">
               <img src="shirovasthi.jpg" alt="Shirovasthi" loading="lazy">
               <div class="treatment-card-overlay"></div>
-              <div class="treatment-card-desc"><p>Warm medicated oil retained on the head using a specially fitted cap � highly effective for neurological disorders, hair loss, and mental fatigue.</p></div>
+              <div class="treatment-card-desc"><p>Warm medicated oil retained on the head using a specially fitted cap — highly effective for neurological disorders, hair loss, and mental fatigue.</p></div>
             </div>
             <div class="treatment-card-body">
               <div class="treatment-card-tag">Ayurveda</div>
@@ -634,7 +663,7 @@ section{position:relative;overflow:hidden}
             <div class="treatment-card-img">
               <img src="ritual4.jpg" alt="Panchakarma" loading="lazy">
               <div class="treatment-card-overlay"></div>
-              <div class="treatment-card-desc"><p>The ultimate Ayurvedic detox � a five-step purification process that eliminates deep-seated toxins and restores the body's natural balance.</p></div>
+              <div class="treatment-card-desc"><p>The ultimate Ayurvedic detox — a five-step purification process that eliminates deep-seated toxins and restores the body's natural balance.</p></div>
             </div>
             <div class="treatment-card-body">
               <div class="treatment-card-tag">Detox</div>
@@ -1265,7 +1294,7 @@ section{position:relative;overflow:hidden}
   .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
   .treatment-card{flex:0 0 calc(50% - 12px)}
   .plant-stats{grid-template-columns:repeat(2,1fr)}
-  .about-image-wrap img,.about-image-wrap video{height:400px}
+  .about-image-wrap{height:400px}
   .why-us-image img{height:400px}
   .why-us-image{order:0}
   .why-us-text{order:1}
@@ -1275,10 +1304,12 @@ section{position:relative;overflow:hidden}
   .top-bar-left a:last-child{display:none}
   .nav-links{display:none}
   .hamburger{display:flex}
-  .hero-title{font-size:2.4rem}
   .about-grid,.why-us-grid,.globe-grid,.plant-grid{grid-template-columns:1fr}
+  .about-grid{gap:24px}
+  .about{padding:40px 0}
   .about-counters{grid-template-columns:repeat(2,1fr)}
   .about-features{grid-template-columns:1fr}
+  .about-image-wrap{height:250px}
   .why-us-image img{height:300px}
   .why-us-image{order:-1}
   .testimonials-grid{grid-template-columns:1fr}
@@ -1297,7 +1328,6 @@ section{position:relative;overflow:hidden}
   .footer-bottom{flex-direction:column;text-align:center}
   .globe-grid{grid-template-columns:1fr}
   #globeCanvas{height:320px}
-  .about-image-wrap img,.about-image-wrap video{height:350px}
   .why-us-image img{height:350px}
   .hero-subtitle{font-size:0.95rem}
   .section-title{font-size:clamp(1.6rem,4vw,2.4rem)}
@@ -1309,6 +1339,9 @@ section{position:relative;overflow:hidden}
   .hero-ctas{flex-direction:column;align-items:center}
   .hero-pills{gap:8px}
   .hero-pill{font-size:0.78rem;padding:6px 14px}
+  .about{padding:20px 0}
+  .about-grid{gap:16px}
+  .about-image-wrap{height:200px}
   .about-counters{grid-template-columns:repeat(2,1fr)}
   .plant-stats{grid-template-columns:1fr 1fr}
   .plant-grid{border-radius:16px}
@@ -1318,7 +1351,6 @@ section{position:relative;overflow:hidden}
   .top-bar{display:none}
   .navbar{top:0}
   .container{padding:0 16px}
-  .hero{min-height:100vh;height:auto}
   .hero-content{padding:80px 16px 40px}
   .hero-title{font-size:clamp(1.8rem,7vw,2.5rem)}
   .hero-subtitle{font-size:0.9rem;margin-bottom:24px}
@@ -1336,7 +1368,6 @@ section{position:relative;overflow:hidden}
   .map-wrap iframe{height:200px}
   .why-point{padding:16px;gap:12px}
   .why-point-icon{width:40px;height:40px;font-size:0.95rem}
-  .about-image-wrap img,.about-image-wrap video{height:280px}
   .why-us-image img{height:280px}
   .plant-stat{padding:28px 16px}
   .plant-stat .stat-num{font-size:2rem}
@@ -1347,7 +1378,7 @@ section{position:relative;overflow:hidden}
   .about-counters{grid-template-columns:1fr 1fr}
   .hero-pills{flex-direction:column;align-items:center}
   #globeCanvas{height:220px}
-  .about-image-wrap img,.about-image-wrap video{height:240px}
+  .about-image-wrap{height:180px}
 }
 /* Disable custom cursor on touch devices */
 @media (hover: none) and (pointer: coarse) {
@@ -1533,6 +1564,23 @@ if (track) {
   document.getElementById('carouselPrev').addEventListener('click', () => { prevSlide(); startAutoSlide(); });
   window.addEventListener('resize', () => { buildDots(); goToSlide(0); });
 }
+
+// ===== HERO SLIDER =====
+(function(){
+  const track = document.getElementById('heroSliderTrack');
+  const slides = track ? track.children : [];
+  const prevBtn = document.getElementById('heroSliderPrev');
+  const nextBtn = document.getElementById('heroSliderNext');
+  let current = 0;
+  const total = slides.length;
+  function goTo(i){
+    current = (i + total) % total;
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+  }
+  if(prevBtn) prevBtn.addEventListener('click', function(){ goTo(current - 1); });
+  if(nextBtn) nextBtn.addEventListener('click', function(){ goTo(current + 1); });
+  setInterval(function(){ goTo(current + 1); }, 4000);
+})();
 
 // ===== FORM SUBMIT =====
 const form = document.getElementById('appointmentForm');
