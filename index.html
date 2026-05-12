@@ -70,7 +70,7 @@ section{position:relative;overflow:hidden}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:50px;font-family:'Raleway',sans-serif;font-weight:600;font-size:0.95rem;letter-spacing:0.05em;transition:var(--transition);cursor:none}
 .btn-primary{background:var(--green);color:#fff;box-shadow:0 4px 20px rgba(107,140,62,0.35)}
 .btn-primary:hover{background:var(--green3);transform:translateY(-2px);box-shadow:0 8px 30px rgba(107,140,62,0.45)}
-.btn-outline{border:2px solid rgba(255,255,255,0.6);color:#fff;background:rgba(255,255,255,0.08);backdrop-filter:blur(8px);}
+.btn-outline{border:2px solid rgba(255,255,255,0.6);color:#fff;background:rgba(255,255,255,0.08);}
 .btn-outline:hover{background:rgba(255,255,255,0.18);border-color:#fff;transform:translateY(-2px)}
 .btn-white{background:#fff;color:var(--green);box-shadow:0 4px 20px rgba(0,0,0,0.15)}
 .btn-white:hover{background:var(--cream);transform:translateY(-2px)}
@@ -298,70 +298,14 @@ section{position:relative;overflow:hidden}
 
 <!-- ===== HERO SECTION ===== -->
 <style>
-.hero{position:relative;height:100vh;min-height:600px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#0a1a05;}
-.hero-bg{position:absolute;inset:0;background-image:url('cover.jpg');background-size:cover;background-position:center center;z-index:0;filter:saturate(1.15) contrast(1.05) brightness(0.88);}
-/* Cinematic overlay � NO white wash, just subtle dark gradient for text legibility */
-.hero-overlay{position:absolute;inset:0;background:
-  linear-gradient(to bottom,
-    rgba(5,15,3,0.55) 0%,
-    rgba(5,15,3,0.45) 40%,
-    rgba(5,15,3,0.50) 65%,
-    rgba(5,15,3,0.70) 100%
-  );z-index:1}
-/* Cinematic radial light � top-left warm glow */
-.hero-light{position:absolute;inset:0;background:
-  radial-gradient(ellipse 80% 60% at 20% 15%, rgba(200,154,74,0.10), transparent 55%),
-  radial-gradient(ellipse 60% 50% at 80% 10%, rgba(141,194,111,0.08), transparent 50%);
-  z-index:2;pointer-events:none;}
-/* Mouse-follow glow */
-.hero-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(141,194,111,0.10) 0%,transparent 65%);pointer-events:none;z-index:3;transform:translate(-50%,-50%);transition:left 0.2s ease,top 0.2s ease}
+.hero{position:relative;height:100vh;min-height:600px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background-image:url('cover.jpg');background-size:cover;background-position:center center;z-index:0;}
 .hero-content{position:relative;z-index:5;text-align:center;padding:120px 24px 80px;max-width:900px;margin:0 auto}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(141,194,111,0.15);border:1px solid rgba(141,194,111,0.4);color:rgba(255,255,255,0.92);padding:8px 20px;border-radius:50px;font-family:'Raleway',sans-serif;font-size:0.8rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:28px;backdrop-filter:blur(8px)}
-.hero-badge i{color:var(--green2)}
-.hero-title{font-size:clamp(2.8rem,6vw,5rem);color:#fff;line-height:1.1;margin-bottom:20px;font-weight:700;text-shadow:0 4px 40px rgba(0,0,0,0.5),0 2px 8px rgba(0,0,0,0.4);}
-.hero-title .accent{color:var(--green2);display:block;text-shadow:0 0 60px rgba(141,194,111,0.4),0 4px 40px rgba(0,0,0,0.5);}
-.hero-subtitle{font-size:clamp(1rem,2vw,1.2rem);color:rgba(255,255,255,0.82);max-width:600px;margin:0 auto 36px;line-height:1.8;font-weight:300;text-shadow:0 2px 16px rgba(0,0,0,0.5);}
-.hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
-.hero-pills{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:48px}
-.hero-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.22);color:rgba(255,255,255,0.88);padding:8px 18px;border-radius:50px;font-family:'Raleway',sans-serif;font-size:0.85rem;font-weight:500;backdrop-filter:blur(8px);transition:var(--transition)}
-.hero-pill:hover{background:var(--green);color:#fff;border-color:var(--green);transform:translateY(-2px)}
-.hero-pill i{color:var(--green2);font-size:0.8rem}
-.hero-pill:hover i{color:#fff}
-.scroll-indicator{display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,0.55);font-family:'Raleway',sans-serif;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;animation:bounce 2s infinite}
-.scroll-indicator .scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,rgba(141,194,111,0.8),transparent);margin:0 auto}
-@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
 </style>
 
 <section class="hero" id="hero">
   <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-light"></div>
-  <div class="hero-glow" id="heroGlow"></div>
-  <canvas id="waterRippleCanvas" style="position:absolute;inset:0;width:100%;height:100%;z-index:4;pointer-events:none;"></canvas>
   <div class="hero-content" style="position:relative;z-index:5;">
-    <div class="hero-badge" id="heroBadge">
-      <i class="fas fa-leaf"></i> Authentic Ayurveda Since 2009
-    </div>
-    <h1 class="hero-title" id="heroTitle">
-      Ancient Wisdom.
-      <span class="accent">Modern Healing.</span>
-    </h1>
-    <p class="hero-subtitle" id="heroSubtitle">
-      Experience the transformative power of traditional Ayurveda, Homeopathy, and Physiotherapy � crafted for your complete well-being.
-    </p>
-    <div class="hero-ctas" id="heroCtas">
-      <a href="#appointment" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book Consultation</a>
-      <a href="#treatments" class="btn btn-outline"><i class="fas fa-spa"></i> Explore Treatments</a>
-    </div>
-    <div class="hero-pills" id="heroPills">
-      <span class="hero-pill"><i class="fas fa-leaf"></i> Ayurveda</span>
-      <span class="hero-pill"><i class="fas fa-pills"></i> Homeopathy</span>
-      <span class="hero-pill"><i class="fas fa-running"></i> Physiotherapy</span>
-    </div>
-    <div class="scroll-indicator" id="scrollIndicator">
-      <div class="scroll-line"></div>
-      <span>Scroll</span>
-    </div>
   </div>
 </section>
 
@@ -948,42 +892,30 @@ section{position:relative;overflow:hidden}
 
 <!-- ===== APPOINTMENT FORM ===== -->
 <style>
-.appointment{position:relative;padding:100px 0;overflow:hidden}
-.appointment-bg{position:absolute;inset:0;background-image:url('sunset.jpg');background-size:cover;background-position:center;background-attachment:fixed;z-index:0;animation:bgSlowZoom 20s ease-in-out infinite alternate}
-@keyframes bgSlowZoom{0%{transform:scale(1);filter:brightness(0.9)}100%{transform:scale(1.08);filter:brightness(1)}}
-.appointment-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,30,5,0.82) 0%,rgba(26,60,10,0.75) 100%);z-index:1}
-/* Animated clouds */
-.appointment-clouds{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
-.appointment-clouds::before{content:'';position:absolute;top:-10%;left:-10%;width:120%;height:60%;background:radial-gradient(ellipse 80% 50% at 30% 40%,rgba(255,255,255,0.06),transparent 60%),radial-gradient(ellipse 60% 40% at 70% 30%,rgba(255,255,255,0.04),transparent 50%);animation:cloudDrift1 25s ease-in-out infinite alternate;filter:blur(20px)}
-.appointment-clouds::after{content:'';position:absolute;bottom:-10%;right:-10%;width:100%;height:50%;background:radial-gradient(ellipse 70% 50% at 60% 60%,rgba(255,255,255,0.05),transparent 55%),radial-gradient(ellipse 50% 40% at 30% 70%,rgba(200,154,74,0.04),transparent 50%);animation:cloudDrift2 30s ease-in-out infinite alternate;filter:blur(24px)}
-@keyframes cloudDrift1{0%{transform:translateX(0) translateY(0)}100%{transform:translateX(60px) translateY(15px)}}
-@keyframes cloudDrift2{0%{transform:translateX(0) translateY(0)}100%{transform:translateX(-50px) translateY(-20px)}}
+.appointment{position:relative;padding:100px 0;overflow:hidden;background:linear-gradient(135deg,#f0f7ec 0%,#e8f5e1 40%,#f5faf2 100%)}
 .appointment-content{position:relative;z-index:2}
 .appointment-header{text-align:center;margin-bottom:60px}
-.appointment-header .section-label{color:var(--green2)}
-.appointment-header .section-title{color:#fff}
-.appointment-header .section-subtitle{color:rgba(255,255,255,0.7);margin:0 auto}
-.appointment-form{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:var(--radius);padding:48px;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);max-width:800px;margin:0 auto}
+.appointment-header .section-label{color:var(--green)}
+.appointment-header .section-title{color:var(--dark)}
+.appointment-header .section-subtitle{color:var(--text-light);margin:0 auto}
+.appointment-form{background:#ffffff;border:1px solid rgba(107,140,62,0.15);border-radius:var(--radius);padding:48px;box-shadow:0 8px 32px rgba(107,140,62,0.08);max-width:800px;margin:0 auto}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .form-group{display:flex;flex-direction:column;gap:8px}
 .form-group.full{grid-column:1/-1}
-.form-label{font-family:'Raleway',sans-serif;font-size:0.82rem;font-weight:600;color:rgba(255,255,255,0.85);letter-spacing:0.05em}
-.form-input{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);border-radius:var(--radius-sm);padding:14px 16px;color:#fff;font-family:'Raleway',sans-serif;font-size:0.9rem;transition:var(--transition);outline:none}
-.form-input::placeholder{color:rgba(255,255,255,0.4)}
-.form-input:focus{border-color:var(--green2);background:rgba(255,255,255,0.12);box-shadow:0 0 0 3px rgba(141,194,111,0.15)}
-.form-input option{background:var(--dark);color:#fff}
+.form-label{font-family:'Raleway',sans-serif;font-size:0.82rem;font-weight:600;color:var(--text);letter-spacing:0.05em}
+.form-input{background:#f8faf6;border:1px solid rgba(107,140,62,0.2);border-radius:var(--radius-sm);padding:14px 16px;color:var(--text);font-family:'Raleway',sans-serif;font-size:0.9rem;transition:var(--transition);outline:none}
+.form-input::placeholder{color:var(--text-light)}
+.form-input:focus{border-color:var(--green);background:#fff;box-shadow:0 0 0 3px rgba(107,140,62,0.1)}
+.form-input option{background:#fff;color:var(--text)}
 .form-submit{width:100%;padding:16px;background:linear-gradient(135deg,var(--green),var(--green2));color:#fff;border-radius:50px;font-family:'Raleway',sans-serif;font-weight:700;font-size:1rem;letter-spacing:0.05em;cursor:none;transition:var(--transition);border:none;margin-top:8px;display:flex;align-items:center;justify-content:center;gap:10px}
 .form-submit:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(107,140,62,0.4)}
-.form-success{display:none;text-align:center;padding:32px;color:#fff}
-.form-success i{font-size:3rem;color:var(--green2);margin-bottom:16px;display:block}
-.form-success h3{font-family:'Cinzel',serif;font-size:1.5rem;margin-bottom:8px}
-.form-success p{font-family:'Raleway',sans-serif;color:rgba(255,255,255,0.75)}
+.form-success{display:none;text-align:center;padding:32px;color:var(--text)}
+.form-success i{font-size:3rem;color:var(--green);margin-bottom:16px;display:block}
+.form-success h3{font-family:'Cinzel',serif;font-size:1.5rem;margin-bottom:8px;color:var(--dark)}
+.form-success p{font-family:'Raleway',sans-serif;color:var(--text-light)}
 </style>
 
 <section class="appointment" id="appointment">
-  <div class="appointment-bg"></div>
-  <div class="appointment-overlay"></div>
-  <div class="appointment-clouds"></div>
   <div class="container appointment-content">
     <div class="appointment-header reveal">
       <span class="section-label">Book a Session</span>
@@ -1424,7 +1356,7 @@ section{position:relative;overflow:hidden}
   #cursor,#cursor-glow{display:none}
   .hero-glow{display:none}
   .plant-fixed-bg{background-attachment:scroll}
-  .appointment-bg{background-attachment:scroll}
+  
 }
 </style>
 
