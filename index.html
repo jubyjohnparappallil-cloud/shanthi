@@ -535,9 +535,10 @@ section{position:relative;overflow:hidden}
 .treat-card:hover .treat-card-circle{border-color:var(--green)}
 .treat-card-circle img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease}
 .treat-card:hover .treat-card-circle img{transform:scale(1.1)}
-.treat-card-circle .treat-hover-overlay{position:absolute;inset:0;background:rgba(74,107,42,0.85);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.4s;border-radius:50%}
+.treat-card-circle .treat-hover-overlay{position:absolute;inset:0;background:rgba(74,107,42,0.85);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;transition:opacity 0.4s;border-radius:50%}
 .treat-card:hover .treat-card-circle .treat-hover-overlay{opacity:1}
-.treat-hover-overlay img{width:60px;height:auto;filter:brightness(10)}
+.treat-hover-overlay i{font-size:2rem;color:#fff;}
+.treat-hover-overlay span{font-family:'Raleway',sans-serif;font-size:0.8rem;color:#fff;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;}
 .treat-card h3{font-family:'Cinzel',serif;font-size:1.1rem;color:var(--dark);margin-bottom:12px;font-weight:700}
 .treat-card p{font-family:'Raleway',sans-serif;font-size:0.85rem;color:var(--text-light);line-height:1.7}
 .treat-carousel-btn{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:#fff;box-shadow:0 4px 20px rgba(26,42,10,0.12);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;transition:all 0.3s;color:var(--green);font-size:1rem;border:1px solid rgba(107,140,62,0.2)}
@@ -561,7 +562,7 @@ section{position:relative;overflow:hidden}
           <div class="treat-card">
             <div class="treat-card-circle">
               <img src="pizhichil.jpg" alt="Pizhichil" loading="lazy">
-              <div class="treat-hover-overlay"><img src="logo.png" alt="Shanthi"></div>
+              <div class="treat-hover-overlay"><i class="fas fa-leaf"></i><span>Explore</span></div>
             </div>
             <h3>Pizhichil</h3>
             <p>Lukewarm oil is poured in the body by squeezing cotton cloth soaked in oil. Highly effective for Spondylosis, Hemiplegia, and Arthritis.</p>
@@ -569,7 +570,7 @@ section{position:relative;overflow:hidden}
           <div class="treat-card">
             <div class="treat-card-circle">
               <img src="Dhara.jpg" alt="Dhara" loading="lazy">
-              <div class="treat-hover-overlay"><img src="logo.png" alt="Shanthi"></div>
+              <div class="treat-hover-overlay"><i class="fas fa-leaf"></i><span>Explore</span></div>
             </div>
             <h3>Dhara</h3>
             <p>Pouring of medicated oil done all over the body, beneficial for neuromuscular conditions, rheumatism and general debility.</p>
@@ -577,7 +578,7 @@ section{position:relative;overflow:hidden}
           <div class="treat-card">
             <div class="treat-card-circle">
               <img src="Nasyam.jpg" alt="Nasyam" loading="lazy">
-              <div class="treat-hover-overlay"><img src="logo.png" alt="Shanthi"></div>
+              <div class="treat-hover-overlay"><i class="fas fa-leaf"></i><span>Explore</span></div>
             </div>
             <h3>Nasyam</h3>
             <p>Herbal juices and medicated oils administered through the nostrils for paralysis, headaches, and mental disorders.</p>
@@ -585,7 +586,7 @@ section{position:relative;overflow:hidden}
           <div class="treat-card">
             <div class="treat-card-circle">
               <img src="kizhi.jpg" alt="Kizhi" loading="lazy">
-              <div class="treat-hover-overlay"><img src="logo.png" alt="Shanthi"></div>
+              <div class="treat-hover-overlay"><i class="fas fa-leaf"></i><span>Explore</span></div>
             </div>
             <h3>Kizhi</h3>
             <p>Herbal poultice massage using warm bundles of medicinal herbs for joint pain, muscle stiffness, and neurological conditions.</p>
@@ -593,7 +594,7 @@ section{position:relative;overflow:hidden}
           <div class="treat-card">
             <div class="treat-card-circle">
               <img src="shirovasthi.jpg" alt="Shirovasthi" loading="lazy">
-              <div class="treat-hover-overlay"><img src="logo.png" alt="Shanthi"></div>
+              <div class="treat-hover-overlay"><i class="fas fa-leaf"></i><span>Explore</span></div>
             </div>
             <h3>Shirovasthi</h3>
             <p>Warm medicated oil retained on the head using a fitted cap — effective for neurological disorders and mental fatigue.</p>
@@ -601,7 +602,7 @@ section{position:relative;overflow:hidden}
           <div class="treat-card">
             <div class="treat-card-circle">
               <img src="ritual3.jpg" alt="Abhyanga" loading="lazy">
-              <div class="treat-hover-overlay"><img src="logo.png" alt="Shanthi"></div>
+              <div class="treat-hover-overlay"><i class="fas fa-leaf"></i><span>Explore</span></div>
             </div>
             <h3>Abhyanga</h3>
             <p>Full-body warm oil massage using dosha-specific herbal oils, improving circulation and promoting deep relaxation.</p>
@@ -649,6 +650,27 @@ section{position:relative;overflow:hidden}
     if(current > 0) current--;
     else current = maxSlide;
     slide();
+  });
+  
+  // Auto-slide every 3 seconds
+  var autoSlide = setInterval(function(){
+    visibleCards = getVisible();
+    var maxSlide = cards.length - visibleCards;
+    if(current < maxSlide) current++;
+    else current = 0;
+    slide();
+  }, 3000);
+  
+  // Pause auto-slide on hover
+  track.parentElement.addEventListener('mouseenter', function(){ clearInterval(autoSlide); });
+  track.parentElement.addEventListener('mouseleave', function(){
+    autoSlide = setInterval(function(){
+      visibleCards = getVisible();
+      var maxSlide = cards.length - visibleCards;
+      if(current < maxSlide) current++;
+      else current = 0;
+      slide();
+    }, 3000);
   });
   
   window.addEventListener('resize', function(){ current = 0; slide(); });
