@@ -84,23 +84,23 @@ section{position:relative;overflow:hidden}
 <!-- ===== PREMIUM NAVBAR ===== -->
 <style>
 /* TOP BAR */
-.top-bar{background:#fff;color:var(--text);padding:7px 0;font-family:'Raleway',sans-serif;font-size:0.78rem;position:relative;z-index:1002;border-bottom:1px solid rgba(0,0,0,0.06);}
-.top-bar .container{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
-.top-bar-left{display:flex;align-items:center;gap:24px;}
-.top-bar-left a{color:var(--text-light);display:flex;align-items:center;gap:6px;transition:color 0.25s;text-decoration:none;}
-.top-bar-left a:hover{color:var(--green);}
-.top-bar-left a i{color:var(--green);}
-.top-bar-right a{background:var(--green);color:#fff;padding:5px 18px;border-radius:50px;font-weight:700;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;transition:all 0.25s;text-decoration:none;box-shadow:0 2px 12px rgba(107,140,62,0.3);}
-.top-bar-right a:hover{background:var(--green3);transform:translateY(-1px);}
-/* -- MAIN NAVBAR � WHITE -- */
-.navbar{position:fixed;top:0;left:0;right:0;z-index:1001;background:#fff;box-shadow:0 2px 20px rgba(0,0,0,0.08);transition:box-shadow 0.4s ease;}
-.navbar.scrolled{box-shadow:0 4px 30px rgba(0,0,0,0.12);}
+.top-bar{background:#fff;padding:12px 0;text-align:center;border-bottom:1px solid rgba(0,0,0,0.06);position:relative;z-index:1002;}
+.top-bar .container{display:flex;flex-direction:column;align-items:center;gap:10px;}
+.top-bar-call{font-family:'Raleway',sans-serif;font-size:0.9rem;color:var(--green);font-weight:600;}
+.top-bar-call a{color:var(--green);text-decoration:none;}
+.top-bar-btn{display:inline-block;padding:14px 48px;background:linear-gradient(135deg,#8bc34a,#6B8C3E);color:#fff;border-radius:50px;font-family:'Raleway',sans-serif;font-weight:800;font-size:1rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;box-shadow:0 4px 20px rgba(107,140,62,0.3);transition:all 0.3s;}
+.top-bar-btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(107,140,62,0.4);}
+/* -- MAIN NAVBAR -- */
+.navbar{position:sticky;top:0;left:0;right:0;z-index:1001;background:#fff;box-shadow:0 2px 20px rgba(0,0,0,0.06);transition:box-shadow 0.4s ease;border-bottom:1px solid rgba(0,0,0,0.04);}
+.navbar.scrolled{box-shadow:0 4px 30px rgba(0,0,0,0.1);}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1280px;margin:0 auto;padding:12px 40px;transition:padding 0.35s ease;}
 .navbar.scrolled .nav-inner{padding:8px 40px;}
+.nav-right{display:flex;align-items:center;gap:12px;font-family:'Raleway',sans-serif;font-size:1rem;font-weight:600;color:var(--dark);}
+.nav-right span{}
 /* LOGO � exposed, no background */
 .nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none;position:relative;}
 .nav-logo-img-wrap{position:relative;display:flex;align-items:center;justify-content:center;}
-.nav-logo img{height:auto;width:clamp(180px,30vw,280px);object-fit:contain;display:block;transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1);image-rendering:auto;}
+.nav-logo img{height:auto;width:clamp(220px,40vw,360px);object-fit:contain;display:block;transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1);image-rendering:auto;}
 .nav-logo:hover img{transform:scale(1.06);}
 .nav-logo-text{font-family:'Cinzel',serif;font-size:1.3rem;color:var(--dark);font-weight:700;line-height:1.2;letter-spacing:0.03em;}
 .nav-logo-text span{display:block;font-size:0.65rem;font-family:'Raleway',sans-serif;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--green);margin-top:3px;}
@@ -150,11 +150,8 @@ section{position:relative;overflow:hidden}
 
 <div class="top-bar">
   <div class="container">
-    <div class="top-bar-left">
-      <a href="tel:+919876543210"><i class="fas fa-phone-alt"></i> +91 98765 43210</a>
-      <a href="mailto:info@shanthiwellness.com"><i class="fas fa-envelope"></i> info@shanthiwellness.com</a>
-    </div>
-    <div class="top-bar-right"><a href="#appointment">Book Appointment</a></div>
+    <div class="top-bar-call">Call : <a href="tel:+97165558429">+971 6 555 8429</a>, <a href="tel:+97142255133">+971 4 225 5133</a></div>
+    <a href="#appointment" class="top-bar-btn">Appointment</a>
   </div>
 </div>
 
@@ -165,21 +162,14 @@ section{position:relative;overflow:hidden}
         <img src="logo.png" alt="Shanthi Wellness"/>
       </div>
     </a>
-    <div class="nav-links" id="navLinks">
-      <a href="#hero"          class="nav-link active" data-section="hero">Home</a>
-      <a href="#about"         class="nav-link" data-section="about">About</a>
-      <a href="#treatments"    class="nav-link" data-section="treatments">Treatments</a>
-      <a href="#why-us"        class="nav-link" data-section="why-us">Wellness</a>
-      <a href="#locations"     class="nav-link" data-section="locations">Locations</a>
-      <a href="#testimonials"  class="nav-link" data-section="testimonials">Reviews</a>
-      <a href="#appointment"   class="nav-cta">Book Now</a>
+    <div class="nav-right">
+      <span>Menu</span>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
   </div>
 </nav>
-
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-head">
     <img src="logo.png" alt="Shanthi Wellness"/>
@@ -297,23 +287,17 @@ section{position:relative;overflow:hidden}
 
 <!-- ===== HERO SECTION ===== -->
 <style>
-.hero{position:relative;overflow:hidden;width:100%;margin-top:80px;}
-.hero-slider{position:relative;width:100%;overflow:hidden;}
-.hero-slider-track{display:flex;transition:transform 0.6s ease;}
-.hero-slide{flex:0 0 100%;width:100%;}
-.hero-slide img{width:100%;height:auto;display:block;object-fit:cover;}
+.hero{position:relative;overflow:hidden;width:100%;}
+.hero-bg{width:100%;display:block;}
+.hero-bg img{width:100%;height:auto;display:block;}
 @media(max-width:768px){
-  .hero{margin-top:70px;}
-  .hero-slide img{height:50vh;object-fit:cover;}
+  .hero{}
 }
 @media(max-width:560px){
-  .hero{margin-top:60px;}
-  .hero-slide img{height:45vh;object-fit:cover;}
+  .hero{}
+  .nav-top-info a:not(.nav-book-btn){display:none;}
+  .nav-right span{display:inline;}
 }
-.hero-slider-btn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.85);border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;font-size:1.2rem;color:var(--green);box-shadow:0 2px 12px rgba(0,0,0,0.15);transition:all 0.3s;}
-.hero-slider-btn:hover{background:#fff;transform:translateY(-50%) scale(1.1);}
-.hero-slider-btn.prev{left:16px;}
-.hero-slider-btn.next{right:16px;}
 .hero-tagline{text-align:center;padding:48px 24px;background:#fff;}
 .hero-tagline .tagline-label{font-family:'Raleway',sans-serif;font-size:0.8rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--green);margin-bottom:12px;display:block;}
 .hero-tagline h2{font-family:'Cinzel',serif;font-size:clamp(1.6rem,4vw,2.4rem);color:var(--dark);line-height:1.3;margin-bottom:24px;}
@@ -322,14 +306,8 @@ section{position:relative;overflow:hidden}
 </style>
 
 <section class="hero" id="hero">
-  <div class="hero-slider">
-    <div class="hero-slider-track" id="heroSliderTrack">
-      <div class="hero-slide"><img src="cover.jpg" alt="Shanthi Wellness Treatment"></div>
-      <div class="hero-slide"><img src="Dhara.jpg" alt="Shirodhara Treatment"></div>
-      <div class="hero-slide"><img src="pizhichil.jpg" alt="Pizhichil Treatment"></div>
-    </div>
-    <button class="hero-slider-btn prev" id="heroSliderPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
-    <button class="hero-slider-btn next" id="heroSliderNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+  <div class="hero-bg">
+    <img src="cover.jpg" alt="Shanthi Wellness">
   </div>
   <div class="hero-tagline">
     <span class="tagline-label">The Essence of Nature</span>
@@ -448,15 +426,24 @@ section{position:relative;overflow:hidden}
 .plant-quote.animated{opacity:1;transform:translateX(0)}
 .plant-quote blockquote{font-family:'Lato',sans-serif;font-size:0.9rem;color:var(--text);font-style:italic;line-height:1.7;margin-bottom:6px}
 .plant-quote cite{font-family:'Raleway',sans-serif;font-size:0.75rem;color:var(--green);font-style:normal;font-weight:600}
-/* Curtain reveal on video */
-.plant-video-wrap::before{content:'';position:absolute;inset:0;background:var(--green);z-index:2;transform-origin:left;transition:transform 1.2s cubic-bezier(0.77,0,0.175,1) 0.3s}
-.plant-video-wrap.revealed::before{transform:translateX(100%)}
+/* Border grid on video */
+.plant-video-wrap .plant-border-grid{position:absolute;inset:10px;border:2px solid rgba(255,255,255,0.3);border-radius:12px;z-index:3;pointer-events:none}
+.plant-video-wrap .plant-corner{position:absolute;width:35px;height:35px;z-index:4;pointer-events:none}
+.plant-video-wrap .plant-corner.tl{top:0;left:0;border-top:3px solid var(--green2);border-left:3px solid var(--green2);border-radius:6px 0 0 0}
+.plant-video-wrap .plant-corner.tr{top:0;right:0;border-top:3px solid var(--green2);border-right:3px solid var(--green2);border-radius:0 6px 0 0}
+.plant-video-wrap .plant-corner.bl{bottom:0;left:0;border-bottom:3px solid var(--green2);border-left:3px solid var(--green2);border-radius:0 0 0 6px}
+.plant-video-wrap .plant-corner.br{bottom:0;right:0;border-bottom:3px solid var(--green2);border-right:3px solid var(--green2);border-radius:0 0 6px 0}
 </style>
 
 <section class="plant-section" id="plant-section">
   <div class="plant-grid">
     <div class="plant-video-wrap" id="plantVideo">
       <video src="slow.mp4" autoplay muted loop playsinline></video>
+      <div class="plant-border-grid"></div>
+      <div class="plant-corner tl"></div>
+      <div class="plant-corner tr"></div>
+      <div class="plant-corner bl"></div>
+      <div class="plant-corner br"></div>
     </div>
     <div class="plant-text">
       <span class="section-label">The Healing Power</span>
@@ -536,33 +523,29 @@ section{position:relative;overflow:hidden}
 
 <!-- ===== TREATMENTS CAROUSEL ===== -->
 <style>
-.treatments{background:#ffffff;padding:100px 0}
+.treatments{background:#f8faf6;padding:100px 0}
 .treatments-header{text-align:center;margin-bottom:60px}
 .treatments-header .section-subtitle{margin:0 auto}
-.carousel-wrap{position:relative}
-.carousel-viewport{overflow:hidden;border-radius:var(--radius)}
-.carousel-track{display:flex;gap:24px;transition:transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94)}
-.treatment-card{flex:0 0 calc(33.333% - 16px);background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 24px rgba(26,42,10,0.08);transition:var(--transition);position:relative}
-.treatment-card:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(26,42,10,0.15)}
-.treatment-card-img{position:relative;height:260px;overflow:hidden}
-.treatment-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease}
-.treatment-card:hover .treatment-card-img img{transform:scale(1.08)}
-.treatment-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,30,5,0.85) 0%,transparent 50%);opacity:0;transition:opacity 0.4s}
-.treatment-card:hover .treatment-card-overlay{opacity:1}
-.treatment-card-desc{position:absolute;bottom:0;left:0;right:0;padding:24px;color:#fff;transform:translateY(100%);transition:transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94)}
-.treatment-card:hover .treatment-card-desc{transform:translateY(0)}
-.treatment-card-desc p{font-family:'Raleway',sans-serif;font-size:0.85rem;line-height:1.6;opacity:0.9}
-.treatment-card-body{padding:20px 24px}
-.treatment-card-tag{font-family:'Raleway',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
-.treatment-card-title{font-family:'Cinzel',serif;font-size:1.05rem;color:var(--dark);margin-bottom:8px}
-.treatment-card-short{font-family:'Raleway',sans-serif;font-size:0.85rem;color:var(--text-light);line-height:1.5}
-.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:#fff;box-shadow:0 4px 20px rgba(26,42,10,0.15);display:flex;align-items:center;justify-content:center;cursor:none;z-index:10;transition:var(--transition);color:var(--green);font-size:1rem;border:1px solid rgba(107,140,62,0.2)}
-.carousel-btn:hover{background:var(--green);color:#fff;transform:translateY(-50%) scale(1.1)}
-.carousel-btn.prev{left:-24px}
-.carousel-btn.next{right:-24px}
-.carousel-dots{display:flex;justify-content:center;gap:8px;margin-top:32px}
-.carousel-dot{width:8px;height:8px;border-radius:50%;background:var(--cream2);cursor:none;transition:var(--transition)}
-.carousel-dot.active{background:var(--green);width:24px;border-radius:4px}
+.treat-carousel-wrap{position:relative;max-width:1000px;margin:0 auto}
+.treat-carousel-viewport{overflow:hidden}
+.treat-carousel-track{display:flex;gap:24px;transition:transform 0.5s ease}
+.treat-card{flex:0 0 calc(33.333% - 16px);background:#fff;border-radius:20px;padding:32px 24px;text-align:center;box-shadow:0 4px 24px rgba(26,42,10,0.06);border:1px solid rgba(0,0,0,0.04);transition:all 0.4s ease;position:relative;overflow:hidden}
+.treat-card:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(107,140,62,0.12);border-color:rgba(107,140,62,0.2)}
+.treat-card-circle{width:180px;height:180px;border-radius:50%;margin:0 auto 24px;overflow:hidden;border:3px solid rgba(107,140,62,0.15);position:relative;transition:border-color 0.4s}
+.treat-card:hover .treat-card-circle{border-color:var(--green)}
+.treat-card-circle img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease}
+.treat-card:hover .treat-card-circle img{transform:scale(1.1)}
+.treat-card-circle .treat-hover-overlay{position:absolute;inset:0;background:rgba(74,107,42,0.85);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.4s;border-radius:50%}
+.treat-card:hover .treat-card-circle .treat-hover-overlay{opacity:1}
+.treat-hover-overlay img{width:60px;height:auto;filter:brightness(10)}
+.treat-card h3{font-family:'Cinzel',serif;font-size:1.1rem;color:var(--dark);margin-bottom:12px;font-weight:700}
+.treat-card p{font-family:'Raleway',sans-serif;font-size:0.85rem;color:var(--text-light);line-height:1.7}
+.treat-carousel-btn{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:#fff;box-shadow:0 4px 20px rgba(26,42,10,0.12);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;transition:all 0.3s;color:var(--green);font-size:1rem;border:1px solid rgba(107,140,62,0.2)}
+.treat-carousel-btn:hover{background:var(--green);color:#fff;transform:translateY(-50%) scale(1.1)}
+.treat-carousel-btn.prev{left:-24px}
+.treat-carousel-btn.next{right:-24px}
+@media(max-width:768px){.treat-card{flex:0 0 calc(50% - 12px);}.treat-card-circle{width:140px;height:140px;}.treat-carousel-btn.prev{left:-12px}.treat-carousel-btn.next{right:-12px}}
+@media(max-width:560px){.treat-card{flex:0 0 calc(100%);}.treat-card-circle{width:160px;height:160px;}.treat-carousel-btn{width:36px;height:36px;font-size:0.85rem}}
 </style>
 
 <section class="treatments" id="treatments">
@@ -572,113 +555,105 @@ section{position:relative;overflow:hidden}
       <h2 class="section-title">Healing Treatments</h2>
       <p class="section-subtitle">Each treatment is carefully tailored to your unique constitution and health goals, guided by our expert Ayurvedic physicians.</p>
     </div>
-    <div class="carousel-wrap reveal">
-      <div class="carousel-viewport">
-        <div class="carousel-track" id="carouselTrack">
-          <div class="treatment-card">
-            <div class="treatment-card-img">
-              <img src="Dhara.jpg" alt="Shirodhara" loading="lazy">
-              <div class="treatment-card-overlay"></div>
-              <div class="treatment-card-desc"><p>A continuous stream of warm medicated oil poured over the forehead, calming the nervous system and relieving stress, anxiety, and insomnia.</p></div>
-            </div>
-            <div class="treatment-card-body">
-              <div class="treatment-card-tag">Ayurveda</div>
-              <h3 class="treatment-card-title">Shirodhara</h3>
-              <p class="treatment-card-short">Continuous oil flow therapy for deep mental relaxation</p>
-            </div>
-          </div>
-          <div class="treatment-card">
-            <div class="treatment-card-img">
-              <img src="kizhi.jpg" alt="Kizhi" loading="lazy">
-              <div class="treatment-card-overlay"></div>
-              <div class="treatment-card-desc"><p>Herbal poultice massage using warm bundles of medicinal herbs, effective for joint pain, muscle stiffness, and neurological conditions.</p></div>
-            </div>
-            <div class="treatment-card-body">
-              <div class="treatment-card-tag">Ayurveda</div>
-              <h3 class="treatment-card-title">Kizhi</h3>
-              <p class="treatment-card-short">Herbal poultice therapy for pain and stiffness relief</p>
-            </div>
-          </div>
-          <div class="treatment-card">
-            <div class="treatment-card-img">
+    <div class="treat-carousel-wrap reveal">
+      <div class="treat-carousel-viewport">
+        <div class="treat-carousel-track" id="treatCarouselTrack">
+          <div class="treat-card">
+            <div class="treat-card-circle">
               <img src="pizhichil.jpg" alt="Pizhichil" loading="lazy">
-              <div class="treatment-card-overlay"></div>
-              <div class="treatment-card-desc"><p>Warm medicated oil is continuously poured over the body while being gently massaged — the royal treatment for rejuvenation and paralysis.</p></div>
+              <div class="treat-hover-overlay"><img src="logo.png" alt="Shanthi"></div>
             </div>
-            <div class="treatment-card-body">
-              <div class="treatment-card-tag">Ayurveda</div>
-              <h3 class="treatment-card-title">Pizhichil</h3>
-              <p class="treatment-card-short">Royal oil bath therapy for full-body rejuvenation</p>
-            </div>
+            <h3>Pizhichil</h3>
+            <p>Lukewarm oil is poured in the body by squeezing cotton cloth soaked in oil. Highly effective for Spondylosis, Hemiplegia, and Arthritis.</p>
           </div>
-          <div class="treatment-card">
-            <div class="treatment-card-img">
+          <div class="treat-card">
+            <div class="treat-card-circle">
+              <img src="Dhara.jpg" alt="Dhara" loading="lazy">
+              <div class="treat-hover-overlay"><img src="logo.png" alt="Shanthi"></div>
+            </div>
+            <h3>Dhara</h3>
+            <p>Pouring of medicated oil done all over the body, beneficial for neuromuscular conditions, rheumatism and general debility.</p>
+          </div>
+          <div class="treat-card">
+            <div class="treat-card-circle">
               <img src="Nasyam.jpg" alt="Nasyam" loading="lazy">
-              <div class="treatment-card-overlay"></div>
-              <div class="treatment-card-desc"><p>Medicated oils or herbal preparations administered through the nasal passages to cleanse and strengthen the head, neck, and sensory organs.</p></div>
+              <div class="treat-hover-overlay"><img src="logo.png" alt="Shanthi"></div>
             </div>
-            <div class="treatment-card-body">
-              <div class="treatment-card-tag">Panchakarma</div>
-              <h3 class="treatment-card-title">Nasyam</h3>
-              <p class="treatment-card-short">Nasal therapy for sinus, migraine, and neurological care</p>
-            </div>
+            <h3>Nasyam</h3>
+            <p>Herbal juices and medicated oils administered through the nostrils for paralysis, headaches, and mental disorders.</p>
           </div>
-          <div class="treatment-card">
-            <div class="treatment-card-img">
-              <img src="mudra.jpg" alt="Yoga Therapy" loading="lazy">
-              <div class="treatment-card-overlay"></div>
-              <div class="treatment-card-desc"><p>Therapeutic yoga and mudra practices customized to your dosha type, promoting flexibility, mental clarity, and spiritual well-being.</p></div>
+          <div class="treat-card">
+            <div class="treat-card-circle">
+              <img src="kizhi.jpg" alt="Kizhi" loading="lazy">
+              <div class="treat-hover-overlay"><img src="logo.png" alt="Shanthi"></div>
             </div>
-            <div class="treatment-card-body">
-              <div class="treatment-card-tag">Yoga</div>
-              <h3 class="treatment-card-title">Yoga Therapy</h3>
-              <p class="treatment-card-short">Personalized yoga for holistic mind-body balance</p>
-            </div>
+            <h3>Kizhi</h3>
+            <p>Herbal poultice massage using warm bundles of medicinal herbs for joint pain, muscle stiffness, and neurological conditions.</p>
           </div>
-          <div class="treatment-card">
-            <div class="treatment-card-img">
+          <div class="treat-card">
+            <div class="treat-card-circle">
               <img src="shirovasthi.jpg" alt="Shirovasthi" loading="lazy">
-              <div class="treatment-card-overlay"></div>
-              <div class="treatment-card-desc"><p>Warm medicated oil retained on the head using a specially fitted cap — highly effective for neurological disorders, hair loss, and mental fatigue.</p></div>
+              <div class="treat-hover-overlay"><img src="logo.png" alt="Shanthi"></div>
             </div>
-            <div class="treatment-card-body">
-              <div class="treatment-card-tag">Ayurveda</div>
-              <h3 class="treatment-card-title">Shirovasthi</h3>
-              <p class="treatment-card-short">Head oil retention therapy for neurological healing</p>
-            </div>
+            <h3>Shirovasthi</h3>
+            <p>Warm medicated oil retained on the head using a fitted cap — effective for neurological disorders and mental fatigue.</p>
           </div>
-          <div class="treatment-card">
-            <div class="treatment-card-img">
+          <div class="treat-card">
+            <div class="treat-card-circle">
               <img src="ritual3.jpg" alt="Abhyanga" loading="lazy">
-              <div class="treatment-card-overlay"></div>
-              <div class="treatment-card-desc"><p>Full-body warm oil massage using dosha-specific herbal oils, improving circulation, nourishing tissues, and promoting deep relaxation.</p></div>
+              <div class="treat-hover-overlay"><img src="logo.png" alt="Shanthi"></div>
             </div>
-            <div class="treatment-card-body">
-              <div class="treatment-card-tag">Ayurveda</div>
-              <h3 class="treatment-card-title">Abhyanga</h3>
-              <p class="treatment-card-short">Traditional full-body herbal oil massage therapy</p>
-            </div>
-          </div>
-          <div class="treatment-card">
-            <div class="treatment-card-img">
-              <img src="ritual4.jpg" alt="Panchakarma" loading="lazy">
-              <div class="treatment-card-overlay"></div>
-              <div class="treatment-card-desc"><p>The ultimate Ayurvedic detox — a five-step purification process that eliminates deep-seated toxins and restores the body's natural balance.</p></div>
-            </div>
-            <div class="treatment-card-body">
-              <div class="treatment-card-tag">Detox</div>
-              <h3 class="treatment-card-title">Panchakarma</h3>
-              <p class="treatment-card-short">Complete Ayurvedic detoxification and rejuvenation</p>
-            </div>
+            <h3>Abhyanga</h3>
+            <p>Full-body warm oil massage using dosha-specific herbal oils, improving circulation and promoting deep relaxation.</p>
           </div>
         </div>
       </div>
-      <button class="carousel-btn prev" id="carouselPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
-      <button class="carousel-btn next" id="carouselNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+      <button class="treat-carousel-btn prev" id="treatPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+      <button class="treat-carousel-btn next" id="treatNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
     </div>
-    <div class="carousel-dots" id="carouselDots"></div>
   </div>
 </section>
+
+<script>
+(function(){
+  var track = document.getElementById('treatCarouselTrack');
+  if(!track) return;
+  var cards = track.children;
+  var current = 0;
+  var visibleCards = 3;
+  var totalSlides = Math.ceil(cards.length / visibleCards);
+  
+  function getVisible(){
+    if(window.innerWidth <= 560) return 1;
+    if(window.innerWidth <= 768) return 2;
+    return 3;
+  }
+  
+  function slide(){
+    visibleCards = getVisible();
+    var cardWidth = cards[0].offsetWidth + 24;
+    track.style.transform = 'translateX(-' + (current * cardWidth) + 'px)';
+  }
+  
+  document.getElementById('treatNext').addEventListener('click', function(){
+    visibleCards = getVisible();
+    var maxSlide = cards.length - visibleCards;
+    if(current < maxSlide) current++;
+    else current = 0;
+    slide();
+  });
+  
+  document.getElementById('treatPrev').addEventListener('click', function(){
+    visibleCards = getVisible();
+    var maxSlide = cards.length - visibleCards;
+    if(current > 0) current--;
+    else current = maxSlide;
+    slide();
+  });
+  
+  window.addEventListener('resize', function(){ current = 0; slide(); });
+})();
+</script>
 
 <!-- ===== WHY US SECTION ===== -->
 <style>
@@ -738,10 +713,14 @@ section{position:relative;overflow:hidden}
           </div>
         </div>
       </div>
-      <div class="why-us-image reveal-right">
-        <img src="plant.jpg" alt="Natural Healing at Shanthi Wellness" loading="lazy">
-        <div class="why-us-image-overlay"></div>
-        <canvas id="whyCanvas"></canvas>
+      <div class="why-us-image reveal-right" style="position:relative;">
+        <img src="Diya.jpg" alt="Natural Healing at Shanthi Wellness" loading="lazy">
+        <!-- Decorative border grid -->
+        <div style="position:absolute;inset:12px;border:2px solid rgba(107,140,62,0.3);border-radius:12px;pointer-events:none;z-index:2;"></div>
+        <div style="position:absolute;top:0;left:0;width:40px;height:40px;border-top:3px solid var(--green2);border-left:3px solid var(--green2);border-radius:8px 0 0 0;pointer-events:none;z-index:3;"></div>
+        <div style="position:absolute;top:0;right:0;width:40px;height:40px;border-top:3px solid var(--green2);border-right:3px solid var(--green2);border-radius:0 8px 0 0;pointer-events:none;z-index:3;"></div>
+        <div style="position:absolute;bottom:0;left:0;width:40px;height:40px;border-bottom:3px solid var(--green2);border-left:3px solid var(--green2);border-radius:0 0 0 8px;pointer-events:none;z-index:3;"></div>
+        <div style="position:absolute;bottom:0;right:0;width:40px;height:40px;border-bottom:3px solid var(--green2);border-right:3px solid var(--green2);border-radius:0 0 8px 0;pointer-events:none;z-index:3;"></div>
       </div>
     </div>
   </div>
@@ -1029,63 +1008,89 @@ section{position:relative;overflow:hidden}
 
 #globeCanvas{width:100%;height:350px;display:block}
 
-.location-cards{display:flex;flex-direction:column;gap:16px}
+.location-cards{display:flex;flex-direction:column;gap:20px}
 
-.location-card{background:rgba(0,0,0,0.03);border:1px solid rgba(0,0,0,0.08);border-radius:var(--radius);padding:20px;transition:var(--transition)}
+.location-card{background:#fff;border:1px solid rgba(107,140,62,0.12);border-radius:20px;padding:28px;transition:var(--transition);box-shadow:0 4px 20px rgba(26,42,10,0.05);position:relative;overflow:hidden}
 
-.location-card:hover{background:rgba(107,140,62,0.06);border-color:rgba(107,140,62,0.3);transform:translateX(8px)}
+.location-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(to bottom,var(--green),var(--green2));border-radius:4px 0 0 4px;opacity:0;transition:opacity 0.3s;}
 
-.location-card-header{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.location-card:hover{background:#fff;border-color:rgba(107,140,62,0.3);transform:translateY(-4px);box-shadow:0 12px 40px rgba(107,140,62,0.12)}
 
-.location-pin{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--green2));display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;flex-shrink:0}
+.location-card:hover::before{opacity:1}
 
-.location-card-header h3{font-family:'Cinzel',serif;font-size:1.1rem;color:var(--dark)}
+.location-card-header{display:flex;align-items:center;gap:14px;margin-bottom:18px}
 
-.location-card-header span{font-family:'Raleway',sans-serif;font-size:0.78rem;color:var(--green2);display:block;margin-top:2px}
+.location-pin{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,var(--green),var(--green2));display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;flex-shrink:0;box-shadow:0 4px 12px rgba(107,140,62,0.25)}
 
-.location-card p{font-family:'Raleway',sans-serif;font-size:0.88rem;color:var(--text-light);line-height:1.6;margin-bottom:16px}
+.location-card-header h3{font-family:'Cinzel',serif;font-size:1.15rem;color:var(--dark);font-weight:700}
 
-.location-card .btn{font-size:0.82rem;padding:10px 20px}
+.location-card-header span{font-family:'Raleway',sans-serif;font-size:0.75rem;color:var(--green);display:block;margin-top:3px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase}
+
+.location-card p{font-family:'Raleway',sans-serif;font-size:0.88rem;color:var(--text-light);line-height:1.8;margin-bottom:18px}
+
+.location-card .btn{font-size:0.82rem;padding:10px 22px;border-radius:50px;background:rgba(107,140,62,0.08);color:var(--green);border:1px solid rgba(107,140,62,0.2);font-weight:600}
+
+.location-card .btn:hover{background:var(--green);color:#fff;border-color:var(--green);transform:translateY(-2px)}
 
 .maps-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:60px}
 
-.map-wrap{border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.3)}
+.map-wrap{border-radius:20px;overflow:hidden;box-shadow:0 8px 32px rgba(26,42,10,0.08);border:1px solid rgba(107,140,62,0.1);transition:var(--transition)}
+
+.map-wrap:hover{box-shadow:0 12px 40px rgba(26,42,10,0.15);transform:translateY(-4px)}
 
 .map-wrap iframe{width:100%;height:280px;border:none;display:block}
 
-.map-label{background:rgba(0,0,0,0.03);border:1px solid rgba(0,0,0,0.08);padding:16px 20px;display:flex;align-items:center;gap:10px}
+.map-label{background:linear-gradient(135deg,rgba(107,140,62,0.06),rgba(141,194,111,0.04));border-bottom:1px solid rgba(107,140,62,0.1);padding:16px 20px;display:flex;align-items:center;gap:10px}
 
-.map-label i{color:var(--green)}
+.map-label i{color:var(--green);font-size:0.9rem}
 
-.map-label span{font-family:'Raleway',sans-serif;font-size:0.85rem;color:var(--text);font-weight:500}
+.map-label span{font-family:'Raleway',sans-serif;font-size:0.85rem;color:var(--dark);font-weight:600}
 
-.footer-main{padding:40px 0;border-bottom:none}
+.footer-main{padding:60px 0 40px;background:linear-gradient(135deg,#f8faf6 0%,#f0f7ec 50%,#f5faf2 100%);border-top:1px solid rgba(107,140,62,0.1)}
 
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:48px}
+.footer-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1.8fr;gap:40px}
 
-.footer-brand img{height:90px;margin-bottom:16px}
+.footer-brand{padding-right:20px}
 
-.footer-brand p{font-family:'Raleway',sans-serif;font-size:0.9rem;line-height:1.7;color:var(--text);margin-bottom:24px;max-width:280px;font-weight:500}
+.footer-brand img{height:80px;margin-bottom:16px}
 
-.footer-social{display:flex;gap:12px}
+.footer-brand p{font-family:'Raleway',sans-serif;font-size:0.88rem;line-height:1.8;color:var(--text-light);margin-bottom:24px;max-width:280px;font-weight:400}
 
-.footer-social a{width:38px;height:38px;border-radius:50%;background:rgba(0,0,0,0.05);display:flex;align-items:center;justify-content:center;color:var(--text-light);font-size:0.9rem;transition:var(--transition)}
+.footer-social{display:flex;gap:10px}
 
-.footer-social a:hover{background:var(--green);color:#fff;transform:translateY(-2px)}
+.footer-social a{width:40px;height:40px;border-radius:12px;background:#fff;border:1px solid rgba(107,140,62,0.15);display:flex;align-items:center;justify-content:center;color:var(--green);font-size:0.95rem;transition:var(--transition);box-shadow:0 2px 8px rgba(0,0,0,0.04)}
 
-.footer-col h4{font-family:'Cinzel',serif;font-size:0.95rem;color:var(--dark);margin-bottom:20px;letter-spacing:0.05em;font-weight:700}
+.footer-social a:hover{background:var(--green);color:#fff;border-color:var(--green);transform:translateY(-3px);box-shadow:0 6px 20px rgba(107,140,62,0.25)}
+
+.footer-col h4{font-family:'Cinzel',serif;font-size:0.9rem;color:var(--dark);margin-bottom:20px;letter-spacing:0.08em;font-weight:700;text-transform:uppercase;position:relative;padding-bottom:10px}
+
+.footer-col h4::after{content:'';position:absolute;bottom:0;left:0;width:30px;height:2px;background:var(--green);border-radius:2px}
 
 .footer-col ul li{margin-bottom:10px}
 
-.footer-col ul li a{font-family:'Raleway',sans-serif;font-size:0.88rem;color:var(--text);font-weight:500;transition:color 0.3s;display:flex;align-items:center;gap:6px}
+.footer-col ul li a{font-family:'Raleway',sans-serif;font-size:0.85rem;color:var(--text-light);font-weight:500;transition:all 0.3s;display:flex;align-items:center;gap:8px}
 
-.footer-col ul li a:hover{color:var(--green2)}
+.footer-col ul li a:hover{color:var(--green);transform:translateX(4px)}
 
-.footer-col ul li a i{font-size:0.7rem;color:var(--green);opacity:0.7}
+.footer-col ul li a i{font-size:0.65rem;color:var(--green);opacity:0.6;transition:opacity 0.3s}
 
-.footer-contact-item{display:flex;align-items:flex-start;gap:12px;margin-bottom:16px}
+.footer-col ul li a:hover i{opacity:1}
 
-.footer-contact-item i{color:var(--green2);font-size:0.9rem;margin-top:3px;flex-shrink:0}
+.footer-contact-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:14px;padding:6px 0}
+
+.footer-contact-item i{width:28px;height:28px;border-radius:8px;background:rgba(107,140,62,0.1);display:flex;align-items:center;justify-content:center;color:var(--green);font-size:0.75rem;flex-shrink:0;margin-top:0}
+
+.footer-contact-item span{font-family:'Raleway',sans-serif;font-size:0.82rem;color:var(--text-light);line-height:1.5}
+
+.footer-contact-item span strong{color:var(--dark);font-weight:600}
+
+.footer-bottom{background:var(--dark);padding:20px 0;margin-top:0}
+
+.footer-bottom p{font-family:'Raleway',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.6)}
+
+.footer-bottom a{color:rgba(255,255,255,0.8);transition:color 0.3s}
+
+.footer-bottom a:hover{color:var(--green2)}
 
 .footer-contact-item span{font-family:'Raleway',sans-serif;font-size:0.88rem;color:var(--text);line-height:1.5;font-weight:500}
 
@@ -1111,7 +1116,30 @@ section{position:relative;overflow:hidden}
 
         <div class="reveal-left">
 
-          <canvas id="globeCanvas"></canvas>
+          <div class="map-video-wrap" style="position:relative;border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(26,42,10,0.12);">
+            <video autoplay muted loop playsinline style="width:100%;height:350px;object-fit:cover;display:block;">
+              <source src="map.mp4" type="video/mp4">
+            </video>
+            <!-- Decorative grid overlay -->
+            <div style="position:absolute;inset:0;pointer-events:none;
+              background:
+                linear-gradient(rgba(107,140,62,0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(107,140,62,0.08) 1px, transparent 1px);
+              background-size:40px 40px;
+            "></div>
+            <!-- Corner accents -->
+            <div style="position:absolute;top:12px;left:12px;width:30px;height:30px;border-top:2px solid var(--green2);border-left:2px solid var(--green2);border-radius:4px 0 0 0;opacity:0.7;"></div>
+            <div style="position:absolute;top:12px;right:12px;width:30px;height:30px;border-top:2px solid var(--green2);border-right:2px solid var(--green2);border-radius:0 4px 0 0;opacity:0.7;"></div>
+            <div style="position:absolute;bottom:12px;left:12px;width:30px;height:30px;border-bottom:2px solid var(--green2);border-left:2px solid var(--green2);border-radius:0 0 0 4px;opacity:0.7;"></div>
+            <div style="position:absolute;bottom:12px;right:12px;width:30px;height:30px;border-bottom:2px solid var(--green2);border-right:2px solid var(--green2);border-radius:0 0 4px 0;opacity:0.7;"></div>
+            <!-- Center crosshair -->
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:24px;height:24px;pointer-events:none;opacity:0.5;">
+              <div style="position:absolute;top:50%;left:0;right:0;height:1px;background:var(--green2);"></div>
+              <div style="position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--green2);"></div>
+            </div>
+            <!-- Subtle bottom gradient -->
+            <div style="position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(to top,rgba(0,0,0,0.3),transparent);pointer-events:none;"></div>
+          </div>
 
         </div>
 
@@ -1121,43 +1149,7 @@ section{position:relative;overflow:hidden}
 
           <h2 class="section-title">Find Us Near You</h2>
 
-          <p class="section-subtitle" style="margin-bottom:40px">Two centres of healing excellence, serving patients across Kerala and Karnataka with authentic Ayurvedic care.</p>
-
-          <div class="location-cards">
-
-            <div class="location-card">
-
-              <div class="location-card-header">
-
-                <div class="location-pin"><i class="fas fa-map-marker-alt"></i></div>
-
-                <div><h3>Kozhikode Centre</h3><span>Kerala, India</span></div>
-
-              </div>
-
-              <p>Shanthi Wellness, Medical College Road, Kozhikode, Kerala - 673008<br>Mon-Sat: 9:00 AM - 6:00 PM</p>
-
-              <a href="https://maps.google.com/?q=Kozhikode,Kerala" target="_blank" class="btn btn-outline" style="color:var(--green2);border-color:var(--green2)"><i class="fas fa-directions"></i> Get Directions</a>
-
-            </div>
-
-            <div class="location-card">
-
-              <div class="location-card-header">
-
-                <div class="location-pin"><i class="fas fa-map-marker-alt"></i></div>
-
-                <div><h3>Bangalore Centre</h3><span>Karnataka, India</span></div>
-
-              </div>
-
-              <p>Shanthi Wellness, Indiranagar, Bangalore, Karnataka - 560038<br>Mon-Sat: 9:00 AM - 7:00 PM</p>
-
-              <a href="https://maps.google.com/?q=Indiranagar,Bangalore" target="_blank" class="btn btn-outline" style="color:var(--green2);border-color:var(--green2)"><i class="fas fa-directions"></i> Get Directions</a>
-
-            </div>
-
-          </div>
+          <p class="section-subtitle" style="margin-bottom:40px">Two centres of authentic Ayurvedic healing in the UAE, serving patients across Sharjah and Dubai.</p>
 
         </div>
 
@@ -1167,17 +1159,17 @@ section{position:relative;overflow:hidden}
 
         <div class="map-wrap">
 
-          <div class="map-label"><i class="fas fa-map-marker-alt"></i><span>Kozhikode, Kerala</span></div>
+          <div class="map-label"><i class="fas fa-map-marker-alt"></i><span>Sharjah, UAE</span></div>
 
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62556.78!2d75.7804!3d11.2588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65938563d4747%3A0x323333!2sKozhikode%2C+Kerala!5e0!3m2!1sen!2sin!4v1" allowfullscreen="" loading="lazy"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57844.0!2d55.3!3d25.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084e2e92!2sSharjah!5e0!3m2!1sen!2sae!4v1" allowfullscreen="" loading="lazy"></iframe>
 
         </div>
 
         <div class="map-wrap">
 
-          <div class="map-label"><i class="fas fa-map-marker-alt"></i><span>Bangalore, Karnataka</span></div>
+          <div class="map-label"><i class="fas fa-map-marker-alt"></i><span>Dubai, UAE</span></div>
 
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62208.78!2d77.5946!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8!2sBengaluru%2C+Karnataka!5e0!3m2!1sen!2sin!4v1" allowfullscreen="" loading="lazy"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14441.0!2d55.34!3d25.28!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5ccf3ba9c9e1%3A0x2!2sHor+Al+Anz+East+-+Dubai!5e0!3m2!1sen!2sae!4v1" allowfullscreen="" loading="lazy"></iframe>
 
         </div>
 
@@ -1259,17 +1251,25 @@ section{position:relative;overflow:hidden}
 
         <div class="footer-col">
 
-          <h4>Contact Us</h4>
+          <h4>Sharjah Branch</h4>
 
-          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Medical College Road, Kozhikode, Kerala - 673008</span></div>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>P.O.Box 64589, Sharjah, UAE</span></div>
 
-          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Indiranagar, Bangalore, Karnataka - 560038</span></div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+971 6 555 8429</span></div>
 
-          <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+91 98765 43210</span></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>info@ayurvedauae.com</span></div>
 
-          <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>info@shanthiwellness.com</span></div>
+          <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><span>+971 52 843 4127</span></div>
 
-          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Mon - Sat: 9:00 AM - 7:00 PM</span></div>
+          <h4 style="margin-top:24px;">Dubai Branch</h4>
+
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Suite M19, Royal House, Al Wuheida St, Hor Al Anz East, Abuhail</span></div>
+
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+971 4 225 5133 / +971 54 463 0447</span></div>
+
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>doctor@ayurvedauae.com</span></div>
+
+          <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><span>+971 54 463 0447</span></div>
 
         </div>
 
@@ -1315,6 +1315,7 @@ section{position:relative;overflow:hidden}
   .testimonials-grid{grid-template-columns:1fr}
   .maps-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
+  .location-cards-footer{grid-template-columns:1fr !important;}
   .treatment-card{flex:0 0 calc(100% - 0px)}
   .plant-stats{grid-template-columns:repeat(2,1fr)}
   .plant-grid{gap:32px}
@@ -1348,7 +1349,9 @@ section{position:relative;overflow:hidden}
   .plant-text{padding:24px 16px}
   .plant-video-wrap video{min-height:250px}
   .appointment-form{padding:28px 16px}
-  .top-bar{display:none}
+  .top-bar{padding:8px 0;}
+  .top-bar-call{font-size:0.75rem;}
+  .top-bar-btn{padding:10px 32px;font-size:0.85rem;}
   .navbar{top:0}
   .container{padding:0 16px}
   .hero-content{padding:80px 16px 40px}
@@ -1399,9 +1402,11 @@ section{position:relative;overflow:hidden}
 <script>
 // ===== LENIS SMOOTH SCROLL =====
 const lenis = new Lenis({
-  duration: 1.2,
+  duration: 1.4,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  smooth: true
+  smooth: true,
+  smoothTouch: true,
+  touchMultiplier: 2
 });
 function rafLoop(time) {
   lenis.raf(time);
