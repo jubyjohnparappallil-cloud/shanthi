@@ -9,9 +9,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
 <style>
 :root {
-  --green: #6B8C3E;
-  --green2: #8dc26f;
-  --green3: #4a6b2a;
+  --green: #5a7a2b;
+  --green2: #7a9e3e;
+  --green3: #3d5a1a;
   --gold: #c89a4a;
   --dark: #1a2a0a;
   --dark2: #0d1a05;
@@ -66,8 +66,8 @@ body:hover #cursor{opacity:1}
 /* SECTION COMMON */
 section{position:relative;overflow:hidden}
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
-.section-label{font-family:'Raleway',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--green);margin-bottom:12px;display:block}
-.section-title{font-size:clamp(2rem,4vw,3rem);color:var(--dark);margin-bottom:16px}
+.section-label{font-family:'Raleway',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--green);margin-bottom:12px;display:block}
+.section-title{font-size:clamp(2rem,4vw,3rem);color:var(--dark);margin-bottom:16px;letter-spacing:0.04em;}
 .section-subtitle{font-size:1.05rem;color:var(--text-light);max-width:560px;line-height:1.8}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:50px;font-family:'Raleway',sans-serif;font-weight:600;font-size:0.95rem;letter-spacing:0.05em;transition:var(--transition);cursor:none}
 .btn-primary{background:var(--green);color:#fff;box-shadow:0 4px 20px rgba(107,140,62,0.35)}
@@ -848,11 +848,16 @@ section{position:relative;overflow:hidden}
 
 <!-- ===== TESTIMONIALS ===== -->
 <style>
-.testimonials{background:#ffffff;padding:100px 0}
+.testimonials{position:relative;padding:100px 0;overflow:hidden;}
+.testimonials::before{content:'';position:absolute;inset:0;background-image:url('herbal.jpg');background-size:cover;background-position:center;background-attachment:fixed;z-index:0;}
+.testimonials::after{content:'';position:absolute;inset:0;background:rgba(90,122,43,0.55);z-index:1;}
+.testimonials .container{position:relative;z-index:2;}
 .testimonials-header{text-align:center;margin-bottom:60px}
-.testimonials-header .section-subtitle{margin:0 auto}
+.testimonials-header .section-label{color:rgba(255,255,255,0.7)}
+.testimonials-header .section-title{color:#fff}
+.testimonials-header .section-subtitle{margin:0 auto;color:rgba(255,255,255,0.75)}
 .testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.testimonial-card{background:rgba(255,255,255,0.8);border:1px solid rgba(107,140,62,0.15);border-radius:var(--radius);padding:36px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 4px 24px rgba(26,42,10,0.06);transition:var(--transition);position:relative}
+.testimonial-card{background:rgba(255,255,255,0.95);border:none;border-radius:var(--radius);padding:36px;box-shadow:0 8px 32px rgba(0,0,0,0.15);transition:var(--transition);position:relative}
 .testimonial-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--green2));border-radius:var(--radius) var(--radius) 0 0;opacity:0;transition:opacity 0.3s}
 .testimonial-card:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(26,42,10,0.12)}
 .testimonial-card:hover::before{opacity:1}
