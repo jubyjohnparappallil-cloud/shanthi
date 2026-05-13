@@ -32,6 +32,8 @@
 html{scroll-behavior:smooth;font-size:16px}
 body{font-family:'Lato',sans-serif;color:var(--text);background:#ffffff;overflow-x:hidden;cursor:none}
 img{max-width:100%;height:auto;display:block}
+/* Global flawless white edge for all media */
+.about-image-wrap,.why-us-image,.map-video-wrap,.map-wrap{border-radius:20px;box-shadow:0 0 0 8px #fff, 0 8px 40px rgba(26,42,10,0.08);overflow:hidden;}
 a{text-decoration:none;color:inherit}
 button{cursor:none;border:none;background:none;font-family:inherit}
 ul{list-style:none}
@@ -288,8 +290,8 @@ section{position:relative;overflow:hidden}
 <!-- ===== HERO SECTION ===== -->
 <style>
 .hero{position:relative;overflow:hidden;width:100%;}
-.hero-bg{width:100%;display:block;}
-.hero-bg img{width:100%;height:auto;display:block;}
+.hero-bg{width:100%;display:block;padding:0 24px;}
+.hero-bg img{width:100%;height:auto;display:block;border-radius:20px;box-shadow:0 0 0 8px #fff, 0 8px 40px rgba(26,42,10,0.08);}
 @media(max-width:768px){
   .hero{}
 }
@@ -400,8 +402,8 @@ section{position:relative;overflow:hidden}
 <!-- ===== PLANT.JPG FIXED BACKGROUND + THREE.JS WATER SECTION ===== -->
 <style>
 .plant-section{position:relative;overflow:hidden;background:#ffffff;padding:100px 0}
-.plant-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:0;align-items:stretch;max-width:1200px;margin:0 auto;padding:0 24px;border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(26,42,10,0.1)}
-.plant-video-wrap{position:relative;overflow:hidden;min-height:580px;border:3px solid rgba(107,140,62,0.2);outline:3px solid rgba(107,140,62,0.08);outline-offset:6px;border-radius:4px;}
+.plant-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:0;align-items:stretch;max-width:1200px;margin:0 auto;padding:0;border-radius:20px;overflow:hidden;box-shadow:0 0 0 8px #fff, 0 8px 40px rgba(26,42,10,0.08)}
+.plant-video-wrap{position:relative;overflow:hidden;min-height:580px;}
 .plant-video-wrap video{width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0}
 .plant-video-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,transparent 70%,rgba(255,255,255,0.9) 100%);pointer-events:none}
 .plant-text{position:relative;padding:60px 48px;background:#fff}
@@ -439,11 +441,6 @@ section{position:relative;overflow:hidden}
   <div class="plant-grid">
     <div class="plant-video-wrap" id="plantVideo">
       <video src="slow.mp4" autoplay muted loop playsinline></video>
-      <div class="plant-border-grid"></div>
-      <div class="plant-corner tl"></div>
-      <div class="plant-corner tr"></div>
-      <div class="plant-corner bl"></div>
-      <div class="plant-corner br"></div>
     </div>
     <div class="plant-text">
       <span class="section-label">The Healing Power</span>
@@ -1138,7 +1135,7 @@ section{position:relative;overflow:hidden}
 
         <div class="reveal-left">
 
-          <div class="map-video-wrap" style="position:relative;border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(26,42,10,0.12);">
+          <div class="map-video-wrap" style="position:relative;overflow:hidden;">
             <video autoplay muted loop playsinline style="width:100%;height:350px;object-fit:cover;display:block;">
               <source src="map.mp4" type="video/mp4">
             </video>
@@ -1221,7 +1218,11 @@ section{position:relative;overflow:hidden}
 
             <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
 
-            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.vayalarikam.com/" target="_blank" aria-label="Our Branch" title="Our Branch"><i class="fas fa-building"></i></a>
+
+            <a href="https://wa.me/971528434127" target="_blank" aria-label="WhatsApp Sharjah" title="WhatsApp Sharjah"><i class="fab fa-whatsapp"></i></a>
+
+            <a href="https://wa.me/971544630447" target="_blank" aria-label="WhatsApp Dubai" title="WhatsApp Dubai"><i class="fab fa-whatsapp"></i></a>
 
           </div>
 
@@ -2102,5 +2103,76 @@ form && form.addEventListener('submit', (e) => {
   });
 })();
 </script>
+<!-- ===== FLOATING BUTTONS ===== -->
+<style>
+.float-whatsapp{position:fixed;bottom:24px;right:24px;z-index:9000;display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
+.float-whatsapp-label{background:rgba(0,0,0,0.7);color:#fff;padding:6px 14px;border-radius:8px;font-family:'Raleway',sans-serif;font-size:0.78rem;font-weight:600;font-style:italic;white-space:nowrap;animation:labelPulse 2s ease-in-out infinite;}
+@keyframes labelPulse{0%,100%{opacity:1}50%{opacity:0.7}}
+.float-whatsapp-btn{width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.8rem;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:all 0.3s;text-decoration:none;cursor:pointer;border:none;position:relative;}
+.float-whatsapp-btn:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,0.5);}
+.float-whatsapp-btn .badge{position:absolute;top:-2px;right:-2px;width:20px;height:20px;background:#e53935;border-radius:50%;font-size:0.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Raleway',sans-serif;}
+.float-wa-popup{position:absolute;bottom:70px;right:0;background:#fff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,0.2);padding:16px;min-width:220px;display:none;flex-direction:column;gap:10px;}
+.float-wa-popup.open{display:flex;}
+.float-wa-popup-close{position:absolute;top:8px;right:12px;background:none;border:none;font-size:1.2rem;color:var(--text-light);cursor:pointer;}
+.float-wa-popup h4{font-family:'Raleway',sans-serif;font-size:0.85rem;font-weight:700;color:var(--dark);margin-bottom:4px;}
+.float-wa-popup a{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:10px;background:rgba(37,211,102,0.08);text-decoration:none;transition:all 0.3s;border:1px solid rgba(37,211,102,0.15);}
+.float-wa-popup a:hover{background:rgba(37,211,102,0.15);transform:translateX(4px);}
+.float-wa-popup a i{color:#25D366;font-size:1.3rem;}
+.float-wa-popup a .wa-info{font-family:'Raleway',sans-serif;}
+.float-wa-popup a .wa-info strong{display:block;font-size:0.82rem;color:var(--dark);}
+.float-wa-popup a .wa-info span{font-size:0.75rem;color:var(--text-light);}
+
+.float-branch{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:9000;}
+.float-branch a{display:flex;flex-direction:column;align-items:center;gap:8px;padding:18px 14px 20px;background:linear-gradient(to bottom,#f0f7ec,#d4e8c4);border-radius:12px 0 0 12px;text-decoration:none;box-shadow:-4px 4px 20px rgba(0,0,0,0.15);transition:all 0.3s;border:2px solid var(--green);border-right:none;}
+.float-branch a:hover{padding-right:18px;box-shadow:-6px 6px 28px rgba(0,0,0,0.2);}
+.float-branch a .branch-icon{width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--green);border-radius:10px;}
+.float-branch a .branch-icon i{font-size:1.3rem;color:#fff;}
+.float-branch a .branch-text{writing-mode:vertical-rl;text-orientation:mixed;font-family:'Cinzel',serif;font-weight:700;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--dark);}
+
+@media(max-width:560px){
+  .float-whatsapp-btn{width:50px;height:50px;font-size:1.5rem;}
+  .float-branch a{padding:12px 8px;font-size:0.6rem;}
+  .float-wa-popup{min-width:190px;right:-10px;}
+}
+</style>
+
+<div class="float-whatsapp">
+  <div class="float-wa-popup" id="waPopup">
+    <button class="float-wa-popup-close" id="waPopupClose">&times;</button>
+    <h4>Chat with us</h4>
+    <a href="https://wa.me/971528434127" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+      <div class="wa-info"><strong>Sharjah Branch</strong><span>+971 52 843 4127</span></div>
+    </a>
+    <a href="https://wa.me/971544630447" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+      <div class="wa-info"><strong>Dubai Branch</strong><span>+971 54 463 0447</span></div>
+    </a>
+  </div>
+  <div class="float-whatsapp-label">We Are Here!</div>
+  <button class="float-whatsapp-btn" id="waToggle" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="badge">1</span>
+  </button>
+</div>
+
+<div class="float-branch">
+  <a href="https://www.vayalarikam.com/" target="_blank">
+    <div class="branch-icon"><i class="fas fa-mortar-pestle"></i></div>
+    <span class="branch-text">Our Branch</span>
+  </a>
+</div>
+
+<script>
+(function(){
+  var btn = document.getElementById('waToggle');
+  var popup = document.getElementById('waPopup');
+  var close = document.getElementById('waPopupClose');
+  btn.addEventListener('click', function(){ popup.classList.toggle('open'); });
+  close.addEventListener('click', function(){ popup.classList.remove('open'); });
+  document.addEventListener('click', function(e){ if(!e.target.closest('.float-whatsapp')) popup.classList.remove('open'); });
+})();
+</script>
+
 </body>
 </html>
