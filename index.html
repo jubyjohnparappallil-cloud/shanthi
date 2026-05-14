@@ -412,7 +412,8 @@ window.addEventListener('load', function(){
 
 <!-- ===== PLANT.JPG FIXED BACKGROUND + THREE.JS WATER SECTION ===== -->
 <style>
-.plant-section{position:relative;padding:80px 24px;background:url('leaf.jpg') center/cover no-repeat;min-height:500px;}
+.plant-section{position:relative;padding:80px 24px;min-height:500px;clip-path:inset(0);}
+.plant-bg{position:fixed;top:0;left:0;width:100%;height:100%;background:url('leaf.jpg') center/cover no-repeat;z-index:0;}
 .plant-grid{display:grid;grid-template-columns:1fr;gap:0;max-width:700px;margin:0 auto;padding:0;position:relative;z-index:1;}
 .plant-video-wrap{display:none;}
 .plant-video-wrap video{width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0}
@@ -449,6 +450,7 @@ window.addEventListener('load', function(){
 </style>
 
 <section class="plant-section" id="plant-section">
+  <div class="plant-bg" data-speed="0.5"></div>
   <div class="plant-grid">
     <div class="plant-video-wrap" id="plantVideo">
       <img src="leaf.jpg" alt="Nature meets science" style="width:100%;height:100%;object-fit:contain;display:block;position:absolute;inset:0;">
@@ -739,7 +741,8 @@ window.addEventListener('load', function(){
 
 <!-- ===== WHY US SECTION ===== -->
 <style>
-.why-us{position:relative;padding:50px 16px;background:url('leaf.jpg') center/cover no-repeat;}
+.why-us{position:relative;padding:50px 16px;clip-path:inset(0);}
+.why-us-bg{position:fixed;top:0;left:0;width:100%;height:100%;background:url('leaf.jpg') center/cover no-repeat;z-index:0;}
 .why-us-grid{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;position:relative;z-index:1;max-width:700px;margin:0 auto;}
 .why-us .section-label{color:var(--green)}
 .why-us .section-title{color:var(--dark)}
@@ -759,6 +762,7 @@ window.addEventListener('load', function(){
 </style>
 
 <section class="why-us" id="why-us">
+  <div class="why-us-bg" data-speed="0.5"></div>
   <div class="container">
     <div class="why-us-grid">
       <div class="why-us-text reveal-left">
@@ -1513,8 +1517,9 @@ window.addEventListener('load', function(){
 const lenis = new Lenis({
   duration: 1.4,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  smooth: true,
-  smoothTouch: true,
+  smoothWheel: true,
+  syncTouch: true,
+  syncTouchLerp: 0.1,
   touchMultiplier: 2
 });
 function rafLoop(time) {
@@ -1573,6 +1578,20 @@ heroSection && heroSection.addEventListener('mousemove', (e) => {
 
 // ===== GSAP HERO ENTRANCE =====
 gsap.registerPlugin(ScrollTrigger);
+
+// ===== PARALLAX BACKGROUND (works on mobile) =====
+document.querySelectorAll('.plant-bg, .why-us-bg').forEach(function(bg){
+  gsap.to(bg, {
+    yPercent: -20,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: bg.parentElement,
+      start: 'top bottom',
+      end: 'bottom top',
+      scrub: true
+    }
+  });
+});
 
 // Animate hero content
 gsap.from('.hero-content .hero-tagline', {opacity:0, y:30, duration:0.8, delay:0.3, ease:'power3.out'});
