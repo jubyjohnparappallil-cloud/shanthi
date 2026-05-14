@@ -412,7 +412,7 @@ window.addEventListener('load', function(){
 
 <!-- ===== PLANT.JPG FIXED BACKGROUND + THREE.JS WATER SECTION ===== -->
 <style>
-.plant-section{position:relative;overflow:hidden;background:url('leaf.jpg') center/cover no-repeat fixed;padding:80px 0;}
+.plant-section{position:relative;overflow:hidden;background:url('leaf.jpg') center/cover no-repeat;background-attachment:fixed;padding:80px 0;}
 .plant-section::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,0.15);pointer-events:none;}
 .plant-grid{display:grid;grid-template-columns:1fr;gap:0;max-width:800px;margin:0 auto;padding:0 24px;position:relative;z-index:1;}
 .plant-video-wrap{display:none;}
@@ -760,7 +760,7 @@ window.addEventListener('load', function(){
 
 <!-- ===== WHY US SECTION ===== -->
 <style>
-.why-us{position:relative;padding:50px 0;overflow:hidden;background:url('leaf.jpg') center/cover no-repeat fixed;}
+.why-us{position:relative;padding:50px 0;overflow:hidden;background:url('leaf.jpg') center/cover no-repeat;background-attachment:fixed;}
 .why-us::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,0.2);pointer-events:none;}
 .why-us-grid{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;position:relative;z-index:1;max-width:700px;margin:0 auto;}
 .why-us .section-label{color:var(--green)}
@@ -1421,19 +1421,20 @@ window.addEventListener('load', function(){
   .about-grid,.why-us-grid,.globe-grid,.plant-grid{grid-template-columns:1fr}
   .about-grid{gap:24px}
   .about{padding:40px 0}
-  .plant-section{padding:40px 0}
+  .plant-section{padding:40px 0;background-attachment:scroll;}
   .treatments{padding:40px 0}
-  .why-us{padding:40px 0}
+  .why-us{padding:40px 0;background-attachment:scroll;}
   .team-section{padding:40px 0}
   .testimonials{padding:40px 0}
   .appointment{padding:40px 0}
   .about-image-wrap,.why-us-image,.map-video-wrap,.map-wrap{box-shadow:none;border-radius:12px;}
-  .plant-grid{box-shadow:none;border-radius:12px;}
+  .plant-grid{box-shadow:none;border-radius:12px;padding:0 16px;}
   .about-counters{grid-template-columns:repeat(2,1fr)}
   .about-features{grid-template-columns:1fr}
   .about-image-wrap{height:250px}
   .why-us-image img{height:300px}
   .why-us-image{order:-1}
+  .why-us-text{padding:28px 20px;margin:0 16px;border-radius:12px;}
   .testimonials-grid{grid-template-columns:1fr}
   .maps-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
@@ -1463,9 +1464,9 @@ window.addEventListener('load', function(){
   .hero-pills{gap:8px}
   .hero-pill{font-size:0.78rem;padding:6px 14px}
   .about{padding:20px 0}
-  .plant-section{padding:20px 0}
+  .plant-section{padding:40px 0;background-attachment:scroll;}
   .treatments{padding:30px 0}
-  .why-us{padding:20px 0}
+  .why-us{padding:30px 0;background-attachment:scroll;}
   .team-section{padding:30px 0}
   .testimonials{padding:30px 0}
   .appointment{padding:30px 0}
@@ -1473,9 +1474,15 @@ window.addEventListener('load', function(){
   .about-image-wrap{height:200px}
   .about-counters{grid-template-columns:repeat(2,1fr)}
   .plant-stats{grid-template-columns:1fr 1fr}
-  .plant-grid{border-radius:16px}
+  .plant-grid{border-radius:16px;padding:0 16px;}
   .plant-text{padding:24px 16px}
   .plant-video-wrap video{min-height:250px}
+  .why-us-text{padding:24px 16px;margin:0 16px;}
+  .why-us-grid{max-width:100%;}
+  .why-point{padding:12px;gap:10px;}
+  .why-point-icon{width:36px;height:36px;font-size:0.85rem}
+  .why-point-text h4{font-size:0.85rem}
+  .why-point-text p{font-size:0.75rem}
   .appointment-form{padding:28px 16px}
   .top-bar{padding:8px 0;}
   .top-bar-call{font-size:0.75rem;}
@@ -1497,11 +1504,9 @@ window.addEventListener('load', function(){
   .footer-social{justify-content:center}
   .maps-grid{gap:16px}
   .map-wrap iframe{height:200px}
-  .why-point{padding:16px;gap:12px}
-  .why-point-icon{width:40px;height:40px;font-size:0.95rem}
   .why-us-image img{height:280px}
-  .plant-stat{padding:28px 16px}
-  .plant-stat .stat-num{font-size:2rem}
+  .plant-stat{padding:14px 10px}
+  .plant-stat .stat-num{font-size:1.2rem}
 }
 @media (max-width: 380px) {
   .hero-title{font-size:1.8rem}
