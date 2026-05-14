@@ -35,7 +35,7 @@ html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden;}
 body{font-family:'Lato',sans-serif;color:var(--text);background:#ffffff;overflow-x:hidden;cursor:none;position:relative;width:100%;}
 img{max-width:100%;height:auto;display:block}
 /* Global flawless white edge for all media */
-.about-image-wrap,.why-us-image,.map-video-wrap,.map-wrap{border-radius:20px;box-shadow:0 0 0 8px #fff, 0 8px 40px rgba(0,0,0,0.06);overflow:hidden;}
+.about-image-wrap,.map-video-wrap,.map-wrap{border-radius:20px;box-shadow:0 0 0 8px #fff, 0 8px 40px rgba(0,0,0,0.06);overflow:hidden;}
 a{text-decoration:none;color:inherit}
 button{cursor:none;border:none;background:none;font-family:inherit}
 ul{list-style:none}
@@ -70,9 +70,9 @@ section{position:relative;overflow:hidden}
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
 .section-label{font-family:'Raleway',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--green);margin-bottom:12px;display:inline-block;position:relative;padding-left:28px;}
 .section-label::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:18px;height:2px;background:linear-gradient(to right,var(--green),var(--green2));border-radius:2px;}
-.section-title{font-size:clamp(2rem,4vw,3rem);color:var(--dark);margin-bottom:20px;letter-spacing:0.04em;position:relative;display:inline-block;}
-.section-title::after{content:'';display:block;width:50px;height:3px;background:linear-gradient(to right,var(--green),var(--gold));border-radius:3px;margin-top:12px;}
-.section-subtitle{font-size:1.05rem;color:var(--text-light);max-width:560px;line-height:1.8}
+.section-title{font-size:clamp(1.5rem,3vw,2.2rem);color:var(--dark);margin-bottom:14px;letter-spacing:0.04em;position:relative;display:inline-block;}
+.section-title::after{content:'';display:block;width:40px;height:2px;background:linear-gradient(to right,var(--green),var(--gold));border-radius:3px;margin-top:8px;}
+.section-subtitle{font-size:0.9rem;color:var(--text-light);max-width:560px;line-height:1.7}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:50px;font-family:'Raleway',sans-serif;font-weight:600;font-size:0.95rem;letter-spacing:0.05em;transition:var(--transition);cursor:none}
 .btn-primary{background:var(--green);color:#fff;box-shadow:0 4px 20px rgba(107,140,62,0.35)}
 .btn-primary:hover{background:var(--green3);transform:translateY(-2px);box-shadow:0 8px 30px rgba(107,140,62,0.45)}
@@ -119,8 +119,8 @@ window.addEventListener('load', function(){
 .top-bar-btn{display:inline-block;padding:12px 40px;background:linear-gradient(135deg,var(--green2),var(--green));color:#fff;border-radius:50px;font-family:'Raleway',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;box-shadow:0 4px 16px rgba(107,140,62,0.25);transition:all 0.3s;}
 .top-bar-btn:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(107,140,62,0.35);}
 /* -- MAIN NAVBAR -- */
-.navbar{position:sticky;top:0;left:0;right:0;z-index:1001;background:rgba(255,255,255,0.98);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(0,0,0,0.04);transition:all 0.4s ease;border-bottom:none;}
-.navbar.scrolled{box-shadow:0 4px 30px rgba(0,0,0,0.08);background:#fff;}
+.navbar{position:sticky;top:0;left:0;right:0;z-index:1001;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none;transition:all 0.4s ease;border-bottom:none;}
+.navbar.scrolled{box-shadow:0 4px 30px rgba(0,0,0,0.08);background:rgba(255,255,255,0.98);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1280px;margin:0 auto;padding:12px 40px;transition:padding 0.35s ease;}
 .navbar.scrolled .nav-inner{padding:8px 40px;}
 .nav-right{display:flex;align-items:center;gap:12px;font-family:'Raleway',sans-serif;font-size:1rem;font-weight:600;color:var(--dark);}
@@ -330,27 +330,27 @@ window.addEventListener('load', function(){
 <div class="section-divider"><i class="fas fa-leaf"></i></div>
 
 <style>
-.about{background:#ffffff;padding:100px 0;overflow:hidden;position:relative;}
+.about{background:#ffffff;padding:50px 0;overflow:hidden;position:relative;}
 .about::before{content:'';position:absolute;top:0;right:0;width:400px;height:400px;background:radial-gradient(circle,rgba(107,140,62,0.04) 0%,transparent 70%);pointer-events:none;}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.about-image-wrap{position:relative;border-radius:20px;overflow:hidden;height:520px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about-image-wrap{position:relative;border-radius:16px;overflow:hidden;height:300px}
 .about-image-wrap::before{content:"";position:absolute;inset:0;background:var(--green);z-index:3;transform-origin:top;transition:transform 1.4s cubic-bezier(0.77,0,0.175,1);transform:translateY(-100%)}
 .about-image-wrap.revealed::before{transform:translateY(-100%)}
 .about-image-wrap img,.about-image-wrap video{width:100%;height:100%;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow-lg)}
-.about-badge{position:absolute;bottom:32px;right:12px;background:var(--green);color:#fff;padding:20px 24px;border-radius:var(--radius);text-align:center;box-shadow:var(--shadow)}
-.about-badge .num{font-family:'Cinzel',serif;font-size:2rem;font-weight:700;display:block;line-height:1}
-.about-badge .label{font-family:'Raleway',sans-serif;font-size:0.75rem;font-weight:500;opacity:0.9;letter-spacing:0.05em}
-.about-text .section-subtitle{max-width:100%}
-.about-features{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0}
-.about-feature{display:flex;align-items:flex-start;gap:12px;padding:16px;background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:12px;transition:all 0.4s ease}
+.about-badge{position:absolute;bottom:20px;right:10px;background:var(--green);color:#fff;padding:14px 18px;border-radius:var(--radius);text-align:center;box-shadow:var(--shadow)}
+.about-badge .num{font-family:'Cinzel',serif;font-size:1.4rem;font-weight:700;display:block;line-height:1}
+.about-badge .label{font-family:'Raleway',sans-serif;font-size:0.65rem;font-weight:500;opacity:0.9;letter-spacing:0.05em}
+.about-text .section-subtitle{max-width:100%;font-size:0.85rem;}
+.about-features{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}
+.about-feature{display:flex;align-items:flex-start;gap:10px;padding:12px;background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:10px;transition:all 0.4s ease}
 .about-feature:hover{background:rgba(107,140,62,0.08);transform:translateY(-4px);box-shadow:0 8px 24px rgba(107,140,62,0.1);border-color:var(--green)}
-.about-feature i{color:var(--green);font-size:1.1rem;margin-top:2px;flex-shrink:0}
-.about-feature h4{font-family:'Raleway',sans-serif;font-size:0.9rem;font-weight:700;color:var(--dark);margin-bottom:4px}
-.about-feature p{font-size:0.82rem;color:var(--text-light);line-height:1.5}
-.about-counters{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px;padding-top:40px;padding-bottom:0;border-top:1px solid var(--cream2)}
+.about-feature i{color:var(--green);font-size:0.9rem;margin-top:2px;flex-shrink:0}
+.about-feature h4{font-family:'Raleway',sans-serif;font-size:0.78rem;font-weight:700;color:var(--dark);margin-bottom:2px}
+.about-feature p{font-size:0.72rem;color:var(--text-light);line-height:1.4}
+.about-counters{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px;padding-top:24px;padding-bottom:0;border-top:1px solid var(--cream2)}
 .counter-item{text-align:center}
-.counter-num{font-family:'Cinzel',serif;font-size:2rem;font-weight:700;color:var(--green);display:block;line-height:1}
-.counter-label{font-family:'Raleway',sans-serif;font-size:0.78rem;color:var(--text-light);margin-top:4px;font-weight:500}
+.counter-num{font-family:'Cinzel',serif;font-size:1.5rem;font-weight:700;color:var(--green);display:block;line-height:1}
+.counter-label{font-family:'Raleway',sans-serif;font-size:0.68rem;color:var(--text-light);margin-top:3px;font-weight:500}
 </style>
 
 <section class="about" id="about">
@@ -412,46 +412,50 @@ window.addEventListener('load', function(){
 
 <!-- ===== PLANT.JPG FIXED BACKGROUND + THREE.JS WATER SECTION ===== -->
 <style>
-.plant-section{position:relative;overflow:hidden;background:#ffffff;padding:100px 0}
-.plant-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:0;align-items:stretch;max-width:1200px;margin:0 auto;padding:0;border-radius:20px;overflow:hidden;box-shadow:0 0 0 8px #fff, 0 8px 40px rgba(0,0,0,0.06)}
-.plant-video-wrap{position:relative;overflow:hidden;min-height:580px;}
+.plant-section{position:relative;overflow:hidden;background:url('leaf.jpg') center/cover no-repeat fixed;padding:80px 0;}
+.plant-section::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,0.15);pointer-events:none;}
+.plant-grid{display:grid;grid-template-columns:1fr;gap:0;max-width:800px;margin:0 auto;padding:0 24px;position:relative;z-index:1;}
+.plant-video-wrap{display:none;}
 .plant-video-wrap video{width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0}
-.plant-video-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,transparent 70%,rgba(255,255,255,0.9) 100%);pointer-events:none}
-.plant-text{position:relative;padding:60px 48px;background:#fff}
-.plant-text .section-label{color:var(--green);font-size:0.75rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;margin-bottom:12px;display:inline-block;background:rgba(107,140,62,0.08);padding:6px 14px;border-radius:50px;font-family:'Raleway',sans-serif}
-.plant-text .section-title{color:var(--dark);margin-bottom:16px;font-size:clamp(1.6rem,3vw,2.4rem)}
-.plant-text .section-subtitle{color:var(--text-light);margin-bottom:36px;font-size:0.95rem;line-height:1.8}
-.plant-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px}
-.plant-stat{background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:14px;padding:20px 14px;text-align:center;transition:all 0.5s cubic-bezier(0.25,0.46,0.45,0.94);position:relative;overflow:hidden;opacity:0;transform:translateY(30px)}
-.plant-stat.animated{opacity:1;transform:translateY(0)}
-.plant-stat:nth-child(1){transition-delay:0.1s}
-.plant-stat:nth-child(2){transition-delay:0.2s}
-.plant-stat:nth-child(3){transition-delay:0.3s}
-.plant-stat:nth-child(4){transition-delay:0.4s}
+.plant-video-wrap::after{display:none;}
+.plant-text{position:relative;padding:40px 36px;background:rgba(255,255,255,0.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,0.08);text-align:center;opacity:0;transform:translateY(50px);transition:opacity 1s ease,transform 1s ease;}
+.plant-text.visible{opacity:1;transform:translateY(0);}
+.plant-text .section-label{color:var(--green);font-size:0.7rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;margin-bottom:10px;display:inline-block;background:rgba(107,140,62,0.1);padding:6px 14px;border-radius:50px;font-family:'Raleway',sans-serif}
+.plant-text .section-title{color:var(--dark);margin-bottom:12px;font-size:clamp(1.4rem,3vw,2rem)}
+.plant-text .section-subtitle{color:var(--text-light);margin-bottom:28px;font-size:0.88rem;line-height:1.7;max-width:500px;margin-left:auto;margin-right:auto;}
+.plant-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px}
+.plant-stat{background:#fff;border:1px solid rgba(107,140,62,0.12);border-radius:12px;padding:18px 12px;text-align:center;transition:all 0.7s cubic-bezier(0.25,0.46,0.45,0.94);position:relative;overflow:hidden;opacity:0;transform:translateY(40px) scale(0.95);}
+.plant-stat.animated{opacity:1;transform:translateY(0) scale(1);}
+.plant-stat:nth-child(1){transition-delay:0.15s}
+.plant-stat:nth-child(2){transition-delay:0.3s}
+.plant-stat:nth-child(3){transition-delay:0.45s}
+.plant-stat:nth-child(4){transition-delay:0.6s}
 .plant-stat::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--green);transform:scaleX(0);transition:transform 0.4s ease}
-.plant-stat:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 16px 40px rgba(107,140,62,0.12);border-color:var(--green)}
+.plant-stat:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(107,140,62,0.12);border-color:var(--green)}
 .plant-stat:hover::after{transform:scaleX(1)}
-.plant-stat i{font-size:1.3rem;color:var(--green);margin-bottom:8px;display:block;transition:transform 0.4s ease}
-.plant-stat:hover i{transform:scale(1.3) rotate(10deg)}
-.plant-stat .stat-num{font-family:'Cinzel',serif;font-size:1.6rem;font-weight:700;color:var(--dark);display:block;line-height:1;margin-bottom:4px}
-.plant-stat .stat-label{font-family:'Raleway',sans-serif;font-size:0.72rem;color:var(--text-light);font-weight:500}
-.plant-quote{padding:20px 24px;border-left:3px solid var(--green);background:rgba(107,140,62,0.03);border-radius:0 12px 12px 0;opacity:0;transform:translateX(-20px);transition:all 0.8s ease 0.5s}
-.plant-quote.animated{opacity:1;transform:translateX(0)}
-.plant-quote blockquote{font-family:'Lato',sans-serif;font-size:0.9rem;color:var(--text);font-style:italic;line-height:1.7;margin-bottom:6px}
-.plant-quote cite{font-family:'Raleway',sans-serif;font-size:0.75rem;color:var(--green);font-style:normal;font-weight:600}
-/* Border grid on video */
-.plant-video-wrap .plant-border-grid{position:absolute;inset:10px;border:2px solid rgba(255,255,255,0.3);border-radius:12px;z-index:3;pointer-events:none}
-.plant-video-wrap .plant-corner{position:absolute;width:35px;height:35px;z-index:4;pointer-events:none}
-.plant-video-wrap .plant-corner.tl{top:0;left:0;border-top:3px solid var(--green2);border-left:3px solid var(--green2);border-radius:6px 0 0 0}
-.plant-video-wrap .plant-corner.tr{top:0;right:0;border-top:3px solid var(--green2);border-right:3px solid var(--green2);border-radius:0 6px 0 0}
-.plant-video-wrap .plant-corner.bl{bottom:0;left:0;border-bottom:3px solid var(--green2);border-left:3px solid var(--green2);border-radius:0 0 0 6px}
-.plant-video-wrap .plant-corner.br{bottom:0;right:0;border-bottom:3px solid var(--green2);border-right:3px solid var(--green2);border-radius:0 0 6px 0}
+.plant-stat i{font-size:1.1rem;color:var(--green);margin-bottom:8px;display:block;transition:transform 0.4s ease}
+.plant-stat:hover i{transform:scale(1.2) rotate(10deg)}
+.plant-stat .stat-num{font-family:'Cinzel',serif;font-size:1.4rem;font-weight:700;color:var(--dark);display:block;line-height:1;margin-bottom:4px}
+.plant-stat .stat-label{font-family:'Raleway',sans-serif;font-size:0.68rem;color:var(--text-light);font-weight:500}
+.plant-quote{padding:16px 20px;border-left:3px solid var(--green);background:rgba(107,140,62,0.04);border-radius:0 12px 12px 0;text-align:left;opacity:0;transform:translateY(30px);transition:opacity 0.8s ease 0.7s,transform 0.8s ease 0.7s;}
+.plant-quote.animated{opacity:1;transform:translateY(0);}
+.plant-quote blockquote{font-family:'Lato',sans-serif;font-size:0.85rem;color:var(--text);font-style:italic;line-height:1.7;margin-bottom:6px}
+.plant-quote cite{font-family:'Raleway',sans-serif;font-size:0.72rem;color:var(--green);font-style:normal;font-weight:600}
+@media(max-width:768px){
+  .plant-stats{grid-template-columns:1fr 1fr;}
+  .plant-text{padding:28px 20px;}
+}
+@media(max-width:480px){
+  .plant-stats{grid-template-columns:1fr 1fr;}
+  .plant-stat{padding:14px 8px;}
+  .plant-stat .stat-num{font-size:1.1rem;}
+}
 </style>
 
 <section class="plant-section" id="plant-section">
   <div class="plant-grid">
     <div class="plant-video-wrap" id="plantVideo">
-      <video src="slow.mp4" autoplay muted loop playsinline></video>
+      <img src="leaf.jpg" alt="Nature meets science" style="width:100%;height:100%;object-fit:contain;display:block;position:absolute;inset:0;">
     </div>
     <div class="plant-text">
       <span class="section-label">The Healing Power</span>
@@ -508,20 +512,26 @@ window.addEventListener('load', function(){
 </script>
 
 <script>
-// Plant section animations
+// Plant section animations + parallax
 (function(){
   var video = document.getElementById('plantVideo');
+  var plantText = document.querySelector('.plant-text');
   var stats = document.querySelectorAll('#plantStats .plant-stat');
   var quote = document.getElementById('plantQuote');
+  var plantSection = document.querySelector('.plant-section');
   var triggered = false;
   function checkPlant(){
-    if(triggered || !video) return;
-    var rect = video.getBoundingClientRect();
-    if(rect.top < window.innerHeight * 0.8){
+    if(!plantSection) return;
+    var rect = plantSection.getBoundingClientRect();
+    if(!triggered && rect.top < window.innerHeight * 0.75){
       triggered = true;
-      video.classList.add('revealed');
-      stats.forEach(function(s){ s.classList.add('animated'); });
-      if(quote) quote.classList.add('animated');
+      if(plantText) plantText.classList.add('visible');
+      setTimeout(function(){
+        stats.forEach(function(s){ s.classList.add('animated'); });
+      }, 400);
+      setTimeout(function(){
+        if(quote) quote.classList.add('animated');
+      }, 800);
     }
   }
   window.addEventListener('scroll', checkPlant, {passive:true});
@@ -529,34 +539,85 @@ window.addEventListener('load', function(){
 })();
 </script>
 
-<!-- ===== TREATMENTS CAROUSEL ===== -->
+<!-- ===== TREATMENTS CINEMATIC FOCUS CAROUSEL ===== -->
 <style>
-.treatments{background:linear-gradient(135deg,#f8faf6 0%,#f0f7ec 50%,#f8faf6 100%);padding:100px 0;overflow:hidden}
-.treatments-header{text-align:center;margin-bottom:60px}
-.treatments-header .section-subtitle{margin:0 auto}
-.treat-carousel-wrap{position:relative;max-width:1000px;margin:0 auto}
-.treat-carousel-viewport{overflow:hidden}
-.treat-carousel-track{display:flex;gap:24px;transition:transform 0.5s ease}
-.treat-card{flex:0 0 calc(33.333% - 16px);background:#fff;border-radius:20px;padding:32px 24px;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);transition:all 0.4s ease;position:relative;overflow:hidden}
-.treat-card::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(107,140,62,0.06) 0%,transparent 60%);opacity:0;transition:opacity 0.5s;}
-.treat-card:hover::before{opacity:1;}
-.treat-card:hover{transform:translateY(-8px);box-shadow:0 20px 60px rgba(107,140,62,0.15);border-color:rgba(107,140,62,0.25)}
-.treat-card-circle{width:180px;height:180px;border-radius:50%;margin:0 auto 24px;overflow:hidden;border:3px solid rgba(107,140,62,0.15);position:relative;transition:border-color 0.4s}
-.treat-card:hover .treat-card-circle{border-color:var(--green)}
-.treat-card-circle img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease}
-.treat-card:hover .treat-card-circle img{transform:scale(1.1)}
-.treat-card-circle .treat-hover-overlay{position:absolute;inset:0;background:rgba(74,107,42,0.85);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;transition:opacity 0.4s;border-radius:50%}
-.treat-card:hover .treat-card-circle .treat-hover-overlay{opacity:1}
-.treat-hover-overlay i{font-size:2rem;color:#fff;}
-.treat-hover-overlay span{font-family:'Raleway',sans-serif;font-size:0.8rem;color:#fff;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;}
-.treat-card h3{font-family:'Cinzel',serif;font-size:1.1rem;color:var(--dark);margin-bottom:12px;font-weight:700}
-.treat-card p{font-family:'Raleway',sans-serif;font-size:0.85rem;color:var(--text-light);line-height:1.7}
-.treat-carousel-btn{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:#fff;box-shadow:0 4px 20px rgba(0,0,0,0.12);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;transition:all 0.3s;color:var(--green);font-size:1rem;border:1px solid rgba(107,140,62,0.2)}
-.treat-carousel-btn:hover{background:var(--green);color:#fff;transform:translateY(-50%) scale(1.1)}
-.treat-carousel-btn.prev{left:-12px}
-.treat-carousel-btn.next{right:-12px}
-@media(max-width:768px){.treat-card{flex:0 0 calc(50% - 12px);}.treat-card-circle{width:140px;height:140px;}.treat-carousel-btn.prev{left:4px}.treat-carousel-btn.next{right:4px}}
-@media(max-width:560px){.treat-card{flex:0 0 calc(100%);}.treat-card-circle{width:160px;height:160px;}.treat-carousel-btn{width:36px;height:36px;font-size:0.85rem}}
+.treatments{background:#6B8C3E;padding:40px 0;overflow:hidden;position:relative;}
+.treatments::before{display:none;}
+.treatments-header{text-align:center;margin-bottom:20px;position:relative;z-index:2;}
+.treatments-header .section-label{color:#000;}
+.treatments-header .section-title{color:#000;}
+.treatments-header .section-title::after{background:linear-gradient(to right,var(--green2),var(--gold));}
+.treatments-header .section-subtitle{margin:0 auto;color:rgba(0,0,0,0.7);}
+
+/* Cinematic Carousel */
+.treat-cinema-wrap{position:relative;display:flex;justify-content:center;align-items:center;height:340px;max-width:1100px;margin:0 auto;perspective:1200px;}
+.treat-cinema-track{position:relative;width:100%;height:100%;transform-style:preserve-3d;}
+
+/* Card */
+.treat-card{position:absolute;top:50%;left:50%;width:240px;padding:20px 18px;border-radius:20px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);color:#fff;text-align:center;transform:translate(-50%,-50%) scale(0.65) rotateY(0deg);opacity:0;transition:all 0.5s cubic-bezier(0.25,0.46,0.45,0.94);pointer-events:none;transform-style:preserve-3d;}
+
+/* Circle image */
+.treat-card-circle{width:100px;height:100px;margin:0 auto 10px;border-radius:50%;overflow:hidden;border:2px solid #6B8C3E;transition:all 0.8s ease;}
+.treat-card-circle img{width:100%;height:100%;object-fit:cover;transition:transform 0.8s ease;}
+
+/* Card text */
+.treat-card h3{font-family:'Cinzel',serif;font-size:0.95rem;color:#fff;margin-bottom:6px;font-weight:700;letter-spacing:0.03em;}
+.treat-card p{font-family:'Raleway',sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.7);line-height:1.6;}
+
+/* ACTIVE CARD (center focus) */
+.treat-card.active{transform:translate(-50%,-50%) scale(1.1) rotateY(0deg);opacity:1;filter:blur(0px);z-index:10;pointer-events:all;background:#ffffff;border-color:rgba(255,255,255,0.9);box-shadow:0 40px 100px rgba(0,0,0,0.2),0 0 40px rgba(255,255,255,0.15);color:var(--dark);}
+.treat-card.active h3{color:var(--dark);}
+.treat-card.active p{color:var(--text-light);}
+.treat-card.active .treat-card-circle{border-color:#6B8C3E;box-shadow:0 0 30px rgba(107,140,62,0.3);}
+.treat-card.active .treat-card-circle img{transform:scale(1.05);}
+
+/* LEFT card */
+.treat-card.left{transform:translate(-155%,-50%) scale(0.78) rotateY(35deg);opacity:0.5;filter:blur(1px) brightness(0.7);pointer-events:none;}
+
+/* RIGHT card */
+.treat-card.right{transform:translate(55%,-50%) scale(0.78) rotateY(-35deg);opacity:0.5;filter:blur(1px) brightness(0.7);pointer-events:none;}
+
+/* FAR LEFT */
+.treat-card.far-left{transform:translate(-230%,-50%) scale(0.55) rotateY(55deg);opacity:0.2;filter:blur(3px) brightness(0.4);pointer-events:none;}
+
+/* FAR RIGHT */
+.treat-card.far-right{transform:translate(130%,-50%) scale(0.55) rotateY(-55deg);opacity:0.2;filter:blur(3px) brightness(0.4);pointer-events:none;}
+
+/* Hidden */
+.treat-card.hide{transform:translate(-50%,-50%) scale(0.4) rotateY(90deg);opacity:0;filter:blur(8px);pointer-events:none;}
+
+/* Navigation buttons */
+.treat-cinema-btn{position:absolute;top:50%;transform:translateY(-50%);width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;transition:all 0.3s;color:rgba(255,255,255,0.8);font-size:1rem;}
+.treat-cinema-btn:hover{background:var(--green);border-color:var(--green);color:#fff;transform:translateY(-50%) scale(1.1);box-shadow:0 8px 30px rgba(107,140,62,0.4);}
+.treat-cinema-btn.prev{left:20px;}
+.treat-cinema-btn.next{right:20px;}
+
+/* Dots */
+.treat-cinema-dots{display:flex;justify-content:center;gap:8px;margin-top:0;position:relative;z-index:2;}
+.treat-cinema-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.2);border:none;cursor:pointer;transition:all 0.4s ease;padding:0;}
+.treat-cinema-dot.active{background:var(--green2);width:24px;border-radius:4px;box-shadow:0 0 12px rgba(139,195,74,0.5);}
+
+/* Responsive */
+@media(max-width:900px){
+  .treat-cinema-wrap{height:460px;}
+  .treat-card{width:240px;padding:24px 20px;}
+  .treat-card-circle{width:120px;height:120px;}
+  .treat-card.left{transform:translate(-140%,-50%) scale(0.72);opacity:0.3;}
+  .treat-card.right{transform:translate(40%,-50%) scale(0.72);opacity:0.3;}
+  .treat-card.far-left,.treat-card.far-right{opacity:0;}
+  .treat-cinema-btn.prev{left:8px;}
+  .treat-cinema-btn.next{right:8px;}
+}
+@media(max-width:560px){
+  .treat-cinema-wrap{height:420px;}
+  .treat-card{width:220px;padding:20px 16px;}
+  .treat-card-circle{width:110px;height:110px;}
+  .treat-card.left{transform:translate(-120%,-50%) scale(0.68);opacity:0.2;}
+  .treat-card.right{transform:translate(20%,-50%) scale(0.68);opacity:0.2;}
+  .treat-cinema-btn{width:40px;height:40px;font-size:0.85rem;}
+  .treat-cinema-btn.prev{left:4px;}
+  .treat-cinema-btn.next{right:4px;}
+}
 </style>
 
 <section class="treatments" id="treatments">
@@ -566,143 +627,155 @@ window.addEventListener('load', function(){
       <h2 class="section-title">Healing Treatments</h2>
       <p class="section-subtitle">Each treatment is carefully tailored to your unique constitution and health goals, guided by our expert Ayurvedic physicians.</p>
     </div>
-    <div class="treat-carousel-wrap reveal">
-      <div class="treat-carousel-viewport">
-        <div class="treat-carousel-track" id="treatCarouselTrack">
-          <div class="treat-card">
-            <div class="treat-card-circle">
-              <img src="pizhichil.jpg" alt="Pizhichil" loading="lazy">
-              <div class="treat-hover-overlay"><i class="fas fa-leaf"></i><span>Explore</span></div>
-            </div>
-            <h3>Pizhichil</h3>
-            <p>Lukewarm oil is poured in the body by squeezing cotton cloth soaked in oil. Highly effective for Spondylosis, Hemiplegia, and Arthritis.</p>
+    <div class="treat-cinema-wrap">
+      <div class="treat-cinema-track" id="treatCinemaTrack">
+        <div class="treat-card">
+          <div class="treat-card-circle">
+            <img src="pizhichil.jpg" alt="Pizhichil" loading="lazy">
           </div>
-          <div class="treat-card">
-            <div class="treat-card-circle">
-              <img src="Dhara.jpg" alt="Dhara" loading="lazy">
-              <div class="treat-hover-overlay"><i class="fas fa-leaf"></i><span>Explore</span></div>
-            </div>
-            <h3>Dhara</h3>
-            <p>Pouring of medicated oil done all over the body, beneficial for neuromuscular conditions, rheumatism and general debility.</p>
+          <h3>Pizhichil</h3>
+          <p>Lukewarm oil is poured in the body by squeezing cotton cloth soaked in oil. Highly effective for Spondylosis, Hemiplegia, and Arthritis.</p>
+        </div>
+        <div class="treat-card">
+          <div class="treat-card-circle">
+            <img src="Dhara.jpg" alt="Dhara" loading="lazy">
           </div>
-          <div class="treat-card">
-            <div class="treat-card-circle">
-              <img src="Nasyam.jpg" alt="Nasyam" loading="lazy">
-              <div class="treat-hover-overlay"><i class="fas fa-leaf"></i><span>Explore</span></div>
-            </div>
-            <h3>Nasyam</h3>
-            <p>Herbal juices and medicated oils administered through the nostrils for paralysis, headaches, and mental disorders.</p>
+          <h3>Dhara</h3>
+          <p>Pouring of medicated oil done all over the body, beneficial for neuromuscular conditions, rheumatism and general debility.</p>
+        </div>
+        <div class="treat-card">
+          <div class="treat-card-circle">
+            <img src="Nasyam.jpg" alt="Nasyam" loading="lazy">
           </div>
-          <div class="treat-card">
-            <div class="treat-card-circle">
-              <img src="kizhi.jpg" alt="Kizhi" loading="lazy">
-              <div class="treat-hover-overlay"><i class="fas fa-leaf"></i><span>Explore</span></div>
-            </div>
-            <h3>Kizhi</h3>
-            <p>Herbal poultice massage using warm bundles of medicinal herbs for joint pain, muscle stiffness, and neurological conditions.</p>
+          <h3>Nasyam</h3>
+          <p>Herbal juices and medicated oils administered through the nostrils for paralysis, headaches, and mental disorders.</p>
+        </div>
+        <div class="treat-card">
+          <div class="treat-card-circle">
+            <img src="kizhi.jpg" alt="Kizhi" loading="lazy">
           </div>
-          <div class="treat-card">
-            <div class="treat-card-circle">
-              <img src="shirovasthi.jpg" alt="Shirovasthi" loading="lazy">
-              <div class="treat-hover-overlay"><i class="fas fa-leaf"></i><span>Explore</span></div>
-            </div>
-            <h3>Shirovasthi</h3>
-            <p>Warm medicated oil retained on the head using a fitted cap — effective for neurological disorders and mental fatigue.</p>
+          <h3>Kizhi</h3>
+          <p>Herbal poultice massage using warm bundles of medicinal herbs for joint pain, muscle stiffness, and neurological conditions.</p>
+        </div>
+        <div class="treat-card">
+          <div class="treat-card-circle">
+            <img src="shirovasthi.jpg" alt="Shirovasthi" loading="lazy">
           </div>
-          <div class="treat-card">
-            <div class="treat-card-circle">
-              <img src="ritual3.jpg" alt="Abhyanga" loading="lazy">
-              <div class="treat-hover-overlay"><i class="fas fa-leaf"></i><span>Explore</span></div>
-            </div>
-            <h3>Abhyanga</h3>
-            <p>Full-body warm oil massage using dosha-specific herbal oils, improving circulation and promoting deep relaxation.</p>
+          <h3>Shirovasthi</h3>
+          <p>Warm medicated oil retained on the head using a fitted cap — effective for neurological disorders and mental fatigue.</p>
+        </div>
+        <div class="treat-card">
+          <div class="treat-card-circle">
+            <img src="ritual3.jpg" alt="Abhyanga" loading="lazy">
           </div>
+          <h3>Abhyanga</h3>
+          <p>Full-body warm oil massage using dosha-specific herbal oils, improving circulation and promoting deep relaxation.</p>
         </div>
       </div>
-      <button class="treat-carousel-btn prev" id="treatPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
-      <button class="treat-carousel-btn next" id="treatNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+      <button class="treat-cinema-btn prev" id="treatCinemaPrev" aria-label="Previous" style="display:none;"><i class="fas fa-chevron-left"></i></button>
+      <button class="treat-cinema-btn next" id="treatCinemaNext" aria-label="Next" style="display:none;"><i class="fas fa-chevron-right"></i></button>
     </div>
+    <div class="treat-cinema-dots" id="treatCinemaDots"></div>
   </div>
 </section>
 
 <script>
 (function(){
-  var track = document.getElementById('treatCarouselTrack');
-  if(!track) return;
-  var cards = track.children;
-  var current = 0;
-  var visibleCards = 3;
-  var totalSlides = Math.ceil(cards.length / visibleCards);
-  
-  function getVisible(){
-    if(window.innerWidth <= 560) return 1;
-    if(window.innerWidth <= 768) return 2;
-    return 3;
+  var cards = document.querySelectorAll('#treatCinemaTrack .treat-card');
+  var dotsWrap = document.getElementById('treatCinemaDots');
+  var total = cards.length;
+  var index = 0;
+  var autoTimer;
+
+  // Create dots
+  for(var i = 0; i < total; i++){
+    var dot = document.createElement('button');
+    dot.className = 'treat-cinema-dot';
+    dot.setAttribute('aria-label','Go to slide '+(i+1));
+    dot.dataset.index = i;
+    dot.addEventListener('click', function(){ goTo(parseInt(this.dataset.index)); });
+    dotsWrap.appendChild(dot);
   }
-  
-  function slide(){
-    visibleCards = getVisible();
-    var cardWidth = cards[0].offsetWidth + 24;
-    track.style.transform = 'translateX(-' + (current * cardWidth) + 'px)';
+
+  function getPos(i){
+    var diff = i - index;
+    // Wrap around for circular feel
+    if(diff > Math.floor(total/2)) diff -= total;
+    if(diff < -Math.floor(total/2)) diff += total;
+    return diff;
   }
-  
-  document.getElementById('treatNext').addEventListener('click', function(){
-    visibleCards = getVisible();
-    var maxSlide = cards.length - visibleCards;
-    if(current < maxSlide) current++;
-    else current = 0;
-    slide();
-  });
-  
-  document.getElementById('treatPrev').addEventListener('click', function(){
-    visibleCards = getVisible();
-    var maxSlide = cards.length - visibleCards;
-    if(current > 0) current--;
-    else current = maxSlide;
-    slide();
-  });
-  
-  // Auto-slide every 3 seconds
-  var autoSlide = setInterval(function(){
-    visibleCards = getVisible();
-    var maxSlide = cards.length - visibleCards;
-    if(current < maxSlide) current++;
-    else current = 0;
-    slide();
-  }, 3000);
-  
-  // Pause auto-slide on hover
-  track.parentElement.addEventListener('mouseenter', function(){ clearInterval(autoSlide); });
-  track.parentElement.addEventListener('mouseleave', function(){
-    autoSlide = setInterval(function(){
-      visibleCards = getVisible();
-      var maxSlide = cards.length - visibleCards;
-      if(current < maxSlide) current++;
-      else current = 0;
-      slide();
-    }, 3000);
-  });
-  
-  window.addEventListener('resize', function(){ current = 0; slide(); });
+
+  function update(){
+    cards.forEach(function(card, i){
+      card.classList.remove('active','left','right','far-left','far-right','hide');
+      var pos = getPos(i);
+      if(pos === 0) card.classList.add('active');
+      else if(pos === -1) card.classList.add('left');
+      else if(pos === 1) card.classList.add('right');
+      else if(pos === -2) card.classList.add('far-left');
+      else if(pos === 2) card.classList.add('far-right');
+      else card.classList.add('hide');
+    });
+    // Update dots
+    var dots = dotsWrap.children;
+    for(var d = 0; d < dots.length; d++){
+      dots[d].classList.toggle('active', d === index);
+    }
+  }
+
+  function goTo(i){
+    index = ((i % total) + total) % total;
+    update();
+    resetAuto();
+  }
+
+  function next(){ goTo(index + 1); }
+  function prev(){ goTo(index - 1); }
+
+  document.getElementById('treatCinemaNext').addEventListener('click', next);
+  document.getElementById('treatCinemaPrev').addEventListener('click', prev);
+
+  // Touch/swipe support
+  var startX = 0;
+  var track = document.getElementById('treatCinemaTrack');
+  track.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; }, {passive:true});
+  track.addEventListener('touchend', function(e){
+    var diff = e.changedTouches[0].clientX - startX;
+    if(diff > 50) prev();
+    else if(diff < -50) next();
+  }, {passive:true});
+
+  // Auto-rotate
+  function startAuto(){ autoTimer = setInterval(next, 2000); }
+  function stopAuto(){ clearInterval(autoTimer); }
+  function resetAuto(){ stopAuto(); startAuto(); }
+
+  startAuto();
+  track.parentElement.addEventListener('mouseenter', stopAuto);
+  track.parentElement.addEventListener('mouseleave', startAuto);
+
+  update();
 })();
 </script>
 
 <!-- ===== WHY US SECTION ===== -->
 <style>
-.why-us{position:relative;padding:100px 0;overflow:hidden;background:#ffffff}
-.why-us-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:1}
+.why-us{position:relative;padding:50px 0;overflow:hidden;background:url('leaf.jpg') center/cover no-repeat fixed;}
+.why-us::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,0.2);pointer-events:none;}
+.why-us-grid{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;position:relative;z-index:1;max-width:700px;margin:0 auto;}
 .why-us .section-label{color:var(--green)}
 .why-us .section-title{color:var(--dark)}
-.why-us-text .section-subtitle{max-width:100%;margin-bottom:40px;color:var(--text-light)}
-.why-points{display:flex;flex-direction:column;gap:20px}
-.why-point{display:flex;align-items:flex-start;gap:16px;padding:20px;background:rgba(255,255,255,0.35);border:1px solid rgba(107,140,62,0.18);border-radius:var(--radius);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 4px 24px rgba(0,0,0,0.08),inset 0 1px 0 rgba(255,255,255,0.6);transition:var(--transition)}
+.why-us-text{background:rgba(255,255,255,0.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:16px;padding:40px 36px;box-shadow:0 8px 40px rgba(0,0,0,0.08);text-align:center;}
+.why-us-text .section-subtitle{max-width:100%;margin-bottom:30px;color:var(--text-light)}
+.why-points{display:flex;flex-direction:column;gap:14px}
+.why-point{display:flex;align-items:flex-start;gap:16px;padding:16px;background:rgba(255,255,255,0.7);border:1px solid rgba(107,140,62,0.12);border-radius:12px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 2px 12px rgba(0,0,0,0.04);transition:var(--transition)}
 .why-point:hover{transform:translateX(8px);background:rgba(255,255,255,0.55);border-color:rgba(107,140,62,0.4);box-shadow:0 8px 40px rgba(0,0,0,0.12),inset 0 1px 0 rgba(255,255,255,0.8)}
 .why-point-icon{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--green),var(--green2));display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;font-size:1.1rem}
 .why-point-text h4{font-family:'Raleway',sans-serif;font-size:1rem;font-weight:700;color:var(--dark);margin-bottom:4px}
 .why-point-text p{font-size:0.85rem;color:var(--text-light);line-height:1.5}
 /* Image */
-.why-us-image{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.1)}
-.why-us-image img{width:100%;height:500px;object-fit:cover;display:block;border-radius:var(--radius)}
+.why-us-image{display:none;}
+.why-us-image img{width:100%;height:280px;object-fit:contain;display:block;border-radius:var(--radius)}
 #whyCanvas{position:absolute;inset:0;z-index:2;pointer-events:none}
 .why-us-image-overlay{position:absolute;inset:0;border-radius:var(--radius);background:rgba(10,30,5,0.1);z-index:1}
 </style>
@@ -746,13 +819,7 @@ window.addEventListener('load', function(){
         </div>
       </div>
       <div class="why-us-image reveal-right" style="position:relative;">
-        <img src="Diya.jpg" alt="Natural Healing at Shanthi Wellness" loading="lazy">
-        <!-- Decorative border grid -->
-        <div style="position:absolute;inset:12px;border:2px solid rgba(107,140,62,0.3);border-radius:12px;pointer-events:none;z-index:2;"></div>
-        <div style="position:absolute;top:0;left:0;width:40px;height:40px;border-top:3px solid var(--green2);border-left:3px solid var(--green2);border-radius:8px 0 0 0;pointer-events:none;z-index:3;"></div>
-        <div style="position:absolute;top:0;right:0;width:40px;height:40px;border-top:3px solid var(--green2);border-right:3px solid var(--green2);border-radius:0 8px 0 0;pointer-events:none;z-index:3;"></div>
-        <div style="position:absolute;bottom:0;left:0;width:40px;height:40px;border-bottom:3px solid var(--green2);border-left:3px solid var(--green2);border-radius:0 0 0 8px;pointer-events:none;z-index:3;"></div>
-        <div style="position:absolute;bottom:0;right:0;width:40px;height:40px;border-bottom:3px solid var(--green2);border-right:3px solid var(--green2);border-radius:0 0 8px 0;pointer-events:none;z-index:3;"></div>
+        <img src="deepam.jpg" alt="Natural Healing at Shanthi Wellness" loading="lazy">
       </div>
     </div>
   </div>
@@ -760,8 +827,8 @@ window.addEventListener('load', function(){
 
 <!-- ===== TEAM SECTION — PLAYING CARDS ===== -->
 <style>
-.team-section{background:#ffffff;padding:100px 0;overflow:hidden}
-.team-header{text-align:center;margin-bottom:60px}
+.team-section{background:#ffffff;padding:50px 0;overflow:hidden}
+.team-header{text-align:center;margin-bottom:40px}
 .team-header .section-subtitle{margin:0 auto;max-width:700px}
 .team-cards{display:flex;justify-content:center;align-items:center;position:relative;height:480px;max-width:900px;margin:0 auto;perspective:1200px}
 .team-card{position:absolute;width:280px;height:400px;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.15);transition:all 0.8s cubic-bezier(0.25,0.46,0.45,0.94);cursor:pointer;transform-origin:bottom center}
@@ -861,14 +928,14 @@ window.addEventListener('load', function(){
 
 <!-- ===== TESTIMONIALS ===== -->
 <style>
-.testimonials{position:relative;padding:40px 0;overflow:hidden;background:#6B8C3E;}
+.testimonials{position:relative;padding:40px 0;overflow:hidden;background:#f8faf6;}
 .testimonials::before{display:none;}
 .testimonials::after{display:none;}
 .testimonials .container{position:relative;z-index:2;}
 .testimonials-header{text-align:center;margin-bottom:30px}
-.testimonials-header .section-label{color:rgba(255,255,255,0.7)}
-.testimonials-header .section-title{color:#fff}
-.testimonials-header .section-subtitle{margin:0 auto;color:rgba(255,255,255,0.75)}
+.testimonials-header .section-label{color:var(--green)}
+.testimonials-header .section-title{color:#000}
+.testimonials-header .section-subtitle{margin:0 auto;color:rgba(0,0,0,0.7)}
 .testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 .testimonial-card{background:rgba(255,255,255,0.95);border:none;border-radius:var(--radius);padding:24px;box-shadow:0 8px 32px rgba(0,0,0,0.15);transition:var(--transition);position:relative}
 .testimonial-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--green2));border-radius:var(--radius) var(--radius) 0 0;opacity:0;transition:opacity 0.3s}
@@ -1159,7 +1226,7 @@ window.addEventListener('load', function(){
         <div class="reveal-left">
 
           <div class="map-video-wrap" style="position:relative;overflow:hidden;">
-            <video autoplay muted loop playsinline style="width:100%;height:350px;object-fit:cover;display:block;">
+            <video autoplay muted loop playsinline style="width:100%;height:280px;object-fit:cover;display:block;">
               <source src="map.mp4" type="video/mp4">
             </video>
             <!-- Decorative grid overlay -->
@@ -1585,67 +1652,7 @@ document.querySelectorAll('.section-title').forEach(function(el){
   });
 });
 
-// ===== TREATMENTS CAROUSEL =====
-const track = document.getElementById('carouselTrack');
-const dotsContainer = document.getElementById('carouselDots');
-const cards = track ? track.querySelectorAll('.treatment-card') : [];
-let currentSlide = 0;
-let slidesPerView = 3;
-let autoSlideTimer;
-
-function getSlideCount() {
-  if (window.innerWidth <= 768) return 1;
-  if (window.innerWidth <= 1024) return 2;
-  return 3;
-}
-
-function buildDots() {
-  if (!dotsContainer) return;
-  dotsContainer.innerHTML = '';
-  const totalSlides = Math.ceil(cards.length / slidesPerView);
-  for (let i = 0; i < totalSlides; i++) {
-    const dot = document.createElement('button');
-    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-    dot.setAttribute('aria-label', 'Slide ' + (i+1));
-    dot.addEventListener('click', () => goToSlide(i));
-    dotsContainer.appendChild(dot);
-  }
-}
-
-function goToSlide(index) {
-  slidesPerView = getSlideCount();
-  const totalSlides = Math.ceil(cards.length / slidesPerView);
-  currentSlide = Math.max(0, Math.min(index, totalSlides - 1));
-  const cardWidth = cards[0] ? cards[0].offsetWidth + 24 : 0;
-  track.style.transform = 'translateX(-' + (currentSlide * slidesPerView * cardWidth) + 'px)';
-  document.querySelectorAll('.carousel-dot').forEach((d, i) => {
-    d.classList.toggle('active', i === currentSlide);
-  });
-}
-
-function nextSlide() {
-  slidesPerView = getSlideCount();
-  const totalSlides = Math.ceil(cards.length / slidesPerView);
-  goToSlide((currentSlide + 1) % totalSlides);
-}
-function prevSlide() {
-  slidesPerView = getSlideCount();
-  const totalSlides = Math.ceil(cards.length / slidesPerView);
-  goToSlide((currentSlide - 1 + totalSlides) % totalSlides);
-}
-
-function startAutoSlide() {
-  clearInterval(autoSlideTimer);
-  autoSlideTimer = setInterval(nextSlide, 4000);
-}
-
-if (track) {
-  buildDots();
-  startAutoSlide();
-  document.getElementById('carouselNext').addEventListener('click', () => { nextSlide(); startAutoSlide(); });
-  document.getElementById('carouselPrev').addEventListener('click', () => { prevSlide(); startAutoSlide(); });
-  window.addEventListener('resize', () => { buildDots(); goToSlide(0); });
-}
+// ===== TREATMENTS CAROUSEL (handled inline above) =====
 
 // ===== HERO SLIDER =====
 (function(){
