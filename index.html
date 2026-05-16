@@ -334,15 +334,15 @@ window.addEventListener('load', function(){
 <style>
 .about{background:#ffffff;padding:50px 0;overflow:hidden;position:relative;z-index:1;}
 .about::before{content:'';position:absolute;top:0;right:0;width:400px;height:400px;background:radial-gradient(circle,rgba(107,140,62,0.04) 0%,transparent 70%);pointer-events:none;}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.about-image-wrap{position:relative;border-radius:16px;overflow:hidden;height:300px}
+.about-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
+.about-image-wrap{display:none;}
 .about-image-wrap::before{content:"";position:absolute;inset:0;background:var(--green);z-index:3;transform-origin:top;transition:transform 1.4s cubic-bezier(0.77,0,0.175,1);transform:translateY(-100%)}
 .about-image-wrap.revealed::before{transform:translateY(-100%)}
 .about-image-wrap img,.about-image-wrap video{width:100%;height:100%;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow-lg)}
 .about-badge{position:absolute;bottom:20px;right:10px;background:var(--green);color:#fff;padding:14px 18px;border-radius:var(--radius);text-align:center;box-shadow:var(--shadow)}
 .about-badge .num{font-family:'Cinzel',serif;font-size:1.4rem;font-weight:700;display:block;line-height:1}
 .about-badge .label{font-family:'Raleway',sans-serif;font-size:0.65rem;font-weight:500;opacity:0.9;letter-spacing:0.05em}
-.about-text .section-subtitle{max-width:100%;font-size:0.85rem;}
+.about-text .section-subtitle{max-width:800px;font-size:0.9rem;margin:0 auto 20px;}
 .about-features{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}
 .about-feature{display:flex;align-items:flex-start;gap:10px;padding:12px;background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:10px;transition:all 0.4s ease}
 .about-feature:hover{background:rgba(107,140,62,0.08);transform:translateY(-4px);box-shadow:0 8px 24px rgba(107,140,62,0.1);border-color:var(--green)}
@@ -365,49 +365,70 @@ window.addEventListener('load', function(){
           <span class="label">Years of Healing</span>
         </div>
       </div>
-      <div class="about-text" id="aboutText">
+      <div class="about-text" id="aboutText" style="text-align:center;max-width:900px;margin:0 auto;">
         <span class="section-label">Our Story</span>
         <h2 class="section-title">Rooted in Tradition,<br>Guided by Science</h2>
         <p class="section-subtitle">
-          Shanthi Wellness was founded with a singular vision � to bring the ancient healing wisdom of Ayurveda to modern lives. Our expert physicians blend classical Ayurvedic protocols with contemporary medical understanding to deliver truly transformative care.
+          Welcome to Shanthi Wellness Medical Center — your holistic well-being center with a natural approach to health, preventing disease and treating illness through our expertise in the Ancient holistic Ayurvedic system of medicine. We look at the whole person, not only at the symptom and the disease, but also the disease process, the root cause and constitution of the person — thus keeping you healthy and protecting against further recurrence.
         </p>
         <div class="about-features">
           <div class="about-feature">
-            <i class="fas fa-user-md"></i>
-            <div><h4>Expert Physicians</h4><p>Board-certified Ayurvedic doctors with decades of experience</p></div>
+            <div><h4>✦ Expert Physicians</h4><p>Board-certified Ayurvedic doctors with decades of experience</p></div>
           </div>
           <div class="about-feature">
-            <i class="fas fa-leaf"></i>
-            <div><h4>Pure Herbs</h4><p>Authentic, ethically sourced medicinal herbs and oils</p></div>
+            <div><h4>✦ Pure Herbs</h4><p>Authentic, ethically sourced medicinal herbs and oils</p></div>
           </div>
           <div class="about-feature">
-            <i class="fas fa-heart"></i>
-            <div><h4>Holistic Care</h4><p>Mind, body and spirit � complete wellness approach</p></div>
+            <div><h4>✦ Holistic Care</h4><p>Mind, body and spirit — complete wellness approach</p></div>
           </div>
           <div class="about-feature">
-            <i class="fas fa-certificate"></i>
-            <div><h4>Certified Centre</h4><p>Accredited Ayurveda treatment centre with ISO standards</p></div>
+            <div><h4>✦ Certified Centre</h4><p>Accredited Ayurveda treatment centre with ISO standards</p></div>
           </div>
         </div>
-        <div class="about-counters">
-          <div class="counter-item">
-            <span class="counter-num" data-target="500">0</span>
-            <span class="counter-label">Patients Healed</span>
-          </div>
-          <div class="counter-item">
-            <span class="counter-num" data-target="15">0</span>
-            <span class="counter-label">Years Experience</span>
-          </div>
-          <div class="counter-item">
-            <span class="counter-num" data-target="3">0</span>
-            <span class="counter-label">Specialties</span>
-          </div>
-          <div class="counter-item">
-            <span class="counter-num" data-target="98">0</span>
-            <span class="counter-label">% Success Rate</span>
-          </div>
-        </div>
+
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT SHANTHI WELLNESS MEDICAL CENTER ===== -->
+<style>
+.about-clinic{background:#fff;padding:80px 0;overflow:hidden;}
+.about-clinic-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;max-width:1200px;margin:0 auto;padding:0 24px;}
+.about-clinic-text h2{font-family:'Cinzel',serif;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--dark);margin-bottom:20px;}
+.about-clinic-text h2::after{content:'';display:block;width:50px;height:3px;background:linear-gradient(to right,var(--green),var(--gold));border-radius:3px;margin-top:12px;}
+.about-clinic-text p{font-family:'Raleway',sans-serif;font-size:0.95rem;color:var(--text-light);line-height:1.9;margin-bottom:20px;}
+.about-clinic-treatments h3{font-family:'Cinzel',serif;font-size:1.1rem;color:var(--dark);margin-bottom:16px;}
+.about-clinic-treatments ul{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.about-clinic-treatments ul li{font-family:'Raleway',sans-serif;font-size:0.9rem;color:var(--text);padding:10px 14px;background:rgba(107,140,62,0.06);border-radius:8px;border-left:3px solid var(--green);transition:all 0.3s;}
+.about-clinic-treatments ul li:hover{background:rgba(107,140,62,0.12);transform:translateX(4px);}
+@media(max-width:768px){
+  .about-clinic-grid{grid-template-columns:1fr;gap:32px;}
+  .about-clinic{padding:50px 0;}
+  .about-clinic-treatments ul{grid-template-columns:1fr;}
+}
+</style>
+
+<section class="about-clinic">
+  <div class="about-clinic-grid">
+    <div class="about-clinic-text">
+      <span class="section-label">Who We Are</span>
+      <h2>Shanthi Wellness Medical Center</h2>
+      <p>Shanthi Wellness Medical Center is a branch of Vayalarikathu Ayurvedic Nursing Home at Varkala, Trivandrum, Kerala. Established since 1980, this charitable institution specializes in Marma therapy and Panchakarma therapy, the ancient health care system of India.</p>
+      <p>At Shanthi Wellness Medical Center the evaluation begins by examining the patient through observation, touch and knowing how the person got to the current state of health. After identifying the root cause of the disorder then we move toward selecting the right Ayurveda treatment to battle the disease based on patient condition.</p>
+    </div>
+    <div class="about-clinic-treatments">
+      <h3>Special Treatments</h3>
+      <ul>
+        <li><i class="fas fa-leaf" style="color:var(--green);margin-right:8px;font-size:0.75rem;"></i>Vamana – Emesis Therapy</li>
+        <li><i class="fas fa-leaf" style="color:var(--green);margin-right:8px;font-size:0.75rem;"></i>Virechana</li>
+        <li><i class="fas fa-leaf" style="color:var(--green);margin-right:8px;font-size:0.75rem;"></i>Nasya</li>
+        <li><i class="fas fa-leaf" style="color:var(--green);margin-right:8px;font-size:0.75rem;"></i>Sirovasty</li>
+        <li><i class="fas fa-leaf" style="color:var(--green);margin-right:8px;font-size:0.75rem;"></i>Pizhichil</li>
+        <li><i class="fas fa-leaf" style="color:var(--green);margin-right:8px;font-size:0.75rem;"></i>Herbal Steam Bath</li>
+        <li><i class="fas fa-leaf" style="color:var(--green);margin-right:8px;font-size:0.75rem;"></i>Snehana (Abhyangam)</li>
+        <li><i class="fas fa-leaf" style="color:var(--green);margin-right:8px;font-size:0.75rem;"></i>Njavarakizhi</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -516,16 +537,16 @@ window.addEventListener('load', function(){
 
 <!-- ===== TREATMENTS CINEMATIC FOCUS CAROUSEL ===== -->
 <style>
-.treatments{background:#6B8C3E;padding:40px 0;overflow:hidden;position:relative;max-width:100vw;z-index:1;}
+.treatments{background:rgba(107,140,62,0.75);padding:30px 0;overflow:hidden;position:relative;max-width:100vw;z-index:1;border-top:5px solid #8bc34a;border-bottom:5px solid #8bc34a;}
 .treatments::before{display:none;}
 .treatments-header{text-align:center;margin-bottom:20px;position:relative;z-index:2;}
-.treatments-header .section-label{color:#000;}
-.treatments-header .section-title{color:#000;}
-.treatments-header .section-title::after{background:linear-gradient(to right,var(--green2),var(--gold));}
-.treatments-header .section-subtitle{margin:0 auto;color:rgba(0,0,0,0.7);}
+.treatments-header .section-label{color:#fff;}
+.treatments-header .section-title{color:#fff;}
+.treatments-header .section-title::after{background:linear-gradient(to right,#fff,var(--gold));}
+.treatments-header .section-subtitle{margin:0 auto;color:rgba(255,255,255,0.8);}
 
 /* Cinematic Carousel */
-.treat-cinema-wrap{position:relative;display:flex;justify-content:center;align-items:center;height:340px;max-width:1100px;margin:0 auto;perspective:1200px;}
+.treat-cinema-wrap{position:relative;display:flex;justify-content:center;align-items:center;height:280px;max-width:1100px;margin:0 auto;perspective:1200px;}
 .treat-cinema-track{position:relative;width:100%;height:100%;transform-style:preserve-3d;overflow:hidden;}
 
 /* Card */
@@ -807,7 +828,7 @@ window.addEventListener('load', function(){
 
 <!-- ===== TEAM SECTION — PLAYING CARDS ===== -->
 <style>
-.team-section{background:#ffffff;padding:50px 0;overflow:hidden}
+.team-section{background:transparent;padding:50px 0;overflow:hidden;border-top:5px solid #8bc34a;border-bottom:5px solid #8bc34a;}
 .team-header{text-align:center;margin-bottom:40px}
 .team-header .section-subtitle{margin:0 auto;max-width:700px}
 .team-cards{display:flex;justify-content:center;align-items:center;position:relative;height:480px;max-width:900px;margin:0 auto;perspective:1200px}
@@ -851,58 +872,110 @@ window.addEventListener('load', function(){
 </style>
 
 <section class="team-section" id="team">
+  <style>
+    .team-3d-wrap{position:relative;display:flex;justify-content:center;align-items:center;height:420px;max-width:1000px;margin:0 auto;perspective:1200px;}
+    .team-3d-track{position:relative;width:100%;height:100%;transform-style:preserve-3d;}
+    .team-3d-card{position:absolute;top:50%;left:50%;width:260px;padding:20px;border-radius:20px;background:rgba(255,255,255,0.95);border:1px solid rgba(107,140,62,0.15);backdrop-filter:blur(8px);text-align:center;transform:translate(-50%,-50%) scale(0.6);opacity:0;transition:all 0.6s cubic-bezier(0.25,0.46,0.45,0.94);pointer-events:none;box-shadow:0 10px 40px rgba(0,0,0,0.1);}
+    .team-3d-card.active{transform:translate(-50%,-50%) scale(1) rotateY(0deg);opacity:1;z-index:5;pointer-events:all;box-shadow:0 20px 60px rgba(0,0,0,0.15);}
+    .team-3d-card.prev{transform:translate(-130%,-50%) scale(0.8) rotateY(25deg);opacity:0.7;z-index:3;pointer-events:none;}
+    .team-3d-card.next{transform:translate(30%,-50%) scale(0.8) rotateY(-25deg);opacity:0.7;z-index:3;pointer-events:none;}
+    .team-3d-card.far-prev{transform:translate(-180%,-50%) scale(0.6) rotateY(40deg);opacity:0.3;z-index:1;}
+    .team-3d-card.far-next{transform:translate(80%,-50%) scale(0.6) rotateY(-40deg);opacity:0.3;z-index:1;}
+    .team-3d-card img{width:100%;height:220px;object-fit:cover;border-radius:14px;margin-bottom:14px;}
+    .team-3d-card h3{font-family:'Cinzel',serif;font-size:1rem;color:var(--dark);margin-bottom:4px;}
+    .team-3d-card p{font-family:'Raleway',sans-serif;font-size:0.8rem;color:var(--text-light);margin-bottom:12px;}
+    .team-3d-card .btn-learn{display:inline-block;padding:8px 20px;border:1.5px solid var(--green);color:var(--green);border-radius:50px;font-family:'Raleway',sans-serif;font-size:0.75rem;font-weight:600;text-decoration:none;transition:all 0.3s;}
+    .team-3d-card .btn-learn:hover{background:var(--green);color:#fff;}
+    .team-3d-nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,0.1);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;border:1px solid rgba(107,140,62,0.15);color:var(--green);font-size:1rem;transition:all 0.3s;}
+    .team-3d-nav:hover{background:var(--green);color:#fff;}
+    .team-3d-nav.prev{left:10px;}
+    .team-3d-nav.next{right:10px;}
+    @media(max-width:768px){
+      .team-3d-wrap{height:380px;}
+      .team-3d-card{width:220px;}
+      .team-3d-card img{height:180px;}
+      .team-3d-card.prev{transform:translate(-115%,-50%) scale(0.75) rotateY(20deg);}
+      .team-3d-card.next{transform:translate(15%,-50%) scale(0.75) rotateY(-20deg);}
+      .team-3d-card.far-prev,.team-3d-card.far-next{opacity:0;}
+    }
+    @media(max-width:560px){
+      .team-3d-wrap{height:360px;}
+      .team-3d-card{width:200px;padding:16px;}
+      .team-3d-card img{height:160px;}
+      .team-3d-nav{width:36px;height:36px;font-size:0.85rem;}
+      .team-3d-nav.prev{left:4px;}
+      .team-3d-nav.next{right:4px;}
+    }
+  </style>
   <div class="container">
-    <div class="team-header reveal">
+    <div style="text-align:center;margin-bottom:30px;">
       <span class="section-label">Awesome Team</span>
       <h2 class="section-title">Our Specialists</h2>
-      <p class="section-subtitle">The oldest healing system, Ayurveda promotes health and wellness by creating a delicate balance between mind, body and spirit.</p>
+      <p style="font-family:'Raleway',sans-serif;font-size:0.9rem;color:var(--text-light);line-height:1.8;max-width:700px;margin:0 auto;">Our qualified and experienced Ayurveda doctors take a larger role in managing patients through various authentic Ayurveda treatments in UAE. They have years of experience working with Kerala's well-known ayurveda institutions.</p>
     </div>
-    <div class="team-cards" id="teamCards">
-      <div class="team-card">
-        <img src="01.jpg" alt="Specialist 1" loading="lazy">
-        <div class="team-card-info">
+    <div class="team-3d-wrap">
+      <div class="team-3d-track" id="team3dTrack">
+        <div class="team-3d-card" data-index="0">
+          <img src="01.jpg" alt="Dr. Neethu Mol">
+          <h3>Dr. Neethu Mol</h3>
+          <p>BAMS, Ayurveda Physician</p>
+          <a href="dr-neethu.html" class="btn-learn">Learn More</a>
+        </div>
+        <div class="team-3d-card" data-index="1">
+          <img src="02.jpg" alt="Dr. Specialist">
           <h3>Dr. Specialist</h3>
-          <span>Ayurveda Physician</span>
+          <p>Senior Consultant</p>
+          <a href="#" class="btn-learn">Learn More</a>
+        </div>
+        <div class="team-3d-card" data-index="2">
+          <img src="03.jpg" alt="Dr. Specialist">
+          <h3>Dr. Specialist</h3>
+          <p>Panchakarma Expert</p>
           <a href="#" class="btn-learn">Learn More</a>
         </div>
       </div>
-      <div class="team-card">
-        <img src="02.jpg" alt="Specialist 2" loading="lazy">
-        <div class="team-card-info">
-          <h3>Dr. Specialist</h3>
-          <span>Senior Consultant</span>
-          <a href="#" class="btn-learn">Learn More</a>
-        </div>
-      </div>
-      <div class="team-card">
-        <img src="03.jpg" alt="Specialist 3" loading="lazy">
-        <div class="team-card-info">
-          <h3>Dr. Specialist</h3>
-          <span>Panchakarma Expert</span>
-          <a href="#" class="btn-learn">Learn More</a>
-        </div>
-      </div>
-    </div>
-    <div class="team-description reveal">
-      <p>Our qualified and experienced Ayurveda doctors take a larger role in managing patients through various authentic Ayurveda treatments. They have years of experience working with Kerala's well-known ayurveda institutions.</p>
+      <button class="team-3d-nav prev" id="team3dPrev"><i class="fas fa-chevron-left"></i></button>
+      <button class="team-3d-nav next" id="team3dNext"><i class="fas fa-chevron-right"></i></button>
     </div>
   </div>
 </section>
 
 <script>
 (function(){
-  var cards = document.getElementById('teamCards');
-  var done = false;
-  function checkTeam(){
-    if(done || !cards) return;
-    var r = cards.getBoundingClientRect();
-    if(r.top < window.innerHeight * 0.7){
-      done = true;
-      cards.classList.add('spread');
-    }
+  var cards = document.querySelectorAll('.team-3d-card');
+  if(!cards.length) return;
+  var current = 0;
+  var total = cards.length;
+
+  function updateCards(){
+    cards.forEach(function(card, i){
+      card.className = 'team-3d-card';
+      var diff = i - current;
+      if(diff === 0) card.classList.add('active');
+      else if(diff === -1 || (current === 0 && i === total-1)) card.classList.add('prev');
+      else if(diff === 1 || (current === total-1 && i === 0)) card.classList.add('next');
+      else if(diff < -1) card.classList.add('far-prev');
+      else card.classList.add('far-next');
+    });
   }
-  window.addEventListener('scroll', checkTeam, {passive:true});
-  checkTeam();
+
+  document.getElementById('team3dNext').addEventListener('click', function(){
+    current = (current + 1) % total;
+    updateCards();
+  });
+  document.getElementById('team3dPrev').addEventListener('click', function(){
+    current = (current - 1 + total) % total;
+    updateCards();
+  });
+
+  updateCards();
+
+  // Auto-rotate
+  var autoTimer = setInterval(function(){ current = (current + 1) % total; updateCards(); }, 4000);
+  document.querySelector('.team-3d-wrap').addEventListener('mouseenter', function(){ clearInterval(autoTimer); });
+  document.querySelector('.team-3d-wrap').addEventListener('mouseleave', function(){
+    autoTimer = setInterval(function(){ current = (current + 1) % total; updateCards(); }, 4000);
+  });
 })();
 </script>
 
@@ -1001,8 +1074,8 @@ window.addEventListener('load', function(){
 .form-input::placeholder{color:var(--text-light)}
 .form-input:focus{border-color:var(--green);background:#fff;box-shadow:0 0 0 3px rgba(107,140,62,0.1)}
 .form-input option{background:#fff;color:var(--text)}
-.form-submit{width:100%;padding:16px;background:linear-gradient(135deg,var(--green),var(--green2));color:#fff;border-radius:50px;font-family:'Raleway',sans-serif;font-weight:700;font-size:1rem;letter-spacing:0.05em;cursor:none;transition:var(--transition);border:none;margin-top:8px;display:flex;align-items:center;justify-content:center;gap:10px}
-.form-submit:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(107,140,62,0.4)}
+.form-submit{width:100%;padding:16px;background:rgba(107,140,62,0.15);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:var(--green);border:1.5px solid rgba(107,140,62,0.3);border-radius:50px;font-family:'Raleway',sans-serif;font-weight:700;font-size:1rem;letter-spacing:0.05em;cursor:none;transition:var(--transition);margin-top:8px;display:flex;align-items:center;justify-content:center;gap:10px}
+.form-submit:hover{transform:translateY(-2px);background:rgba(107,140,62,0.25);box-shadow:0 8px 30px rgba(107,140,62,0.2);border-color:var(--green)}
 .form-success{display:none;text-align:center;padding:32px;color:var(--text)}
 .form-success i{font-size:3rem;color:var(--green);margin-bottom:16px;display:block}
 .form-success h3{font-family:'Cinzel',serif;font-size:1.5rem;margin-bottom:8px;color:var(--dark)}
